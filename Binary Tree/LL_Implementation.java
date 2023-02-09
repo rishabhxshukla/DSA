@@ -29,17 +29,17 @@ class LL_Implementation
             return;
         }
         /* ELSE */
-        Node focus = root;
+        Node temp = root;
         Node parent;
 
         while (true)
         {
-            parent = focus;
+            parent = temp;
 
-            if (data < focus.data)
+            if (data < temp.data)
             {
-                focus = focus.left;
-                if (focus == null)
+                temp = temp.left;
+                if (temp == null)
                 {
                     parent.left = new_node;
                     return;
@@ -47,8 +47,8 @@ class LL_Implementation
             }
             else
             {
-                focus = focus.right;
-                if (focus == null)
+                temp = temp.right;
+                if (temp == null)
                 {
                     parent.right = new_node;
                     return;
@@ -59,13 +59,13 @@ class LL_Implementation
 
 
     /* Preorder traversal of binary tree */
-    void traversal(Node focus)
+    void traversal(Node temp)
     {
-        if (focus != null)
+        if (temp != null)
         {
-            System.out.print(focus.data + " ");
-            traversal(focus.left);
-            traversal(focus.right);
+            System.out.print(temp.data + " ");
+            traversal(temp.left);
+            traversal(temp.right);
         }
     }
 
@@ -73,7 +73,7 @@ class LL_Implementation
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        LL_Implementation bt = new LL_Implementation();
+        LL_Implementation t = new LL_Implementation();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -82,11 +82,11 @@ class LL_Implementation
         {
             System.out.print("Enter the node : ");
             int d = Integer.parseInt(b.readLine());
-            bt.add(d);
+            t.add(d);
         }
 
         //Printing the Binary Tree
         System.out.println("*** Created Binary Tree ***");
-        bt.traversal(root);
+        t.traversal(root);
     }
 }
