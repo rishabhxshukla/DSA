@@ -59,14 +59,14 @@ class LL_Implementation
 
 
     /* Preorder traversal of binary tree */
-    void traversal(Node temp)
+    void print(Node temp)
     {
-        if (temp != null)
-        {
-            System.out.print(temp.data + " ");
-            traversal(temp.left);
-            traversal(temp.right);
+        if (temp == null) {
+            return;
         }
+        System.out.print(temp.data + " ");
+        print(temp.left);
+        print(temp.right);
     }
 
 
@@ -87,6 +87,6 @@ class LL_Implementation
 
         //Printing the Binary Tree
         System.out.println("*** Created Binary Tree ***");
-        t.traversal(root);
+        t.print(root);
     }
 }
