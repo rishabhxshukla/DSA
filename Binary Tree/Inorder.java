@@ -12,7 +12,7 @@ class Inorder
         Node(int data)
         {
             this.data = data;
-            this.left = this.right = null;
+            left = right = null;
         }
     }
 
