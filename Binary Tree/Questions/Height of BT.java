@@ -1,7 +1,10 @@
-package BinaryTree;
+/* Height of BT is the number of nodes along the longest path
+from the root node down to the farthest leaf node. */
+
+package Questions;
 import java.io.*;
 
-class Inorder
+class HeightOfBT
 {
     static Node root;
     static class Node
@@ -35,7 +38,7 @@ class Inorder
     }
 
 
-    /* Inorder traversal of binary tree */
+    /* Printing the BT */
     void print(Node temp)
     {
         //4 2 5 1 3
@@ -48,10 +51,30 @@ class Inorder
     }
 
 
+    /* Function to find the height of BT */
+    static int heightOfBT(Node temp)
+    {
+        if (temp == null)
+            return 0;
+        else
+        {
+            //Height of each subtree
+            int lheight = heightOfBT(temp.left);
+            int rheight = heightOfBT(temp.right);
+
+            //Using the larger one
+            if (lheight > rheight)
+                return (lheight + 1);
+            else
+                return (rheight + 1);
+        }
+    }
+
+
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Inorder t = new Inorder();
+        HeightOfBT t = new HeightOfBT();
 
         //Creating the BT
         t.create();
@@ -59,5 +82,8 @@ class Inorder
         //Printing the BT
         System.out.println("*** Created Binary Tree ***");
         t.print(root);
+
+        //Printing height of BT
+        System.out.println("\nHeight of binary tree is : " + heightOfBT(root));
     }
 }

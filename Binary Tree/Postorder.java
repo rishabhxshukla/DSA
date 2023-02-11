@@ -17,7 +17,7 @@ class Postorder
     }
 
 
-    /* Function to create a binary tree */
+    /* Creating the BT */
     void create()
     {
         Node first   = new Node(1);
@@ -53,10 +53,10 @@ class Postorder
         //Creating object of the class
         Postorder t = new Postorder();
 
-        //Creating the binary tree
+        //Creating the BT
         t.create();
 
-        //Printing the Binary Tree
+        //Printing the BT
         System.out.println("*** Created Binary Tree ***");
         t.print(root);
     }

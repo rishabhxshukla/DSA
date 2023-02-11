@@ -17,7 +17,7 @@ class Preorder
     }
 
 
-    /* Function to create a binary tree */
+    /* Creating the BT */
     void create()
     {
         Node first   = new Node(1);
@@ -53,10 +53,10 @@ class Preorder
         //Creating object of the class
         Preorder t = new Preorder();
 
-        //Creating the binary tree
+        //Creating the BT
         t.create();
 
-        //Printing the Binary Tree
+        //Printing the BT
         System.out.println("*** Created Binary Tree ***");
         t.print(root);
     }
