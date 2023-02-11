@@ -39,12 +39,12 @@ class Preorder
     void print(Node temp)
     {
         //1 2 4 5 3
-        if (temp != null)
-        {
-            System.out.print(temp.data + " ");
-            print(temp.left);
-            print(temp.right);
+        if (temp == null) {
+            return;
         }
+        System.out.print(temp.data + " ");
+        print(temp.left);
+        print(temp.right);
     }
 
 

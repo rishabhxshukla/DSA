@@ -39,12 +39,12 @@ class Inorder
     void print(Node temp)
     {
         //4 2 5 1 3
-        if (temp != null)
-        {
-            print(temp.left);
-            System.out.print(temp.data + " ");
-            print(temp.right);
+        if (temp == null) {
+            return;
         }
+        print(temp.left);
+        System.out.print(temp.data + " ");
+        print(temp.right);
     }
 
 

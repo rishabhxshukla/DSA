@@ -39,12 +39,12 @@ class Postorder
     void print(Node temp)
     {
         //4 5 2 3 1
-        if (temp != null)
-        {
-            print(temp.left);
-            print(temp.right);
-            System.out.print(temp.data + " ");
+        if (temp == null) {
+            return;
         }
+        print(temp.left);
+        print(temp.right);
+        System.out.print(temp.data + " ");
     }
 
 
