@@ -28,6 +28,7 @@ class LL_Implementation
             root = new_node;
             return;
         }
+
         /* ELSE */
         Node temp = root;
         Node parent;
@@ -36,18 +37,25 @@ class LL_Implementation
         {
             parent = temp;
 
+            //If the new node’s value is lower than the current node, go to the left child
             if (data < temp.data)
             {
                 temp = temp.left;
+                //When the current node is null, we have reached a leaf node,
+                //we insert the new node in this position
                 if (temp == null)
                 {
                     parent.left = new_node;
                     return;
                 }
             }
+
+            //Else go to the right child
             else
             {
                 temp = temp.right;
+                //When the current node is null, we have reached a leaf node,
+                //we insert the new node in this position
                 if (temp == null)
                 {
                     parent.right = new_node;
