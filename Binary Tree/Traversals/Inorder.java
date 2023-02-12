@@ -1,7 +1,7 @@
-package BinaryTree;
+package Traversals;
 import java.io.*;
 
-class Preorder
+class Inorder
 {
     static Node root;
     static class Node
@@ -35,15 +35,15 @@ class Preorder
     }
 
 
-    /* Preorder traversal of binary tree */
+    /* Inorder traversal of binary tree */
     void print(Node temp)
     {
-        //1 2 4 5 3
+        //4 2 5 1 3
         if (temp == null) {
             return;
         }
-        System.out.print(temp.data + " ");
         print(temp.left);
+        System.out.print(temp.data + " ");
         print(temp.right);
     }
 
@@ -51,7 +51,7 @@ class Preorder
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Preorder t = new Preorder();
+        Inorder t = new Inorder();
 
         //Creating the BT
         t.create();

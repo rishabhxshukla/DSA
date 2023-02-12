@@ -1,7 +1,7 @@
-package BinaryTree;
+package Traversals;
 import java.io.*;
 
-class Inorder
+class Postorder
 {
     static Node root;
     static class Node
@@ -35,23 +35,23 @@ class Inorder
     }
 
 
-    /* Inorder traversal of binary tree */
+    /* Postorder traversal of binary tree */
     void print(Node temp)
     {
-        //4 2 5 1 3
+        //4 5 2 3 1
         if (temp == null) {
             return;
         }
         print(temp.left);
-        System.out.print(temp.data + " ");
         print(temp.right);
+        System.out.print(temp.data + " ");
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Inorder t = new Inorder();
+        Postorder t = new Postorder();
 
         //Creating the BT
         t.create();
