@@ -1,3 +1,5 @@
+// PREORDER : (+ab) : Root --> Left --> Right
+
 package Traversals;
 import java.io.*;
 
