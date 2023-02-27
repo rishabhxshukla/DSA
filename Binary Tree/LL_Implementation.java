@@ -23,6 +23,7 @@ class LL_Implementation
     {
         //Allocating memory for new node
         Node new_node = new Node(data);
+
         /* IF TREE IS EMPTY */
         if (root == null) {
             root = new_node;

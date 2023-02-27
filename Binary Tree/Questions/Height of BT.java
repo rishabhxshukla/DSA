@@ -2,7 +2,6 @@
 from the root node down to the farthest leaf node. */
 
 package Questions;
-import java.io.*;
 
 class HeightOfBT
 {
@@ -71,7 +70,7 @@ class HeightOfBT
     }
 
 
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
         //Creating object of the class
         HeightOfBT t = new HeightOfBT();
