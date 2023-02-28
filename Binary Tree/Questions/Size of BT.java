@@ -30,7 +30,6 @@ class SizeOfBT
         root = first;
         first.left = second;
         first.right = third;
-
         second.left = fourth;
         second.right = fifth;
     }
