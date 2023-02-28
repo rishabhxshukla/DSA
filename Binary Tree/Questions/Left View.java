@@ -37,7 +37,7 @@ class LeftView
     /* Printing the BT */
     void print()
     {
-        System.out.print("1 2 3 4 5");
+        System.out.println("1 2 3 4 5");
     }
 
 
@@ -74,7 +74,7 @@ class LeftView
         t.print();
 
         //Printing left view of BT
-        System.out.println("\nLeft View Of Binary Tree : ");
+        System.out.println("Left View Of Binary Tree : ");
         t.leftView(root, 1);
     }
 }
