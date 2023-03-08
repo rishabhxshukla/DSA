@@ -2,7 +2,7 @@
 
 package Traversals;
 
-class LevelOrder
+class LevelOrder_Recursion
 {
     static Node root;
     static class Node
@@ -88,7 +88,7 @@ class LevelOrder
     public static void main(String args[])
     {
         //Creating object of the class
-        LevelOrder t = new LevelOrder();
+        LevelOrder_Recursion t = new LevelOrder_Recursion();
 
         //Creating the BT
         t.create();
