@@ -38,9 +38,9 @@ class Insert_BeforeKey
         {
             temp = temp.next;
         }
-        //Make next of new node as next of key node
+        //Place new node before the key node
         new_node.next = temp.next;
-        //Point the key node to the newly created node
+        //Point node before the key node to the newly created node
         temp.next = new_node;
     }
 
