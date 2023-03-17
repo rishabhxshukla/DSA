@@ -1,6 +1,7 @@
 package Deletion;
+import java.util.Scanner;
 
-class Delete_Beginning
+class AllAfterKey
 {
     static Node head;
 
@@ -17,17 +18,18 @@ class Delete_Beginning
     }
 
 
-    /* Deleting the first node */
-    void deleteNode()
+    /* Deleting all nodes after a given node */
+    void deleteNode(int key)
     {
-        /* IF LL IS EMPTY */
-        if(head == null) {
-            System.out.println("ERROR : List is empty");
-            return;
+        Node temp = head;
+
+        //Looping till the key node
+        while(temp.data != key)
+        {
+            temp = temp.next;
         }
-        /* ELSE */
-        //Pointing the head to the second node
-        head = head.next;
+        //Unlinking the nodes from linked list
+        temp.next = null;
     }
 
 
@@ -47,7 +49,8 @@ class Delete_Beginning
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_Beginning obj = new Delete_Beginning();
+        AllAfterKey ll = new AllAfterKey();
+        Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -64,13 +67,17 @@ class Delete_Beginning
 
         /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
-        /* Deleting 1st node */
-        obj.deleteNode();
+        /* Deleting the nodes */
+        System.out.print("\nEnter the node after which you want to delete all nodes : ");
+        int key = sc.nextInt();
+        ll.deleteNode(key);
 
         /* New LL */
-        System.out.println("\nNew Linked List :");
-        obj.printLL();
+        System.out.println("New Linked List :");
+        ll.printLL();
+
+        sc.close();
     }
 }

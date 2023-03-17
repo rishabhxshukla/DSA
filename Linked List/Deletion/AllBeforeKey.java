@@ -1,6 +1,7 @@
 package Deletion;
+import java.util.Scanner;
 
-class Delete_All
+class AllBeforeKey
 {
     static Node head;
 
@@ -17,10 +18,18 @@ class Delete_All
     }
 
 
-    /* Deleting the full Linked List */
-    void deleteLL()
+    /* Deleting all nodes before a given node */
+    void deleteNode(int key)
     {
-        head = null;
+        Node temp = head;
+
+        //Looping till the key node
+        while(temp.data != key)
+        {
+            temp = temp.next;
+        }
+        //Unlinking the nodes from linked list
+        head = temp;
     }
 
 
@@ -29,7 +38,7 @@ class Delete_All
     {
         //Storing the value of head in a temp variable
         Node temp = head;
-        while (temp != null)
+        while(temp != null)
         {
             System.out.print(temp.data + " ");
             temp = temp.next;
@@ -40,7 +49,8 @@ class Delete_All
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_All obj = new Delete_All();
+        AllBeforeKey ll = new AllBeforeKey();
+        Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -57,13 +67,17 @@ class Delete_All
 
         /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
-        /* Deleting full linked list */
-        obj.deleteLL();
+        /* Deleting the nodes */
+        System.out.print("\nEnter the node before which you want to delete all nodes : ");
+        int key = sc.nextInt();
+        ll.deleteNode(key);
 
         /* New LL */
-        System.out.println("\nNew Linked List :");
-        obj.printLL();
+        System.out.println("New Linked List :");
+        ll.printLL();
+
+        sc.close();
     }
 }

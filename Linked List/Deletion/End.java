@@ -1,7 +1,6 @@
 package Deletion;
-import java.util.Scanner;
 
-class Delete_AllAfterKey
+class End
 {
     static Node head;
 
@@ -18,17 +17,15 @@ class Delete_AllAfterKey
     }
 
 
-    /* Deleting all nodes after a given node */
-    void deleteNode(int key)
+    /* Deleting the last node */
+    void deleteNode()
     {
         Node temp = head;
-
-        //Looping till the key node
-        while(temp.data != key)
+        while(temp.next.next != null)
         {
             temp = temp.next;
         }
-        //Unlinking the nodes from linked list
+        //Deleting the last node
         temp.next = null;
     }
 
@@ -49,8 +46,7 @@ class Delete_AllAfterKey
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_AllAfterKey obj = new Delete_AllAfterKey();
-        Scanner sc = new Scanner(System.in);
+        End ll = new End();
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -67,17 +63,13 @@ class Delete_AllAfterKey
 
         /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
-        /* Deleting the nodes */
-        System.out.print("\nEnter the node after which you want to delete all nodes : ");
-        int key = sc.nextInt();
-        obj.deleteNode(key);
+        /* Deleting last node */
+        ll.deleteNode();
 
         /* New LL */
-        System.out.println("New Linked List :");
-        obj.printLL();
-
-        sc.close();
+        System.out.println("\nNew Linked List :");
+        ll.printLL();
     }
 }

@@ -1,7 +1,7 @@
 package Deletion;
 import java.util.Scanner;
 
-class Delete_Key
+class Key
 {
     static Node head;
 
@@ -61,7 +61,7 @@ class Delete_Key
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_Key obj = new Delete_Key();
+        Key ll = new Key();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -79,16 +79,16 @@ class Delete_Key
 
         /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         /* Deleting key node */
         System.out.print("\nEnter the node that you want to delete : ");
         int key = sc.nextInt();
-        obj.deleteNode(key);
+        ll.deleteNode(key);
 
         /* New LL */
         System.out.println("New Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         sc.close();
     }

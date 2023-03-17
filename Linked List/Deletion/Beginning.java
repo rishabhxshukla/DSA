@@ -1,6 +1,6 @@
 package Deletion;
 
-class Delete_End
+class Beginning
 {
     static Node head;
 
@@ -17,16 +17,17 @@ class Delete_End
     }
 
 
-    /* Deleting the last node */
+    /* Deleting the first node */
     void deleteNode()
     {
-        Node temp = head;
-        while(temp.next.next != null)
-        {
-            temp = temp.next;
+        /* IF LL IS EMPTY */
+        if(head == null) {
+            System.out.println("ERROR : List is empty");
+            return;
         }
-        //Deleting the last node
-        temp.next = null;
+        /* ELSE */
+        //Pointing the head to the second node
+        head = head.next;
     }
 
 
@@ -46,7 +47,7 @@ class Delete_End
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_End obj = new Delete_End();
+        Beginning ll = new Beginning();
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -63,13 +64,13 @@ class Delete_End
 
         /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
-        /* Deleting last node */
-        obj.deleteNode();
+        /* Deleting 1st node */
+        ll.deleteNode();
 
         /* New LL */
         System.out.println("\nNew Linked List :");
-        obj.printLL();
+        ll.printLL();
     }
 }
