@@ -55,14 +55,14 @@ class Delete_All
         third.next = fourth;
         fourth.next = fifth;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
         obj.printLL();
 
         /* Deleting full linked list */
         obj.deleteLL();
 
-        /* New list */
+        /* New LL */
         System.out.println("\nNew Linked List :");
         obj.printLL();
     }

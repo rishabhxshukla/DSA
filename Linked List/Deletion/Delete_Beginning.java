@@ -62,14 +62,14 @@ class Delete_Beginning
         third.next = fourth;
         fourth.next = fifth;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
         obj.printLL();
 
         /* Deleting 1st node */
         obj.deleteNode();
 
-        /* New list */
+        /* New LL */
         System.out.println("\nNew Linked List :");
         obj.printLL();
     }

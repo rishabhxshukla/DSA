@@ -1,7 +1,7 @@
 package Deletion;
 import java.util.Scanner;
 
-class Delete_AllAfterKey
+class Delete_AllBeforeKey
 {
     static Node head;
 
@@ -18,7 +18,7 @@ class Delete_AllAfterKey
     }
 
 
-    /* Deleting all nodes after a given node */
+    /* Deleting all nodes before a given node */
     void deleteNode(int key)
     {
         Node temp = head;
@@ -29,7 +29,7 @@ class Delete_AllAfterKey
             temp = temp.next;
         }
         //Unlinking the nodes from linked list
-        temp.next = null;
+        head = temp;
     }
 
 
@@ -49,7 +49,7 @@ class Delete_AllAfterKey
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Delete_AllAfterKey obj = new Delete_AllAfterKey();
+        Delete_AllBeforeKey obj = new Delete_AllBeforeKey();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -70,7 +70,7 @@ class Delete_AllAfterKey
         obj.printLL();
 
         /* Deleting the nodes */
-        System.out.print("\nEnter the node after which you want to delete all nodes : ");
+        System.out.print("\nEnter the node before which you want to delete all nodes : ");
         int key = sc.nextInt();
         obj.deleteNode(key);
 

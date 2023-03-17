@@ -77,16 +77,16 @@ class Delete_Key
         third.next = fourth;
         fourth.next = fifth;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
         obj.printLL();
 
-        /* Deleting 1st node */
+        /* Deleting key node */
         System.out.print("\nEnter the node that you want to delete : ");
         int key = sc.nextInt();
         obj.deleteNode(key);
 
-        /* New list */
+        /* New LL */
         System.out.println("New Linked List :");
         obj.printLL();
 
