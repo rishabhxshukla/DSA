@@ -61,7 +61,7 @@ class Delete_Key
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Deletion.Delete_AllAfterKey obj = new Deletion.Delete_AllAfterKey();
+        Delete_Key obj = new Delete_Key();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -87,7 +87,7 @@ class Delete_Key
         obj.deleteNode(key);
 
         /* New list */
-        System.out.println("\nNew Linked List :");
+        System.out.println("New Linked List :");
         obj.printLL();
 
         sc.close();
