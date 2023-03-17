@@ -1,7 +1,7 @@
 package Insertion;
 import java.util.Scanner;
 
-class Insert_End
+class End
 {
     static Node head;
     static class Node
@@ -58,7 +58,7 @@ class Insert_End
     public static void main(String args[]) 
     {
         /* Creating object of the class */
-        Insert_End obj = new Insert_End();
+        End ll = new End();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -72,18 +72,18 @@ class Insert_End
         second.next = third;
         third.next = fourth;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         /* Inserting value */
         System.out.print("\nEnter data to be inserted at the end: ");
         int d = sc.nextInt();
-        obj.insertNode(d);
+        ll.insertNode(d);
 
-        /* New list */
+        /* New LL */
         System.out.println("New Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         sc.close();
     }

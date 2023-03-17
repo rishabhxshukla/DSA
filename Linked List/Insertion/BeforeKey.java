@@ -1,7 +1,7 @@
 package Insertion;
 import java.util.Scanner;
 
-class Insert_AfterKey
+class BeforeKey
 {
     static Node head;
     static class Node
@@ -17,7 +17,7 @@ class Insert_AfterKey
     }
 
 
-    /* Inserting new node after a given key */
+    /* Inserting new node before a given key */
     void insertNode(int key, int d)
     {
         //Allocating memory for new node
@@ -25,27 +25,22 @@ class Insert_AfterKey
 
         /* If head node contains the key */
         if(head.data == key) {
-            //Make next of new node as next of head node
-            new_node.next = head.next;
+            //Point the next of new node to the head node
+            new_node.next = head;
             //Point the head node to the newly created node
-            head.next = new_node;
+            head = new_node;
             return;
         }
 
         /* Else iterate over the LL */
         Node temp = head;
-        while(temp.data != key)
+        while(temp.next.data != key)
         {
             temp = temp.next;
-            if(temp == null)
-            {
-                System.out.println("ERROR : Key not found!");
-                return;
-            }
         }
-        //Make next of new node as next of key node
+        //Place new node before the key node
         new_node.next = temp.next;
-        //Point the key node to the newly created node
+        //Point node before the key node to the newly created node
         temp.next = new_node;
     }
 
@@ -63,10 +58,10 @@ class Insert_AfterKey
     }
 
 
-    public static void main(String args[]) 
+    public static void main(String args[])
     {
         /* Creating object of the class */
-        Insert_AfterKey obj = new Insert_AfterKey();
+        BeforeKey ll = new BeforeKey();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -80,20 +75,20 @@ class Insert_AfterKey
         second.next = third;
         third.next = fourth;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         /* Inserting value */
-        System.out.print("\nEnter the node data to be inserted: ");
+        System.out.print("\nEnter the data to be inserted: ");
         int d = sc.nextInt();
-        System.out.print("Enter the key after which the node is to be inserted: ");
+        System.out.print("Enter the key before which the node is to be inserted: ");
         int key = sc.nextInt();
-        obj.insertNode(key, d);
+        ll.insertNode(key, d);
 
-        /* New list */
+        /* New LL */
         System.out.println("New Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         sc.close();
     }

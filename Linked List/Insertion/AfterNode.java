@@ -1,7 +1,7 @@
 package Insertion;
 import java.util.Scanner;
 
-class Insert_Beginning
+class AfterNode
 {
     static Node head;
     static class Node
@@ -17,24 +17,18 @@ class Insert_Beginning
     }
 
 
-    /* Inserting new node at the beginning */
-    void insertNode(int d)
+    /* Inserting new node after a given node */
+    void insertNode(Node prev, int d)
     {
         //Allocating memory for new node
         Node new_node = new Node(d);
-        /* IF LL IS EMPTY */
-        if(head == null) {
-            head = new_node;
-            return;
-        }
-        /* ELSE */
-        //New node points to original head
-        new_node.next = head;
-        //New node is now the new head
-        head = new_node;
+        //Make next of new node as next of previous node
+        new_node.next = prev.next;
+        //Point the previous node to the newly created node
+        prev.next = new_node;
     }
 
-    
+
     /* Printing the LL */
     void printLL()
     {
@@ -51,7 +45,7 @@ class Insert_Beginning
     public static void main(String args[]) 
     {
         /* Creating object of the class */
-        Insert_Beginning obj = new Insert_Beginning();
+        AfterNode ll = new AfterNode();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -64,20 +58,21 @@ class Insert_Beginning
         head.next = second;
         second.next = third;
         third.next = fourth;
-        fourth.next = null;
 
-        /* Original List */
+        /* Original LL */
         System.out.println("Original Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         /* Inserting value */
-        System.out.print("\nEnter data to be inserted at the beginning: ");
+        System.out.print("\nEnter data to be inserted after the 2nd node: ");
         int d = sc.nextInt();
-        obj.insertNode(d);
+        //Inserting after the 2nd node
+        Node prev = second;
+        ll.insertNode(prev, d);
 
-        /* New list */
+        /* New LL */
         System.out.println("New Linked List :");
-        obj.printLL();
+        ll.printLL();
 
         sc.close();
     }
