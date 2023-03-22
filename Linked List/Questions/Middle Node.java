@@ -56,8 +56,8 @@ class Middle_Node
     /* Function to find middle node of LL */
     static int middleNode()
     {
-        Node temp = head;
         int mid = lengthOfLL()/2;
+        Node temp = head;
         int count = 0;
 
         while (temp != null)
