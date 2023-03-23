@@ -46,8 +46,8 @@ class Length_of_LL
 
         while (temp != null)
         {
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
         return count;
     }
