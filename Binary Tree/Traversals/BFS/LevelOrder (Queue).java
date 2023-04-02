@@ -48,7 +48,7 @@ class LevelOrder_Queue
         //Loop
         while (!q.isEmpty())
         {
-            Node temp = q.poll();
+            Node temp = q.remove();
             System.out.print(temp.data + " ");
 
             //Enqueue left child
