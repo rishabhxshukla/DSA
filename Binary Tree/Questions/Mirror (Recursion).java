@@ -3,7 +3,7 @@
 package Questions;
 import java.util.*;
 
-class Mirror
+class Mirror1
 {
     static Node root;
     static class Node
@@ -86,7 +86,7 @@ class Mirror
     public static void main(String args[])
     {
         //Creating object of the class
-        Mirror t = new Mirror();
+        Mirror1 t = new Mirror1();
 
         //Creating the BT
         t.create();
