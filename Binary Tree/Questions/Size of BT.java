@@ -71,6 +71,6 @@ class SizeOfBT
         t.print(root);
 
         //Printing size of BT
-        System.out.println("\nSize of binary tree is : " + sizeOfBT(root));
+        System.out.println("\nSize : " + sizeOfBT(root));
     }
 }

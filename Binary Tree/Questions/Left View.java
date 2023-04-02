@@ -1,4 +1,5 @@
 package Questions;
+import java.util.*;
 
 class LeftView
 {
@@ -37,7 +38,25 @@ class LeftView
     /* Printing the BT */
     void print()
     {
-        System.out.println("1 2 3 4 5");
+        //Creating a queue
+        Queue<Node> q = new LinkedList<>();
+        //Adding root node
+        q.add(root);
+
+        while (!q.isEmpty())
+        {
+            Node temp = q.remove();
+            System.out.print(temp.data + " ");
+
+            //Enqueue left child
+            if (temp.left != null) {
+                q.add(temp.left);
+            }
+            //Enqueue right child
+            if (temp.right != null) {
+                q.add(temp.right);
+            }
+        }
     }
 
 
@@ -74,7 +93,7 @@ class LeftView
         t.print();
 
         //Printing left view of BT
-        System.out.println("Left View Of Binary Tree : ");
+        System.out.println("\nLeft View Of Binary Tree : ");
         t.leftView(root, 1);
     }
 }

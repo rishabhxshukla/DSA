@@ -46,17 +46,15 @@ class Mirror2
         //Adding root node
         q.add(root);
 
-        //Loop
         while (!q.isEmpty())
         {
-            Node temp = q.poll();
+            Node temp = q.remove();
             System.out.print(temp.data + " ");
 
             //Enqueue left child
             if (temp.left != null) {
                 q.add(temp.left);
             }
-
             //Enqueue right child
             if (temp.right != null) {
                 q.add(temp.right);
@@ -73,12 +71,10 @@ class Mirror2
         //Adding root node
         q.add(root);
 
-        //Loop
         while (!q.isEmpty())
         {
             //Popping out top node from queue
-            Node temp = q.peek();
-            q.remove();
+            Node temp = q.remove();
 
             //Swapping the left and right child
             Node t = temp.left;
@@ -106,7 +102,7 @@ class Mirror2
         t.create();
 
         //Printing the BT
-        System.out.println("Created Binary Tree : ");
+        System.out.println("*** Created Binary Tree ***");
         t.print();
 
         //Printing mirror of BT

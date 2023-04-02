@@ -1,6 +1,7 @@
 // Density of Binary Tree = Size / Height
 
 package Questions;
+import java.util.*;
 
 class DensityOfBT
 {
@@ -40,7 +41,25 @@ class DensityOfBT
     /* Printing the BT */
     void print()
     {
-        System.out.println("1 2 3 4 5 6");
+        //Creating a queue
+        Queue<Node> q = new LinkedList<>();
+        //Adding root node
+        q.add(root);
+
+        while (!q.isEmpty())
+        {
+            Node temp = q.remove();
+            System.out.print(temp.data + " ");
+
+            //Enqueue left child
+            if (temp.left != null) {
+                q.add(temp.left);
+            }
+            //Enqueue right child
+            if (temp.right != null) {
+                q.add(temp.right);
+            }
+        }
     }
 
 
@@ -92,13 +111,14 @@ class DensityOfBT
         t.create();
 
         //Printing the BT
+        System.out.println("*** Created Binary Tree ***");
         t.print();
 
         //Printing size and height of BT
-        System.out.println("Size : " + sizeOfBT(root));
+        System.out.println("\nSize : " + sizeOfBT(root));
         System.out.println("Height : " + heightOfBT(root));
 
         //Printing density of BT
-        System.out.println("Density of binary tree is : " + densityOfBT());
+        System.out.println("Density : " + densityOfBT());
     }
 }

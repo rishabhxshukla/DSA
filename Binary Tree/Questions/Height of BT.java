@@ -82,6 +82,6 @@ class HeightOfBT
         t.print(root);
 
         //Printing height of BT
-        System.out.println("\nHeight of binary tree is : " + heightOfBT(root));
+        System.out.println("\nHeight : " + heightOfBT(root));
     }
 }
