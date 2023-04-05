@@ -32,10 +32,8 @@ class StackLength
     static int lengthOfStack()
     {
         int count = 0;
-        int i = top;
-        while (i >= 0)
+        for (int i=top; i>=0; i--)
         {
-            i--;
             count++;
         }
         return count;
