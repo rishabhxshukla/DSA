@@ -72,17 +72,12 @@ class Parenthesis_Matching
             }
 
             //If closing bracket, pop from stack
-            else
-            {
-                if ((ch==']' && s.peek()=='[') ||
-                    (ch=='}' && s.peek()=='{') ||
-                    (ch==')' && s.peek()=='('))
+            else if ((ch==']' && s.peek()=='[') ||
+                     (ch=='}' && s.peek()=='{') ||
+                     (ch==')' && s.peek()=='('))
                     {
                         s.pop();
                     }
-                else
-                    return false;
-            }
         }
         //If stack is empty then parenthesis are balanced
         return (s.isEmpty());
