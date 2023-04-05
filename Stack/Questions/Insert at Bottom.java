@@ -47,18 +47,6 @@ class InsertBottom
     }
 
 
-    /* PEEK */
-    int peek()
-    {
-        if (top < 0) {
-            System.out.println("Stack is Empty!");
-            return -999;
-        }
-        else
-            return a[top];
-    }
-
-
     /* Function to insert element at the bottom of the stack */
     void insertAtBottom(InsertBottom s, int data)
     {
