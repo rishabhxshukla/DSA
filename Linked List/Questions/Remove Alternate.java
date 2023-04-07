@@ -64,7 +64,7 @@ class Remove_Alternate
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Remove_Alternate ll = new Remove_Alternate();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

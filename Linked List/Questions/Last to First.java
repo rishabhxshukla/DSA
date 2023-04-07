@@ -63,7 +63,7 @@ class Last_to_First
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Last_to_First ll = new Last_to_First();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

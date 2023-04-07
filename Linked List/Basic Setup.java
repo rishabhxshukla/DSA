@@ -30,9 +30,9 @@ class Basic_Setup
 
 
     /* Creating the LL */
-    void add(int d)
+    void add(int data)
     {
-        Node new_node = new Node(d);
+        Node new_node = new Node(data);
         new_node.next = head;
         head = new_node;
     }
@@ -40,7 +40,7 @@ class Basic_Setup
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Basic_Setup ll = new Basic_Setup();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

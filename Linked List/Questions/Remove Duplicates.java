@@ -67,7 +67,7 @@ class Remove_Duplicates
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Remove_Duplicates ll = new Remove_Duplicates();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

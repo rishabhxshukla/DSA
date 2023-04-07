@@ -81,7 +81,7 @@ class Sum_Last_N_Nodes2
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Sum_Last_N_Nodes2 ll = new Sum_Last_N_Nodes2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

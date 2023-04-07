@@ -74,7 +74,7 @@ class Nth_Node_from_end
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Nth_Node_from_end ll = new Nth_Node_from_end();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

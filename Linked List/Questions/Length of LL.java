@@ -55,7 +55,7 @@ class Length_of_LL
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Length_of_LL ll = new Length_of_LL();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

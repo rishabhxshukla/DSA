@@ -38,7 +38,7 @@ class Nth_Node
     }
 
 
-    /* Function to find the Nth node from the start of LL*/
+    /* Function to find the Nth node from the start of LL */
     static int GetNth(int index)
     {
         Node temp = head;

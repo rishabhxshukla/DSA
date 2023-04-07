@@ -58,7 +58,7 @@ class Number_from_LL
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Number_from_LL ll = new Number_from_LL();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

@@ -61,7 +61,7 @@ class Pairwise_Swap
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Pairwise_Swap ll = new Pairwise_Swap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

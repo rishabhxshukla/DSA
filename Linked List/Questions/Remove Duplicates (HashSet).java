@@ -64,7 +64,7 @@ class Remove_Duplicates_HashSet
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Remove_Duplicates_HashSet ll = new Remove_Duplicates_HashSet();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
