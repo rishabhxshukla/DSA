@@ -56,7 +56,7 @@ class Nth_Node_from_end
 
     /* Function to find the Nth node from the end of LL */
     static int GetNth(int index)
-    { //1-->2-->3-->4-->5
+    {
         Node temp = head;
         int count = lengthOfLL();
 
