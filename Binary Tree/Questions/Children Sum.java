@@ -39,9 +39,7 @@ class ChildrenSum
     /* Printing the BT */
     void print()
     {
-        //Creating a queue
         Queue<Node> q = new LinkedList<>();
-        //Adding root node
         q.add(root);
 
         while (!q.isEmpty())
@@ -49,11 +47,9 @@ class ChildrenSum
             Node temp = q.remove();
             System.out.print(temp.data + " ");
 
-            //Enqueue left child
             if (temp.left != null) {
                 q.add(temp.left);
             }
-            //Enqueue right child
             if (temp.right != null) {
                 q.add(temp.right);
             }
