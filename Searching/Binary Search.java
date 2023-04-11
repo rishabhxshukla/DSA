@@ -29,6 +29,7 @@ class Binary_Search
         BufferedReader b = new BufferedReader(inp);
         int arr[] = new int[5];
 
+        //Creating the array
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the element : ");
