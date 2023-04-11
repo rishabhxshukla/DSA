@@ -54,7 +54,13 @@ class SizeOfBT
         if (temp == null)
             return 0;
         else
-            return sizeOfBT(temp.left) + sizeOfBT(temp.right) + 1;
+        {
+            //Size of each subtree
+            int left = sizeOfBT(temp.left);
+            int right = sizeOfBT(temp.right);
+
+            return left + right + 1;
+        }
     }
 
 
