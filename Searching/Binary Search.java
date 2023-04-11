@@ -22,6 +22,7 @@ class Binary_Search
         return false;
     }
 
+
     public static void main(String args[]) throws IOException
     {
         InputStreamReader inp = new InputStreamReader(System.in);

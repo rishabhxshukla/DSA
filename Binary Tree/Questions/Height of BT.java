@@ -52,8 +52,9 @@ class HeightOfBT
     /* Function to find the height of BT */
     static int heightOfBT(Node temp)
     {
-        if (temp == null)
+        if (temp == null) {
             return 0;
+        }
         else
         {
             //Height of each subtree
