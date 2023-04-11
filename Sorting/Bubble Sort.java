@@ -1,7 +1,7 @@
 package Sorting;
 import java.io.*;
 
-class Selection_Sort
+class Bubble_Sort
 {
     static int arr[] = new int[5];
 
@@ -18,29 +18,28 @@ class Selection_Sort
     /* Function to sort elements of an array */
     void sort()
     {
-        int min, t;
-        int n = arr.length;
+        int t;
+        int n = arr.length - 1;
 
-        for (int i=0; i<n-1; i++)
+        for (int i=0; i<n; i++)
         {
-            min = i;
-
-            for (int j=i+1; j<n; j++)
+            for (int j=0; j<(n-i); j++)
             {
-                if (arr[j] < arr[min])
-                    min = j;
+                if (arr[j] > arr[j+1])
+                {
+                    //Swapping
+                    t = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = t;
+                }
             }
-            //Swapping
-            t = arr[i];
-            arr[i] = arr[min];
-            arr[min] = t;
         }
     }
 
 
     public static void main(String args[]) throws IOException
     {
-        Selection_Sort obj = new Selection_Sort();
+        Bubble_Sort obj = new Bubble_Sort();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
