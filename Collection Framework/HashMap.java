@@ -14,71 +14,86 @@ class Hash_Map
         hm.put("Cristiano", 12017777);
         hm.put("Messi", 12011010);
 
-        /* Printing the Hash table */
+
+        /* Printing the Hash Map */
+        System.out.println("Printing the Hash Map :");
         System.out.println(hm);
         System.out.println();
 
 
-        /* Getting the id of Rishabh */
+        /* Getting the id of a particular element */
+        System.out.println("Getting the id of Rishabh :");
         int id = hm.get("Rishabh");
         System.out.println(id);
         System.out.println();
 
 
-        /* Checking if our map contains a certain Key */
-        boolean isPresent;
+        /* Checking if our map contains a particular Key */
+        boolean ans;
 
-        isPresent = hm.containsKey("Tanya");
-        System.out.println((isPresent));
-
-        isPresent = hm.containsKey("Cat");
-        System.out.println(isPresent);
+        System.out.println("Checking if Cristiano is present :");
+        ans = hm.containsKey("Cristiano");
+        System.out.println(ans);
         System.out.println();
 
 
-        /* Checking if our map contains a certain Value */
-        isPresent = hm.containsValue(12014745);
-        System.out.println(isPresent);
+        /* Checking if our map contains a particular Value */
+        System.out.println("Checking if 12014745 is present :");
+        ans = hm.containsValue(12014745);
+        System.out.println(ans);
         System.out.println();
 
 
-        /* To update an existing value, simply use put() function which will overwrite it */
+        /* Overwriting value already present at a particular key */
+        System.out.println("Overwriting value of Rishabh :");
         hm.put("Rishabh", 12013333);
         System.out.println(hm.get("Rishabh"));
         System.out.println();
 
 
-        /* Replace a value in the Hash Map */
+        /* Changing value already present at a particular key */
+        System.out.println("Changing value of Tanya :");
         hm.replace("Tanya", 12014604, 12016666);
         System.out.println(hm.get("Tanya"));
         System.out.println();
 
 
-        /* Put a key-value pair if it is not yet present */
-        hm.putIfAbsent("AbsentKey", 10101010);
+        /* Insert a key-value pair if it is not yet present */
+        System.out.println("Inserting key-value pair if not present :");
+        hm.putIfAbsent("NewKey", 10101010);
         System.out.println(hm);
         System.out.println();
 
 
         /* Remove a kay-value pair from the Hash Map */
+        System.out.println("Removing an entry from the Hash Map :");
         hm.remove("Anuj");
         System.out.println(hm);
         System.out.println();
 
 
-        /* Get the size of a Hash Map */
+        /* Size of Hash Map */
+        System.out.println("Size of Hash Map :");
         int size = hm.size();
         System.out.println(size);
         System.out.println();
 
         
         /* List all the Keys */
+        System.out.println("Printing all the keys :");
         System.out.println(hm.keySet());
         System.out.println();
 
 
         /* List all the Values */
+        System.out.println("Printing all the values :");
         System.out.println(hm.values());
         System.out.println();
+
+
+        /* Deleting full Hash Map */
+        System.out.println("Deleting full Hash Map :");
+        hm.clear();
+        System.out.println(hm);
     }
 }
