@@ -20,14 +20,14 @@ class Stack_CF
         System.out.println();
 
 
-        /* Getting the top element of the stack */
+        /* Getting the top element of the Stack */
         System.out.println("Top element :");
         int top = s.peek();
         System.out.println(top);
         System.out.println();
 
 
-        /* Removing the top element of the stack */
+        /* Removing the top element of the Stack */
         System.out.println("Removing top element :");
         s.pop();
         System.out.println(s);
