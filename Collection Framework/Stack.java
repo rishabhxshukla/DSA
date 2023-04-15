@@ -14,7 +14,7 @@ class Stack_CF
         s.push(10);
 
 
-        /* Printing the Array List */
+        /* Printing the Stack */
         System.out.println("Printing the Stack :");
         System.out.println(s);
         System.out.println();
