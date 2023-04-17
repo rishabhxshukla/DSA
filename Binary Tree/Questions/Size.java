@@ -1,9 +1,9 @@
-// Density of Binary Tree = Size / Height
+// Size of BT = (Size of left subtree) + (Size of right subtree) + 1
 
 package Questions;
 import java.util.*;
 
-class DensityOfBT
+class Size
 {
     static Node root;
     static class Node
@@ -27,14 +27,12 @@ class DensityOfBT
         Node third  = new Node(3);
         Node fourth = new Node(4);
         Node fifth  = new Node(5);
-        Node sixth  = new Node(6);
 
         root = first;
         first.left = second;
         first.right = third;
         second.left = fourth;
         second.right = fifth;
-        third.left = sixth;
     }
 
 
@@ -60,54 +58,24 @@ class DensityOfBT
 
 
     /* Function to find the size of BT */
-    static int sizeOfBT(Node temp)
+    static int size(Node temp)
     {
-        if (temp == null)
+        if (temp == null) {
             return 0;
-        else
-        {
-            //Size of each subtree
-            int left = sizeOfBT(temp.left);
-            int right = sizeOfBT(temp.right);
-
-            return left + right + 1;
         }
-    }
 
+        //Size of each subtree
+        int left = size(temp.left);
+        int right = size(temp.right);
 
-    /* Function to find the height of BT */
-    static int heightOfBT(Node temp)
-    {
-        if (temp == null)
-            return 0;
-        else
-        {
-            //Height of each subtree
-            int lheight = heightOfBT(temp.left);
-            int rheight = heightOfBT(temp.right);
-
-            //Using the larger one
-            if (lheight > rheight)
-                return (lheight + 1);
-            else
-                return (rheight + 1);
-        }
-    }
-
-
-    /* Function to find the density of BT */
-    static int densityOfBT()
-    {
-        int size = sizeOfBT(root);
-        int height = heightOfBT(root);
-        return size / height;
+        return left + right + 1;
     }
 
 
     public static void main(String args[])
     {
         //Creating object of the class
-        DensityOfBT t = new DensityOfBT();
+        Size t = new Size();
 
         //Creating the BT
         t.create();
@@ -116,11 +84,7 @@ class DensityOfBT
         System.out.println("*** Created Binary Tree ***");
         t.print();
 
-        //Printing size and height of BT
-        System.out.println("\nSize : " + sizeOfBT(root));
-        System.out.println("Height : " + heightOfBT(root));
-
-        //Printing density of BT
-        System.out.println("Density : " + densityOfBT());
+        //Printing size of BT
+        System.out.println("\nSize : " + size(root));
     }
 }

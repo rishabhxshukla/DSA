@@ -1,10 +1,9 @@
-/* Height of BT is the number of nodes along the longest path
-from the root node down to the farthest leaf node. */
+// Size of BT = (Size of left subtree) + (Size of right subtree) + 1
 
 package Questions;
 import java.util.*;
 
-class HeightOfBT
+class Sum
 {
     static Node root;
     static class Node
@@ -58,29 +57,25 @@ class HeightOfBT
     }
 
 
-    /* Function to find the height of BT */
-    static int heightOfBT(Node temp)
+    /* Function to find the sum of BT */
+    static int sum(Node temp)
     {
         if (temp == null) {
             return 0;
         }
 
-        //Height of each subtree
-        int lheight = heightOfBT(temp.left);
-        int rheight = heightOfBT(temp.right);
+        //Sum of each subtree
+        int left = sum(temp.left);
+        int right = sum(temp.right);
 
-        //Using the larger one
-        if (lheight > rheight)
-            return (lheight + 1);
-        else
-            return (rheight + 1);
+        return left + right + temp.data;
     }
 
 
     public static void main(String args[])
     {
         //Creating object of the class
-        HeightOfBT t = new HeightOfBT();
+        Sum t = new Sum();
 
         //Creating the BT
         t.create();
@@ -89,7 +84,7 @@ class HeightOfBT
         System.out.println("*** Created Binary Tree ***");
         t.print();
 
-        //Printing height of BT
-        System.out.println("\nHeight : " + heightOfBT(root));
+        //Printing sum of BT
+        System.out.println("\nSum : " + sum(root));
     }
 }
