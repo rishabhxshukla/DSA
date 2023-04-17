@@ -55,18 +55,16 @@ class HeightOfBT
         if (temp == null) {
             return 0;
         }
-        else
-        {
-            //Height of each subtree
-            int lheight = heightOfBT(temp.left);
-            int rheight = heightOfBT(temp.right);
 
-            //Using the larger one
-            if (lheight > rheight)
-                return (lheight + 1);
-            else
-                return (rheight + 1);
-        }
+        //Height of each subtree
+        int lheight = heightOfBT(temp.left);
+        int rheight = heightOfBT(temp.right);
+
+        //Using the larger one
+        if (lheight > rheight)
+            return (lheight + 1);
+        else
+            return (rheight + 1);
     }
 
 
