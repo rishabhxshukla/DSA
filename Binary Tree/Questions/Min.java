@@ -1,9 +1,9 @@
-// Maximum node of BT = Compare (Max of left subtree), (Max of right subtree), (Current node)
+// Minimum node of BT = Compare (Min of left subtree), (Min of right subtree), (Current node)
 
 package Questions;
 import java.util.*;
 
-class Max
+class Min
 {
     static Node root;
     static class Node
@@ -57,26 +57,26 @@ class Max
     }
 
 
-    /* Function to find the maximum node of BT */
-    static int max(Node temp)
+    /* Function to find the minimum node of BT */
+    static int min(Node temp)
     {
-        //Returning lowest integer value so that on comparing leaf node becomes the maximum of the two
+        //Returning highest integer value so that on comparing leaf node becomes the minimum of the two
         if (temp == null) {
-            return 0;
+            return Integer.MAX_VALUE;
         }
 
-        //Max of each subtree
-        int left = max(temp.left);
-        int right = max(temp.right);
+        //Min of each subtree
+        int left = min(temp.left);
+        int right = min(temp.right);
 
-        return Math.max(Math.max(left, right), temp.data);
+        return Math.min(Math.min(left, right), temp.data);
     }
 
 
     public static void main(String args[])
     {
         //Creating object of the class
-        Max t = new Max();
+        Min t = new Min();
 
         //Creating the BT
         t.create();
@@ -85,7 +85,7 @@ class Max
         System.out.println("*** Created Binary Tree ***");
         t.print();
 
-        //Printing max of BT
-        System.out.println("\nMaximum node : " + max(root));
+        //Printing min of BT
+        System.out.println("\nMinimum node : " + min(root));
     }
 }
