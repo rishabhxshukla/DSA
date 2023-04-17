@@ -46,10 +46,12 @@ class LeftView
             Node temp = q.remove();
             System.out.print(temp.data + " ");
 
-            if (temp.left != null)
+            if (temp.left != null) {
                 q.add(temp.left);
-            if (temp.right != null)
+            }
+            if (temp.right != null) {
                 q.add(temp.right);
+            }
         }
     }
 

@@ -1,6 +1,7 @@
 // Size of BT = (Size of left subtree) + (Size of right subtree) + 1
 
 package Questions;
+import java.util.*;
 
 class SumOfBT
 {
@@ -36,15 +37,23 @@ class SumOfBT
 
 
     /* Printing the BT */
-    void print(Node temp)
+    void print()
     {
-        //4 2 5 1 3
-        if (temp == null) {
-            return;
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty())
+        {
+            Node temp = q.remove();
+            System.out.print(temp.data + " ");
+
+            if (temp.left != null) {
+                q.add(temp.left);
+            }
+            if (temp.right != null) {
+                q.add(temp.right);
+            }
         }
-        print(temp.left);
-        System.out.print(temp.data + " ");
-        print(temp.right);
     }
 
 
@@ -73,7 +82,7 @@ class SumOfBT
 
         //Printing the BT
         System.out.println("*** Created Binary Tree ***");
-        t.print(root);
+        t.print();
 
         //Printing sum of BT
         System.out.println("\nSum : " + sumOfBT(root));

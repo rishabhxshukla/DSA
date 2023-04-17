@@ -2,6 +2,7 @@
 from the root node down to the farthest leaf node. */
 
 package Questions;
+import java.util.*;
 
 class HeightOfBT
 {
@@ -37,15 +38,23 @@ class HeightOfBT
 
 
     /* Printing the BT */
-    void print(Node temp)
+    void print()
     {
-        //4 2 5 1 3
-        if (temp == null) {
-            return;
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty())
+        {
+            Node temp = q.remove();
+            System.out.print(temp.data + " ");
+
+            if (temp.left != null) {
+                q.add(temp.left);
+            }
+            if (temp.right != null) {
+                q.add(temp.right);
+            }
         }
-        print(temp.left);
-        System.out.print(temp.data + " ");
-        print(temp.right);
     }
 
 
@@ -78,7 +87,7 @@ class HeightOfBT
 
         //Printing the BT
         System.out.println("*** Created Binary Tree ***");
-        t.print(root);
+        t.print();
 
         //Printing height of BT
         System.out.println("\nHeight : " + heightOfBT(root));
