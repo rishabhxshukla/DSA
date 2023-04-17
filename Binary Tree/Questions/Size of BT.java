@@ -51,16 +51,15 @@ class SizeOfBT
     /* Function to find the size of BT */
     static int sizeOfBT(Node temp)
     {
-        if (temp == null)
+        if (temp == null) {
             return 0;
-        else
-        {
-            //Size of each subtree
-            int left = sizeOfBT(temp.left);
-            int right = sizeOfBT(temp.right);
-
-            return left + right + 1;
         }
+
+        //Size of each subtree
+        int left = sizeOfBT(temp.left);
+        int right = sizeOfBT(temp.right);
+
+        return left + right + 1;
     }
 
 
