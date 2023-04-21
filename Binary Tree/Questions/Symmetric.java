@@ -76,17 +76,17 @@ class Symmetric
 
 
     /* Function to check if a BT is mirror of itself */
-    static boolean isMirror(Node temp1, Node temp2)
+    static boolean isMirror(Node a, Node b)
     {
         //If both trees are empty
-        if (temp1 == null && temp2 == null) {
+        if (a == null && b == null) {
             return true;
         }
 
         //If root node is same
-        if (temp1.data == temp2.data) {
-            return (isMirror(temp1.left, temp2.right) &&
-                    isMirror(temp1.right, temp2.left));
+        if (a.data == b.data) {
+            return (isMirror(a.left, b.right) &&
+                    isMirror(a.right, b.left));
         }
 
         //Else return false
