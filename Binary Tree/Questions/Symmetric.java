@@ -1,6 +1,6 @@
 // A binary tree is symmetric if it is the mirror image of itself
 /*
-For two trees to be mirror images, they must follow these 3 conditions:
+For two trees to be mirror images, they must follow these 3 conditions :
 1) Their root node must be same.
 2) left subtree of left tree and right subtree of right tree have to be mirror images.
 3) right subtree of left tree and left subtree of right tree have to be mirror images.
