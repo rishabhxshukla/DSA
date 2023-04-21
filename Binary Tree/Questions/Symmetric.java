@@ -83,10 +83,14 @@ class Symmetric
             return true;
         }
 
-        //If root node is same
-        if (a.data == b.data) {
-            return (isMirror(a.left, b.right) &&
-                    isMirror(a.right, b.left));
+        //If both trees are non-empty
+        if (a != null && b != null)
+        {
+            return (
+                    a.data == b.data &&
+                    isMirror(a.left, b.right) &&
+                    isMirror(a.right, b.left)
+            );
         }
 
         //Else return false

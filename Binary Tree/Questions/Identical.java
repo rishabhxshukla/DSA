@@ -93,7 +93,7 @@ class Identical
                     a.data == b.data &&
                     isIdentical(a.left, b.left) &&
                     isIdentical(a.right, b.right)
-                    );
+            );
         }
 
         //Else return false
