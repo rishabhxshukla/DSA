@@ -1,9 +1,9 @@
 // Two trees are identical when they have same data and the arrangement of data is also same.
 /*
-For two trees to be identical, they must follow these 3 conditions :
-1) Root node must be same.
-2) Check for left subtree.
-3) Check for right subtree.
+They must follow these 3 conditions :
+1) Root node must be same
+2) Check for left subtree
+3) Check for right subtree
 */
 
 package Questions;
@@ -78,7 +78,7 @@ class Identical
     }
 
 
-    /* Function to check if given BTs is identical or not */
+    /* Function to check if given BTs are identical or not */
     static boolean isIdentical(Node a, Node b)
     {
         //If both trees are empty
