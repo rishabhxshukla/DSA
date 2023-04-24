@@ -63,8 +63,11 @@ class LeftView2
 
         while (!q.isEmpty())
         {
+            //Number of nodes at current level
+            int n = q.size();
+
             //Traversing all nodes of current level
-            for (int i=0; i<q.size(); i++)
+            for (int i=0; i<n; i++)
             {
                 Node temp = q.remove();
                 //Printing the first element only

@@ -1,7 +1,7 @@
 package Questions;
 import java.util.*;
 
-class LeftView
+class LeftView1
 {
     static int maxlevel = 0;
     static Node root;
@@ -79,7 +79,7 @@ class LeftView
     public static void main(String args[])
     {
         //Creating object of the class
-        LeftView t = new LeftView();
+        LeftView1 t = new LeftView1();
 
         //Creating the BT
         t.create();
