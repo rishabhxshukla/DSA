@@ -37,12 +37,12 @@ class Symmetric
         Node seventh = new Node(3);
 
         root = first;
-        first.left = second;
-        first.right = third;
-        second.left = fourth;
+        first.left   = second;
+        first.right  = third;
+        second.left  = fourth;
         second.right = fifth;
-        third.left = sixth;
-        third.right = seventh;
+        third.left   = sixth;
+        third.right  = seventh;
 
         /* Created BT :
              1

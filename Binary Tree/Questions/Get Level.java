@@ -27,9 +27,9 @@ class GetLevel
         Node fifth  = new Node(5);
 
         root = first;
-        first.left = second;
-        first.right = third;
-        second.left = fourth;
+        first.left   = second;
+        first.right  = third;
+        second.left  = fourth;
         second.right = fifth;
     }
 

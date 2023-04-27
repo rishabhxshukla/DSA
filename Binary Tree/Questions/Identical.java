@@ -36,9 +36,9 @@ class Identical
         Node fifth  = new Node(5);
 
         root1 = first;
-        first.left = second;
-        first.right = third;
-        second.left = fourth;
+        first.left   = second;
+        first.right  = third;
+        second.left  = fourth;
         second.right = fifth;
     }
     void create2()
@@ -50,9 +50,9 @@ class Identical
         Node fifth  = new Node(5);
 
         root2 = first;
-        first.left = second;
-        first.right = third;
-        second.left = fourth;
+        first.left   = second;
+        first.right  = third;
+        second.left  = fourth;
         second.right = fifth;
     }
 
