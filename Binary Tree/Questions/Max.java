@@ -66,7 +66,7 @@ class Max
     {
         //Returning lowest integer value so that on comparing leaf node becomes the maximum of the two
         if (temp == null) {
-            return 0;
+            return Integer.MIN_VALUE;
         }
 
         //Max of each subtree
