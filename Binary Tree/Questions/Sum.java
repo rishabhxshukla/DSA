@@ -1,4 +1,4 @@
-// Size of BT = (Size of left subtree) + (Size of right subtree) + 1
+// Size of BT = (Sum of left subtree) + (Sum of right subtree) + (Current node)
 
 package Questions;
 import java.util.*;
