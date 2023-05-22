@@ -3,7 +3,7 @@
 package Questions;
 import java.util.*;
 
-class PrintCount
+class LeafPrint
 {
     static Node root;
     static class Node
@@ -82,7 +82,7 @@ class PrintCount
     public static void main(String args[])
     {
         //Creating object of the class
-        PrintCount t = new PrintCount();
+        LeafPrint t = new LeafPrint();
 
         //Creating the BT
         t.create();
