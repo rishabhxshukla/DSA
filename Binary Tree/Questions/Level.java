@@ -1,7 +1,7 @@
 package Questions;
 import java.util.*;
 
-class GetLevel
+class Level
 {
     static Node root;
     static class Node
@@ -60,7 +60,7 @@ class GetLevel
     {
         int down;
 
-        //Empty tree or leaf node
+        //Empty tree
         if (temp == null) {
             return -1;
         }
@@ -84,7 +84,7 @@ class GetLevel
     public static void main(String args[])
     {
         //Creating object of the class
-        GetLevel t = new GetLevel();
+        Level t = new Level();
         Scanner sc = new Scanner(System.in);
 
         //Creating the BT
@@ -97,6 +97,7 @@ class GetLevel
         System.out.print("\nEnter the node to find its level : ");
         int key = sc.nextInt();
 
+        //Printing level of BT
         System.out.println("Level : " + level(root, key, 0));
     }
 }
