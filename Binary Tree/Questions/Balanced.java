@@ -1,4 +1,9 @@
-// Balanced Tree = (Height of left subtree) - (Height of right subtree) <= 1
+/*
+For a tree to be balanced :
+1) Left subtree should be balanced
+2) Right subtree should be balanced
+3) (Height of left subtree) - (Height of right subtree) <= 1
+*/
 
 package Questions;
 import java.util.*;
@@ -86,17 +91,16 @@ class BalancedTree
         if (temp == null) {
             return true;
         }
-        else
-        {
-            boolean left  = isBalanced(temp.left);
-            boolean right = isBalanced(temp.right);
-            boolean diff  = (height(temp.left) - height(temp.right)) <=1;
 
-            if (left && right && diff)
-                return true;
-            else
-                return false;
-        }
+        boolean left  = isBalanced(temp.left);
+        boolean right = isBalanced(temp.right);
+        boolean diff  = (height(temp.left) - height(temp.right)) <= 1;
+
+        //If left & right subtrees are balanced + diff <= 1
+        if (left && right && diff)
+            return true;
+        else
+            return false;
     }
 
 
