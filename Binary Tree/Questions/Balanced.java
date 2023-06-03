@@ -62,23 +62,21 @@ class BalancedTree
 
 
     /* Function to find the height of BT */
-    static int heightOfBT(Node temp)
+    static int height(Node temp)
     {
         if (temp == null) {
             return 0;
         }
-        else
-        {
-            //Height of each subtree
-            int lheight = heightOfBT(temp.left);
-            int rheight = heightOfBT(temp.right);
 
-            //Using the larger one
-            if (lheight > rheight)
-                return (lheight + 1);
-            else
-                return (rheight + 1);
-        }
+        //Height of each subtree
+        int left = height(temp.left);
+        int right = height(temp.right);
+
+        //Using the larger one
+        if (left > right)
+            return (left + 1);
+        else
+            return (right + 1);
     }
 
 
@@ -92,7 +90,7 @@ class BalancedTree
         {
             boolean left  = isBalanced(temp.left);
             boolean right = isBalanced(temp.right);
-            boolean diff  = (heightOfBT(temp.left) - heightOfBT(temp.right)) <=1;
+            boolean diff  = (height(temp.left) - height(temp.right)) <=1;
 
             if (left && right && diff)
                 return true;
