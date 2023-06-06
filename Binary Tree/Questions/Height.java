@@ -74,10 +74,7 @@ class Height
         int right = height(temp.right);
 
         //Using the larger one
-        if (left > right)
-            return (left + 1);
-        else
-            return (right + 1);
+        return (Math.max(left, right) + 1);
     }
 
 
