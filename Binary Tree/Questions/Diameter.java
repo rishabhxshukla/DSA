@@ -70,11 +70,11 @@ class Diameter
         if (temp == null)
             return 0;
 
-        int left = diameter(temp.left);     //Ans in left subtree
-        int right = diameter(temp.right);   //Ans in right subtree
-        int height = height(temp.left) + height(temp.right) + 1;    //Ans including root
+        int left = diameter(temp.left);                           //Ans in left subtree
+        int right = diameter(temp.right);                         //Ans in right subtree
+        int both = height(temp.left) + height(temp.right) + 1;    //Ans including root
 
-        return Math.max(Math.max(left, right), height);
+        return Math.max(Math.max(left, right), both);
     }
     static int height(Node temp)
     {
