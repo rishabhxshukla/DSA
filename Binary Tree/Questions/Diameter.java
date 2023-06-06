@@ -85,10 +85,7 @@ class Diameter
         int left = height(temp.left);
         int right = height(temp.right);
 
-        if (left > right)
-            return (left + 1);
-        else
-            return (right + 1);
+        return (Math.max(left, right) + 1);
     }
     */
 
