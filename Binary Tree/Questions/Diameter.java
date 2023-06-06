@@ -70,9 +70,9 @@ class Diameter
         if (temp == null)
             return 0;
 
-        int left = diameter(temp.left);
-        int right = diameter(temp.right);
-        int height = height(temp.left) + height(temp.right) + 1;
+        int left = diameter(temp.left);     //Ans in left subtree
+        int right = diameter(temp.right);   //Ans in right subtree
+        int height = height(temp.left) + height(temp.right) + 1;    //Ans including root
 
         return Math.max(Math.max(left, right), height);
     }
