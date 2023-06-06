@@ -84,18 +84,18 @@ class DeleteNode
             return;
         }
 
-        Node temp = null, keyNode = null, parent = null;
+        Node temp = null, target = null, parent = null;
         Queue<Node> q = new LinkedList<>();
         q.add(root);
 
-        //Finding the last node (temp), node to be deleted (keyNode), parent of last node (parent)
+        //Finding the last node (temp), node to be deleted (target), parent of last node (parent)
         while (!q.isEmpty())
         {
             temp = q.remove();
 
             //Storing the key node
             if (temp.data == key) {
-                keyNode = temp;
+                target = temp;
             }
 
             //Enqueue left child + storing its parent
@@ -111,10 +111,10 @@ class DeleteNode
         }
 
         //If key node was found in the tree
-        if (keyNode != null)
+        if (target != null)
         {
             //Replacing key node data with last node data
-            keyNode.data = temp.data;
+            target.data = temp.data;
 
             //Deleting the last node :
             /*If the last node was 2nd child of its parent, set it to be null.
