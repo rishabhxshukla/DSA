@@ -46,7 +46,7 @@ class Insertion
 
         //Printing original array
         System.out.println("*** Original Array ***");
-        for (int i=0; i<arr.length; i++)
+        for (int i=0; i<size; i++)
         {
             System.out.print(arr[i] + " ");
         }
