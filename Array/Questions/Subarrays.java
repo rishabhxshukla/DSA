@@ -1,3 +1,8 @@
+/*
+Subarray is an array inside another array.
+For an array of size n, there are n*(n+1)/2 subarrays.
+*/
+
 package Questions;
 import java.io.*;
 
