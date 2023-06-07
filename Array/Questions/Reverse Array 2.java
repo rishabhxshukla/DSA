@@ -1,3 +1,5 @@
+// Reverse an array (using single pointer)
+
 package Questions;
 import java.io.*;
 
@@ -7,7 +9,7 @@ class ReverseArray2
     static int arr[] = new int[size];
 
 
-    /* Function to reverse an array using single pointer */
+    /* Function to reverse an array */
     void reverse()
     {
         int temp;

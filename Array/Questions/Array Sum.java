@@ -1,3 +1,5 @@
+// Sum of elements of the array
+
 package Questions;
 import java.io.*;
 
