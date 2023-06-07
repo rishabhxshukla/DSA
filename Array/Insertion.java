@@ -10,6 +10,11 @@ class Insertion
     /* Function to insert an element at a particular index */
     static int[] insert(int key, int pos)
     {
+        if (pos > size) {
+            System.out.println("ERROR : Index out of range!");
+            return arr;
+        }
+
         //Creating a new array
         int newarr[] = new int[size + 1];
 
