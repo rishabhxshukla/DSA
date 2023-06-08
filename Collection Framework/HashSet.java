@@ -1,3 +1,6 @@
+// HashSet is a collection of items where every item is unique.
+// This means that duplicate values are not allowed here.
+
 package CollectionFramework;
 import java.util.HashSet;
 
@@ -15,8 +18,8 @@ class Hash_Set
         hs.add("Messi");
 
 
-        /* Printing the Hash Set */
-        System.out.println("Printing the Hash Set :");
+        /* Printing the HashSet */
+        System.out.println("Printing the HashSet :");
         System.out.println(hs);
         System.out.println();
 
@@ -29,22 +32,22 @@ class Hash_Set
         System.out.println();
 
 
-        /* Remove a value from the Hash Set */
-        System.out.println("Removing an entry from the Hash Set :");
+        /* Remove a value from the HashSet */
+        System.out.println("Removing an entry from the HashSet :");
         hs.remove("Messi");
         System.out.println(hs);
         System.out.println();
 
 
-        /* Size of Hash Set */
-        System.out.println("Size of Hash Set :");
+        /* Size of HashSet */
+        System.out.println("Size of HashSet :");
         int size = hs.size();
         System.out.println(size);
         System.out.println();
 
 
-        /* Converting Hash Set to an Array */
-        System.out.println("Converting Hash Set to an Array :");
+        /* Converting HashSet to an Array */
+        System.out.println("Converting HashSet to an Array :");
         Object arr[] = hs.toArray();
         for (int i=0; i<arr.length; i++)
         {
@@ -53,8 +56,8 @@ class Hash_Set
         System.out.println("\n");
 
 
-        /* Deleting Hash Set */
-        System.out.println("Deleting Hash Set :");
+        /* Deleting HashSet */
+        System.out.println("Deleting HashSet :");
         hs.clear();
         System.out.println(hs);
     }
