@@ -34,6 +34,7 @@ class Once
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Once obj = new Once();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

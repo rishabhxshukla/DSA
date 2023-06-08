@@ -32,6 +32,7 @@ class Subarrays
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Subarrays obj = new Subarrays();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
