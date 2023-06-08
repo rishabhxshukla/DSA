@@ -1,5 +1,6 @@
 // HashMap allows us to store data in key-value pair, where every key is unique.
 // This means that keys cannot be duplicate, however values can be duplicate.
+// Roll number - Student's Name
 
 package CollectionFramework;
 import java.util.HashMap;
