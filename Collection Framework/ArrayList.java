@@ -1,3 +1,5 @@
+// ArrayList provides us with resizable arrays.
+
 package CollectionFramework;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +16,8 @@ class Array_List
         al.add(30);
 
 
-        /* Printing the Array List */
-        System.out.println("Printing the Array List :");
+        /* Printing the ArrayList */
+        System.out.println("Printing the ArrayList :");
         System.out.println(al);
         System.out.println();
 
@@ -48,8 +50,8 @@ class Array_List
         System.out.println();
 
 
-        /* Checking if Array List contains a particular element */
-        System.out.println("Checking if Array List contains 99 :");
+        /* Checking if ArrayList contains a particular element */
+        System.out.println("Checking if ArrayList contains 99 :");
         boolean ans = al.contains(99);
         System.out.println(ans);
         System.out.println();
@@ -62,15 +64,15 @@ class Array_List
         System.out.println();
 
 
-        /* Size of Array List */
-        System.out.println("Size of Array List :");
+        /* Size of ArrayList */
+        System.out.println("Size of ArrayList :");
         int size = al.size();
         System.out.println(size);
         System.out.println();
 
 
-        /* Iterating over the Array List */
-        System.out.println("Iterating over the Array List :");
+        /* Iterating over the ArrayList */
+        System.out.println("Iterating over the ArrayList :");
         for (int i=0; i<al.size(); i++)
         {
             System.out.print(al.get(i) + " ");
@@ -78,15 +80,15 @@ class Array_List
         System.out.println("\n");
 
 
-        /* Sorting the Array List using Collections class */
-        System.out.println("Sorting the Array List :");
+        /* Sorting the ArrayList using Collections class */
+        System.out.println("Sorting the ArrayList :");
         Collections.sort(al);
         System.out.println(al);
         System.out.println();
 
 
-        /* Deleting full Array List */
-        System.out.println("Deleting full Array List :");
+        /* Deleting full ArrayList */
+        System.out.println("Deleting full ArrayList :");
         al.clear();
         System.out.println(al);
     }
