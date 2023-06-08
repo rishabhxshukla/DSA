@@ -1,3 +1,6 @@
+// HashMap allows us to store data in key-value pair, where every key is unique.
+// This means that keys cannot be duplicate, however values can be duplicate.
+
 package CollectionFramework;
 import java.util.HashMap;
 
@@ -15,8 +18,8 @@ class Hash_Map
         hm.put("Messi", 12011010);
 
 
-        /* Printing the Hash Map */
-        System.out.println("Printing the Hash Map :");
+        /* Printing the HashMap */
+        System.out.println("Printing the HashMap :");
         System.out.println(hm);
         System.out.println();
 
@@ -65,15 +68,15 @@ class Hash_Map
         System.out.println();
 
 
-        /* Remove a kay-value pair from the Hash Map */
-        System.out.println("Removing an entry from the Hash Map :");
+        /* Remove a kay-value pair from the HashMap */
+        System.out.println("Removing an entry from the HashMap :");
         hm.remove("Anuj");
         System.out.println(hm);
         System.out.println();
 
 
-        /* Size of Hash Map */
-        System.out.println("Size of Hash Map :");
+        /* Size of HashMap */
+        System.out.println("Size of HashMap :");
         int size = hm.size();
         System.out.println(size);
         System.out.println();
@@ -91,8 +94,8 @@ class Hash_Map
         System.out.println();
 
 
-        /* Deleting full Hash Map */
-        System.out.println("Deleting full Hash Map :");
+        /* Deleting HashMap */
+        System.out.println("Deleting HashMap :");
         hm.clear();
         System.out.println(hm);
     }
