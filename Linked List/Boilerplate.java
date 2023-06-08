@@ -1,4 +1,4 @@
-package Linked_List;
+package Questions;
 import java.io.*;
 
 class Basic_Setup
