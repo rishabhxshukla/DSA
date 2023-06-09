@@ -1,9 +1,11 @@
 /*
 Opening parenthesis => Push in stack
 Closing parenthesis => Compare with top of the stack
-If pair matches, pop out the opening parenthesis from the stack
-Parenthesis are balanced if stack is empty otherwise not
- */
+If pair matches, pop out the opening parenthesis from the stack.
+Parenthesis are balanced if stack is empty otherwise not.
+
+//NOTE : The order of opening and closing parenthesis should be same.
+*/
 
 package Questions;
 import java.io.*;
