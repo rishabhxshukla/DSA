@@ -3,6 +3,7 @@ import java.io.*;
 
 class Fibonacci
 {
+    /* Function to find the fibonacci of n */
     static int fibonacci(int n)
     {
         if (n == 0)
@@ -19,9 +20,11 @@ class Fibonacci
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the value of N : ");
         int n = Integer.parseInt(b.readLine());
 
+        //Printing the fibonacci
         System.out.println("Fibonacci : " + fibonacci(n));
     }
 }

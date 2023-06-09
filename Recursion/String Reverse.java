@@ -3,7 +3,10 @@ import java.io.*;
 
 class StringReverse
 {
+    //Variable to store the reversed string
     static String newstr = "";
+
+    /* Function to reverse a string */
     static String reverse(String str)
     {
         //Calculates last index of the string each time
@@ -13,9 +16,8 @@ class StringReverse
             newstr =  newstr + str;
         else
         {
-            //Storing the last character
-            char ch = str.charAt(last);
-            newstr = newstr + ch;
+            //Adding last character to newstr
+            newstr = newstr + str.charAt(last);
             //Sending back string after removing the last character
             reverse(str.substring(0, last));
         }
@@ -29,9 +31,11 @@ class StringReverse
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the string : ");
         String str = b.readLine();
 
+        //Printing the reversed string
         System.out.print("Reversed string : " + reverse(str));
     }
 }

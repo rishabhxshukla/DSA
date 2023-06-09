@@ -3,6 +3,7 @@ import java.io.*;
 
 class Number_to_String
 {
+    /* Function to print a number in string format */
     void sayDigit(int n, String arr[])
     {
         if (n == 0)
@@ -19,6 +20,7 @@ class Number_to_String
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Number_to_String obj = new Number_to_String();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
@@ -26,9 +28,11 @@ class Number_to_String
         //Array to store all the string names based on their index values
         String arr[] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
+        //Taking user input
         System.out.print("Enter the number : ");
         int n = Integer.parseInt(b.readLine());
 
+        //Printing the number in string format
         System.out.print("String format : ");
         obj.sayDigit(n, arr);
     }
