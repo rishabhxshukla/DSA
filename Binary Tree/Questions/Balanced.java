@@ -5,7 +5,7 @@ For a tree to be balanced :
 3) (Height of left subtree) - (Height of right subtree) <= 1
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class BalancedTree

@@ -1,6 +1,6 @@
 // Size of BT = (Size of left subtree) + (Size of right subtree) + 1
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Size

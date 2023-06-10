@@ -1,6 +1,6 @@
 // POSTORDER : (ab+) : Left --> Right --> Root
 
-package Traversals;
+package BinaryTree.Traversals;
 import java.io.*;
 
 class Postorder

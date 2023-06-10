@@ -1,6 +1,6 @@
 // Count the number of internal nodes
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class InternalCount

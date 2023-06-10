@@ -7,7 +7,7 @@ Delete a node from a BT :
 Example : Key node = 6, Parent = 3, Last node = 7
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.io.*;
 import java.util.*;
 

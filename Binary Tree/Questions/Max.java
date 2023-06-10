@@ -1,6 +1,6 @@
 // Maximum node of BT = Compare (Max of left subtree), (Max of right subtree), (Current node)
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Max

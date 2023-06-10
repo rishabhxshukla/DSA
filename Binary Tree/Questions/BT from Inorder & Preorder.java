@@ -12,8 +12,7 @@ Inorder  : 4 2 5 1 6 3 7
 5) Follow steps 3 & 4 for right subtree as well.
 */
 
-package Questions;
-import java.util.*;
+package BinaryTree.Questions;
 
 class BTfromInorderPreorder
 {

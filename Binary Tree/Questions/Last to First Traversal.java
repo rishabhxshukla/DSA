@@ -3,7 +3,7 @@
 2. Remove elements from the stack one-by-one and print them.
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Last_to_First_Traversal

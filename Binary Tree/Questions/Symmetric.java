@@ -6,7 +6,7 @@ They must follow these 3 conditions :
 3) right subtree of left tree and left subtree of right tree have to be mirror images
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Symmetric

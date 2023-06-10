@@ -6,7 +6,7 @@ They must follow these 3 conditions :
 3) Check for right subtree
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Identical

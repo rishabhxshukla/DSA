@@ -1,6 +1,6 @@
 // Diameter = No. of nodes on the longest path between two end nodes
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Diameter

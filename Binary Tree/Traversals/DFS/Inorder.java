@@ -1,6 +1,6 @@
 // INORDER : (a + b) : Left --> Root --> Right
 
-package Traversals;
+package BinaryTree.Traversals;
 import java.io.*;
 
 class Inorder

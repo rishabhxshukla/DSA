@@ -1,6 +1,6 @@
 // Children Sum property : Root node = Left child + Right child
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class ChildrenSum

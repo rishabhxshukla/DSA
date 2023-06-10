@@ -1,6 +1,6 @@
 // Mirror of Binary Tree = Left and Right child of all non-leaf nodes interchanged
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Mirror1

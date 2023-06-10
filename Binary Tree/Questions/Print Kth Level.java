@@ -1,6 +1,6 @@
 // Printing nodes at a given level of a BT
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class PrintKth

@@ -5,7 +5,7 @@ Assuming root to be at level 0,
 2) All the nodes on odd levels have odd values.
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class EvenOddTree

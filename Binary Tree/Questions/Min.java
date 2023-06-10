@@ -1,6 +1,6 @@
 // Minimum node of BT = Compare (Min of left subtree), (Min of right subtree), (Current node)
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Min

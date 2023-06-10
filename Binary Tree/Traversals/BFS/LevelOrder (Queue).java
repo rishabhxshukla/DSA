@@ -1,7 +1,7 @@
 // LevelOrder : Level wise tree nodes
 // Follow the RPA method : Remove -> Print -> Add child
 
-package Traversals;
+package BinaryTree.Traversals;
 import java.util.*;
 
 class LevelOrder_Queue

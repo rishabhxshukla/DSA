@@ -1,7 +1,7 @@
 // Print all the paths from leaf to root node
 // Use Preorder traversal + Stack Reverse
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Leaf_to_Root

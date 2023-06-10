@@ -1,6 +1,6 @@
 // Print the internal nodes of a BT
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class InternalPrint

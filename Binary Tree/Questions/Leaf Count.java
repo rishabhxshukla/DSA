@@ -1,6 +1,6 @@
 // Count the number of leaf nodes
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class LeafCount

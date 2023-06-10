@@ -1,6 +1,6 @@
 // Size of BT = (Sum of left subtree) + (Sum of right subtree) + (Current node)
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Sum

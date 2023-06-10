@@ -4,7 +4,7 @@ For 2 nodes to be cousins :
 2) Both should be on the same level.
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.io.*;
 import java.util.*;
 

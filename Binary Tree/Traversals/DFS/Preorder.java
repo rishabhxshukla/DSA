@@ -1,6 +1,6 @@
 // PREORDER : (+ab) : Root --> Left --> Right
 
-package Traversals;
+package BinaryTree.Traversals;
 import java.io.*;
 
 class Preorder

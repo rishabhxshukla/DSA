@@ -1,6 +1,6 @@
 // For 2 nodes to be siblings, their parent node must be same.
 
-package Questions;
+package BinaryTree.Questions;
 import java.io.*;
 import java.util.*;
 

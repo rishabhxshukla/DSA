@@ -5,7 +5,7 @@
 3. Print the stack elements, and we have our answer.
 */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class ReverseLoT

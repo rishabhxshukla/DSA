@@ -1,6 +1,6 @@
 // LevelOrder : level wise tree nodes
 
-package Traversals;
+package BinaryTree.Traversals;
 
 class LevelOrder_Recursion
 {

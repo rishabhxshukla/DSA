@@ -1,7 +1,7 @@
 /* Height of BT is the number of nodes along the longest path
 from the root node down to the farthest leaf node. */
 
-package Questions;
+package BinaryTree.Questions;
 import java.util.*;
 
 class Height
