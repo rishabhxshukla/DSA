@@ -39,6 +39,7 @@ class Subarray_with_Sum
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Subarray_with_Sum obj = new Subarray_with_Sum();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
@@ -57,6 +58,7 @@ class Subarray_with_Sum
             System.out.print(arr[i] + " ");
         }
 
+        //Taking user input
         System.out.print("\nEnter the sum : ");
         int target = Integer.parseInt(b.readLine());
 

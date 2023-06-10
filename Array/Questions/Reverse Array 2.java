@@ -26,6 +26,7 @@ class ReverseArray2
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         ReverseArray2 obj = new ReverseArray2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

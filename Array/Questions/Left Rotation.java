@@ -29,6 +29,7 @@ class LeftRotation
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         LeftRotation obj = new LeftRotation();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
