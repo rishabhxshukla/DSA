@@ -1,6 +1,6 @@
 // Left rotation shifts each of the array elements to the left by 1 unit.
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class LeftRotation

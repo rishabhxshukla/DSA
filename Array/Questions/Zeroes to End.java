@@ -1,6 +1,6 @@
 // Move all zeroes to the end of the array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Zeroes_to_End

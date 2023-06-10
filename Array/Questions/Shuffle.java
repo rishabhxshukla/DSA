@@ -3,7 +3,7 @@ Given an array consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn]
 Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 */
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Shuffle

@@ -1,4 +1,4 @@
-// Frequency or no. of occurrences of an element in the array
+// Frequency or number of occurrences of an element in the array
 
 package Array.Questions;
 import java.io.*;

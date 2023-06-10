@@ -1,6 +1,6 @@
 // Reverse an array (using two pointers)
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class ReverseArray3

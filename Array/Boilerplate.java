@@ -1,6 +1,6 @@
 // ...
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Boilerplate
@@ -9,7 +9,7 @@ class Boilerplate
     static int arr[] = new int[size];
 
 
-    /* Function to find the ... */
+    /* Function to ... */
     //
 
 

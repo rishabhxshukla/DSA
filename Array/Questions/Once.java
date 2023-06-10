@@ -1,6 +1,6 @@
 // In an array, all numbers occur twice (or more) except one number which occurs only once.
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Once

@@ -1,6 +1,6 @@
 // Reverse an array (using new array)
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class ReverseArray1

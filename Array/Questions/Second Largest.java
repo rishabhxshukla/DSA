@@ -1,6 +1,6 @@
 // 2nd Largest element of the array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class SecondLargest

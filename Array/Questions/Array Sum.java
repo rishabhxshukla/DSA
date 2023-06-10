@@ -1,6 +1,6 @@
 // Sum of elements of the array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class ArraySum

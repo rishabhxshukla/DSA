@@ -1,7 +1,7 @@
 // Missing number in an array of consecutive elements
 // Gauss summation formula : (n * (n + 1)) / 2
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class MissingNumber

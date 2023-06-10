@@ -1,6 +1,6 @@
 // Subarray with a given sum in an array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Subarray_with_Sum

@@ -1,6 +1,6 @@
 // Smallest element of the array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Smallest

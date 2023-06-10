@@ -1,6 +1,6 @@
 // Segregate 0s on left side and 1s on right side of the array
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class Segregate1

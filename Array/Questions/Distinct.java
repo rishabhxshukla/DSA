@@ -1,6 +1,6 @@
 // Distinct elements of the array containing mixed values
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 import java.util.HashMap;
 

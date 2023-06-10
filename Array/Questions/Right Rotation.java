@@ -1,6 +1,6 @@
 // Right rotation shifts each of the array elements to the right by 1 unit.
 
-package Questions;
+package Array.Questions;
 import java.io.*;
 
 class RightRotation
