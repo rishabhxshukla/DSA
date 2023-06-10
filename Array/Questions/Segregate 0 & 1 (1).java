@@ -3,7 +3,7 @@
 package Questions;
 import java.io.*;
 
-class Segregate01
+class Segregate1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -39,7 +39,7 @@ class Segregate01
 
     public static void main(String args[]) throws IOException
     {
-        Segregate01 obj = new Segregate01();
+        Segregate1 obj = new Segregate1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
