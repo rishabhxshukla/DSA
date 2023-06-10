@@ -7,7 +7,7 @@ Parenthesis are balanced if stack is empty otherwise not.
 //NOTE : The order of opening and closing parenthesis should be same.
 */
 
-package Questions;
+package Stack.Questions;
 import java.io.*;
 
 class Parenthesis_Matching

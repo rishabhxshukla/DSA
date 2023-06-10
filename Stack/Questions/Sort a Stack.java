@@ -7,9 +7,9 @@
    Otherwise, if the element is smaller, we push it into the tempStack.
 4. The input stack will be empty by the end of the outer loop, and the sorted elements are present in
    the temporary stack. So we return the tempStack as an output.
- */
+*/
 
-package Questions;
+package Stack.Questions;
 import java.io.*;
 
 class StackSort

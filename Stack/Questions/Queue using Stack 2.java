@@ -1,5 +1,6 @@
-/* Implementing queue using 2 stacks with Dequeue operation being the costlier one */
-package Questions;
+// Implementing queue using 2 stacks with Dequeue operation being the costlier one
+
+package Stack.Questions;
 import java.io.*;
 import java.util.Stack;
 

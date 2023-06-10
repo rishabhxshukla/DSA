@@ -1,6 +1,4 @@
 /*
-*** Simple Method ***
-
 A simple way to implement two stacks is to divide the array in two halves, i.e., use arr[0] to arr[n/2]
 for stack1, and arr[(n/2) + 1] to arr[n-1] for stack2
 where arr[] is the array of size n which is to be used to implement the two stacks.
@@ -9,9 +7,9 @@ The problem with this method is inefficient use of array space. A stack push ope
 stack overflow even if there is space available in arr[]. For example, say the array size is 6 and we
 push 3 elements to stack1 and do not push anything to second stack2. When we push 4th element to stack1,
 there will be overflow even if we have space for 3 more elements in array.
- */
+*/
 
-package Questions;
+package Stack.Questions;
 import java.io.*;
 
 class TwoStacks

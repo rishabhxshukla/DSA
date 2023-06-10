@@ -1,4 +1,4 @@
-package Questions;
+package Stack.Questions;
 import java.io.*;
 
 class InfixToPostfix
