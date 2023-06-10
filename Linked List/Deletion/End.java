@@ -1,4 +1,4 @@
-package Deletion;
+package LinkedList.Deletion;
 
 class End
 {

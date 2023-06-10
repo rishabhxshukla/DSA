@@ -7,7 +7,7 @@
    Update prev and temp variables : prev = temp, temp = next
 */
 
-package Questions;
+package LinkedList.Questions;
 import java.io.*;
 
 class Reverse

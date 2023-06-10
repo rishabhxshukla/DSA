@@ -1,4 +1,4 @@
-package Deletion;
+package LinkedList.Deletion;
 import java.util.Scanner;
 
 class AllBeforeKey

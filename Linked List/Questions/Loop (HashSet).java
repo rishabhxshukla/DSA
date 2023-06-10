@@ -1,4 +1,4 @@
-package Questions;
+package LinkedList.Questions;
 
 /* Floyd’s Cycle-Finding Algorithm Method */
 

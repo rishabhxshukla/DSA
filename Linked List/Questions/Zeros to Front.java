@@ -1,4 +1,4 @@
-package Questions;
+package LinkedList.Questions;
 import java.io.*;
 
 class Zeros_to_Front

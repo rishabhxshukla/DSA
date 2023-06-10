@@ -1,4 +1,4 @@
-package Questions;
+package LinkedList.Questions;
 import java.io.*;
 
 class Length_of_LL

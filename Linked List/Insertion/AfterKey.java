@@ -1,4 +1,4 @@
-package Insertion;
+package LinkedList.Insertion;
 import java.util.Scanner;
 
 class AfterKey

@@ -1,6 +1,6 @@
-package Questions;
+// Floyd’s Cycle Detection Algorithm Method
 
-                /* Floyd’s Cycle Detection Algorithm Method */
+package LinkedList.Questions;
 
 class Detect_Loop_Floyd
 {
@@ -48,7 +48,7 @@ class Detect_Loop_Floyd
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Questions.Loop_Remove ll = new Questions.Loop_Remove();
+        Detect_Loop_Floyd ll = new Detect_Loop_Floyd();
 
         /* Assigning the Nodes */
         head = new Node(10);

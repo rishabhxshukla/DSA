@@ -1,7 +1,7 @@
-package Questions;
+package LinkedList.Questions;
 import java.io.*;
 
-class Basic_Setup
+class Boilerplate
 {
     static Node head;
     static class Node
@@ -41,7 +41,7 @@ class Basic_Setup
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Basic_Setup ll = new Basic_Setup();
+        Boilerplate ll = new Boilerplate();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

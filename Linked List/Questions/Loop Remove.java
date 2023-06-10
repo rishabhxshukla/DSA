@@ -1,6 +1,6 @@
-package Questions;
+// Floyd’s Cycle Detection Algorithm Method
 
-/* Floyd’s Cycle Detection Algorithm Method */
+package LinkedList.Questions;
 
 class Loop_Remove
 {

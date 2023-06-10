@@ -1,4 +1,4 @@
-package Linked_List;
+package LinkedList.Questions;
 import java.io.*;
 
 class Delete_Without_Head
