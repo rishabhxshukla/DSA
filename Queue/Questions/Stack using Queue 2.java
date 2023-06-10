@@ -1,5 +1,6 @@
-/* Implementing stack using 2 queues with Pop operation being the costlier one */
-package Questions;
+// Implementing stack using 2 queues with Pop operation being the costlier one
+
+package Queue.Questions;
 import java.io.*;
 import java.util.Queue;
 import java.util.LinkedList;

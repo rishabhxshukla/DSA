@@ -3,8 +3,9 @@ STEPS :
 1. Pop first K elements from queue and put them into a stack
 2. Pop elements from stack and push them back into the queue
 3. Fetch first (n-k) elements from the queue and place them at the end of queue
- */
-package Questions;
+*/
+
+package Queue.Questions;
 import java.io.*;
 import java.util.Stack;
 

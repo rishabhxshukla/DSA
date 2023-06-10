@@ -1,4 +1,4 @@
-package Questions;
+package Queue.Questions;
 import java.io.*;
 import java.util.Stack;
 

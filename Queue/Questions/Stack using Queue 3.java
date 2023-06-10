@@ -1,5 +1,6 @@
-/* Implementing stack using a single queue only */
-package Questions;
+// Implementing stack using a single queue only
+
+package Queue.Questions;
 import java.io.*;
 import java.util.Queue;
 import java.util.LinkedList;
