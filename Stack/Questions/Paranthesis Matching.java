@@ -88,12 +88,15 @@ class Parenthesis_Matching
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the string with input parenthesis : ");
         String str = b.readLine();
 
+        //Printing the output
         System.out.println("Balanced Parenthesis output : " + isBalanced(str));
     }
 }

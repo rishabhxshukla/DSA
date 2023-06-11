@@ -67,10 +67,12 @@ class StackReverse
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         StackReverse s = new StackReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -78,12 +80,15 @@ class StackReverse
             s.push(d);
         }
 
+        //Printing original stack
         System.out.println("*** Original Stack ***");
         s.printStk();
 
+        //Reversing the stack
         System.out.println("\nReversing the stack...");
         s.reverse(s);
 
+        //Printing new stack
         System.out.println("*** New Stack ***");
         s.printStk();
     }

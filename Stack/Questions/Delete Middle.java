@@ -101,10 +101,12 @@ class DeleteMiddle
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         DeleteMiddle s = new DeleteMiddle();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -112,12 +114,15 @@ class DeleteMiddle
             s.push(d);
         }
 
+        //Printing original stack
         System.out.println("*** Original Stack ***");
         s.printStk();
 
+        //Deleting middle element
         System.out.println("\nDeleting middle element...");
         s.deleteMiddle();
 
+        //Printing new stack
         System.out.println("*** New Stack ***");
         s.printStk();
     }

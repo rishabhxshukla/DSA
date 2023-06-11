@@ -143,13 +143,16 @@ class InfixToPostfix
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         InfixToPostfix s = new InfixToPostfix();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the Infix expression : ");
         String str = b.readLine();
 
+        //Printing the postfix expression
         System.out.println("Postfix expression = " + Convert(str));
     }
 }

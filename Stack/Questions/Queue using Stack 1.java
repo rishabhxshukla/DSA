@@ -40,10 +40,12 @@ class QueueUsingStack1
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         QueueUsingStack1 q = new QueueUsingStack1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the data : ");
@@ -51,7 +53,7 @@ class QueueUsingStack1
             q.enqueue(d);
         }
 
-        //Original Queue
+        //Printing original queue
         System.out.println("*** Original Queue ***");
         System.out.print(s1);
 
@@ -59,7 +61,7 @@ class QueueUsingStack1
         System.out.println("\nRemoving " +q.dequeue()+ " from the queue...");
         System.out.println("Removing " +q.dequeue()+ " from the queue...");
 
-        //New Queue
+        //Printing new queue
         System.out.println("*** New Queue ***");
         System.out.print(s1);
     }

@@ -77,14 +77,17 @@ class NumberReverse
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         NumberReverse s = new NumberReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the number : ");
         int num = Integer.parseInt(b.readLine());
 
-        System.out.print("Reverse of the number = ");
+        //Printing the reversed number
+        System.out.print("Reverse of the number : ");
         s.reverse(num);
     }
 }

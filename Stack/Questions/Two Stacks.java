@@ -95,6 +95,7 @@ class TwoStacks
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         TwoStacks s = new TwoStacks();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

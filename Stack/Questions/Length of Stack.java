@@ -42,10 +42,12 @@ class StackLength
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         StackLength s = new StackLength();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -53,8 +55,11 @@ class StackLength
             s.push(d);
         }
 
+        //Printing the stack
         System.out.println("Created Stack :");
         s.printStk();
+
+        //Printing the length of stack
         System.out.println("\nLength of stack is : " + lengthOfStack());
     }
 }

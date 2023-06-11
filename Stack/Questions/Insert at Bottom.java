@@ -69,10 +69,12 @@ class InsertBottom
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         InsertBottom s = new InsertBottom();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<MAX-1; i++)
         {
             System.out.print("Enter the data : ");
@@ -80,13 +82,16 @@ class InsertBottom
             s.push(d);
         }
 
+        //Printing original stack
         System.out.println("*** Original Stack ***");
         s.printStk();
 
+        //Taking user input
         System.out.print("\nEnter the element that you want to insert : ");
         int d = Integer.parseInt(b.readLine());
         s.insertAtBottom(s, d);
 
+        //Printing new stack
         System.out.println("*** New Stack ***");
         s.printStk();
     }

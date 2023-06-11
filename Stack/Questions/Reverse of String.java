@@ -30,21 +30,27 @@ class StringReverse
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         StringReverse s = new StringReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("Enter the string : ");
         String str = b.readLine();
 
+        //Reversing the string
         for (int i=0; i<str.length(); i++)
         {
             char ch = str.charAt(i);
             s.push(ch);
         }
 
+        //Printing original stack
         System.out.println("*** Original String ***");
         System.out.println(str);
+
+        //Printing new stack
         System.out.println("*** New String ***");
         s.printStk();
     }

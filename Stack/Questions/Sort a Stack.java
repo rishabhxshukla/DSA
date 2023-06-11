@@ -91,11 +91,13 @@ class StackSort
 
     public static void main(String args[]) throws IOException
     {
+        //Creating objects of the class
         StackSort stack = new StackSort();
         StackSort tempStack = new StackSort();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -103,12 +105,15 @@ class StackSort
             stack.push(d);
         }
 
+        //Printing original stack
         System.out.println("*** Original Stack ***");
         stack.printStk();
 
+        //Sorting the stack
         System.out.println("\nSorting the Stack...");
         stack.sort(stack, tempStack);
 
+        //Printing new stack
         System.out.println("*** New Stack ***");
         tempStack.printStk();
     }
