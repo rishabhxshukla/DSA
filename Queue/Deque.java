@@ -8,14 +8,14 @@ class Deque_Implementation
     {
         Deque<Integer> dq = new LinkedList<>();
 
-        //Adding elements :
+        //Adding elements
         dq.add(1);
         dq.addFirst(2);
         dq.addLast(3);
         System.out.print("add, addFirst, addlast : ");
         System.out.println(dq);
 
-        /* Clearing previous elements */
+        // Clearing previous elements
         while (!dq.isEmpty())
             dq.remove();
 
@@ -26,12 +26,12 @@ class Deque_Implementation
         System.out.println(dq);
 
 
-        //Removing elements :
+        //Removing elements
         /*
-        System.out.print("remove : ");
-        dq.remove();
-        System.out.println(dq);
-         */
+          System.out.print("remove : ");
+          dq.remove();
+          System.out.println(dq);
+        */
         System.out.print("removeFirst : ");
         dq.removeFirst();
         System.out.println(dq);
@@ -40,11 +40,11 @@ class Deque_Implementation
         System.out.println(dq);
 
 
-        //Contains :
+        //Contains
         System.out.println("Contains : " + dq.contains(1));
-        //isEmpty :
+        //isEmpty
         System.out.println("isEmpty : " + dq.isEmpty());
-        //Size :
+        //Size
         System.out.println("Size : " + dq.size());
     }
 }

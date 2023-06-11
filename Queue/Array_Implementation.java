@@ -73,10 +73,12 @@ class Array_Implementation
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Array_Implementation q = new Array_Implementation();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the queue
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -84,7 +86,7 @@ class Array_Implementation
             q.enqueue(d);
         }
 
-        //Original Queue
+        //Printing original queue
         System.out.println("*** Original Queue ***");
         q.printQue();
 
@@ -94,7 +96,7 @@ class Array_Implementation
         System.out.println("Removing " +q.peek()+ " from the queue...");
         q.dequeue();
 
-        //New Queue
+        //Printing new queue
         System.out.println("*** New Queue ***");
         q.printQue();
     }

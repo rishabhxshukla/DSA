@@ -77,10 +77,12 @@ class LL_Implementation
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         LL_Implementation q = new LL_Implementation();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the queue
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the data : ");
@@ -88,7 +90,7 @@ class LL_Implementation
             q.enqueue(d);
         }
 
-        //Original Queue
+        //Printing original queue
         System.out.println("*** Original Queue ***");
         q.printQue();
 
@@ -98,7 +100,7 @@ class LL_Implementation
         System.out.println("Removing " +q.peek()+ " from the queue...");
         q.dequeue();
 
-        //New Queue
+        //Printing new queue
         System.out.println("*** New Queue ***");
         q.printQue();
     }
