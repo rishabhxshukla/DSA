@@ -86,10 +86,12 @@ class LL_Implementation
 
     public static void main(String[] args) throws IOException
     {
+        //Creating object of the class
         LL_Implementation s = new LL_Implementation();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the stack
         for (int i=0; i<6; i++)
         {
             System.out.print("Enter the data : ");
@@ -97,7 +99,7 @@ class LL_Implementation
             s.push(d);
         }
 
-        //Original Stack
+        //Printing original stack
         System.out.println("*** Original Stack ***");
         s.printStk();
 
@@ -109,7 +111,7 @@ class LL_Implementation
         System.out.println("Removing " +s.peek()+ " from stack..");
         s.pop();
 
-        //New Stack
+        //Printing new stack
         System.out.println("\n*** New Stack ***");
         s.printStk();
     }
