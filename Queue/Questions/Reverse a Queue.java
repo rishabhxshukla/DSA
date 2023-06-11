@@ -76,10 +76,12 @@ class QueueReverse
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         QueueReverse q = new QueueReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the queue
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -87,12 +89,15 @@ class QueueReverse
             q.enqueue(d);
         }
 
+        //Printing original queue
         System.out.println("*** Original Queue ***");
         q.printQue();
 
+        //Reversing the queue
         System.out.println("\nReversing the queue...");
         q.reverse(q);
 
+        //Printing new queue
         System.out.println("*** New Queue ***");
         q.printQue();
     }

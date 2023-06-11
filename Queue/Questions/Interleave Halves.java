@@ -80,11 +80,12 @@ class InterleaveHalves
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         InterleaveHalves q = new InterleaveHalves();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
-        //Inserting the elements
+        //Creating the queue
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");

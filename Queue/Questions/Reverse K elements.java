@@ -85,11 +85,12 @@ class ReverseFirstK
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         ReverseFirstK q = new ReverseFirstK();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
-        //Inserting the elements
+        //Creating the queue
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -97,7 +98,7 @@ class ReverseFirstK
             q.enqueue(d);
         }
 
-        //Taking input for 'k'
+        //Taking user input
         System.out.print("How many elements do you want to reverse? : ");
         int k = Integer.parseInt(b.readLine());
         if (k < 0 || k > MAX)

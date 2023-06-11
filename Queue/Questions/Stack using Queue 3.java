@@ -45,10 +45,12 @@ class StackUsingQueue3
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         StackUsingQueue3 s = new StackUsingQueue3();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the queue
         for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
@@ -56,7 +58,7 @@ class StackUsingQueue3
             s.push(d);
         }
 
-        //Original Stack
+        //Printing original queue
         System.out.println("*** Original Stack ***");
         System.out.print(q);
 
@@ -64,7 +66,7 @@ class StackUsingQueue3
         System.out.println("\nRemoving " +s.pop()+ " from the stack...");
         System.out.println("Removing " +s.pop()+ " from the stack...");
 
-        //New Stack
+        //Printing new queue
         System.out.println("*** New Stack ***");
         System.out.print(q);
     }
