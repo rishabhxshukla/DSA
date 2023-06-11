@@ -1,4 +1,4 @@
-// Target sum problem
+// Target sum problem using nested for loops
 
 package Array.Questions;
 import java.io.*;
