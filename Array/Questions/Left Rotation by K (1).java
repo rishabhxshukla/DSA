@@ -3,7 +3,7 @@
 package Array.Questions;
 import java.io.*;
 
-class LeftRotation_by_K
+class LeftRotation_by_K1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -36,7 +36,7 @@ class LeftRotation_by_K
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        LeftRotation_by_K obj = new LeftRotation_by_K();
+        LeftRotation_by_K1 obj = new LeftRotation_by_K1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
