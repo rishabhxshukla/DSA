@@ -1,9 +1,11 @@
+// Program to print a number in string format
+
 package Recursion;
 import java.io.*;
 
 class Number_to_String
 {
-    /* Function to print a number in string format */
+    /* Function to say the digits */
     void sayDigit(int n, String arr[])
     {
         if (n == 0)

@@ -1,9 +1,11 @@
+// Program to find the number(n) raised to the power(p)
+
 package Recursion;
 import java.io.*;
 
 class Power
 {
-    /* Function to find the number(n) raised to the power(p) */
+    /* Function to find the power */
     static int power(int n, int p)
     {
         if (p == 0)

@@ -1,9 +1,11 @@
+// Program to count numbers from 1 to n
+
 package Recursion;
 import java.io.*;
 
 class Counting
 {
-    /* Function to count numbers from 1 to n */
+    /* Function to count numbers */
     void counting(int n)
     {
         if (n == 0)

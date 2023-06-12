@@ -1,9 +1,11 @@
+// Program to find the fibonacci of n
+
 package Recursion;
 import java.io.*;
 
 class Fibonacci
 {
-    /* Function to find the fibonacci of n */
+    /* Function to find the fibonacci */
     static int fibonacci(int n)
     {
         if (n == 0)

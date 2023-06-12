@@ -1,9 +1,11 @@
+// Program to find the factorial of n
+
 package Recursion;
 import java.io.*;
 
 class Factorial
 {
-    /* Function to find the factorial of n */
+    /* Function to find the factorial */
     static int factorial(int n)
     {
         if (n == 0)
