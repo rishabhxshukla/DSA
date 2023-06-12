@@ -10,13 +10,13 @@ class PrintArray
     /* Function to print the array */
     void print(int i)
     {
-        if (i == size-1)
+        if (i == size-1) {
             System.out.print(arr[i]);
-        else
-        {
-            System.out.print(arr[i] + " ");
-            print(i+1);
+            return;
         }
+
+        System.out.print(arr[i] + " ");
+        print(i+1);
     }
 
 

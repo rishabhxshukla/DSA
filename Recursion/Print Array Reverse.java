@@ -10,13 +10,13 @@ class PrintArrayReverse
     /* Function to print the reverse of array */
     void print(int i)
     {
-        if (i == 0)
+        if (i == 0) {
             System.out.print(arr[i]);
-        else
-        {
-            System.out.print(arr[i] + " ");
-            print(i-1);
+            return;
         }
+
+        System.out.print(arr[i] + " ");
+        print(i-1);
     }
 
 
