@@ -3,12 +3,14 @@ import java.io.*;
 
 class Selection_Sort
 {
-    static int arr[] = new int[5];
+    static final int size = 5;
+    static int arr[] = new int[size];
+
 
     /* Printing the array */
     void print()
     {
-        for (int i=0; i<arr.length; i++)
+        for (int i=0; i<size; i++)
         {
             System.out.print(arr[i] + " ");
         }
@@ -19,7 +21,7 @@ class Selection_Sort
     void sort()
     {
         int min, t;
-        int n = arr.length;
+        int n = size;
 
         for (int i=0; i<n-1; i++)
         {
@@ -40,6 +42,7 @@ class Selection_Sort
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Selection_Sort obj = new Selection_Sort();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
@@ -51,11 +54,16 @@ class Selection_Sort
             arr[i] = Integer.parseInt(b.readLine());
         }
 
-        System.out.print("Created array : ");
+        //Printing original array
+        System.out.println("*** Original Array ***");
         obj.print();
+
+        //Sorting the elements
         System.out.println("\nSorting...");
         obj.sort();
-        System.out.print("New array : ");
+
+        //Printing new array
+        System.out.println("*** New Array ***");
         obj.print();
     }
 }
