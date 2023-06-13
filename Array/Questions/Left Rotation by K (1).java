@@ -9,6 +9,30 @@ class LeftRotation_by_K1
     static int arr[] = new int[size];
 
 
+    /* Creating the array */
+    void create() throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+        }
+    }
+
+
+    /* Printing the array */
+    void print(int a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to left rotate the array */
     // 1 2 3 4 5   -->   2 3 4 5 1
     void leftRotate(int k)
@@ -41,18 +65,11 @@ class LeftRotation_by_K1
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create();
 
         //Printing the array
         System.out.println("*** Original Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
 
         //Taking user input
         System.out.print("\nEnter the value of K : ");
@@ -63,9 +80,6 @@ class LeftRotation_by_K1
 
         //Printing the rotated array
         System.out.println("*** New Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
     }
 }

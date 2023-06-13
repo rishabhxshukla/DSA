@@ -14,6 +14,16 @@ class DutchFlag
     static int size = arr.length;
 
 
+    /* Printing the array */
+    void print(String a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to make the Dutch flag */
     void makeFlag()
     {
@@ -54,24 +64,16 @@ class DutchFlag
     {
         //Creating object of the class
         DutchFlag obj = new DutchFlag();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
 
         //Making the flag
         obj.makeFlag();
 
         //Printing the flag
         System.out.println("\n\n*** Dutch National Flag ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
     }
 }

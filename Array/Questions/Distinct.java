@@ -11,6 +11,30 @@ class Distinct
     static int arr[] = new int[size];
 
 
+    /* Creating the array */
+    void create() throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+        }
+    }
+
+
+    /* Printing the array */
+    void print(int a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to find the distinct elements of the array */
     static HashMap<Integer, Integer> distinct()
     {
@@ -31,22 +55,15 @@ class Distinct
 
     public static void main(String args[]) throws IOException
     {
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
+        //Creating object of the class
+        Distinct obj = new Distinct();
 
         //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create();
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
 
         //Printing the distinct elements
         HashMap<Integer, Integer> ans = distinct();

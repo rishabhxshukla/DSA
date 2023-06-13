@@ -11,6 +11,30 @@ class Duplicates
     static int arr[] = new int[size];
 
 
+    /* Creating the array */
+    void create() throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+        }
+    }
+
+
+    /* Printing the array */
+    void print(int a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to find the duplicates */
     void duplicates()
     {
@@ -47,22 +71,13 @@ class Duplicates
     {
         //Creating object of the class
         Duplicates obj = new Duplicates();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create();
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
 
         //Printing the duplicates
         System.out.println("\nDuplicates : ");
