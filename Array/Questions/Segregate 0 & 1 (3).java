@@ -1,4 +1,4 @@
-// Segregate 0s on left side and 1s on right side of the array
+// Segregate 0s on left side and 1s on right side of the array (using 2 pointers)
 
 package Array.Questions;
 import java.io.*;
@@ -40,6 +40,7 @@ class Segregate3
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Segregate3 obj = new Segregate3();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);

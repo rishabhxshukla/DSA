@@ -1,4 +1,4 @@
-// Segregate 0s on left side and 1s on right side of the array
+// Segregate 0s on left side and 1s on right side of the array (by counting no. of 0's)
 
 package Array.Questions;
 import java.io.*;
@@ -14,20 +14,20 @@ class Segregate2
     {
         int count = 0;
 
-        //Counting the no. of 0s
+        //Counting the no. of 0's
         for (int i=0; i<size; i++)
         {
             if (arr[i] == 0)
                 count++;
         }
 
-        //Filling array with 0s until count
+        //Filling array with 0's until count
         for (int i=0; i<count; i++)
         {
             arr[i] = 0;
         }
 
-        //Filling the remaining array with 1s
+        //Filling the remaining array with 1's
         for (int i=count; i<size; i++)
         {
             arr[i] = 1;
@@ -37,6 +37,7 @@ class Segregate2
 
     public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         Segregate2 obj = new Segregate2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
