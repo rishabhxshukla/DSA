@@ -12,6 +12,30 @@ class UnionIntersection
     static int arr2[] = new int[size];
 
 
+    /* Creating the array */
+    void create(int a[]) throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            a[i] = Integer.parseInt(b.readLine());
+        }
+    }
+
+
+    /* Printing the array */
+    void print(int a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to find the union */
     void union()
     {
@@ -59,34 +83,18 @@ class UnionIntersection
     {
         //Creating object of the class
         UnionIntersection obj = new UnionIntersection();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
 
         //Creating the arrays
         System.out.println("*** ARRAY 1 ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr1[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create(arr1);
         System.out.println("*** ARRAY 2 ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr2[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create(arr2);
 
         //Printing the arrays
         System.out.println("\n*** Created Array 1 ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr1[i] + " ");
-        }
+        obj.print(arr1);
         System.out.println("\n*** Created Array 2 ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr2[i] + " ");
-        }
+        obj.print(arr2);
 
         //Printing the Union & Intersection
         System.out.print("\n\nUnion : ");
