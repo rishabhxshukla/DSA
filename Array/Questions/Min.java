@@ -1,25 +1,26 @@
-// Sum of elements of the array
+// Smallest element of the array
 
 package Array.Questions;
 import java.io.*;
 
-class ArraySum
+class Min
 {
     static final int size = 5;
     static int arr[] = new int[size];
 
 
-    /* Function to find the sum of the array */
-    static int sum()
+    /* Function to find the smallest element of the array */
+    static int smallest()
     {
-        int sum = 0;
+        int min = Integer.MAX_VALUE;
 
         for (int i=0; i<size; i++)
         {
-            sum = sum + arr[i];
+            if (arr[i] < min)
+                min = arr[i];
         }
 
-        return sum;
+        return min;
     }
 
 
@@ -42,7 +43,7 @@ class ArraySum
             System.out.print(arr[i] + " ");
         }
 
-        //Printing the sum
-        System.out.println("\nSum : " + sum());
+        //Printing the smallest element
+        System.out.println("\nSmallest element : " + smallest());
     }
 }

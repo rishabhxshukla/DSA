@@ -1,26 +1,25 @@
-// Largest element of the array
+// Sum of elements of the array
 
 package Array.Questions;
 import java.io.*;
 
-class Largest
+class Sum
 {
     static final int size = 5;
     static int arr[] = new int[size];
 
 
-    /* Function to find the largest element of the array */
-    static int largest()
+    /* Function to find the sum of the array */
+    static int sum()
     {
-        int max = Integer.MIN_VALUE;
+        int sum = 0;
 
         for (int i=0; i<size; i++)
         {
-            if (arr[i] > max)
-                max = arr[i];
+            sum = sum + arr[i];
         }
 
-        return max;
+        return sum;
     }
 
 
@@ -43,7 +42,7 @@ class Largest
             System.out.print(arr[i] + " ");
         }
 
-        //Printing the largest element
-        System.out.println("\nLargest element : " + largest());
+        //Printing the sum
+        System.out.println("\nSum : " + sum());
     }
 }

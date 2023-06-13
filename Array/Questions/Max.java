@@ -1,26 +1,26 @@
-// Smallest element of the array
+// Largest element of the array
 
 package Array.Questions;
 import java.io.*;
 
-class Smallest
+class Max
 {
     static final int size = 5;
     static int arr[] = new int[size];
 
 
-    /* Function to find the smallest element of the array */
-    static int smallest()
+    /* Function to find the largest element of the array */
+    static int largest()
     {
-        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
 
         for (int i=0; i<size; i++)
         {
-            if (arr[i] < min)
-                min = arr[i];
+            if (arr[i] > max)
+                max = arr[i];
         }
 
-        return min;
+        return max;
     }
 
 
@@ -43,7 +43,7 @@ class Smallest
             System.out.print(arr[i] + " ");
         }
 
-        //Printing the smallest element
-        System.out.println("\nSmallest element : " + smallest());
+        //Printing the largest element
+        System.out.println("\nLargest element : " + largest());
     }
 }
