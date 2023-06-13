@@ -1,9 +1,10 @@
 // Move negative numbers to the beginning and positive numbers to the end of array
+// Using 1 pointer
 
 package Array.Questions;
 import java.io.*;
 
-class NegativePositive
+class NegativePositive1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -31,7 +32,7 @@ class NegativePositive
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        NegativePositive obj = new NegativePositive();
+        NegativePositive1 obj = new NegativePositive1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
