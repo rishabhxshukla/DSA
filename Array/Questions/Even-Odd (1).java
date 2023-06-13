@@ -13,7 +13,7 @@ class EvenOdd1
     /* Function to move the even numbers to the beginning */
     void move()
     {
-        //Single pointer
+        //Pointer
         int j = 0;
 
         for (int i=0; i<size; i++)
@@ -24,7 +24,6 @@ class EvenOdd1
                 int t = arr[i];
                 arr[i] = arr[j];
                 arr[j] = t;
-
                 j++;
             }
         }

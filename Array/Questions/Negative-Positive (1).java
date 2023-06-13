@@ -13,16 +13,17 @@ class NegativePositive1
     /* Function to move the negative numbers to the beginning */
     void move()
     {
-        int temp = 0, j = 0;
+        //Pointer
+        int j = 0;
 
         for (int i=0; i<size; i++)
         {
             //Swap with 'j' if negative
             if (arr[i] < 0)
             {
-                temp = arr[i];
+                int t = arr[i];
                 arr[i] = arr[j];
-                arr[j] = temp;
+                arr[j] = t;
                 j++;
             }
         }
