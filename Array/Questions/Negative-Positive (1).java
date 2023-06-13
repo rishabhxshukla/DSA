@@ -1,5 +1,5 @@
 // Move negative numbers to the beginning and positive numbers to the end of array
-// Using 1 pointer
+// 1 POINTER
 
 package Array.Questions;
 import java.io.*;

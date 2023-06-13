@@ -1,4 +1,5 @@
 // Subarray with a given sum in an array
+// 2 POINTERS
 
 package Array.Questions;
 import java.io.*;

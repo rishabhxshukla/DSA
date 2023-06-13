@@ -1,4 +1,5 @@
 // Find all duplicate elements in an array
+// 2 HASHSETS
 
 package Array.Questions;
 import java.io.*;

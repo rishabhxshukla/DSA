@@ -1,4 +1,5 @@
 // Distinct elements of the array containing mixed values
+// HASHMAP
 
 package Array.Questions;
 import java.io.*;

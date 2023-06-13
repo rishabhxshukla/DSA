@@ -1,4 +1,5 @@
-// Segregate 0s on left side and 1s on right side of the array (using 2 pointers)
+// Segregate 0s on left side and 1s on right side of the array
+// 2 POINTERS
 
 package Array.Questions;
 import java.io.*;

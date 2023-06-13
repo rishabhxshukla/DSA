@@ -1,4 +1,5 @@
-// Kth smallest element in an unsorted array using sorting
+// Kth smallest element in an unsorted array
+// SORTING
 
 package Array.Questions;
 import java.io.*;

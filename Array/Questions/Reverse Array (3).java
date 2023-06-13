@@ -1,4 +1,5 @@
-// Reverse an array (using two pointers)
+// Reverse an array
+// 2 POINTERS
 
 package Array.Questions;
 import java.io.*;

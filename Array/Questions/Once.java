@@ -1,4 +1,5 @@
 // In an array, all numbers occur twice (or more) except one number which occurs only once.
+// NESTED LOOPS
 
 package Array.Questions;
 import java.io.*;

@@ -1,4 +1,5 @@
-// Segregate 0s on left side and 1s on right side of the array (by counting no. of 0's)
+// Segregate 0s on left side and 1s on right side of the array
+// COUNT
 
 package Array.Questions;
 import java.io.*;

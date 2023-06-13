@@ -3,6 +3,7 @@ Dutch national flag consists of three colors: red, white, and blue.
 We are given an array with these colours arranged randomly.
 Our task is to put the same colours together and in the correct order.
 */
+// COUNT
 
 package Array.Questions;
 import java.io.*;

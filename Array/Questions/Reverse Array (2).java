@@ -1,4 +1,5 @@
-// Reverse an array (using single pointer)
+// Reverse an array
+// 1 POINTER
 
 package Array.Questions;
 import java.io.*;

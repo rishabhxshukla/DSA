@@ -1,9 +1,10 @@
-// Target sum problem using 2 pointers
 /*
+Target sum problem.
 For using the two-pointer technique, the array must be sorted.
 If the sum is lesser than the target, increase the left pointer.
 If the sum is greater than the target, decrease the right pointer.
 */
+// 2 POINTERS
 
 package Array.Questions;
 import java.io.*;
