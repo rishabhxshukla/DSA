@@ -7,6 +7,30 @@ class Insertion
     static int arr[] = new int[size];
 
 
+    /* Creating the array */
+    void create() throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+        }
+    }
+
+
+    /* Printing the array */
+    void print(int a[])
+    {
+        for (int i=0; i<a.length; i++)
+        {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+
     /* Function to insert an element at a particular index */
     static int[] insert(int key, int pos)
     {
@@ -39,23 +63,19 @@ class Insertion
 
     public static void main(String[] args) throws IOException
     {
+        //Creating object of the class
+        Insertion obj = new Insertion();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create();
 
         //Printing original array
         System.out.println("*** Original Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        obj.print(arr);
 
+        //Taking user inputs
         System.out.print("\nEnter the element that you want to insert : ");
         int key = Integer.parseInt(b.readLine());
         System.out.print("Enter the index where you want to insert : ");
@@ -66,9 +86,6 @@ class Insertion
 
         //Printing new array
         System.out.println("*** New Array ***");
-        for (int i=0; i<ans.length; i++)
-        {
-            System.out.print(ans[i] + " ");
-        }
+        obj.print(ans);
     }
 }
