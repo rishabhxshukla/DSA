@@ -54,6 +54,7 @@ class Triplets1
             }
         }
 
+        //If no triplet is present
         if (!present)
             System.out.println("Triplets not found!");
     }
