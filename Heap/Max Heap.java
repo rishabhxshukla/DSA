@@ -1,25 +1,13 @@
 // Max Heap implementation
 
 package Heap;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 class MaxHeap
 {
-    int heap[];
+    static final int maxSize = 10;
+    int heap[] = new int[maxSize];
     int size;
-    int maxsize;
-
-
-    //Constructor to initialize an empty max heap with given capacity
-    MaxHeap(int maxsize)
-    {
-        this.maxsize = maxsize;
-        this.size = 0;
-        heap = new int[this.maxsize];
-    }
 
 
     /* Method 1 */
@@ -141,12 +129,12 @@ class MaxHeap
     public static void main(String[] arg) throws IOException
     {
         //Creating object of the class
-        MaxHeap obj = new MaxHeap(7);
+        MaxHeap obj = new MaxHeap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the max heap
-        for (int i=0; i<6; i++)
+        for (int i=0; i<5; i++)
         {
             System.out.print("Enter the element : ");
             int e = Integer.parseInt(b.readLine());
