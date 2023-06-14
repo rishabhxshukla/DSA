@@ -9,7 +9,8 @@ class MaxHeap
     private int size;
     private int maxsize;
 
-    // Constructor to initialize an empty max heap with given capacity
+
+    //Constructor to initialize an empty max heap with given capacity
     public MaxHeap(int maxsize)
     {
         this.maxsize = maxsize;
@@ -17,23 +18,25 @@ class MaxHeap
         Heap = new int[this.maxsize];
     }
 
-    // Method 1
-    // Returning position of parent
+
+    /* Method 1 */
+    //Returning position of parent
     private int parent(int pos) { return (pos - 1) / 2; }
 
-    // Method 2
-    // Returning left children
+    /* Method 2 */
+    //Returning left children
     private int leftChild(int pos) { return (2 * pos) + 1; }
 
-    // Method 3
-    // Returning right children
+    /* Method 3 */
+    //Returning right children
     private int rightChild(int pos)
     {
         return (2 * pos) + 2;
     }
 
-    // Method 4
-    // Returning true if given node is leaf
+
+    /* Method 4 */
+    //Returning true if given node is leaf
     private boolean isLeaf(int pos)
     {
         if (pos > (size / 2) && pos <= size) {
@@ -42,8 +45,9 @@ class MaxHeap
         return false;
     }
 
-    // Method 5
-    // Swapping nodes
+
+    /* Method 5 */
+    //Swapping nodes
     private void swap(int fpos, int spos)
     {
         int tmp;
@@ -52,8 +56,9 @@ class MaxHeap
         Heap[spos] = tmp;
     }
 
-    // Method 6
-    // Recursive function to max heapify given subtree
+
+    /* Method 6 */
+    //Recursive function to max heapify given subtree
     private void maxHeapify(int pos)
     {
         if (isLeaf(pos))
@@ -74,8 +79,9 @@ class MaxHeap
         }
     }
 
-    // Method 7
-    // Inserts a new element to max heap
+
+    /* Method 7 */
+    //Inserts a new element to max heap
     public void insert(int element)
     {
         Heap[size] = element;
@@ -89,8 +95,8 @@ class MaxHeap
         size++;
     }
 
-    // Method 8
-    // To display heap
+    /* Method 8 */
+    //To display the heap
     public void print()
     {
 
@@ -114,8 +120,9 @@ class MaxHeap
         }
     }
 
-    // Method 9
-    // Remove an element from max heap
+
+    /* Method 9 */
+    //Remove an element from max heap
     public int extractMax()
     {
         int popped = Heap[0];
@@ -124,13 +131,9 @@ class MaxHeap
         return popped;
     }
 
-    // Method 10
-    // main driver method
+
     public static void main(String[] arg)
     {
-        // Display message for better readability
-        System.out.println("The Max Heap is ");
-
         MaxHeap maxHeap = new MaxHeap(15);
 
         // Inserting nodes
