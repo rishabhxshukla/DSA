@@ -29,7 +29,7 @@ class MaxHeap
 
     /* Method 2 */
     //Function to return left child
-    int leftChild(int i)
+    int left(int i)
     {
         return (2 * i);
     }
@@ -37,7 +37,7 @@ class MaxHeap
 
     /* Method 3 */
     //Function to return right child
-    int rightChild(int i)
+    int right(int i)
     {
         return (2 * i) + 1;
     }
@@ -69,17 +69,17 @@ class MaxHeap
             return;
         }
 
-        if (arr[i] < arr[leftChild(i)] || arr[i] < arr[rightChild(i)])
+        if (arr[i] < arr[left(i)] || arr[i] < arr[right(i)])
         {
-            if (arr[leftChild(i)] > arr[rightChild(i)])
+            if (arr[left(i)] > arr[right(i)])
             {
-                swap(i, leftChild(i));
-                maxHeapify(leftChild(i));
+                swap(i, left(i));
+                maxHeapify(left(i));
             }
             else
             {
-                swap(i, rightChild(i));
-                maxHeapify(rightChild(i));
+                swap(i, right(i));
+                maxHeapify(right(i));
             }
         }
     }
@@ -149,7 +149,7 @@ class MaxHeap
     public static void main(String args[])
     {
         //Creating object of the class
-        MinHeap obj = new MinHeap(9);
+        MaxHeap obj = new MaxHeap(9);
 
         obj.insert(5);
         obj.insert(3);
@@ -160,13 +160,13 @@ class MaxHeap
         obj.insert(6);
         obj.insert(22);
         obj.insert(9);
-        obj.minHeap();
+        obj.maxHeap();
 
         //Printing the max heap
         System.out.println("*** Created Max Heap ***");
         obj.print();
 
         //Printing the maximum value in heap
-        System.out.println("\nMaximum element : " + obj.minElement());
+        System.out.println("\nMaximum element : " + obj.maxElement());
     }
 }

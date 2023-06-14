@@ -29,7 +29,7 @@ class MinHeap
 
     /* Method 2 */
     //Function to return left child
-    int leftChild(int i)
+    int left(int i)
     {
         return (2 * i);
     }
@@ -37,7 +37,7 @@ class MinHeap
 
     /* Method 3 */
     //Function to return right child
-    int rightChild(int i)
+    int right(int i)
     {
         return (2 * i) + 1;
     }
@@ -69,17 +69,17 @@ class MinHeap
             return;
         }
 
-        if (arr[i] > arr[leftChild(i)] || arr[i] > arr[rightChild(i)])
+        if (arr[i] > arr[left(i)] || arr[i] > arr[right(i)])
         {
-            if (arr[leftChild(i)] < arr[rightChild(i)])
+            if (arr[left(i)] < arr[right(i)])
             {
-                swap(i, leftChild(i));
-                minHeapify(leftChild(i));
+                swap(i, left(i));
+                minHeapify(left(i));
             }
             else
             {
-                swap(i, rightChild(i));
-                minHeapify(rightChild(i));
+                swap(i, right(i));
+                minHeapify(right(i));
             }
         }
     }
