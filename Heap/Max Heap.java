@@ -2,6 +2,10 @@
 
 package Heap;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 class MaxHeap
 {
     int heap[];
@@ -134,25 +138,26 @@ class MaxHeap
     }
 
 
-    public static void main(String[] arg)
+    public static void main(String[] arg) throws IOException
     {
-        MaxHeap maxHeap = new MaxHeap(15);
+        //Creating object of the class
+        MaxHeap obj = new MaxHeap(7);
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
 
-        //Inserting nodes
-        maxHeap.insert(5);
-        maxHeap.insert(3);
-        maxHeap.insert(17);
-        maxHeap.insert(10);
-        maxHeap.insert(84);
-        maxHeap.insert(19);
-        maxHeap.insert(6);
-        maxHeap.insert(22);
-        maxHeap.insert(9);
+        //Creating the max heap
+        for (int i=0; i<6; i++)
+        {
+            System.out.print("Enter the element : ");
+            int e = Integer.parseInt(b.readLine());
+            obj.insert(e);
+        }
 
-        //Calling maxHeap()
-        maxHeap.print();
+        //Printing the max heap
+        System.out.println("\n*** Created Max Heap ***");
+        obj.print();
 
         //Printing the maximum value in heap
-        System.out.println("The max val is " + maxHeap.extractMax());
+        System.out.println("\nMaximum element : " + obj.extractMax());
     }
 }
