@@ -11,7 +11,7 @@ class MaxHeap
 
 
     /* Method 1 */
-    //Returning position of parent
+    //Function to return parent
     int parent(int pos)
     {
         return (pos - 1) / 2;
@@ -19,7 +19,7 @@ class MaxHeap
 
 
     /* Method 2 */
-    //Returning left children
+    //Function to return left child
     int leftChild(int pos)
     {
         return (2 * pos) + 1;
@@ -27,7 +27,7 @@ class MaxHeap
 
 
     /* Method 3 */
-    //Returning right children
+    //Function to return right child
     int rightChild(int pos)
     {
         return (2 * pos) + 2;
@@ -35,7 +35,7 @@ class MaxHeap
 
 
     /* Method 4 */
-    //Returning true if given node is leaf
+    //Function to check if given node is leaf node
     boolean isLeaf(int pos)
     {
         if (pos > (size/2) && pos <= size) {
@@ -46,7 +46,7 @@ class MaxHeap
 
 
     /* Method 5 */
-    //Swapping nodes
+    //Function to swap nodes
     void swap(int fpos, int spos)
     {
         int tmp;
@@ -57,7 +57,7 @@ class MaxHeap
 
 
     /* Method 6 */
-    //Recursive function to max heapify given subtree
+    //Function to max heapify given subtree
     void maxHeapify(int pos)
     {
         if (isLeaf(pos))
@@ -80,7 +80,7 @@ class MaxHeap
 
 
     /* Method 7 */
-    //Inserts a new element to max heap
+    //Insert an element in the max heap
     void insert(int element)
     {
         heap[size] = element;
@@ -97,7 +97,7 @@ class MaxHeap
 
 
     /* Method 8 */
-    //Display the heap
+    //Display the max heap
     void print()
     {
         for (int i=0; i<size/2; i++)
