@@ -1,21 +1,21 @@
-// Max Heap implementation
+// Min Heap implementation
 
 package Heap;
 
-class MaxHeap
+class MinHeap
 {
     int arr[];
     int size;
     int n;
 
 
-    //Constructor to initialize an empty max heap
-    MaxHeap(int maxsize)
+    //Constructor to initialize an empty min heap
+    MinHeap(int maxsize)
     {
         n = maxsize;                   //Maximum capacity of heap
         size = 0;                      //Current no. of elements
         arr = new int[n + 1];          //Array with indexing from 1
-        arr[0] = Integer.MAX_VALUE;    //Sentinel value
+        arr[0] = Integer.MIN_VALUE;    //Sentinel value
     }
 
 
@@ -62,31 +62,31 @@ class MaxHeap
 
 
     /* Method 6 */
-    //Recursive function to max heapify given subtree
-    void maxHeapify(int i)
+    //Recursive function to min heapify given subtree
+    void minHeapify(int i)
     {
         if (isLeaf(i)) {
             return;
         }
 
-        if (arr[i] < arr[leftChild(i)] || arr[i] < arr[rightChild(i)])
+        if (arr[i] > arr[leftChild(i)] || arr[i] > arr[rightChild(i)])
         {
-            if (arr[leftChild(i)] > arr[rightChild(i)])
+            if (arr[leftChild(i)] < arr[rightChild(i)])
             {
                 swap(i, leftChild(i));
-                maxHeapify(leftChild(i));
+                minHeapify(leftChild(i));
             }
             else
             {
                 swap(i, rightChild(i));
-                maxHeapify(rightChild(i));
+                minHeapify(rightChild(i));
             }
         }
     }
 
 
     /* Method 7 */
-    //Insert an element in the max heap
+    //Insert an element in the min heap
     void insert(int element)
     {
         //Increasing the size of heap
@@ -97,8 +97,8 @@ class MaxHeap
         //Traverse up from last and fix violated property
         int i = size;
 
-        //If inserted node > its parent
-        while (arr[i] > arr[parent(i)])
+        //If inserted node < its parent
+        while (arr[i] < arr[parent(i)])
         {
             //Swap inserted node and parent node
             swap(i, parent(i));
@@ -109,7 +109,7 @@ class MaxHeap
 
 
     /* Method 8 */
-    //Print the max heap
+    //Print the min heap
     void print()
     {
         for (int i = 1; i <= size / 2; i++)
@@ -121,27 +121,27 @@ class MaxHeap
 
 
     /* Method 9 */
-    //Function to get max element from max heap
-    int maxElement()
+    //Function to get min element from min heap
+    int minElement()
     {
-        //Storing max element (root)
-        int max = arr[1];
+        //Storing min element (root)
+        int min = arr[1];
         //Replacing root with last node
         arr[1] = arr[size--];
-        //Restoring max heap property
-        maxHeapify(1);
-        //Returning max element
-        return max;
+        //Restoring min heap property
+        minHeapify(1);
+        //Returning min element
+        return min;
     }
 
 
     /* METHOD 10 */
-    //Function to ensure max heap property is maintained
-    void maxHeap()
+    //Function to ensure min heap property is maintained
+    void minHeap()
     {
         for (int i = (size / 2); i >= 1; i--)
         {
-            maxHeapify(i);
+            minHeapify(i);
         }
     }
 
@@ -162,11 +162,11 @@ class MaxHeap
         obj.insert(9);
         obj.minHeap();
 
-        //Printing the max heap
-        System.out.println("*** Created Max Heap ***");
+        //Printing the min heap
+        System.out.println("*** Created Min Heap ***");
         obj.print();
 
-        //Printing the maximum value in heap
-        System.out.println("\nMaximum element : " + obj.minElement());
+        //Printing the minimum value in heap
+        System.out.println("\nMinimum element : " + obj.minElement());
     }
 }
