@@ -47,17 +47,16 @@ class MaxHeap
 
     /* Method 5 */
     //Function to swap nodes
-    void swap(int fpos, int spos)
+    void swap(int x, int y)
     {
-        int tmp;
-        tmp = heap[fpos];
-        heap[fpos] = heap[spos];
-        heap[spos] = tmp;
+        int temp = heap[x];
+        heap[x] = heap[y];
+        heap[y] = temp;
     }
 
 
     /* Method 6 */
-    //Function to max heapify given subtree
+    //Recursive function to max heapify given subtree
     void maxHeapify(int pos)
     {
         if (isLeaf(pos))
@@ -83,16 +82,23 @@ class MaxHeap
     //Insert an element in the max heap
     void insert(int element)
     {
+        //Inserting new node
         heap[size] = element;
 
-        // Traverse up and fix violated property
-        int current = size;
-        while (heap[current] > heap[parent(current)])
+        //Traverse up from last and fix violated property
+        int i = size;
+
+        //If inserted node > its parent
+        while (heap[i] > heap[parent(i)])
         {
-            swap(current, parent(current));
-            current = parent(current);
+            //Swap inserted node and parent node
+            swap(i, parent(i));
+            //Make inserted node the new parent
+            i = parent(i);
         }
-        size++;
+
+        //Increasing the size of heap
+        size = size + 1;
     }
 
 
