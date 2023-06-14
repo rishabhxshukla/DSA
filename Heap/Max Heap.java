@@ -21,33 +21,33 @@ class MaxHeap
 
     /* Method 1 */
     //Function to return parent
-    int parent(int pos)
+    int parent(int i)
     {
-        return pos / 2;
+        return i / 2;
     }
 
 
     /* Method 2 */
     //Function to return left child
-    int leftChild(int pos)
+    int leftChild(int i)
     {
-        return (2 * pos);
+        return (2 * i);
     }
 
 
     /* Method 3 */
     //Function to return right child
-    int rightChild(int pos)
+    int rightChild(int i)
     {
-        return (2 * pos) + 1;
+        return (2 * i) + 1;
     }
 
 
     /* Method 4 */
     //Function to check if given node is leaf node
-    boolean isLeaf(int pos)
+    boolean isLeaf(int i)
     {
-        return (pos > size/2 && pos <= size);
+        return (i > size/2 && i <= size);
     }
 
 
@@ -63,23 +63,23 @@ class MaxHeap
 
     /* Method 6 */
     //Recursive function to max heapify given subtree
-    void maxHeapify(int pos)
+    void maxHeapify(int i)
     {
-        if (isLeaf(pos)) {
+        if (isLeaf(i)) {
             return;
         }
 
-        if (arr[pos] < arr[leftChild(pos)] || arr[pos] < arr[rightChild(pos)])
+        if (arr[i] < arr[leftChild(i)] || arr[i] < arr[rightChild(i)])
         {
-            if (arr[leftChild(pos)] > arr[rightChild(pos)])
+            if (arr[leftChild(i)] > arr[rightChild(i)])
             {
-                swap(pos, leftChild(pos));
-                maxHeapify(leftChild(pos));
+                swap(i, leftChild(i));
+                maxHeapify(leftChild(i));
             }
             else
             {
-                swap(pos, rightChild(pos));
-                maxHeapify(rightChild(pos));
+                swap(i, rightChild(i));
+                maxHeapify(rightChild(i));
             }
         }
     }
@@ -124,10 +124,14 @@ class MaxHeap
     //Function to get max element from max heap
     int maxElement()
     {
-        int popped = arr[1];
+        //Storing max element (root)
+        int max = arr[1];
+        //Replacing root with last node
         arr[1] = arr[size--];
+        //Restoring max heap property
         maxHeapify(1);
-        return popped;
+        //Returning max element
+        return max;
     }
 
 
@@ -135,9 +139,9 @@ class MaxHeap
     //Function to ensure max heap property is maintained
     void maxHeap()
     {
-        for (int pos = (size / 2); pos >= 1; pos--)
+        for (int i = (size / 2); i >= 1; i--)
         {
-            maxHeapify(pos);
+            maxHeapify(i);
         }
     }
 
