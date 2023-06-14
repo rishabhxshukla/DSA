@@ -2,8 +2,6 @@
 // NESTED LOOPS
 
 package Array.Questions;
-import Array.Questions.Boilerplate;
-
 import java.io.*;
 import java.util.*;
 
