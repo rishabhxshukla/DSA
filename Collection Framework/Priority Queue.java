@@ -14,7 +14,7 @@ class Priority_Queue
 {
     public static void main(String args[])
     {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         /* Inserting elements */
         pq.add(10);
