@@ -2,7 +2,7 @@
 By default, priority is given to number with lesser value.
 If you want to change this behaviour, just pass 'Collections.reverseOrder()' in PriorityQueue<>().
 NOTE :
-Internal data structure of PriorityQueue is not ordered, it is a heap; so while printing pq, elements can be unordered.
+Internal data structure of PriorityQueue is not ordered, it is a heap; so while printing pq, children can be unordered.
 PriorityQueue doesn't need to be ordered because it only focuses on the head, and sorting wastes time.
 */
 
