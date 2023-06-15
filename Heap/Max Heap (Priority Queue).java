@@ -2,7 +2,7 @@
 Max Heap implementation using Priority Queue.
 NOTE :
 Internal data structure of PriorityQueue is not ordered, it is a heap; so while printing pq, elements can be unordered.
-PriorityQueue doesn't need to be ordered because it focuses on the head of data, and sorting wastes time.
+PriorityQueue doesn't need to be ordered because it only focuses on the head, and sorting wastes time.
 */
 
 package Heap;

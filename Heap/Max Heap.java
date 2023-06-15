@@ -1,4 +1,4 @@
-// Max Heap implementation
+// Max Heap implementation using Array
 
 package Heap;
 
