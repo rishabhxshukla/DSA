@@ -1,5 +1,5 @@
 /*
-Max Heap implementation using Priority Queue.
+Min Heap implementation using Priority Queue.
 NOTE :
 Internal data structure of PriorityQueue is not ordered, it is a heap; so while printing pq, elements can be unordered.
 PriorityQueue doesn't need to be ordered because it only focuses on the head, and sorting wastes time.
@@ -8,11 +8,11 @@ PriorityQueue doesn't need to be ordered because it only focuses on the head, an
 package Heap;
 import java.util.*;
 
-class MaxHeap2
+class MinHeap2
 {
     public static void main(String args[])
     {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         //Inserting elements
         pq.add(10);
@@ -22,25 +22,25 @@ class MaxHeap2
 
 
         //Printing the heap
-        System.out.println("*** Max Heap ***");
+        System.out.println("*** Min Heap ***");
         System.out.println(pq);
         System.out.println();
 
 
-        //Printing the max element
-        int max = pq.peek();
-        System.out.println("Maximum element : " + max);
+        //Printing the min element
+        int min = pq.peek();
+        System.out.println("Minimum element : " + min);
         System.out.println();
 
 
-        //Removing the max element
-        System.out.println("Removing max element...");
+        //Removing the min element
+        System.out.println("Removing min element...");
         pq.remove();
         System.out.println();
 
 
-        //After removing max element
-        System.out.println("*** New Max Heap ***");
+        //After removing min element
+        System.out.println("*** New Min Heap ***");
         System.out.println(pq);
         System.out.println();
 
