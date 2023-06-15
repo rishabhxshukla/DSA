@@ -5,7 +5,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class KthSmallest
+class KthSmallest1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -49,7 +49,7 @@ class KthSmallest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KthSmallest obj = new KthSmallest();
+        KthSmallest1 obj = new KthSmallest1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

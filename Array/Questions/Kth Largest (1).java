@@ -5,7 +5,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class KthLargest
+class KthLargest1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -49,7 +49,7 @@ class KthLargest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KthLargest obj = new KthLargest();
+        KthLargest1 obj = new KthLargest1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
