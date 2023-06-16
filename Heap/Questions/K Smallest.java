@@ -63,6 +63,7 @@ class KSmallest
         int k = Integer.parseInt(b.readLine());
 
         //Printing the K smallest elements
+        System.out.println("*** K Smallest Elements ***");
         obj.kSmallest(k);
     }
 }
