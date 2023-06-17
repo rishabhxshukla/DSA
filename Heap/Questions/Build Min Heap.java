@@ -1,5 +1,5 @@
 /*
-Build max heap from a given integer array.
+Build min heap from a given integer array.
 Leaf nodes need not to be heapified as they already follow the heap property.
 So, find the position of the last non-leaf node and perform the heapify in reverse order.
 Also, increase the size of the heap while taking user input.
@@ -9,7 +9,7 @@ Last non-leaf node : (size / 2) - 1
 package Heap.Questions;
 import java.io.*;
 
-class BuildMaxHeap
+class BuildMinHeap
 {
     static int size = 0;
     static int maxsize = 7;
@@ -80,9 +80,9 @@ class BuildMaxHeap
             return;
         }
 
-        if (arr[i] < arr[left(i)] || arr[i] < arr[right(i)])
+        if (arr[i] > arr[left(i)] || arr[i] > arr[right(i)])
         {
-            if (arr[left(i)] > arr[right(i)])
+            if (arr[left(i)] < arr[right(i)])
             {
                 swap(i, left(i));
                 Heapify(left(i));
@@ -96,7 +96,7 @@ class BuildMaxHeap
     }
 
 
-    /* Function to build max heap */
+    /* Function to build min heap */
     void build()
     {
         for (int i = (size/2)-1; i >= 0; i--)
@@ -109,7 +109,7 @@ class BuildMaxHeap
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        BuildMaxHeap obj = new BuildMaxHeap();
+        BuildMinHeap obj = new BuildMinHeap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -125,12 +125,12 @@ class BuildMaxHeap
         System.out.println("*** Created Array ***");
         obj.printArray();
 
-        //Building max heap
-        System.out.println("\nBuilding max heap...");
+        //Building min heap
+        System.out.println("\nBuilding min heap...");
         obj.build();
 
-        //Printing created max heap
-        System.out.println("*** Created Max Heap ***");
+        //Printing created min heap
+        System.out.println("*** Created Min Heap ***");
         obj.print();
     }
 }
