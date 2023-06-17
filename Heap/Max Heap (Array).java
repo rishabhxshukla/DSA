@@ -4,9 +4,9 @@ package Heap;
 
 class MaxHeap1
 {
-    int size = 0;                       //Current size of heap
-    int maxsize = 7;                    //Maximum size of heap
-    int arr[] = new int[maxsize + 1];   //Array to store heap elements
+    int size = 0;                      //Current size of heap
+    int maxsize = 7;                   //Maximum size of heap
+    int arr[] = new int[maxsize];      //Array to store heap elements
 
 
     /* Method 1 */
@@ -55,16 +55,9 @@ class MaxHeap1
     //Print the max heap
     void print()
     {
-        //Single element
-        if (size == 1) {
-            System.out.println(arr[0]);
-            return;
-        }
-
-        for (int i = 0; i < size/2; i++)
+        for (int i = 0; i < size; i++)
         {
-            System.out.print(arr[i] + " :" + " L-" + arr[left(i)] + "  R-" + arr[right(i)]);
-            System.out.println();
+            System.out.print(arr[i] + " ");
         }
     }
 
@@ -73,19 +66,17 @@ class MaxHeap1
     //Insert an element
     void insert(int element)
     {
-        //Full heap
+        //Heap Overflow
         if (size == maxsize) {
             System.out.println("ERROR: Heap is full!");
             System.exit(0);
         }
 
-        //Increasing heap size
-        size++;
-        //Inserting new node at last
-        arr[size - 1] = element;
+        //Insert new node
+        arr[size] = element;
 
         //Traverse up from last and fix violated property
-        int i = size - 1;
+        int i = size;
 
         //If current node > its parent
         while (arr[i] > arr[parent(i)])
@@ -95,6 +86,9 @@ class MaxHeap1
             //Make current node the new parent
             i = parent(i);
         }
+
+        //Increase heap size
+        size++;
     }
 
 
@@ -102,7 +96,7 @@ class MaxHeap1
     //Get max element
     int remove()
     {
-        //Empty heap
+        //Heap Underflow
         if (size == 0) {
             System.out.println("ERROR: Heap is empty!");
             System.exit(0);
@@ -113,15 +107,15 @@ class MaxHeap1
             return arr[0];
         }
 
-        //Storing max element (root)
+        //Store max element (root)
         int max = arr[0];
-        //Replacing root with last node
+        //Replace root with last node
         arr[0] = arr[size - 1];
-        //Decreasing heap size
+        //Decrease heap size
         size--;
-        //Restoring max heap property
+        //Restore max heap property
         Heapify(0);
-        //Returning max element
+        //Return max element
         return max;
     }
 
@@ -170,12 +164,11 @@ class MaxHeap1
         obj.insert(7);
 
         //Printing original max heap
-        System.out.println("*** Created Max Heap ***");
+        System.out.println("*** Original Max Heap ***");
         obj.print();
 
         //Removing max value from heap
-        System.out.println("\nRemoving max value...");
-        System.out.println("Max element : " + obj.remove());
+        System.out.println("\n\nRemoving max value...");
         System.out.println("Max element : " + obj.remove());
 
         //Printing new max heap
