@@ -1,58 +1,48 @@
-// Min Heap implementation
+// Min Heap implementation using Array
 
 package Heap;
 
 class MinHeap1
 {
-    int arr[];
-    int size;
-    int n;
-
-
-    //Constructor to initialize an empty min heap
-    MinHeap1(int maxsize)
-    {
-        n = maxsize;                   //Maximum capacity of heap
-        size = 0;                      //Current no. of elements
-        arr = new int[n + 1];          //Array with indexing from 1
-        arr[0] = Integer.MIN_VALUE;    //Sentinel value
-    }
+    int size = 0;                      //Current size of heap
+    int maxsize = 7;                   //Maximum size of heap
+    int arr[] = new int[maxsize];      //Array to store heap elements
 
 
     /* Method 1 */
-    //Function to return parent
+    //Parent
     int parent(int i)
     {
-        return i / 2;
+        return (i - 1) / 2;
     }
 
 
     /* Method 2 */
-    //Function to return left child
+    //Left child
     int left(int i)
-    {
-        return (2 * i);
-    }
-
-
-    /* Method 3 */
-    //Function to return right child
-    int right(int i)
     {
         return (2 * i) + 1;
     }
 
 
+    /* Method 3 */
+    //Right child
+    int right(int i)
+    {
+        return (2 * i) + 2;
+    }
+
+
     /* Method 4 */
-    //Function to check if given node is leaf node
+    //Leaf node
     boolean isLeaf(int i)
     {
-        return (i > size/2 && i <= size);
+        return (i >= size/2 && i < size);
     }
 
 
     /* Method 5 */
-    //Function to swap nodes
+    //Swap nodes
     void swap(int x, int y)
     {
         int temp = arr[x];
@@ -62,86 +52,99 @@ class MinHeap1
 
 
     /* Method 6 */
-    //Recursive function to min heapify given subtree
-    void minHeapify(int i)
+    //Print the min heap
+    void print()
     {
-        if (isLeaf(i)) {
-            return;
-        }
-
-        if (arr[i] > arr[left(i)] || arr[i] > arr[right(i)])
+        for (int i = 0; i < size; i++)
         {
-            if (arr[left(i)] < arr[right(i)])
-            {
-                swap(i, left(i));
-                minHeapify(left(i));
-            }
-            else
-            {
-                swap(i, right(i));
-                minHeapify(right(i));
-            }
+            System.out.print(arr[i] + " ");
         }
     }
 
 
     /* Method 7 */
-    //Insert an element in the min heap
+    //Insert an element
     void insert(int element)
     {
-        //Increasing the size of heap
-        size = size + 1;
-        //Inserting new node
+        //Heap Overflow
+        if (size == maxsize) {
+            System.out.println("ERROR: Heap is full!");
+            System.exit(0);
+        }
+
+        //Insert new node
         arr[size] = element;
 
         //Traverse up from last and fix violated property
         int i = size;
 
-        //If inserted node < its parent
+        //If current node < its parent
         while (arr[i] < arr[parent(i)])
         {
-            //Swap inserted node and parent node
+            //Swap current node and parent node
             swap(i, parent(i));
-            //Make inserted node the new parent
+            //Make current node the new parent
             i = parent(i);
         }
+
+        //Increase heap size
+        size++;
     }
 
 
     /* Method 8 */
-    //Print the min heap
-    void print()
+    //Get min element
+    int remove()
     {
-        for (int i = 1; i <= size / 2; i++)
-        {
-            System.out.print(arr[i] + " :" + " L-" + arr[2 * i] + "  R-" + arr[2 * i + 1]);
-            System.out.println();
+        //Heap Underflow
+        if (size == 0) {
+            System.out.println("ERROR: Heap is empty!");
+            System.exit(0);
         }
-    }
+        //Single element
+        if (size == 1) {
+            size--;
+            return arr[0];
+        }
 
-
-    /* Method 9 */
-    //Function to get min element from min heap
-    int minElement()
-    {
-        //Storing min element (root)
-        int min = arr[1];
-        //Replacing root with last node
-        arr[1] = arr[size--];
-        //Restoring min heap property
-        minHeapify(1);
-        //Returning min element
+        //Store min element (root)
+        int min = arr[0];
+        //Replace root with last node
+        arr[0] = arr[size - 1];
+        //Decrease heap size
+        size--;
+        //Restore min heap property
+        Heapify(0);
+        //Return min element
         return min;
     }
 
 
-    /* METHOD 10 */
-    //Function to ensure min heap property is maintained
-    void minHeap()
+    /* Method 9 */
+    //Fix violated heap property
+    void Heapify(int i)
     {
-        for (int i = (size / 2); i >= 1; i--)
+        //Break condition: Leaf Node
+        if (isLeaf(i)) {
+            return;
+        }
+
+        //If current element is greater than any of its children
+        if (arr[i] > arr[left(i)] || arr[i] > arr[right(i)])
         {
-            minHeapify(i);
+            /* Find the smallest of the 2 children & swap it with parent */
+            //If left child is smaller, then swap it with parent
+            if (arr[left(i)] < arr[right(i)])
+            {
+                swap(i, left(i));
+                Heapify(left(i));
+            }
+            //Otherwise, swap right child with parent
+            else
+            {
+                swap(i, right(i));
+                Heapify(right(i));
+            }
         }
     }
 
@@ -149,24 +152,27 @@ class MinHeap1
     public static void main(String args[])
     {
         //Creating object of the class
-        MinHeap1 obj = new MinHeap1(9);
+        MinHeap1 obj = new MinHeap1();
 
-        obj.insert(5);
+        //Inserting elements
+        obj.insert(1);
+        obj.insert(2);
         obj.insert(3);
-        obj.insert(17);
-        obj.insert(10);
-        obj.insert(84);
-        obj.insert(19);
+        obj.insert(4);
+        obj.insert(5);
         obj.insert(6);
-        obj.insert(22);
-        obj.insert(9);
-        obj.minHeap();
+        obj.insert(7);
 
-        //Printing the min heap
-        System.out.println("*** Created Min Heap ***");
+        //Printing original min heap
+        System.out.println("*** Original Min Heap ***");
         obj.print();
 
-        //Printing the minimum value in heap
-        System.out.println("\nMinimum element : " + obj.minElement());
+        //Removing min value from heap
+        System.out.println("\n\nRemoving min value...");
+        System.out.println("Min element : " + obj.remove());
+
+        //Printing new min heap
+        System.out.println("\n*** New Min Heap ***");
+        obj.print();
     }
 }
