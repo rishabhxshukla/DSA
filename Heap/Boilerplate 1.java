@@ -1,5 +1,4 @@
 // ...
-//
 
 package Heap.Questions;
 import java.io.*;
