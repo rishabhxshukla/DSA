@@ -39,11 +39,21 @@ class MinCostOfRopes
     /* Function to find the minimum cost */
     static int minCost()
     {
-        //Getting top 2 minimum elements
-        int min1 = pq.remove();
-        int min2 = pq.remove();
+        int cost = 0;
 
-        return (min1 + min2);
+        //Till PQ contains only 1 element
+        while (pq.size() != 1)
+        {
+            //Getting top 2 minimum elements
+            int min1 = pq.remove();
+            int min2 = pq.remove();
+            cost = cost + min1 + min2;
+
+            //Adding combined length in PQ
+            pq.add(min1+min2);
+        }
+
+        return cost;
     }
 
 
