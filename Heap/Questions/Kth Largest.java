@@ -3,8 +3,7 @@
 
 package Heap.Questions;
 import java.io.*;
-import java.util.Collections;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class KthLargest
 {

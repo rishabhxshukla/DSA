@@ -3,7 +3,7 @@
 
 package Heap.Questions;
 import java.io.*;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class KthSmallest
 {

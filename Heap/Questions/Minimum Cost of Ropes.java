@@ -6,7 +6,7 @@ Cost of 2 ropes = Sum of lengths of 2 ropes
 
 package Heap.Questions;
 import java.io.*;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class MinCostOfRopes
 {
