@@ -1,5 +1,5 @@
 // Top K frequent numbers present in the array
-// HASHMAP
+// HASHMAP + LIST
 
 package Array.Questions;
 import java.io.*;
