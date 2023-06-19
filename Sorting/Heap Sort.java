@@ -3,9 +3,9 @@ import java.io.*;
 
 class HeapSort
 {
-    static int size = 0;
-    static int maxsize = 5;
-    static int arr[] = new int[maxsize];
+    int size = 0;
+    int maxsize = 5;
+    int arr[] = new int[maxsize];
 
 
     /* Parent */
@@ -38,10 +38,25 @@ class HeapSort
     }
 
 
-    /* Print the array */
-    void printArray()
+    /* Creating the array */
+    void create() throws IOException
     {
-        for (int i = 0; i < size; i++)
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<maxsize; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+            size++;
+        }
+    }
+
+
+    /* Print the array */
+    void print()
+    {
+        for (int i=0; i<size; i++)
         {
             System.out.print(arr[i] + " ");
         }
@@ -101,17 +116,12 @@ class HeapSort
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
-        //Inserting array elements
-        for (int i=0; i<maxsize; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-            size++;
-        }
+        //Creating the array
+        obj.create();
 
         //Printing created array
         System.out.println("*** Created Array ***");
-        obj.printArray();
+        obj.print();
 
         //Sorting array
         System.out.println("\nSorting the array...");
@@ -119,6 +129,6 @@ class HeapSort
 
         //Printing new array
         System.out.println("*** New Array ***");
-        obj.printArray();
+        obj.print();
     }
 }
