@@ -20,7 +20,21 @@ import java.io.*;
 class Counting_Sort
 {
     static final int size = 5;
-    static int arr[] = new int[size];
+    int arr[] = new int[size];
+
+
+    /* Creating the array */
+    void create() throws IOException
+    {
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        for (int i=0; i<size; i++)
+        {
+            System.out.print("Enter the element : ");
+            arr[i] = Integer.parseInt(b.readLine());
+        }
+    }
 
 
     /* Printing the array */
@@ -79,11 +93,7 @@ class Counting_Sort
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        for (int i=0; i<5; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        obj.create();
 
         //Printing original array
         System.out.println("*** Original Array ***");
