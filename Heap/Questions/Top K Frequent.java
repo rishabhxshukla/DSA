@@ -59,7 +59,12 @@ class TopKFrequent
 
         //Sorting the elements in descending order based on frequency
         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>(
-                (a, b) -> a.getValue() != b.getValue() ? b.getValue() - a.getValue() : a.getKey() - b.getKey()
+                (a, b) -> {
+                    if (a.getValue() != b.getValue())
+                        return b.getValue() - a.getValue();
+                    else
+                        return a.getKey() - b.getKey();
+                }
         );
 
         //Adding all HashMap elements to PriorityQueue
