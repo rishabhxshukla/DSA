@@ -31,29 +31,12 @@ class HeapSort
     }
 
 
-    /* Leaf node */
-    boolean isLeaf(int i)
-    {
-        return (i >= size/2 && i < size);
-    }
-
-
     /* Swap nodes */
     void swap(int x, int y)
     {
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
-    }
-
-
-    /* Print the heap */
-    void print()
-    {
-        for (int i = 0; i < size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
     }
 
 
@@ -129,7 +112,7 @@ class HeapSort
         }
 
         //Printing created array
-        System.out.println("\n*** Created Array ***");
+        System.out.println("*** Created Array ***");
         obj.printArray();
 
         //Sorting array
