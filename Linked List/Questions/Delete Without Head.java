@@ -84,6 +84,7 @@ class Delete_Without_Head
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -91,21 +92,24 @@ class Delete_Without_Head
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Taking user input
         System.out.print("\nEnter the node that you want to delete : ");
         int key = Integer.parseInt(b.readLine());
         Node temp = getNode(key);
 
-        //Deleting user desired node
+        //Deleting desired node
         System.out.println("Deleting...");
         ll.delete(temp);
         /*
           We can directly pass node like this :
           ll.delete(head.next.next);
-         */
+        */
 
+        //Printing new LL
         System.out.println("New Linked List : ");
         ll.printLL();
     }
