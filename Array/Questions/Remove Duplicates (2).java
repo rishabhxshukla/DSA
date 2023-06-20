@@ -39,7 +39,7 @@ class RemoveDuplicates2
         }
 
         //Printing the elements after removing duplicates
-        for (int k=0; k<=i; k++)
+        for (int k = 0; k <= i; k++)
         {
             System.out.print(arr[k] + " ");
         }

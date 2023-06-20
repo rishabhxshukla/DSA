@@ -34,7 +34,7 @@ class RemoveDuplicates1
         }
 
         //Printing the elements after removing duplicates
-        for (int i=0; i<k; i++)
+        for (int i = 0; i < k; i++)
         {
             System.out.print(arr[i] + " ");
         }
