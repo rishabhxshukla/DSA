@@ -8,8 +8,9 @@ class TowerOfHanoi
     /* Function to move the disks */
     void move(int n, char from, char aux, char to)
     {
-        if (n == 0)
+        if (n == 0) {
             return;
+        }
 
         move(n-1, from, to, aux);
         System.out.println("Moved disk " +n+ " from " +from+ " to " +to);

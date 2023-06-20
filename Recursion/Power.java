@@ -8,10 +8,11 @@ class Power
     /* Function to find the power */
     static int power(int n, int p)
     {
-        if (p == 0)
+        if (p == 0) {
             return 1;
-        else
-            return (n * power(n, p-1));
+        }
+
+        return (n * power(n, p-1));
     }
 
 

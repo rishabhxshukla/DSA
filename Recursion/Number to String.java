@@ -8,8 +8,9 @@ class Number_to_String
     /* Function to say the digits */
     void sayDigit(int n, String arr[])
     {
-        if (n == 0)
+        if (n == 0) {
             return;
+        }
 
         int digit = n % 10;
         n = n / 10;

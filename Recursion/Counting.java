@@ -8,8 +8,9 @@ class Counting
     /* Function to count numbers */
     void counting(int n)
     {
-        if (n == 0)
+        if (n == 0) {
             return;
+        }
 
         counting(n-1);
         System.out.print(n + " ");
