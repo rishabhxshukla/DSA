@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class RemoveDuplicates
+class RemoveDuplicates1
 {
     static int arr[] = {2, 3, 3, 7, 9, 9, 9, 10, 12, 12, 12};
 
@@ -44,7 +44,7 @@ class RemoveDuplicates
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        RemoveDuplicates obj = new RemoveDuplicates();
+        RemoveDuplicates1 obj = new RemoveDuplicates1();
 
         //Printing original array
         System.out.println("*** Original Array ***");
