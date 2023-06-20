@@ -1,4 +1,12 @@
-// Program for Tower of Hanoi algorithm
+/*
+Program for Tower of Hanoi algorithm.
+The Tower of Hanoi is a mathematical puzzle that consists of 3 rods and a number of disks
+of different sizes. The objective of the puzzle is to move the entire stack of disks from
+one rod to another, following these rules:
+1) Only one disk can be moved at a time.
+2) You can only move the upper disk of the rod.
+3) No bigger disk should be placed on top of a smaller disk.
+*/
 
 package Recursion;
 import java.io.*;
