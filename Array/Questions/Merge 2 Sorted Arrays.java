@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class Merge_2_Sorted_Arrays1
+class Merge_2_Sorted_Arrays
 {
     static int arr1[] = new int[3];
     static int arr2[] = new int[5];
@@ -76,7 +76,7 @@ class Merge_2_Sorted_Arrays1
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Merge_2_Sorted_Arrays1 obj = new Merge_2_Sorted_Arrays1();
+        Merge_2_Sorted_Arrays obj = new Merge_2_Sorted_Arrays();
 
         //Creating the arrays
         System.out.println("Creating Sorted Array 1 -> ");
