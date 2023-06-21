@@ -1,3 +1,9 @@
+/*
+Optimal formula for calculating middle element :
+mid = s + (e-s)/2
+mid = lb + (ub-lb)/2
+*/
+
 package Searching;
 import java.io.*;
 
@@ -10,7 +16,7 @@ class Binary_Search
 
         while (lb <= ub)
         {
-            int mid = (ub + lb) / 2;
+            int mid = (lb + ub) / 2;
 
             if (arr[mid] < key)
                 lb = mid + 1;
