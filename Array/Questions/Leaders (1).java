@@ -8,7 +8,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class Leaders
+class Leaders1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -69,7 +69,7 @@ class Leaders
     public static void main(String[] args) throws IOException
     {
         //Creating object of the class
-        Leaders obj = new Leaders();
+        Leaders1 obj = new Leaders1();
 
         //Creating the array
         obj.create();
