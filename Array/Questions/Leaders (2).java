@@ -2,7 +2,7 @@
 An element is a leader if it is greater than all the elements to its right side.
 And the rightmost element is always a leader.
 */
-// MAX VARIABLE + ARRAYLIST
+// MAX VARIABLE + ARRAY LIST
 
 package Array.Questions;
 import java.io.*;
