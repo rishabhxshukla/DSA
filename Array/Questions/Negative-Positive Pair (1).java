@@ -5,7 +5,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class NegativePositivePair
+class NegativePositivePair1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -65,7 +65,7 @@ class NegativePositivePair
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        NegativePositivePair obj = new NegativePositivePair();
+        NegativePositivePair1 obj = new NegativePositivePair1();
 
         //Creating the array
         obj.create();
