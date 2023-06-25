@@ -1,0 +1,54 @@
+/*
+Find all the pairs in an array whose sum of cubes is equal to the target value.
+STEPS :
+1) Traverse numbers from 1 to cube root of target.
+2) Subtract cube of current number from target and check if their difference is a
+   perfect cube or not.
+3) If it is a perfect cube then print the pairs.
+*/
+// DIFFERENCE
+
+package Array.Questions;
+import java.io.*;
+
+class CubeSumPairs2
+{
+    /* Function to find the pairs */
+    void pairs(int target)
+    {
+        //Only going till cube-root of target
+        int range = (int)Math.cbrt(target);
+
+        for (int i=0; i<=range; i++)
+        {
+            //Difference = Target - Cube of 1st no.
+            int diff = target - (int)Math.pow(i, 3);
+
+            //Cube root of 2nd no. (diff)
+            int cubeRootOfSecond = (int)Math.cbrt(diff);
+
+            //If diff == Cube of Cube-root of diff
+            if (diff == (int)Math.pow(cubeRootOfSecond, 3))
+            {
+                System.out.println("("+ i +", "+ cubeRootOfSecond +")");
+            }
+        }
+    }
+
+
+    public static void main(String args[]) throws IOException
+    {
+        //Creating object of the class
+        CubeSumPairs2 obj = new CubeSumPairs2();
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
+
+        //Taking user input
+        System.out.print("Enter the target value : ");
+        int target = Integer.parseInt(b.readLine());
+
+        //Printing the pairs
+        System.out.println("*** Pairs ***");
+        obj.pairs(target);
+    }
+}
