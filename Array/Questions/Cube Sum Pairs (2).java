@@ -1,5 +1,5 @@
 /*
-Find all the pairs in an array whose sum of cubes is equal to the target value.
+Find all the pairs whose sum of cubes is equal to the target value.
 STEPS :
 1) Traverse numbers from 1 to cube root of target.
 2) Subtract cube of current number from target and check if their difference is a

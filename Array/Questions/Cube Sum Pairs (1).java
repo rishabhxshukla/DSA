@@ -1,4 +1,4 @@
-// Find all the pairs in an array whose sum of cubes is equal to the target value.
+// Find all the pairs whose sum of cubes is equal to the target value.
 // NESTED LOOPS
 
 package Array.Questions;
