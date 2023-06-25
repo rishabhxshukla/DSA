@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class CubeSumPairs
+class CubeSumPairs1
 {
     /* Function to find the pairs */
     void pairs(int target)
@@ -28,7 +28,7 @@ class CubeSumPairs
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        CubeSumPairs obj = new CubeSumPairs();
+        CubeSumPairs1 obj = new CubeSumPairs1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
