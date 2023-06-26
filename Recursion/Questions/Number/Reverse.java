@@ -3,7 +3,7 @@
 package Recursion.Questions.Number;
 import java.io.*;
 
-class NumberReverse
+class Reverse
 {
     /* Function to reverse a number */
     static int sum = 0;

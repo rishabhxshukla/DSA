@@ -3,7 +3,7 @@
 package Recursion.Questions.Number;
 import java.io.*;
 
-class Sum_of_Digits
+class SumDigits
 {
     /* Function to find the sum */
     static int sum = 0;

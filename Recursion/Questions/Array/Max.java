@@ -3,7 +3,7 @@
 package Recursion.Questions.Array;
 import java.io.*;
 
-class ArrayMax
+class Max
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -28,7 +28,7 @@ class ArrayMax
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        ArrayMax obj = new ArrayMax();
+        Max obj = new Max();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

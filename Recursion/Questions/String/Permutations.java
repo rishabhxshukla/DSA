@@ -3,7 +3,7 @@
 package Recursion.Questions.String;
 import java.io.*;
 
-class StringPermutations
+class Permutations
 {
     /* Function to find the permutations */
     // ABC => ABC  ACB  BAC  BCA  CAB  CBA
@@ -26,7 +26,7 @@ class StringPermutations
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        StringPermutations obj = new StringPermutations();
+        Permutations obj = new Permutations();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

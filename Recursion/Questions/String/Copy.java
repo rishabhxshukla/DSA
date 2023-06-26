@@ -3,7 +3,7 @@
 package Recursion.Questions.String;
 import java.io.*;
 
-class CopyString
+class Copy
 {
     /* Function to find the copy the string */
     static String newstr = "";

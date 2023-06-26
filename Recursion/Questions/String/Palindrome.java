@@ -4,7 +4,7 @@
 package Recursion.Questions.String;
 import java.io.*;
 
-class StringPalindrome
+class Palindrome
 {
     /* Function to check for a palindrome string */
     static boolean palindrome(String str, int i, int j)

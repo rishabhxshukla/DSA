@@ -1,34 +1,31 @@
-// Program to find the smallest element of an array
+// Program to print the array recursively
 
 package Recursion.Questions.Array;
 import java.io.*;
 
-class ArrayMin
+class Print
 {
     static final int size = 5;
     static int arr[] = new int[size];
 
 
-    /* Function to find the max element */
-    static int min = Integer.MAX_VALUE;
-    static int min(int i)
+    /* Function to print the array */
+    void print(int i)
     {
-        if (i == arr.length) {
-            return min;
+        if (i == size-1) {
+            System.out.print(arr[i]);
+            return;
         }
 
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-
-        return min(i + 1);
+        System.out.print(arr[i] + " ");
+        print(i+1);
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        ArrayMin obj = new ArrayMin();
+        Print obj = new Print();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -41,12 +38,6 @@ class ArrayMin
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
-
-        //Finding the smallest element
-        System.out.println("\nMin : " + min(0));
+        obj.print(0);
     }
 }

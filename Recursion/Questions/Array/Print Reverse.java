@@ -3,7 +3,7 @@
 package Recursion.Questions.Array;
 import java.io.*;
 
-class PrintArrayReverse
+class PrintReverse
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -25,7 +25,7 @@ class PrintArrayReverse
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        PrintArrayReverse obj = new PrintArrayReverse();
+        PrintReverse obj = new PrintReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

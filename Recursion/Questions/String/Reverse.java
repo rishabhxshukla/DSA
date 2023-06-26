@@ -3,7 +3,7 @@
 package Recursion.Questions.String;
 import java.io.*;
 
-class StringReverse
+class Reverse
 {
     //Variable to store the reversed string
     static String newstr = "";

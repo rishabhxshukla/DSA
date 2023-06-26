@@ -3,7 +3,7 @@
 package Recursion.Questions.Number;
 import java.io.*;
 
-class NumberPalindrome
+class Palindrome
 {
     /* Function to check for a palindrome number */
     static int sum = 0;
