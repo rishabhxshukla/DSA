@@ -1,18 +1,19 @@
-// Program to find the factorial of n
+// Program to find the fibonacci of n
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
-class Factorial
+class Fibonacci
 {
-    /* Function to find the factorial */
-    static int factorial(int n)
+    /* Function to find the fibonacci */
+    static int fibonacci(int n)
     {
-        if (n == 0) {
+        if (n == 0)
+            return 0;
+        if (n == 1)
             return 1;
-        }
-
-        return (n * factorial(n-1));
+        else
+            return (fibonacci(n-1) + fibonacci(n-2));
     }
 
 
@@ -25,7 +26,7 @@ class Factorial
         System.out.print("Enter the value of N : ");
         int n = Integer.parseInt(b.readLine());
 
-        //Printing the factorial
-        System.out.println("Factorial : " + factorial(n));
+        //Printing the fibonacci
+        System.out.println("Fibonacci : " + fibonacci(n));
     }
 }

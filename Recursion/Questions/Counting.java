@@ -1,6 +1,6 @@
 // Program to count numbers from 1 to n
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class Counting

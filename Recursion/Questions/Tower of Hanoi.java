@@ -8,7 +8,7 @@ one rod to another, following these rules:
 3) No bigger disk should be placed on top of a smaller disk.
 */
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class TowerOfHanoi

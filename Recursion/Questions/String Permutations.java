@@ -1,6 +1,6 @@
 // Program to find all the permutations of a given string
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class StringPermutations

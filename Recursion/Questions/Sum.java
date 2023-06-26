@@ -1,6 +1,6 @@
 // Program to find the sum of first n natural numbers
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class Sum

@@ -1,7 +1,7 @@
 // Program to print the prefix sum of the array
 // Prefix Sum = Sum of all the elements till the index i for every element of the array
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class PrefixSum

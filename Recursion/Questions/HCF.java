@@ -1,6 +1,6 @@
 // Program to find the HCF or GCD of 2 numbers
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class HCF

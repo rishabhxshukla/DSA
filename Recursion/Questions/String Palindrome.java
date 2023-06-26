@@ -1,7 +1,7 @@
 // Program to check whether a string is palindrome or not
 // 2 POINTERS
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class StringPalindrome

@@ -1,6 +1,6 @@
 // Program to print the array recursively
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class PrintArray

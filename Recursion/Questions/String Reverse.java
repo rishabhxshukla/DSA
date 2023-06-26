@@ -1,6 +1,6 @@
 // Program to reverse a string
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class StringReverse

@@ -1,13 +1,13 @@
-// Program to reverse a number
+// Program to check whether a number is palindrome or not
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
-class NumberReverse
+class NumberPalindrome
 {
-    /* Function to reverse a number */
+    /* Function to check for a palindrome number */
     static int sum = 0;
-    static int reverse(int num)
+    static int palindrome(int num)
     {
         if (num == 0) {
             return sum;
@@ -17,7 +17,7 @@ class NumberReverse
         int r = num % 10;
         sum = (sum * 10) + r;
 
-        return reverse(num / 10);
+        return palindrome(num / 10);
     }
 
 
@@ -30,7 +30,8 @@ class NumberReverse
         System.out.print("Enter the number : ");
         int num = Integer.parseInt(b.readLine());
 
-        //Printing the reversed number
-        System.out.print("Reversed number : " + reverse(num));
+        //Printing the result
+        boolean ans = num == palindrome(num);
+        System.out.println("Palindrome : " + ans);
     }
 }

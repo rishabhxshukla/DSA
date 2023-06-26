@@ -1,6 +1,6 @@
 // Program to find the number(n) raised to the power(p)
 
-package Recursion;
+package Recursion.Questions;
 import java.io.*;
 
 class Power
