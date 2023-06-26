@@ -5,7 +5,7 @@ Right move : M[i][j+1]
 Down move  : M[i+1][j]
 */
 
-package Recursion.Questions;
+package Recursion.Questions.Array;
 import java.io.*;
 
 class MatrixPaths
