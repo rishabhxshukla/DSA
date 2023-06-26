@@ -1,6 +1,6 @@
 // Program to copy one string to another
 
-package Recursion.Questions;
+package Recursion.Questions.String;
 import java.io.*;
 
 class CopyString

@@ -1,7 +1,7 @@
 // Program to check if a number is prime or not
 // NOTE : Count-based approach is not efficient for large numbers.
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Prime

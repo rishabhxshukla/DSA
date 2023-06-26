@@ -6,7 +6,7 @@ Thus, 13 is an Emirp number.
 NOTE : Count-based approach is not efficient for large numbers.
 */
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Emirp

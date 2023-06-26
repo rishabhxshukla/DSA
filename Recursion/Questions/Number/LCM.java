@@ -1,6 +1,6 @@
 // Program to find the LCM of 2 numbers
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class LCM

@@ -1,6 +1,6 @@
 // Program to find the fibonacci of n
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Fibonacci

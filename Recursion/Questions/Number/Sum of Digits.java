@@ -1,6 +1,6 @@
 // Program to find the sum of digits of a number
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Sum_of_Digits

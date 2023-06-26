@@ -1,6 +1,6 @@
 // Program to print a number in string format
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Number_to_String

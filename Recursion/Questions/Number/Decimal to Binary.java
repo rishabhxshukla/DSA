@@ -1,6 +1,6 @@
 // Program to convert decimal number into its binary equivalent
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Decimal_to_Binary

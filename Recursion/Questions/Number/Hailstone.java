@@ -7,7 +7,7 @@ Let N be an integer. According to Collatz conjecture, if we keep iterating N as 
 Our number will eventually converge to 1 irrespective of the choice of N.
 */
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class Hailstone

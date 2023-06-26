@@ -1,6 +1,6 @@
 // Program to count the digits of a given number
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class CountDigits

@@ -1,6 +1,6 @@
 // Program to find the largest element of an array
 
-package Recursion.Questions;
+package Recursion.Questions.Array;
 import java.io.*;
 
 class ArrayMax

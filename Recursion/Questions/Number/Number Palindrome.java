@@ -1,6 +1,6 @@
 // Program to check whether a number is palindrome or not
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class NumberPalindrome

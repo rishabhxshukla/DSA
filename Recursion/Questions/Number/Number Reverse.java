@@ -1,6 +1,6 @@
 // Program to reverse a number
 
-package Recursion.Questions;
+package Recursion.Questions.Number;
 import java.io.*;
 
 class NumberReverse

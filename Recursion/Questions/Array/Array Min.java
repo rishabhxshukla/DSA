@@ -1,6 +1,6 @@
 // Program to find the smallest element of an array
 
-package Recursion.Questions;
+package Recursion.Questions.Array;
 import java.io.*;
 
 class ArrayMin
