@@ -27,8 +27,8 @@ class CubeSumPairs2
             //Cube root of 2nd no. (diff)
             int cubeRootOfSecond = (int)Math.cbrt(diff);
 
-            //If diff == Cube of Cube-root of diff
-            if (diff == (int)Math.pow(cubeRootOfSecond, 3))
+            //If i^3 + j^3 == target
+            if ((int)Math.pow(i, 3) + (int)Math.pow(cubeRootOfSecond, 3) == target)
             {
                 System.out.println("("+ i +", "+ cubeRootOfSecond +")");
             }
