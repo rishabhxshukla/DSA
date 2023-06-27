@@ -37,8 +37,9 @@ class PrintNodes
     {
         while (pq.peek() != key)
         {
+            //If key is not found
             if (pq.isEmpty()) {
-                System.out.println("ERROR : Heap is empty!");
+                System.out.println("ERROR : Heap is empty, key not found.");
                 return;
             }
 
