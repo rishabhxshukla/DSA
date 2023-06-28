@@ -52,8 +52,9 @@ class SortingValues
     }
 
 
-    public static void main(String[] args) throws IOException
+    public static void main(String args[]) throws IOException
     {
+        //Creating object of the class
         SortingValues obj = new SortingValues();
 
         //Creating the HashMap
