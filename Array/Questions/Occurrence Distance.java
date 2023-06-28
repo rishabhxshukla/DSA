@@ -34,6 +34,7 @@ class OccurrenceDistance
 
 
     /* Function to find the maximum distance */
+    // Both these loops are basically one iteration only
     static int distance(int key)
     {
         int first = 0;
@@ -49,7 +50,7 @@ class OccurrenceDistance
         }
 
         //2nd occurrence
-        for (int i=first; i<size; i++)
+        for (int i=(first+1); i<size; i++)
         {
             if (arr[i] == key) {
                 last = i;
