@@ -68,6 +68,7 @@ class Last_to_First
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -75,12 +76,15 @@ class Last_to_First
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List :");
         ll.printLL();
 
+        //Swapping nodes
         System.out.println("\nSwapping last and first node...");
         ll.LastToFirst();
 
+        //Printing new LL
         System.out.println("New Linked List :");
         ll.printLL();
     }

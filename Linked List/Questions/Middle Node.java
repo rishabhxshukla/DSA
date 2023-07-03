@@ -79,9 +79,11 @@ class Middle_Node
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Taking user input
         System.out.print("How many nodes do you want to enter? : ");
         int n = Integer.parseInt(b.readLine());
 
+        //Creating the LL
         for (int i=0; i<n; i++)
         {
             System.out.print("Enter the node : ");
@@ -89,9 +91,11 @@ class Middle_Node
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("Created Linked List :");
         ll.printLL();
 
+        //Printing the middle node
         System.out.println("\nMiddle node is : " + middleNode());
     }
 }

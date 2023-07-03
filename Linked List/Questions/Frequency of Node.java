@@ -62,6 +62,7 @@ class Frequency
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -69,12 +70,15 @@ class Frequency
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Taking user input
         System.out.print("\nEnter a node to check its frequency : ");
         int key = Integer.parseInt(b.readLine());
 
-        System.out.println("Frequency of " +key+ " is " +frequency(key));
+        //Printing the frequency
+        System.out.println("Frequency of " +key+ " is " + frequency(key));
     }
 }

@@ -63,26 +63,28 @@ class Loop_Length
 
     public static void main(String args[])
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Loop_Length ll = new Loop_Length();
 
-        /* Assigning the Nodes */
+        //Creating the LL
         head = new Node(10);
         Node second = new Node(20);
         Node third = new Node(30);
         Node fourth = new Node(40);
         Node fifth = new Node(50);
 
-        /* Linking the Nodes */
+        //Linking the Nodes
         head.next = second;
         second.next = third;
         third.next = fourth;
         fourth.next = fifth;
-        fifth.next = third;     // <-----
+        fifth.next = third;     // <----
 
+        //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Printing the length of loop
         System.out.println("Loop length : " + isLoop());
     }
 }

@@ -60,6 +60,7 @@ class Length_of_LL
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -67,9 +68,11 @@ class Length_of_LL
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("Created Linked List :");
         ll.printLL();
 
+        //Printing the length
         System.out.print("\nLength of LL is : " + lengthOfLL());
     }
 }

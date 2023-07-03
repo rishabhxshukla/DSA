@@ -58,11 +58,12 @@ class Nth_Node
 
     public static void main(String args[]) throws IOException
     {
-        /* Creating object of the class */
+        //Creating object of the class
         Nth_Node ll = new Nth_Node();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -70,12 +71,15 @@ class Nth_Node
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("*** Created Linked List ***");
         ll.printLL();
 
+        //Taking user input
         System.out.print("\nEnter the index that you want to find : ");
         int index = Integer.parseInt(b.readLine());
-        int nodeAtIndex = GetNth(index);
-        System.out.println("Node present at index " +index+ " is " +nodeAtIndex);
+
+        //Printing the node present at 'index'
+        System.out.println("Node present at index " +index+ " is " + GetNth(index));
     }
 }
