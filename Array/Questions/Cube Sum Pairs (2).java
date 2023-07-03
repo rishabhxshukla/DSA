@@ -24,13 +24,13 @@ class CubeSumPairs2
             //Difference = Target - Cube of 1st no.
             int diff = target - (int)Math.pow(i, 3);
 
-            //Cube root of 2nd no. (diff)
-            int cubeRootOfSecond = (int)Math.cbrt(diff);
+            //Second no. = Cube root of diff
+            int j = (int)Math.cbrt(diff);
 
             //If i^3 + j^3 == target
-            if ((int)Math.pow(i, 3) + (int)Math.pow(cubeRootOfSecond, 3) == target)
+            if ((int)Math.pow(i, 3) + (int)Math.pow(j, 3) == target)
             {
-                System.out.println("("+ i +", "+ cubeRootOfSecond +")");
+                System.out.println("("+ i +", "+ j +")");
             }
         }
     }
