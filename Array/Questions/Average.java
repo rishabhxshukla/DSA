@@ -33,7 +33,7 @@ class Average
     }
 
 
-    /* Function to find the sum of the array */
+    /* Function to find average of elements of the array */
     static int average()
     {
         int sum = 0;

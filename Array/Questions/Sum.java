@@ -33,7 +33,7 @@ class Sum
     }
 
 
-    /* Function to find the sum of the array */
+    /* Function to find sum of elements of the array */
     static int sum()
     {
         int sum = 0;
