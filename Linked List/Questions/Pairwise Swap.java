@@ -66,6 +66,7 @@ class Pairwise_Swap
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<6; i++)
         {
             System.out.print("Enter the node : ");
@@ -73,12 +74,15 @@ class Pairwise_Swap
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List :");
         ll.printLL();
 
+        //Swapping pairwise
         System.out.println("\nSwapping elements pairwise...");
         ll.SwapPairwise();
 
+        //Printing new LL
         System.out.println("New Linked List :");
         ll.printLL();
     }

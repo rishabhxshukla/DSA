@@ -66,6 +66,7 @@ class Number_Present
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -73,11 +74,15 @@ class Number_Present
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Taking user input
         System.out.print("\nEnter the node that you want to search : ");
         int key = Integer.parseInt(b.readLine());
-        System.out.println( search(key) );
+
+        //Printing the result
+        System.out.println("isPresent : " + search(key));
     }
 }

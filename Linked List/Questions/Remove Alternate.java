@@ -69,6 +69,7 @@ class Remove_Alternate
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<6; i++)
         {
             System.out.print("Enter the node : ");
@@ -76,12 +77,15 @@ class Remove_Alternate
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List :");
         ll.printLL();
 
+        //Removing alternate nodes
         System.out.println("\nRemoving alternate nodes...");
         ll.RemoveAlternate();
 
+        //Printing new LL
         System.out.println("New Linked List :");
         ll.printLL();
     }

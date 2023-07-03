@@ -83,6 +83,7 @@ class Zeros_to_Front
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -90,12 +91,15 @@ class Zeros_to_Front
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Moving zeroes to front
         System.out.println("\nMoving zeros to the front...");
         ll.moveZeros();
 
+        //Printing new LL
         System.out.println("New Linked List : ");
         ll.printLL();
     }

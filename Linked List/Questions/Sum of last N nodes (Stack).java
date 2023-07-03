@@ -86,6 +86,7 @@ class Sum_Last_N_Nodes2
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -93,12 +94,15 @@ class Sum_Last_N_Nodes2
             ll.add(d);
         }
 
+        //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Taking user input
         System.out.print("\nEnter the value of N : ");
         int N = Integer.parseInt(b.readLine());
 
+        //Printing the sum
         System.out.print("Sum of last n nodes : " + sum(N));
     }
 }

@@ -1,7 +1,7 @@
 /*
-1. Initialize 3 pointers prev = null, temp = head, and next = null.
-2. Iterate through the linked list.
-3. Follow these steps -
+1) Initialize 3 pointers prev = null, temp = head, and next = null.
+2) Iterate through the linked list.
+3) Follow these steps -
    Store the next node : next = temp.next
    Point temp.next to the prev : temp.next = prev
    Update prev and temp variables : prev = temp, temp = next
@@ -74,6 +74,7 @@ class Reverse
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
+        //Creating the LL
         for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
@@ -81,12 +82,15 @@ class Reverse
             ll.add(d);
         }
 
+        //Printing original LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
+        //Reversing the LL
         System.out.print("\nReversing Linked List...");
         ll.reverse();
 
+        //Printing new LL
         System.out.println("\nNew Linked List : ");
         ll.printLL();
     }
