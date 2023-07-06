@@ -1,6 +1,6 @@
 //
 
-package String;
+package String.Questions;
 import java.io.*;
 
 class Boilerplate
