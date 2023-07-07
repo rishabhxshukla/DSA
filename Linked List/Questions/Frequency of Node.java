@@ -1,3 +1,5 @@
+// Program to find the frequency of a given node in linked list.
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -38,7 +40,7 @@ class Frequency
     }
 
 
-    /* Function to find frequency of a node */
+    /* Function to find the node frequency */
     static int frequency(int key)
     {
         Node temp = head;
@@ -79,6 +81,6 @@ class Frequency
         int key = Integer.parseInt(b.readLine());
 
         //Printing the frequency
-        System.out.println("Frequency of " +key+ " is " + frequency(key));
+        System.out.println("Frequency of " +key+ " is : " + frequency(key));
     }
 }
