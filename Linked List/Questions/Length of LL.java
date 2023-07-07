@@ -1,3 +1,5 @@
+// Program to find the length of a linked list.
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -38,7 +40,7 @@ class Length_of_LL
     }
 
 
-    /* Function to find length of LL */
+    /* Function to find the length */
     static int lengthOfLL()
     {
         Node temp = head;
