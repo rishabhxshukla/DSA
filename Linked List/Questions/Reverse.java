@@ -1,10 +1,11 @@
 /*
+STEPS :
 1) Initialize 3 pointers prev = null, temp = head, and next = null.
 2) Iterate through the linked list.
 3) Follow these steps -
-   Store the next node : next = temp.next
-   Point temp.next to the prev : temp.next = prev
-   Update prev and temp variables : prev = temp, temp = next
+   a) Store the next node : next = temp.next
+   b) Point temp.next to the prev : temp.next = prev
+   c) Update prev and temp variables : prev = temp, temp = next
 */
 
 package LinkedList.Questions;
@@ -62,6 +63,7 @@ class Reverse
             prev = temp;
             temp = next;
         }
+
         //Changing head node
         head = prev;
     }
