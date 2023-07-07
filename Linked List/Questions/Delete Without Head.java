@@ -1,3 +1,10 @@
+/*
+Delete a node from linked list without the head pointer.
+STEPS :
+1) Copy the data of next node to the current node to be deleted.
+2) Now we can easily delete the current node by moving one step forward.
+*/
+
 package LinkedList.Questions;
 import java.io.*;
 
