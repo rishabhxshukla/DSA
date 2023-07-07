@@ -3,7 +3,7 @@
 package LinkedList.Questions;
 import java.io.*;
 
-class Length_of_LL
+class Length
 {
     static Node head;
     static class Node
@@ -41,7 +41,7 @@ class Length_of_LL
 
 
     /* Function to find the length */
-    static int lengthOfLL()
+    static int length()
     {
         Node temp = head;
         int count = 0;
@@ -51,6 +51,7 @@ class Length_of_LL
             count++;
             temp = temp.next;
         }
+
         return count;
     }
 
@@ -58,7 +59,7 @@ class Length_of_LL
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Length_of_LL ll = new Length_of_LL();
+        Length ll = new Length();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -75,6 +76,6 @@ class Length_of_LL
         ll.printLL();
 
         //Printing the length
-        System.out.print("\nLength of LL is : " + lengthOfLL());
+        System.out.print("\nLength : " + length());
     }
 }
