@@ -1,3 +1,14 @@
+/*
+Program to move the last node to the front of linked list.
+STEPS :
+1) Traverse till the last node.
+   Use two pointers - 'prev & last' :
+   a) Store the 2nd last node in prev.
+   b) Store the last node in last.
+2) Make prev the last node.
+3) Make last the head node.
+*/
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -38,7 +49,7 @@ class Last_to_First
     }
 
 
-    /* Function to make last node the first node in a LL */
+    /* Function to make last node the first node of a LL */
     void LastToFirst()
     {
         Node temp = head;
@@ -52,12 +63,12 @@ class Last_to_First
         //Storing last node in last
         Node last = temp.next;
 
+        //Pointing 2nd last node to null
+        prev.next = null;
+
         //Making last node the first node
         last.next = head;
         head = last;
-
-        //Pointing 2nd last node to null
-        prev.next = null;
     }
 
 
