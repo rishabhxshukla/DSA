@@ -1,10 +1,10 @@
+// Detect loop or cycle in a linked list
+// HASHSET
+
 package LinkedList.Questions;
-
-/* Floyd’s Cycle-Finding Algorithm Method */
-
 import java.util.HashSet;
 
-class Detect_Loop_HashSet
+class DetectLoop2
 {
     static Node head;
     static class Node
@@ -27,27 +27,19 @@ class Detect_Loop_HashSet
     }
 
 
-    /* Creating the LL */
-    void add(int d)
-    {
-        Node new_node = new Node(d);
-        new_node.next = head;
-        head = new_node;
-    }
-
-
     /* Function to find loop in LL */
     static boolean isLoop()
     {
-        //Creating a Hash Set
         HashSet<Node> set = new HashSet<>();
         Node temp = head;
 
         while (temp != null)
         {
+            //If HashSet already contains the node
             if (set.contains(temp)) {
                 return true;
             }
+            //Otherwise, add it to the HashSet
             set.add(temp);
             temp = temp.next;
         }
@@ -58,21 +50,21 @@ class Detect_Loop_HashSet
     public static void main(String args[])
     {
         //Creating object of the class
-        Detect_Loop_HashSet ll = new Detect_Loop_HashSet();
+        DetectLoop2 ll = new DetectLoop2();
 
         //Creating the LL
         head = new Node(10);
         Node second = new Node(20);
-        Node third = new Node(30);
+        Node third  = new Node(30);
         Node fourth = new Node(40);
-        Node fifth = new Node(50);
+        Node fifth  = new Node(50);
 
         //Linking the Nodes
-        head.next = second;
+        head.next   = second;
         second.next = third;
-        third.next = fourth;
+        third.next  = fourth;
         fourth.next = fifth;
-        fifth.next = third;     // <----
+        fifth.next  = third;     // <----
 
         //Printing the LL
         System.out.println("Created Linked List : ");

@@ -1,4 +1,5 @@
-// Floyd’s Cycle Detection Algorithm Method
+// Detect loop or cycle in a linked list
+// Floyd’s Cycle Detection Algorithm
 
 package LinkedList.Questions;
 
@@ -53,16 +54,16 @@ class Detect_Loop_Floyd
         //Creating the LL
         head = new Node(10);
         Node second = new Node(20);
-        Node third = new Node(30);
+        Node third  = new Node(30);
         Node fourth = new Node(40);
-        Node fifth = new Node(50);
+        Node fifth  = new Node(50);
 
         //Linking the Nodes
-        head.next = second;
+        head.next   = second;
         second.next = third;
-        third.next = fourth;
+        third.next  = fourth;
         fourth.next = fifth;
-        fifth.next = third;     // <----
+        fifth.next  = third;     // <----
 
         //Printing the LL
         System.out.println("Created Linked List : ");
