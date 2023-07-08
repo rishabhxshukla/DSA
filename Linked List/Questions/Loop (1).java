@@ -3,7 +3,7 @@
 
 package LinkedList.Questions;
 
-class Detect_Loop_Floyd
+class DetectLoop1
 {
     static Node head;
     static class Node
@@ -19,10 +19,37 @@ class Detect_Loop_Floyd
     }
 
 
+    /* Creating the LL */
+    void create()
+    {
+        head = new Node(10);
+        Node second = new Node(20);
+        Node third  = new Node(30);
+        Node fourth = new Node(40);
+        Node fifth  = new Node(50);
+
+        //Linking the Nodes
+        head.next   = second;
+        second.next = third;
+        third.next  = fourth;
+        fourth.next = fifth;
+        fifth.next  = third;     // <----
+    }
+
+
     /* Printing the LL */
     void printLL()
     {
-        System.out.println("10 20 30 40 50");
+        Node temp = head;   //Current node
+        int n = 0;          //No. of nodes
+
+        //Printing the nodes
+        while (temp != null && n < 5)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+            n++;
+        }
     }
 
 
@@ -49,27 +76,16 @@ class Detect_Loop_Floyd
     public static void main(String args[])
     {
         //Creating object of the class
-        Detect_Loop_Floyd ll = new Detect_Loop_Floyd();
+        DetectLoop1 ll = new DetectLoop1();
 
         //Creating the LL
-        head = new Node(10);
-        Node second = new Node(20);
-        Node third  = new Node(30);
-        Node fourth = new Node(40);
-        Node fifth  = new Node(50);
-
-        //Linking the Nodes
-        head.next   = second;
-        second.next = third;
-        third.next  = fourth;
-        fourth.next = fifth;
-        fifth.next  = third;     // <----
+        ll.create();
 
         //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
         //Printing the result
-        System.out.println("Loop : " + isLoop());
+        System.out.println("\nLoop : " + isLoop());
     }
 }
