@@ -12,7 +12,7 @@ Explanation: Buy stock on day 1 and sell it on day 4 => 6 – 1 = 5
 package Array.Questions;
 import java.io.*;
 
-class Stocks
+class Stocks2
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -69,7 +69,7 @@ class Stocks
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Stocks obj = new Stocks();
+        Stocks2 obj = new Stocks2();
 
         //Creating the array
         obj.create();
