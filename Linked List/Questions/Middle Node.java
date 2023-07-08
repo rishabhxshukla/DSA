@@ -1,7 +1,9 @@
+// Find the middle node of a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Middle_Node
+class MiddleNode
 {
     static Node head;
     static class Node
@@ -38,7 +40,7 @@ class Middle_Node
     }
 
 
-    /* Function to find length of LL */
+    /* Function to find the length of LL */
     static int lengthOfLL()
     {
         Node temp = head;
@@ -53,7 +55,7 @@ class Middle_Node
     }
 
 
-    /* Function to find middle node of LL */
+    /* Function to find the middle node */
     static int middleNode()
     {
         int mid = lengthOfLL()/2;
@@ -75,16 +77,12 @@ class Middle_Node
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Middle_Node ll = new Middle_Node();
+        MiddleNode ll = new MiddleNode();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
-        //Taking user input
-        System.out.print("How many nodes do you want to enter? : ");
-        int n = Integer.parseInt(b.readLine());
-
         //Creating the LL
-        for (int i=0; i<n; i++)
+        for (int i=0; i<5; i++)
         {
             System.out.print("Enter the node : ");
             int d = Integer.parseInt(b.readLine());
@@ -96,6 +94,6 @@ class Middle_Node
         ll.printLL();
 
         //Printing the middle node
-        System.out.println("\nMiddle node is : " + middleNode());
+        System.out.println("\nMiddle node : " + middleNode());
     }
 }

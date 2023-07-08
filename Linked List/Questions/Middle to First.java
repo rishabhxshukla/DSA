@@ -1,3 +1,6 @@
+// Make middle node the head of a linked list
+// 2 POINTERS
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -53,7 +56,7 @@ class Middle_to_First
     }
 
 
-    /* Function to make middle node the first node in a LL by using 2 pointers */
+    /* Function to make middle node the head node of a LL */
     void MiddleToFirst()
     {
         Node temp = head;     //Pointer 1
@@ -104,7 +107,7 @@ class Middle_to_First
         ll.printLL();
 
         //Swapping nodes
-        System.out.println("\nTaking out middle node and making it the head node...");
+        System.out.println("\nMaking middle node the head node...");
         ll.MiddleToFirst();
 
         //Printing new LL
