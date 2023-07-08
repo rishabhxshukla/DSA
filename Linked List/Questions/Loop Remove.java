@@ -1,8 +1,9 @@
-// Floyd’s Cycle Detection Algorithm Method
+// Detect and remove loop in a linked list
+// Floyd’s Cycle Detection Algorithm
 
 package LinkedList.Questions;
 
-class Loop_Remove
+class LoopRemove
 {
     static Node head;
     static class Node
@@ -18,10 +19,37 @@ class Loop_Remove
     }
 
 
+    /* Creating the LL */
+    void create()
+    {
+        head = new Node(10);
+        Node second = new Node(20);
+        Node third  = new Node(30);
+        Node fourth = new Node(40);
+        Node fifth  = new Node(50);
+
+        //Linking the Nodes
+        head.next   = second;
+        second.next = third;
+        third.next  = fourth;
+        fourth.next = fifth;
+        fifth.next  = third;     // <----
+    }
+
+
     /* Printing the LL */
     void printLL()
     {
-        System.out.println("10 20 30 40 50");
+        Node temp = head;   //Current node
+        int n = 0;          //No. of nodes
+
+        //Printing the nodes
+        while (temp != null && n < 5)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+            n++;
+        }
     }
 
 
@@ -52,27 +80,16 @@ class Loop_Remove
     public static void main(String args[])
     {
         //Creating object of the class
-        Loop_Remove ll = new Loop_Remove();
+        LoopRemove ll = new LoopRemove();
 
         //Creating the LL
-        head = new Node(10);
-        Node second = new Node(20);
-        Node third = new Node(30);
-        Node fourth = new Node(40);
-        Node fifth = new Node(50);
-
-        //Linking the Nodes
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = fifth;
-        fifth.next = third;     // <----
+        ll.create();
 
         //Printing the LL
         System.out.println("Created Linked List : ");
         ll.printLL();
 
         //Removing the loop
-        System.out.println("Loop removed output : " + removeLoop());
+        System.out.println("\nLoop removed : " + removeLoop());
     }
 }
