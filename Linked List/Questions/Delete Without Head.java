@@ -25,7 +25,7 @@ class Delete_Without_Head
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -101,7 +101,7 @@ class Delete_Without_Head
 
         //Printing original LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Taking user input
         System.out.print("\nEnter the node that you want to delete : ");
@@ -118,6 +118,6 @@ class Delete_Without_Head
 
         //Printing new LL
         System.out.println("New Linked List : ");
-        ll.printLL();
+        ll.print();
     }
 }

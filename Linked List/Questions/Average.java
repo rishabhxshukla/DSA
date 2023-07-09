@@ -20,7 +20,7 @@ class Average
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -89,7 +89,7 @@ class Average
 
         //Printing the LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Printing the average
         System.out.print("\nAverage : " + average());

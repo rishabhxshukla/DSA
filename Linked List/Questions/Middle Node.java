@@ -20,7 +20,7 @@ class MiddleNode
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -91,7 +91,7 @@ class MiddleNode
 
         //Printing the LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Printing the middle node
         System.out.println("\nMiddle node : " + middleNode());

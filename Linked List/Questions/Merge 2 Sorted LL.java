@@ -23,7 +23,7 @@ class Merge_2_Sorted_LL
 
 
     /* Printing the LL */
-    void printLL(Node temp)
+    void print(Node temp)
     {
         while (temp != null)
         {
@@ -98,9 +98,9 @@ class Merge_2_Sorted_LL
 
         //Printing the LLs
         System.out.println("1st Linked List : ");
-        ll.printLL(head1);
+        ll.print(head1);
         System.out.println("\n2nd Linked List : ");
-        ll.printLL(head2);
+        ll.print(head2);
 
         //Merging the LLs
         LinkedList<Node> ans = merge();

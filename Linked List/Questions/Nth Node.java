@@ -18,7 +18,7 @@ class Nth_Node
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -73,7 +73,7 @@ class Nth_Node
 
         //Printing the LL
         System.out.println("*** Created Linked List ***");
-        ll.printLL();
+        ll.print();
 
         //Taking user input
         System.out.print("\nEnter the index that you want to find : ");

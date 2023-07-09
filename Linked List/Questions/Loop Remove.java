@@ -38,7 +38,7 @@ class LoopRemove
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;   //Current node
         int n = 0;          //No. of nodes
@@ -88,7 +88,7 @@ class LoopRemove
 
         //Printing the LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Removing the loop
         System.out.println("\nLoop removed : " + removeLoop());

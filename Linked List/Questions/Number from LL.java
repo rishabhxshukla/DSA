@@ -18,7 +18,7 @@ class Number_from_LL
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -73,7 +73,7 @@ class Number_from_LL
 
         //Printing the LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Printing the number
         System.out.printf("\nNumber created from LL is : " + number());

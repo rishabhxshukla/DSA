@@ -38,7 +38,7 @@ class DetectLoop1
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;   //Current node
         int n = 0;          //No. of nodes
@@ -84,7 +84,7 @@ class DetectLoop1
 
         //Printing the LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Printing the result
         System.out.println("\nLoop : " + isLoop());

@@ -29,7 +29,7 @@ class Last_to_First
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -89,7 +89,7 @@ class Last_to_First
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Swapping nodes
         System.out.println("\nSwapping last and first node...");
@@ -97,6 +97,6 @@ class Last_to_First
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }
