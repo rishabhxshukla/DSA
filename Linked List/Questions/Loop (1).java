@@ -33,7 +33,7 @@ class DetectLoop1
         second.next = third;
         third.next  = fourth;
         fourth.next = fifth;
-        fifth.next  = third;     // <----
+        fifth.next  = third;     //<---
     }
 
 
@@ -69,6 +69,7 @@ class DetectLoop1
                 return true;
             }
         }
+
         return false;
     }
 

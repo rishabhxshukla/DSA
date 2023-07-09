@@ -66,13 +66,14 @@ class LoopRemove
 
             if (slow == fast)
             {
-                //Storing the value of node where slow and fast pointer meet
+                //Storing the node where slow and fast pointers meet
                 Node temp = fast;
-                //Pointing the value to null to end the loop
+                //Pointing that node to null to end the loop
                 temp.next = null;
                 return true;
             }
         }
+
         return false;
     }
 

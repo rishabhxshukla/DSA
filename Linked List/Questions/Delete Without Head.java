@@ -69,16 +69,16 @@ class Delete_Without_Head
             return;
         }
         //If node to be deleted is the last node
-        else if (temp.next == null) {
+        if (temp.next == null) {
             System.out.println("Last node cannot be deleted without the head node!");
             return;
         }
 
-        //Storing the next node in the current node
+        //Copying next node data in current node
         //1->2->3->4  =>  1->3->3->4
         temp.data = temp.next.data;
 
-        //Breaking link to the next node
+        //Breaking link to delete the node
         //1->3->4
         temp.next = temp.next.next;
     }

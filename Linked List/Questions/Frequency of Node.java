@@ -53,6 +53,7 @@ class Frequency
             }
             temp = temp.next;
         }
+
         return count;
     }
 

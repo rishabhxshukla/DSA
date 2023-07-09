@@ -34,7 +34,7 @@ class DetectLoop2
         second.next = third;
         third.next  = fourth;
         fourth.next = fifth;
-        fifth.next  = third;     // <----
+        fifth.next  = third;     //<---
     }
 
 
@@ -57,17 +57,17 @@ class DetectLoop2
     /* Function to find loop in LL */
     static boolean isLoop()
     {
-        HashSet<Node> set = new HashSet<>();
+        HashSet<Node> hs = new HashSet<>();
         Node temp = head;
 
         while (temp != null)
         {
             //If HashSet already contains the node
-            if (set.contains(temp)) {
+            if (hs.contains(temp)) {
                 return true;
             }
             //Otherwise, add it to the HashSet
-            set.add(temp);
+            hs.add(temp);
             temp = temp.next;
         }
         return false;

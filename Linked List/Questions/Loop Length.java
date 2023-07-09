@@ -69,21 +69,23 @@ class LoopLength
                 return lengthOfLoop(fast);
             }
         }
+
         return 0;
     }
 
 
     /* Function to find loop length in LL */
-    static int lengthOfLoop(Node n)
+    static int lengthOfLoop(Node start)
     {
-        Node temp = n;
+        Node temp = start;
         int count = 1;
 
-        while (temp.next != n)
+        while (temp.next != start)
         {
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
+
         return count;
     }
 
