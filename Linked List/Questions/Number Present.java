@@ -1,3 +1,5 @@
+// Check if a given number is present in a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -43,11 +45,13 @@ class Number_Present
     {
         Node temp = head;
 
+        //If head contains the key
         if(head.data == key)
         {
             return true;
         }
 
+        //Otherwise loop the LL
         while (temp != null)
         {
             if (temp.data == key) {

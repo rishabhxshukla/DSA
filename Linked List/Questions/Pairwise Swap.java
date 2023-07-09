@@ -1,7 +1,9 @@
+// Pairwise swap nodes of a given linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Pairwise_Swap
+class PairwiseSwap
 {
     static Node head;
     static class Node
@@ -62,7 +64,7 @@ class Pairwise_Swap
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Pairwise_Swap ll = new Pairwise_Swap();
+        PairwiseSwap ll = new PairwiseSwap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

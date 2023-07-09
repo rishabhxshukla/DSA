@@ -1,3 +1,5 @@
+// Check if a linked list is palindrome or not
+
 package LinkedList.Questions;
 import java.io.*;
 import java.util.Stack;
@@ -39,31 +41,34 @@ class Palindrome
     }
 
 
-    /* Function to find whether a LL is a palindrome or not */
+    /* Function to check for palindrome */
     static boolean isPalindrome()
     {
         Stack<Integer> stack = new Stack<>();
         Node temp = head;
         boolean ans = false;
 
-        /* Creating a Stack */
+        //Pushing nodes in stack
         while (temp != null)
         {
             stack.push(temp.data);
             temp = temp.next;
         }
 
-        /* Checking for palindrome */
+        //Checking for palindrome
         temp = head;    //Reassigning temp
         while (temp != null)
         {
-            if (temp.data == stack.pop())
+            if (temp.data == stack.pop()) {
                 ans = true;
-            else
+            }
+            else {
                 ans = false;
+            }
 
             temp = temp.next;
         }
+
         return ans;
     }
 

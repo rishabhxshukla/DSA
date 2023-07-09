@@ -1,7 +1,9 @@
+// Delete alternate nodes of a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Remove_Alternate
+class RemoveAlternate
 {
     static Node head;
     static class Node
@@ -38,8 +40,8 @@ class Remove_Alternate
     }
 
 
-    /* Function to remove alternate nodes from LL */
-    void RemoveAlternate()
+    /* Function to remove alternate nodes */
+    void remove()
     {
         Node temp = head;
 
@@ -59,13 +61,13 @@ class Remove_Alternate
     }
     /*
     Here we can also use : temp.next = temp.next.next;
-     */
+    */
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Remove_Alternate ll = new Remove_Alternate();
+        RemoveAlternate ll = new RemoveAlternate();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -83,7 +85,7 @@ class Remove_Alternate
 
         //Removing alternate nodes
         System.out.println("\nRemoving alternate nodes...");
-        ll.RemoveAlternate();
+        ll.remove();
 
         //Printing new LL
         System.out.println("New Linked List :");

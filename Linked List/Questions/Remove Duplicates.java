@@ -1,7 +1,10 @@
+// Remove duplicate nodes from a linked list
+// Taking each element and comparing it with every other element in LL
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Remove_Duplicates
+class RemoveDuplicates1
 {
     static Node head;
     static class Node
@@ -38,9 +41,8 @@ class Remove_Duplicates
     }
 
 
-    /* Function to remove duplicate nodes from LL */
-    //Taking each element and comparing it to every other element in the LL
-    void RemoveDuplicates()
+    /* Function to remove duplicate nodes */
+    void remove()
     {
         Node temp1 = head;
         Node temp2 = null;
@@ -68,7 +70,7 @@ class Remove_Duplicates
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Remove_Duplicates ll = new Remove_Duplicates();
+        RemoveDuplicates1 ll = new RemoveDuplicates1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -86,7 +88,7 @@ class Remove_Duplicates
 
         //Removing duplicate nodes
         System.out.println("\nRemoving duplicate nodes...");
-        ll.RemoveDuplicates();
+        ll.remove();
 
         //Printing new LL
         System.out.println("New Linked List :");

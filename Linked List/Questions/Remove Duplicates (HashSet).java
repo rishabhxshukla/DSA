@@ -1,8 +1,11 @@
+// Remove duplicate nodes from a linked list
+// Storing each element in HashSet and comparing it with other elements
+
 package LinkedList.Questions;
 import java.io.*;
 import java.util.HashSet;
 
-class Remove_Duplicates_HashSet
+class RemoveDuplicates2
 {
     static Node head;
     static class Node
@@ -39,11 +42,9 @@ class Remove_Duplicates_HashSet
     }
 
 
-    /* Function to remove duplicate nodes from LL */
-    //Storing each element in HS and comparing it to other elements
+    /* Function to remove duplicate nodes */
     void RemoveDuplicates()
     {
-        //Creating a Hash Set
         HashSet<Integer> set = new HashSet<>();
         Node temp = head;
         Node prev = null;
@@ -65,7 +66,7 @@ class Remove_Duplicates_HashSet
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Remove_Duplicates_HashSet ll = new Remove_Duplicates_HashSet();
+        RemoveDuplicates2 ll = new RemoveDuplicates2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
