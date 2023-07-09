@@ -1,3 +1,5 @@
+// Find the nth node from the start of a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -38,7 +40,7 @@ class Nth_Node
     }
 
 
-    /* Function to find the Nth node from the start of LL */
+    /* Function to find the Nth node from start */
     static int GetNth(int index)
     {
         Node temp = head;
@@ -49,9 +51,10 @@ class Nth_Node
             if(count == index) {
                 return temp.data;
             }
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
+
         return -1;
     }
 
@@ -76,10 +79,10 @@ class Nth_Node
         ll.print();
 
         //Taking user input
-        System.out.print("\nEnter the index that you want to find : ");
+        System.out.print("\nEnter the index from start : ");
         int index = Integer.parseInt(b.readLine());
 
         //Printing the node present at 'index'
-        System.out.println("Node present at index " +index+ " is " + GetNth(index));
+        System.out.println("Node present at index " +index+ " is : " + GetNth(index));
     }
 }

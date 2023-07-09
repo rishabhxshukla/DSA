@@ -1,3 +1,5 @@
+// Find the nth node from the end of a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -38,36 +40,37 @@ class Nth_Node_from_end
     }
 
 
-
     /* Function to find length of LL */
-    static int lengthOfLL()
+    static int length()
     {
         Node temp = head;
         int count = 0;
 
         while (temp != null)
         {
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
+
         return  count;
     }
 
 
-    /* Function to find the Nth node from the end of LL */
+    /* Function to find the Nth node from end */
     static int GetNth(int index)
     {
         Node temp = head;
-        int count = lengthOfLL();
+        int count = length();
 
         while (temp != null)
         {
             if (count == index) {
                 return temp.data;
             }
-            temp = temp.next;
             count--;
+            temp = temp.next;
         }
+
         return -1;
     }
 
@@ -92,10 +95,10 @@ class Nth_Node_from_end
         ll.print();
 
         //Taking user input
-        System.out.print("\nEnter the index that you want to find : ");
+        System.out.print("\nEnter the index from end : ");
         int index = Integer.parseInt(b.readLine());
 
         //Printing the node present at 'index' from last
-        System.out.println("Node present at index " +index+ " from last is " + GetNth(index));
+        System.out.println("Node present at index " +index+ " from last is : " + GetNth(index));
     }
 }
