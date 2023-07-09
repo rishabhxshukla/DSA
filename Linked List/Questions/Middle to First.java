@@ -42,7 +42,7 @@ class Middle_to_First
 
 
     /* Function to find length of LL */
-    static int lengthOfLL()
+    static int length()
     {
         Node temp = head;
         int count = 0;
@@ -52,6 +52,7 @@ class Middle_to_First
             count++;
             temp = temp.next;
         }
+
         return count;
     }
 
@@ -63,14 +64,13 @@ class Middle_to_First
         Node prev = null;     //Pointer 2
         Node middle = null;   //To store middle element
 
-        int mid = lengthOfLL()/2;
         int count = 0;
+        int mid = length()/2;
 
         while (temp != null)
         {
-            //Checking if we are present at middle node's index
+            //Storing the mid-element
             if (count == mid) {
-                //Storing the mid element in node middle
                 middle = temp;
                 break;
             }
@@ -78,10 +78,11 @@ class Middle_to_First
             temp = temp.next;
             count++;
         }
+
         //Linking the broken middle part
         prev.next = temp.next;
 
-        //Making middle node the first node
+        //Making middle node the head node
         middle.next = head;
         head = middle;
     }

@@ -41,35 +41,37 @@ class MiddleNode
 
 
     /* Function to find the length of LL */
-    static int lengthOfLL()
+    static int length()
     {
         Node temp = head;
         int count = 0;
 
         while (temp != null)
         {
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
+
         return count;
     }
 
 
     /* Function to find the middle node */
-    static int middleNode()
+    static int middle()
     {
-        int mid = lengthOfLL()/2;
         Node temp = head;
         int count = 0;
+        int mid = length()/2;
 
         while (temp != null)
         {
             if (count == mid) {
                 return temp.data;
             }
-            temp = temp.next;
             count++;
+            temp = temp.next;
         }
+
         return -1;
     }
 
@@ -94,6 +96,6 @@ class MiddleNode
         ll.print();
 
         //Printing the middle node
-        System.out.println("\nMiddle node : " + middleNode());
+        System.out.println("\nMiddle node : " + middle());
     }
 }
