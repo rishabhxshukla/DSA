@@ -18,7 +18,7 @@ class Remove_Repeating
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -76,7 +76,7 @@ class Remove_Repeating
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Removing repetitive nodes
         System.out.println("\nRemoving repetitive nodes...");
@@ -84,6 +84,6 @@ class Remove_Repeating
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }

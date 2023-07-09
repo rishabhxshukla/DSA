@@ -20,7 +20,7 @@ class Boilerplate
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -40,6 +40,10 @@ class Boilerplate
     }
 
 
+    /* Function to ... */
+    //
+
+
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
@@ -57,6 +61,6 @@ class Boilerplate
 
         //Printing the LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
     }
 }

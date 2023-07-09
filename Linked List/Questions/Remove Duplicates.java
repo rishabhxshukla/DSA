@@ -18,7 +18,7 @@ class Remove_Duplicates
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -82,7 +82,7 @@ class Remove_Duplicates
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Removing duplicate nodes
         System.out.println("\nRemoving duplicate nodes...");
@@ -90,6 +90,6 @@ class Remove_Duplicates
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }

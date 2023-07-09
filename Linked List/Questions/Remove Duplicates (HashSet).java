@@ -19,7 +19,7 @@ class Remove_Duplicates_HashSet
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -79,7 +79,7 @@ class Remove_Duplicates_HashSet
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Removing duplicate nodes
         System.out.println("\nRemoving duplicate nodes...");
@@ -87,6 +87,6 @@ class Remove_Duplicates_HashSet
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }

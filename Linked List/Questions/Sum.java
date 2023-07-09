@@ -20,7 +20,7 @@ class Sum
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -73,7 +73,7 @@ class Sum
 
         //Printing the LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Printing the sum
         System.out.print("\nSum : " + sum());

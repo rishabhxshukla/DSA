@@ -18,7 +18,7 @@ class Pairwise_Swap
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -76,7 +76,7 @@ class Pairwise_Swap
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Swapping pairwise
         System.out.println("\nSwapping elements pairwise...");
@@ -84,6 +84,6 @@ class Pairwise_Swap
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }

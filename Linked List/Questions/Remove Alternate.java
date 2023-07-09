@@ -18,7 +18,7 @@ class Remove_Alternate
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -79,7 +79,7 @@ class Remove_Alternate
 
         //Printing original LL
         System.out.println("Created Linked List :");
-        ll.printLL();
+        ll.print();
 
         //Removing alternate nodes
         System.out.println("\nRemoving alternate nodes...");
@@ -87,6 +87,6 @@ class Remove_Alternate
 
         //Printing new LL
         System.out.println("New Linked List :");
-        ll.printLL();
+        ll.print();
     }
 }

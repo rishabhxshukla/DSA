@@ -28,7 +28,7 @@ class Reverse
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -86,7 +86,7 @@ class Reverse
 
         //Printing original LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Reversing the LL
         System.out.print("\nReversing Linked List...");
@@ -94,6 +94,6 @@ class Reverse
 
         //Printing new LL
         System.out.println("\nNew Linked List : ");
-        ll.printLL();
+        ll.print();
     }
 }

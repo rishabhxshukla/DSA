@@ -18,7 +18,7 @@ class Zeros_to_Front
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -93,7 +93,7 @@ class Zeros_to_Front
 
         //Printing original LL
         System.out.println("Created Linked List : ");
-        ll.printLL();
+        ll.print();
 
         //Moving zeroes to front
         System.out.println("\nMoving zeros to the front...");
@@ -101,6 +101,6 @@ class Zeros_to_Front
 
         //Printing new LL
         System.out.println("New Linked List : ");
-        ll.printLL();
+        ll.print();
     }
 }
