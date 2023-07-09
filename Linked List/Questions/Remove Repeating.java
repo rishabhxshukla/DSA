@@ -1,7 +1,9 @@
+// Remove repeating nodes from linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Remove_Repeating
+class RemoveRepeating
 {
     static Node head;
     static class Node
@@ -38,8 +40,8 @@ class Remove_Repeating
     }
 
 
-    /* Function to remove alternate nodes from LL */
-    void RemoveRepeating()
+    /* Function to remove repeating nodes */
+    void remove()
     {
         Node temp = head;
         while (temp.next != null)
@@ -62,7 +64,7 @@ class Remove_Repeating
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Remove_Repeating ll = new Remove_Repeating();
+        RemoveRepeating ll = new RemoveRepeating();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -80,7 +82,7 @@ class Remove_Repeating
 
         //Removing repetitive nodes
         System.out.println("\nRemoving repetitive nodes...");
-        ll.RemoveRepeating();
+        ll.remove();
 
         //Printing new LL
         System.out.println("New Linked List :");

@@ -1,7 +1,9 @@
+// Implement stack using singly linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
-class Stack_Implementation
+class StackImplementation
 {
     static Node head;
     static class Node

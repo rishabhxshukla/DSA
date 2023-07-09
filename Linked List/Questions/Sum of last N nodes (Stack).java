@@ -1,3 +1,6 @@
+// Find the sum of last n nodes of a given linked list
+// STACK
+
 package LinkedList.Questions;
 import java.io.*;
 import java.util.*;
@@ -39,30 +42,14 @@ class Sum_Last_N_Nodes2
     }
 
 
-    /* Function to find length of LL */
-    static int lengthOfLL()
-    {
-        Node temp = head;
-        int count = 0;
-
-        while (temp != null)
-        {
-            count++;
-            temp = temp.next;
-        }
-        return count;
-    }
-
-
     /* Function to find sum of last N nodes */
     static int sum(int N)
     {
-        //Creating a stack
         Stack<Integer> stack = new Stack<>();
         Node temp = head;
         int sum = 0;
 
-        //Storing all nodes in the stack
+        //Pushing nodes in stack
         while (temp != null)
         {
             stack.push(temp.data);
@@ -75,6 +62,7 @@ class Sum_Last_N_Nodes2
             sum = sum + stack.peek();
             stack.pop();
         }
+
         return sum;
     }
 

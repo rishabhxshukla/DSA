@@ -1,4 +1,4 @@
-// Program to find the sum of nodes of a linked list.
+// Program to find the sum of nodes of a linked list
 
 package LinkedList.Questions;
 import java.io.*;

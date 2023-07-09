@@ -1,3 +1,5 @@
+// Move all zeros to the front of a linked list
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -44,6 +46,7 @@ class Zeros_to_Front
         {
             temp = temp.next;
         }
+
         temp.next = new_node;
         new_node.next = null;
     }

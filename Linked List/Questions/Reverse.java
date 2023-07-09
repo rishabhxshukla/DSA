@@ -1,4 +1,5 @@
 /*
+Reverse a linked list
 STEPS :
 1) Initialize 3 pointers prev = null, temp = head, and next = null.
 2) Iterate through the linked list.

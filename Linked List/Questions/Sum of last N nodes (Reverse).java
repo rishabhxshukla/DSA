@@ -1,3 +1,6 @@
+// Find the sum of last n nodes of a given linked list
+// REVERSE
+
 package LinkedList.Questions;
 import java.io.*;
 
@@ -53,6 +56,7 @@ class Sum_Last_N_Nodes3
             prev = temp;
             temp = next;
         }
+
         //Changing head node
         head = prev;
     }
@@ -74,6 +78,7 @@ class Sum_Last_N_Nodes3
             temp = temp.next;
             count++;
         }
+
         return sum;
     }
 

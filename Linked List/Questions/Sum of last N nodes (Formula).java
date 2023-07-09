@@ -1,3 +1,6 @@
+// Find the sum of last n nodes of a given linked list
+// Formula
+
 package LinkedList.Questions;
 import java.io.*;
 
