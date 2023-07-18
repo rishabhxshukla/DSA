@@ -1,14 +1,14 @@
+// Reverse a stack
+
 package Stack.Questions;
 import java.io.*;
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.*;
 
-class StackReverse
+class Reverse
 {
     int top = -1;
     static final int MAX = 5;
     int a[] = new int[MAX];
-    Queue<Integer> q = new LinkedList<>();
 
 
     /* Print Stack */
@@ -51,13 +51,17 @@ class StackReverse
 
 
     /* Function to reverse the stack */
-    void reverse(StackReverse s)
+    void reverse(Reverse s)
     {
+        Queue<Integer> q = new LinkedList<>();
+
+        //Storing elements in a temporary stack
         while (!s.isEmpty())
         {
             q.add(s.pop());
         }
 
+        //Bringing back elements to the original stack
         while (!q.isEmpty())
         {
             s.push(q.remove());
@@ -68,7 +72,7 @@ class StackReverse
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        StackReverse s = new StackReverse();
+        Reverse s = new Reverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
