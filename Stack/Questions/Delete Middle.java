@@ -1,3 +1,5 @@
+// Delete the middle element of a stack
+
 package Stack.Questions;
 import java.io.*;
 
@@ -60,15 +62,15 @@ class DeleteMiddle
 
 
     /* Function to find length of stack */
-    static int lengthOfStack()
+    static int length()
     {
         int count = 0;
-        int i = top;
-        while (i >= 0)
+
+        for (int i=top; i>=0; i--)
         {
-            i--;
             count++;
         }
+
         return count;
     }
 
@@ -78,23 +80,23 @@ class DeleteMiddle
     {
         DeleteMiddle s = new DeleteMiddle();
         DeleteMiddle t = new DeleteMiddle();
-        int mid = lengthOfStack()/2;
+        int mid = length()/2;
         int count = 0;
 
         //Storing elements in a temporary stack until mid is found
         while (count != mid)
         {
-            t.push(s.peek());
-            s.pop();
+            t.push(s.pop());
             count++;
         }
-        s.pop();    //Popping out middle element
+
+        //Popping out middle element
+        s.pop();
 
         //Placing elements back to the main stack from the temp stack
         while (!t.isEmpty())
         {
-            s.push(t.peek());
-            t.pop();
+            s.push(t.pop());
         }
     }
 

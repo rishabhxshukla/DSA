@@ -1,3 +1,5 @@
+// Write a function to insert an element at the bottom of a stack
+
 package Stack.Questions;
 import java.io.*;
 
@@ -57,7 +59,9 @@ class InsertBottom
         {
             t.push(s.pop());
         }
-        s.push(data);   //Inserting the last element
+
+        //Inserting the last element
+        s.push(data);
 
         //Re-shifting all elements from temp stack to main stack
         while (!t.isEmpty())
