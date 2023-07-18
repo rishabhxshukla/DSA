@@ -6,8 +6,8 @@ import java.io.*;
 class InsertBottom
 {
     int top = -1;
-    static final int MAX = 6;
-    int a[] = new int[MAX];
+    static final int MAX = 5;
+    int a[] = new int[MAX + 1];
 
 
     /* Printing Stack */
@@ -79,7 +79,7 @@ class InsertBottom
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<MAX-1; i++)
+        for (int i=0; i<MAX; i++)
         {
             System.out.print("Enter the data : ");
             int d = Integer.parseInt(b.readLine());

@@ -1,11 +1,13 @@
 /*
-1. We create a temporary stack. Now we run a loop while the input stack is not empty.
-2. At each iteration, we pop an element from the input stack and compare it with the element
+Sort a stack.
+STEPS :
+1) We create a temporary stack. Now we run a loop while the input stack is not empty.
+2) At each iteration, we pop an element from the input stack and compare it with the element
    present on top of the tempStack.
-3. If tempStack is not empty and the top element of input stack > top element of the tempStack,
+3) If tempStack is not empty and the top element of input stack > top element of the tempStack,
    we pop the top element from the tempStack and push it into the input stack.
    Otherwise, if the element is smaller, we push it into the tempStack.
-4. The input stack will be empty by the end of the outer loop, and the sorted elements are present in
+4) The input stack will be empty by the end of the outer loop, and the sorted elements are present in
    the temporary stack. So we return the tempStack as an output.
 */
 
