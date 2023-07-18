@@ -1,3 +1,5 @@
+// Find the reverse of a given number
+
 package Stack.Questions;
 import java.io.*;
 
@@ -67,9 +69,10 @@ class NumberReverse
         while (!s.isEmpty())
         {
             S = S + (s.peek() * i);
-            i = i* 10;
+            i = i * 10;
             s.pop();
         }
+
         //Printing the reversed number
         System.out.print(S);
     }

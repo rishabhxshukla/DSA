@@ -4,13 +4,13 @@ Closing parenthesis => Compare with top of the stack
 If pair matches, pop out the opening parenthesis from the stack.
 Parenthesis are balanced if stack is empty otherwise not.
 
-//NOTE : The order of opening and closing parenthesis should be same.
+NOTE : The order of opening and closing parenthesis should be same.
 */
 
 package Stack.Questions;
 import java.io.*;
 
-class Parenthesis_Matching
+class ParenthesisMatching
 {
     int top = -1;
     static final int MAX = 100;
@@ -61,19 +61,18 @@ class Parenthesis_Matching
     /* Function to check for balanced parenthesis */
     static boolean isBalanced(String str)
     {
-        //Creating an object of the class
-        Parenthesis_Matching s = new Parenthesis_Matching();
+        ParenthesisMatching s = new ParenthesisMatching();
 
         for (int i=0; i<str.length(); i++)
         {
             char ch = str.charAt(i);
-            //If opening bracket, push into stack
+            //If opening bracket, push it into stack
             if (ch == '[' || ch == '{' | ch == '(')
             {
                 s.push(ch);
             }
 
-            //If closing bracket, pop from stack
+            //If closing bracket, compare with stack top and pop it
             else if ((ch==']' && s.peek()=='[') ||
                      (ch=='}' && s.peek()=='{') ||
                      (ch==')' && s.peek()=='('))
@@ -81,7 +80,8 @@ class Parenthesis_Matching
                         s.pop();
                     }
         }
-        //If stack is empty then parenthesis are balanced
+
+        //Finally, if stack is empty then parenthesis are balanced
         return (s.isEmpty());
     }
 
