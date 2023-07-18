@@ -14,10 +14,10 @@ STEPS :
 package Stack.Questions;
 import java.io.*;
 
-class StackSort
+class Sort
 {
     int top = -1;
-    static final int MAX = 6;
+    static final int MAX = 5;
     int a[] = new int[MAX];
 
 
@@ -72,21 +72,22 @@ class StackSort
     }
 
 
-    /* Function to sort a given Stack which stores the sorted values in tempStack */
-    void sort(StackSort stack, StackSort tempStack)
+    /* Function to sort a given stack */
+    void sort(Sort s, Sort t)
     {
-        while (!stack.isEmpty())
+        while (!s.isEmpty())
         {
             //Top of original stack
-            int stkTop = stack.pop();
+            int stkTop = s.pop();
 
-            while (!tempStack.isEmpty() && stkTop > tempStack.peek())
+            while (!t.isEmpty() && stkTop > t.peek())
             {
                 //Popping element from tempStack and pushing into input stack
-                stack.push(tempStack.pop());
+                s.push(t.pop());
             }
+
             //Otherwise, if element is smaller, we push it into the tempStack
-            tempStack.push(stkTop);
+            t.push(stkTop);
         }
     }
 
@@ -94,8 +95,8 @@ class StackSort
     public static void main(String args[]) throws IOException
     {
         //Creating objects of the class
-        StackSort stack = new StackSort();
-        StackSort tempStack = new StackSort();
+        Sort stack = new Sort();
+        Sort tempStack = new Sort();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
