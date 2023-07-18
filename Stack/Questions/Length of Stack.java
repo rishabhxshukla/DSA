@@ -9,7 +9,7 @@ class StackLength
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -57,7 +57,7 @@ class StackLength
 
         //Printing the stack
         System.out.println("Created Stack :");
-        s.printStk();
+        s.print();
 
         //Printing the length of stack
         System.out.println("\nLength of stack is : " + lengthOfStack());

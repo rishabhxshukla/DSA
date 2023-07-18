@@ -20,7 +20,7 @@ class StackSort
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -107,7 +107,7 @@ class StackSort
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        stack.printStk();
+        stack.print();
 
         //Sorting the stack
         System.out.println("\nSorting the Stack...");
@@ -115,6 +115,6 @@ class StackSort
 
         //Printing new stack
         System.out.println("*** New Stack ***");
-        tempStack.printStk();
+        tempStack.print();
     }
 }

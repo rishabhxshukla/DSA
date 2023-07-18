@@ -12,7 +12,7 @@ class StackReverse
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -82,7 +82,7 @@ class StackReverse
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        s.printStk();
+        s.print();
 
         //Reversing the stack
         System.out.println("\nReversing the stack...");
@@ -90,6 +90,6 @@ class StackReverse
 
         //Printing new stack
         System.out.println("*** New Stack ***");
-        s.printStk();
+        s.print();
     }
 }

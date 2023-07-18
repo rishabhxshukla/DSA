@@ -9,7 +9,7 @@ class InsertBottom
 
 
     /* Printing Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -84,7 +84,7 @@ class InsertBottom
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        s.printStk();
+        s.print();
 
         //Taking user input
         System.out.print("\nEnter the element that you want to insert : ");
@@ -93,6 +93,6 @@ class InsertBottom
 
         //Printing new stack
         System.out.println("*** New Stack ***");
-        s.printStk();
+        s.print();
     }
 }

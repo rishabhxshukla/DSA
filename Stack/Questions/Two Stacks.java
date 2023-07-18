@@ -21,7 +21,7 @@ class TwoStacks
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=0; i<MAX; i++)
         {
@@ -128,7 +128,7 @@ class TwoStacks
 
         //Printing original stack
         System.out.println("\nCreated Stack :");
-        s.printStk();
+        s.print();
 
         //Peeking elements
         System.out.println("\n\nTop element of stack 1 is : " + s.peek1());

@@ -9,7 +9,7 @@ class StringReverse
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -52,6 +52,6 @@ class StringReverse
 
         //Printing new stack
         System.out.println("*** New String ***");
-        s.printStk();
+        s.print();
     }
 }

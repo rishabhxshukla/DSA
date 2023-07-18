@@ -9,7 +9,7 @@ class DeleteMiddle
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -116,7 +116,7 @@ class DeleteMiddle
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        s.printStk();
+        s.print();
 
         //Deleting middle element
         System.out.println("\nDeleting middle element...");
@@ -124,6 +124,6 @@ class DeleteMiddle
 
         //Printing new stack
         System.out.println("*** New Stack ***");
-        s.printStk();
+        s.print();
     }
 }

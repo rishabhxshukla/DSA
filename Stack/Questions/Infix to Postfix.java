@@ -9,7 +9,7 @@ class InfixToPostfix
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
