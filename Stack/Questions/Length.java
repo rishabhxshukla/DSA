@@ -1,10 +1,12 @@
+// Find the length of a stack
+
 package Stack.Questions;
 import java.io.*;
 
-class StackLength
+class Length
 {
     static int top = -1;
-    static final int MAX = 6;
+    static final int MAX = 5;
     int a[] = new int[MAX];
 
 
@@ -29,13 +31,15 @@ class StackLength
 
 
     /* Function to find length of stack */
-    static int lengthOfStack()
+    static int length()
     {
         int count = 0;
+
         for (int i=top; i>=0; i--)
         {
             count++;
         }
+
         return count;
     }
 
@@ -43,7 +47,7 @@ class StackLength
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        StackLength s = new StackLength();
+        Length s = new Length();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -60,6 +64,6 @@ class StackLength
         s.print();
 
         //Printing the length of stack
-        System.out.println("\nLength of stack is : " + lengthOfStack());
+        System.out.println("\nLength of stack is : " + length());
     }
 }
