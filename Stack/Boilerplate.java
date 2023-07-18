@@ -11,7 +11,7 @@ class Boilerplate
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for (int i=top; i>=0; i--)
         {
@@ -82,6 +82,6 @@ class Boilerplate
 
         //Printing the stack
         System.out.println("*** Created Stack ***");
-        s.printStk();
+        s.print();
     }
 }

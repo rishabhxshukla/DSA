@@ -19,7 +19,7 @@ class LL_Implementation
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         Node temp = head;
         while (temp != null)
@@ -33,10 +33,7 @@ class LL_Implementation
     /* Function to check if stack is empty */
     boolean isEmpty()
     {
-        if (head == null)
-            return true;
-        else
-            return false;
+        return (head == null);
     }
 
 
@@ -101,7 +98,7 @@ class LL_Implementation
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        s.printStk();
+        s.print();
 
         //Performing operations
         System.out.println("\n\nTop element : " + s.peek());
@@ -113,6 +110,6 @@ class LL_Implementation
 
         //Printing new stack
         System.out.println("\n*** New Stack ***");
-        s.printStk();
+        s.print();
     }
 }

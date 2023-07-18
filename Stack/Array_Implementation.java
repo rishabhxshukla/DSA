@@ -10,7 +10,7 @@ class Array_Implementation
 
 
     /* Print Stack */
-    void printStk()
+    void print()
     {
         for(int i=top; i>=0; i--)
         {
@@ -77,7 +77,7 @@ class Array_Implementation
 
         //Printing original stack
         System.out.println("*** Original Stack ***");
-        s.printStk();
+        s.print();
 
         //Performing operations
         System.out.println("\n\nTop element : " + s.peek());
@@ -89,6 +89,6 @@ class Array_Implementation
 
         //Printing new stack
         System.out.println("\n*** New Stack ***");
-        s.printStk();
+        s.print();
     }
 }
