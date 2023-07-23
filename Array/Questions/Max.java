@@ -40,8 +40,9 @@ class Max
 
         for (int i=0; i<size; i++)
         {
-            if (arr[i] > max)
+            if (arr[i] > max) {
                 max = arr[i];
+            }
         }
 
         return max;
