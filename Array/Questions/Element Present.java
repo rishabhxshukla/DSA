@@ -1,9 +1,9 @@
-// Check if a number is present in the array not
+// Check if an element is present in the array not
 
 package Array.Questions;
 import java.io.*;
 
-class NumberPresent
+class ElementPresent
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -38,9 +38,11 @@ class NumberPresent
     {
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == key)
+            if (arr[i] == key) {
                 return true;
+            }
         }
+
         return false;
     }
 
@@ -48,7 +50,7 @@ class NumberPresent
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        NumberPresent obj = new NumberPresent();
+        ElementPresent obj = new ElementPresent();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
