@@ -1,4 +1,4 @@
-// Find the minimum and maximum element of an array.
+// Find the minimum and maximum elements of an array in 1 iteration.
 
 package Array.Questions;
 import java.io.*;
@@ -36,8 +36,8 @@ class MinAndMax
     /* Function to find the largest gap */
     void MinMax()
     {
-        int min = arr[0];
-        int max = arr[0];
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
 
         for (int i=0; i<size; i++)
         {
