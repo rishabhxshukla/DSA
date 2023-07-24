@@ -1,11 +1,11 @@
 // Find the most frequent element in an array
-// HASHMAP
+// HASHMAP + MAX
 
 package Hashing.Questions;
 import java.io.*;
 import java.util.*;
 
-class MostFrequent
+class MostFrequent1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -64,7 +64,7 @@ class MostFrequent
         //Finding element with maximum frequency
         int ans = 0, max = Integer.MIN_VALUE;
 
-        for (Map.Entry<Integer, Integer> i : hm.entrySet())
+        for (var i : hm.entrySet())
         {
             if (i.getValue() > max)
             {
@@ -80,7 +80,7 @@ class MostFrequent
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        MostFrequent obj = new MostFrequent();
+        MostFrequent1 obj = new MostFrequent1();
 
         //Creating the array
         obj.create();
