@@ -43,15 +43,17 @@ class EvenOdd3
         //Storing Odd numbers
         for (int i=0; i<size; i++)
         {
-            if (arr[i] % 2 != 0)
+            if (arr[i] % 2 != 0) {
                 s.push(arr[i]);
+            }
         }
 
         //Storing Even numbers
         for (int i=0; i<size; i++)
         {
-            if (arr[i] % 2 == 0)
+            if (arr[i] % 2 == 0) {
                 s.push(arr[i]);
+            }
         }
 
         //Moving back the elements to the array

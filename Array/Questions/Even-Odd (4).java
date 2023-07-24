@@ -43,15 +43,17 @@ class EvenOdd4
         //Storing Even numbers
         for (int i=0; i<size; i++)
         {
-            if (arr[i] % 2 == 0)
+            if (arr[i] % 2 == 0) {
                 q.add(arr[i]);
+            }
         }
 
         //Storing Odd numbers
         for (int i=0; i<size; i++)
         {
-            if (arr[i] % 2 != 0)
+            if (arr[i] % 2 != 0) {
                 q.add(arr[i]);
+            }
         }
 
         //Moving back the elements to the array

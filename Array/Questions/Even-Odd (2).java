@@ -42,23 +42,23 @@ class EvenOdd2
         while (i < j)
         {
             //If odd on left and even on right, then swap
-            if ((arr[i] % 2 != 0) && (arr[j] % 2 == 0))
-            {
+            if ((arr[i] % 2 != 0) && (arr[j] % 2 == 0)) {
                 int t = arr[i];
                 arr[i] = arr[j];
                 arr[j] = t;
-
                 i++;
                 j--;
             }
 
             //If even is already present on left
-            if (arr[i] % 2 == 0)
+            if (arr[i] % 2 == 0) {
                 i++;
+            }
 
             //If odd is already present on right
-            if (arr[j] % 2 != 0)
+            if (arr[j] % 2 != 0) {
                 j--;
+            }
         }
     }
 
