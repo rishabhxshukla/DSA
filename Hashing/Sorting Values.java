@@ -38,14 +38,17 @@ class SortingValues
     /* Sorting the values */
     void sort ()
     {
-        //Create a list from the elements of HashMap
+        //Create a list from the entry-set of HashMap
         ArrayList<Map.Entry<Integer, String>> list = new ArrayList<>(hm.entrySet());
 
         //Sort the list
-        list.sort((o1, o2) -> (o1.getValue().compareTo(o2.getValue())));
+        //NOTE : Use Collections.reverseOrder() to sort in descending order
+        //list.sort((o1, o2) -> (o1.getValue().compareTo(o2.getValue())));
+        list.sort(Map.Entry.comparingByValue());
 
         //Put data from sorted list to new HashMap
-        for (Map.Entry<Integer, String> i : list)
+        //Using 'var' in place of 'Map.Entry<Integer, String>'
+        for (var i : list)
         {
             ans.put(i.getKey(), i.getValue());
         }
