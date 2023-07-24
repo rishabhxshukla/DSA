@@ -10,20 +10,6 @@ class MissingNumber
     static int size = arr.length;
 
 
-    /* Creating the array */
-    void create() throws IOException
-    {
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
-
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
-    }
-
-
     /* Printing the array */
     void print(int a[])
     {
