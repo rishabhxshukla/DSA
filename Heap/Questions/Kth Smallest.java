@@ -36,15 +36,15 @@ class KthSmallest
     /* Function to return the Kth smallest element */
     static int Kth(int k)
     {
-        int min = 0;
+        int e = 0;
 
         while(k > 0)
         {
-            min = pq.remove();
+            e = pq.remove();
             k--;
         }
 
-        return min;
+        return e;
     }
 
 

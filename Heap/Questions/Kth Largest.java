@@ -36,15 +36,15 @@ class KthLargest
     /* Function to return the Kth largest element */
     static int Kth(int k)
     {
-        int max = 0;
+        int e = 0;
 
         while(k > 0)
         {
-            max = pq.remove();
+            e = pq.remove();
             k--;
         }
 
-        return max;
+        return e;
     }
 
 

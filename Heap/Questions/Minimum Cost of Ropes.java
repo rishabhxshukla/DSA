@@ -50,7 +50,7 @@ class MinCostOfRopes
             cost = cost + min1 + min2;
 
             //Adding combined length in PQ
-            pq.add(min1+min2);
+            pq.add(min1 + min2);
         }
 
         return cost;
