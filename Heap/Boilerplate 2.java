@@ -1,3 +1,4 @@
+// PLRLSPIRH
 // ...
 
 package Heap.Questions;
@@ -60,7 +61,7 @@ class Boilerplate2
     void insert(int element)
     {
         //Heap Overflow
-        if (size == maxsize) {
+        if (size >= maxsize) {
             System.out.println("ERROR: Heap is full!");
             System.exit(0);
         }
@@ -83,7 +84,7 @@ class Boilerplate2
     int remove()
     {
         //Heap Underflow
-        if (size == 0) {
+        if (size <= 0) {
             System.out.println("ERROR: Heap is empty!");
             System.exit(0);
         }
@@ -96,6 +97,7 @@ class Boilerplate2
         arr[0] = arr[size - 1];
         size--;
         Heapify(0);
+
         return max;
     }
 
