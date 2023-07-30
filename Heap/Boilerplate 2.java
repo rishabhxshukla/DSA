@@ -132,27 +132,27 @@ class Boilerplate2
     public static void main(String args[])
     {
         //Creating object of the class
-        Boilerplate2 obj = new Boilerplate2();
+        Boilerplate2 h = new Boilerplate2();
 
         //Inserting elements
-        obj.insert(1);
-        obj.insert(2);
-        obj.insert(3);
-        obj.insert(4);
-        obj.insert(5);
-        obj.insert(6);
-        obj.insert(7);
+        h.insert(1);
+        h.insert(2);
+        h.insert(3);
+        h.insert(4);
+        h.insert(5);
+        h.insert(6);
+        h.insert(7);
 
         //Printing original max heap
         System.out.println("*** Original Max Heap ***");
-        obj.print();
+        h.print();
 
         //Removing max value from heap
         System.out.println("\n\nRemoving max value...");
-        System.out.println("Max element : " + obj.remove());
+        System.out.println("Max element : " + h.remove());
 
         //Printing new max heap
         System.out.println("\n*** New Max Heap ***");
-        obj.print();
+        h.print();
     }
 }

@@ -152,27 +152,27 @@ class MinHeap1
     public static void main(String args[])
     {
         //Creating object of the class
-        MinHeap1 obj = new MinHeap1();
+        MinHeap1 h = new MinHeap1();
 
         //Inserting elements
-        obj.insert(1);
-        obj.insert(2);
-        obj.insert(3);
-        obj.insert(4);
-        obj.insert(5);
-        obj.insert(6);
-        obj.insert(7);
+        h.insert(1);
+        h.insert(2);
+        h.insert(3);
+        h.insert(4);
+        h.insert(5);
+        h.insert(6);
+        h.insert(7);
 
         //Printing original min heap
         System.out.println("*** Original Min Heap ***");
-        obj.print();
+        h.print();
 
         //Removing min value from heap
         System.out.println("\n\nRemoving min value...");
-        System.out.println("Min element : " + obj.remove());
+        System.out.println("Min element : " + h.remove());
 
         //Printing new min heap
         System.out.println("\n*** New Min Heap ***");
-        obj.print();
+        h.print();
     }
 }

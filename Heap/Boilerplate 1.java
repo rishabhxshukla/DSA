@@ -39,14 +39,14 @@ class Boilerplate
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Boilerplate obj = new Boilerplate();
+        Boilerplate h = new Boilerplate();
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Printing the ...
     }
