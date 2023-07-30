@@ -6,8 +6,8 @@ import java.io.*;
 class HeapSort
 {
     int size = 0;
-    int maxsize = 5;
-    int arr[] = new int[maxsize];
+    int maxSize = 5;
+    int arr[] = new int[maxSize];
 
 
     /* Parent */
@@ -46,7 +46,7 @@ class HeapSort
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
-        for (int i=0; i<maxsize; i++)
+        for (int i=0; i<maxSize; i++)
         {
             System.out.print("Enter the element : ");
             arr[i] = Integer.parseInt(b.readLine());

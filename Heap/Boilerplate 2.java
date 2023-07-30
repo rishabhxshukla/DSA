@@ -6,8 +6,8 @@ package Heap.Questions;
 class Boilerplate2
 {
     int size = 0;
-    int maxsize = 7;
-    int arr[] = new int[maxsize];
+    int maxSize = 7;
+    int arr[] = new int[maxSize];
 
 
     /* Parent */
@@ -61,7 +61,7 @@ class Boilerplate2
     void insert(int element)
     {
         //Heap Overflow
-        if (size >= maxsize) {
+        if (size >= maxSize) {
             System.out.println("ERROR: Heap is full!");
             System.exit(0);
         }

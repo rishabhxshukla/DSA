@@ -5,8 +5,8 @@ package Heap;
 class MaxHeap1
 {
     int size = 0;                      //Current size of heap
-    int maxsize = 7;                   //Maximum size of heap
-    int arr[] = new int[maxsize];      //Array to store heap elements
+    int maxSize = 7;                   //Maximum size of heap
+    int arr[] = new int[maxSize];      //Array to store heap elements
 
 
     /* Method 1 */
@@ -67,7 +67,7 @@ class MaxHeap1
     void insert(int element)
     {
         //Heap Overflow
-        if (size == maxsize) {
+        if (size >= maxSize) {
             System.out.println("ERROR: Heap is full!");
             System.exit(0);
         }
@@ -97,7 +97,7 @@ class MaxHeap1
     int remove()
     {
         //Heap Underflow
-        if (size == 0) {
+        if (size <= 0) {
             System.out.println("ERROR: Heap is empty!");
             System.exit(0);
         }

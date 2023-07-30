@@ -13,8 +13,8 @@ import java.io.*;
 class BuildMinHeap
 {
     static int size = 0;
-    static int minsize = 7;
-    static int arr[] = new int[minsize];
+    static int maxSize = 7;
+    static int arr[] = new int[maxSize];
 
 
     /* Parent */
@@ -77,7 +77,7 @@ class BuildMinHeap
     /* Get min element */
     int remove()
     {
-        if (size == 0) {
+        if (size <= 0) {
             System.out.println("ERROR: Heap is empty!");
             System.exit(0);
         }
@@ -136,7 +136,7 @@ class BuildMinHeap
         BufferedReader b = new BufferedReader(inp);
 
         //Inserting array elements
-        for (int i=0; i<minsize; i++)
+        for (int i=0; i<maxSize; i++)
         {
             System.out.print("Enter the element : ");
             arr[i] = Integer.parseInt(b.readLine());
