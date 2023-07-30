@@ -5,6 +5,7 @@ So, find the position of the last non-leaf node and perform the heapify in rever
 Also, increase the size of the heap while taking user input.
 Last non-leaf node : (size / 2) - 1
 */
+// Array to Max Heap
 
 package Heap.Questions;
 import java.io.*;
@@ -73,6 +74,27 @@ class BuildMaxHeap
     }
 
 
+    /* Get max element */
+    int remove()
+    {
+        if (size == 0) {
+            System.out.println("ERROR: Heap is empty!");
+            System.exit(0);
+        }
+        if (size == 1) {
+            size--;
+            return arr[0];
+        }
+
+        int max = arr[0];
+        arr[0] = arr[size - 1];
+        size--;
+        Heapify(0);
+
+        return max;
+    }
+
+
     /* Fix violated heap property */
     void Heapify(int i)
     {
@@ -126,11 +148,20 @@ class BuildMaxHeap
         obj.printArray();
 
         //Building max heap
-        System.out.println("\nBuilding max heap...");
+        System.out.println("\n\nBuilding max heap...");
         obj.build();
 
         //Printing created max heap
-        System.out.println("*** Created Max Heap ***");
+        System.out.println("\n*** Created Max Heap ***");
+        obj.print();
+
+        //Removing max value from heap
+        System.out.println("\n\nRemoving max value...");
+        System.out.println("Max element : " + obj.remove());
+        System.out.println("Max element : " + obj.remove());
+
+        //Printing new max heap
+        System.out.println("\n*** New Max Heap ***");
         obj.print();
     }
 }
