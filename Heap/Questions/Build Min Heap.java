@@ -5,6 +5,7 @@ So, find the position of the last non-leaf node and perform the heapify in rever
 Also, increase the size of the heap while taking user input.
 Last non-leaf node : (size / 2) - 1
 */
+// Array to Min Heap
 
 package Heap.Questions;
 import java.io.*;
@@ -12,8 +13,8 @@ import java.io.*;
 class BuildMinHeap
 {
     static int size = 0;
-    static int maxsize = 7;
-    static int arr[] = new int[maxsize];
+    static int minsize = 7;
+    static int arr[] = new int[minsize];
 
 
     /* Parent */
@@ -73,6 +74,27 @@ class BuildMinHeap
     }
 
 
+    /* Get min element */
+    int remove()
+    {
+        if (size == 0) {
+            System.out.println("ERROR: Heap is empty!");
+            System.exit(0);
+        }
+        if (size == 1) {
+            size--;
+            return arr[0];
+        }
+
+        int min = arr[0];
+        arr[0] = arr[size - 1];
+        size--;
+        Heapify(0);
+
+        return min;
+    }
+
+
     /* Fix violated heap property */
     void Heapify(int i)
     {
@@ -114,7 +136,7 @@ class BuildMinHeap
         BufferedReader b = new BufferedReader(inp);
 
         //Inserting array elements
-        for (int i=0; i<maxsize; i++)
+        for (int i=0; i<minsize; i++)
         {
             System.out.print("Enter the element : ");
             arr[i] = Integer.parseInt(b.readLine());
@@ -126,11 +148,20 @@ class BuildMinHeap
         obj.printArray();
 
         //Building min heap
-        System.out.println("\nBuilding min heap...");
+        System.out.println("\n\nBuilding min heap...");
         obj.build();
 
         //Printing created min heap
-        System.out.println("*** Created Min Heap ***");
+        System.out.println("\n*** Created Min Heap ***");
+        obj.print();
+
+        //Removing min value from heap
+        System.out.println("\n\nRemoving min value...");
+        System.out.println("Min element : " + obj.remove());
+        System.out.println("Min element : " + obj.remove());
+
+        //Printing new min heap
+        System.out.println("\n*** New Min Heap ***");
         obj.print();
     }
 }
