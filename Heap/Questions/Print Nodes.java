@@ -51,16 +51,16 @@ class PrintNodes
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        PrintNodes obj = new PrintNodes();
+        PrintNodes h = new PrintNodes();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Taking user input
         System.out.print("Enter the key : ");
@@ -68,6 +68,6 @@ class PrintNodes
 
         //Printing the nodes which are less than key
         System.out.println("Nodes less than " +key+ " are : ");
-        obj.printLessThan(key);
+        h.printLessThan(key);
     }
 }

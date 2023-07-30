@@ -47,16 +47,16 @@ class KLargest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KLargest obj = new KLargest();
+        KLargest h = new KLargest();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Taking user input
         System.out.print("Enter the value of K : ");
@@ -64,6 +64,6 @@ class KLargest
 
         //Printing the K largest elements
         System.out.println("*** K Largest Elements ***");
-        obj.kLargest(k);
+        h.kLargest(k);
     }
 }

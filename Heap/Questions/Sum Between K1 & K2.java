@@ -59,14 +59,14 @@ class SumBetween
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        SumBetween obj = new SumBetween();
+        SumBetween h = new SumBetween();
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Values of k
         int k1 = 2;

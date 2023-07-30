@@ -69,16 +69,16 @@ class MaximumDistinct
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        MaximumDistinct obj = new MaximumDistinct();
+        MaximumDistinct h = new MaximumDistinct();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Taking user input
         System.out.print("Enter the value of K : ");

@@ -64,16 +64,16 @@ class KNonRepeating
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KNonRepeating obj = new KNonRepeating();
+        KNonRepeating h = new KNonRepeating();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Taking user input
         System.out.print("Enter the value of K : ");
@@ -81,6 +81,6 @@ class KNonRepeating
 
         //Printing the k non-repeating characters
         System.out.println("First k non-repeating characters :");
-        obj.nonRepeating(k);
+        h.nonRepeating(k);
     }
 }

@@ -60,14 +60,14 @@ class MinCostOfRopes
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        MinCostOfRopes obj = new MinCostOfRopes();
+        MinCostOfRopes h = new MinCostOfRopes();
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Printing the minimum cost
         System.out.println("Minimum cost : " + minCost());

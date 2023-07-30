@@ -114,23 +114,23 @@ class HeapSort
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        HeapSort obj = new HeapSort();
+        HeapSort h = new HeapSort();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        obj.create();
+        h.create();
 
         //Printing created array
         System.out.println("*** Created Array ***");
-        obj.print();
+        h.print();
 
         //Sorting array
         System.out.println("\nSorting the array...");
-        obj.sort();
+        h.sort();
 
         //Printing new array
         System.out.println("*** New Array ***");
-        obj.print();
+        h.print();
     }
 }

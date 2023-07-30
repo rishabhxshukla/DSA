@@ -55,17 +55,17 @@ class KSortedArray
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KSortedArray obj = new KSortedArray();
+        KSortedArray h = new KSortedArray();
 
         //Printing original array
         System.out.println("*** Original Array ***");
-        obj.print();
+        h.print();
 
         System.out.println("\nSorting...");
-        obj.sort(3);
+        h.sort(3);
 
         //Printing New array
         System.out.println("*** New Array ***");
-        obj.print();
+        h.print();
     }
 }

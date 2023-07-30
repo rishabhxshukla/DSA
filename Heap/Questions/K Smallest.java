@@ -47,16 +47,16 @@ class KSmallest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        KSmallest obj = new KSmallest();
+        KSmallest h = new KSmallest();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the heap
-        obj.create();
+        h.create();
 
         //Printing the heap
         System.out.println("*** Created Heap ***");
-        obj.print();
+        h.print();
 
         //Taking user input
         System.out.print("Enter the value of K : ");
@@ -64,6 +64,6 @@ class KSmallest
 
         //Printing the K smallest elements
         System.out.println("*** K Smallest Elements ***");
-        obj.kSmallest(k);
+        h.kSmallest(k);
     }
 }

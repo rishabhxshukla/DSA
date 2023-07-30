@@ -131,7 +131,7 @@ class BuildMinHeap
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        BuildMinHeap obj = new BuildMinHeap();
+        BuildMinHeap h = new BuildMinHeap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -145,23 +145,23 @@ class BuildMinHeap
 
         //Printing created array
         System.out.println("*** Created Array ***");
-        obj.printArray();
+        h.printArray();
 
         //Building min heap
         System.out.println("\n\nBuilding min heap...");
-        obj.build();
+        h.build();
 
         //Printing created min heap
         System.out.println("\n*** Created Min Heap ***");
-        obj.print();
+        h.print();
 
         //Removing min value from heap
         System.out.println("\n\nRemoving min value...");
-        System.out.println("Min element : " + obj.remove());
-        System.out.println("Min element : " + obj.remove());
+        System.out.println("Min element : " + h.remove());
+        System.out.println("Min element : " + h.remove());
 
         //Printing new min heap
         System.out.println("\n*** New Min Heap ***");
-        obj.print();
+        h.print();
     }
 }

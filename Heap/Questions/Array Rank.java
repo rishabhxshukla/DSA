@@ -76,20 +76,20 @@ class ArrayRank
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        ArrayRank obj = new ArrayRank();
+        ArrayRank h = new ArrayRank();
 
         //Creating the array
-        obj.create();
+        h.create();
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        obj.print();
+        h.print();
 
         //Copying ranks
-        obj.copyRank();
+        h.copyRank();
 
         //Printing the new array
         System.out.println("\n*** Ranks ***");
-        obj.print();
+        h.print();
     }
 }

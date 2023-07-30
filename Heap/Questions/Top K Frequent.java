@@ -82,16 +82,16 @@ class TopKFrequent
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        TopKFrequent obj = new TopKFrequent();
+        TopKFrequent h = new TopKFrequent();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
-        obj.create();
+        h.create();
 
         //Printing the array
         System.out.println("*** Created Array ***");
-        obj.print(arr);
+        h.print(arr);
 
         //Taking user input
         System.out.print("\nEnter the value of k : ");
@@ -99,6 +99,6 @@ class TopKFrequent
 
         //Printing the top K frequent elements
         System.out.print("Top K frequent elements : ");
-        obj.topKfrequent(k);
+        h.topKfrequent(k);
     }
 }

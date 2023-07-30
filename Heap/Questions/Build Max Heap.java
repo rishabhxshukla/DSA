@@ -131,7 +131,7 @@ class BuildMaxHeap
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        BuildMaxHeap obj = new BuildMaxHeap();
+        BuildMaxHeap h = new BuildMaxHeap();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -145,23 +145,23 @@ class BuildMaxHeap
 
         //Printing created array
         System.out.println("*** Created Array ***");
-        obj.printArray();
+        h.printArray();
 
         //Building max heap
         System.out.println("\n\nBuilding max heap...");
-        obj.build();
+        h.build();
 
         //Printing created max heap
         System.out.println("\n*** Created Max Heap ***");
-        obj.print();
+        h.print();
 
         //Removing max value from heap
         System.out.println("\n\nRemoving max value...");
-        System.out.println("Max element : " + obj.remove());
-        System.out.println("Max element : " + obj.remove());
+        System.out.println("Max element : " + h.remove());
+        System.out.println("Max element : " + h.remove());
 
         //Printing new max heap
         System.out.println("\n*** New Max Heap ***");
-        obj.print();
+        h.print();
     }
 }
