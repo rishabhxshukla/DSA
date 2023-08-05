@@ -1,4 +1,5 @@
 /*
+Shuffle the Array
 Given an array consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
 Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 */
@@ -43,17 +44,15 @@ class Shuffle
     static int[] shuffle()
     {
         int i = 0, j = size/2, k = 0;
-        int newarr[] = new int[size];
+        int ans[] = new int[size];
 
         while (i < size/2 && j < size)
         {
-            newarr[k++] = arr[i];
-            newarr[k++] = arr[j];
-
-            i++;
-            j++;
+            ans[k++] = arr[i++];
+            ans[k++] = arr[j++];
         }
-        return newarr;
+
+        return ans;
     }
 
 
