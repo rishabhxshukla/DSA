@@ -30,9 +30,7 @@ class RichestCustomer
     /* Function to find the person with maximum wealth */
     static int maximumWealth()
     {
-        int sum = 0;
-        //List to store the sum of each row
-        ArrayList<Integer> rowSum = new ArrayList<>();
+        int sum = 0, max = Integer.MIN_VALUE;
 
         for (int i=0; i<arr.length; i++)
         {
@@ -43,14 +41,11 @@ class RichestCustomer
                 sum = sum + arr[i][j];
             }
 
-            //Adding sum of each row in the list
-            rowSum.add(sum);
+            //Keeping track of max wealth
+            max = Math.max(max, sum);
         }
 
-        //Sorting the list
-        Collections.sort(rowSum);
-
-        return rowSum.get(rowSum.size() - 1);
+        return max;
     }
 
 
