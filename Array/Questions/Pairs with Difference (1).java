@@ -2,7 +2,7 @@
 Count Number of Pairs With Absolute Difference K
 Given an array and an integer k, return the number of pairs (i, j) with |arr[i] - arr[j]| == k.
 */
-// HASHMAP
+// NESTED LOOP
 
 package Array.Questions;
 import java.io.*;
