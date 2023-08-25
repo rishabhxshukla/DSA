@@ -38,7 +38,7 @@ class DiagonalSum
         {
             for (int j=0; j<matrix[i].length; j++)
             {
-                if (i == j || j == n - 1 - i)
+                if (i == j || j == n - i - 1)
                 {
                     sum += matrix[i][j];
                 }

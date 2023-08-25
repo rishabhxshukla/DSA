@@ -53,15 +53,18 @@ class TargetSum2
         while (i < j)
         {
             int sum = arr[i] + arr[j];
+
             if (sum == target)
             {
                 pair.add(arr[i]);
                 pair.add(arr[j]);
             }
-            if (sum < target)
+            if (sum < target) {
                 i++;
-            else
+            }
+            else {
                 j--;
+            }
         }
 
         //Printing the pairs

@@ -53,12 +53,14 @@ class NegativePositive2
             }
 
             //If -ve is already present on left
-            if (arr[i] < 0)
+            if (arr[i] < 0) {
                 i++;
+            }
 
             //If +ve is already present on right
-            if (arr[j] >= 0)
+            if (arr[j] >= 0) {
                 j--;
+            }
         }
     }
 

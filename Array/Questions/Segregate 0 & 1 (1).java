@@ -43,15 +43,17 @@ class Segregate1
         //If 0 is found
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == 0)
+            if (arr[i] == 0) {
                 temp[k++] = 0;
+            }
         }
 
         //If 1 is found
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == 1)
+            if (arr[i] == 1) {
                 temp[k++] = 1;
+            }
         }
 
         //Copying elements back to original array

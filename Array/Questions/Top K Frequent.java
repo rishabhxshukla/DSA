@@ -49,8 +49,9 @@ class TopKFrequent
 
             //If element is already present, then update it
             if (hm.containsKey(key)) {
-                int updated = hm.get(key) + 1;
-                hm.put(key, updated);
+                int val = hm.get(key);
+                val++;
+                hm.put(key, val);
             }
             //Otherwise add it to HashMap
             else {
@@ -59,9 +60,9 @@ class TopKFrequent
         }
 
         //Adding HashMap elements to a List
-        for (Map.Entry<Integer, Integer> entry : hm.entrySet())
+        for (var i : hm.entrySet())
         {
-            list.add(entry.getKey());
+            list.add(i.getKey());
         }
 
         //Sorting the List based on the frequency of elements

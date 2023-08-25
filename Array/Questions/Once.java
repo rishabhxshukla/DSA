@@ -47,12 +47,14 @@ class Once
 
             for (int j=0; j<size; j++)
             {
-                if (arr[i] == arr[j])
+                if (arr[i] == arr[j]) {
                     count++;
+                }
             }
 
-            if (count == 1)
+            if (count == 1) {
                 System.out.print("\nElement that occurs once is : " + arr[i]);
+            }
         }
     }
 

@@ -53,12 +53,14 @@ class Segregate3
             }
 
             //If 0 is already present on left
-            if (arr[i] == 0)
+            if (arr[i] == 0) {
                 i++;
+            }
 
             //If 1 is already present on right
-            if (arr[j] == 1)
+            if (arr[j] == 1) {
                 j--;
+            }
         }
     }
 

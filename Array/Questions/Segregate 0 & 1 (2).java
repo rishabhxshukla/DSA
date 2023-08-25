@@ -42,8 +42,9 @@ class Segregate2
         //Counting the no. of 0's
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == 0)
+            if (arr[i] == 0) {
                 count++;
+            }
         }
 
         //Filling array with 0's until count

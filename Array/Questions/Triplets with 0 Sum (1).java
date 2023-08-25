@@ -44,7 +44,7 @@ class Triplets1
         {
             for (int j=i+1; j<size-1; j++)
             {
-                for (int k = j+1; k<size; k++)
+                for (int k=j+1; k<size; k++)
                 {
                     if (arr[i] + arr[j] + arr[k] == 0) {
                         System.out.println("(" + arr[i] + ", " + arr[j] + ", " + arr[k] + ")");
