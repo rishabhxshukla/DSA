@@ -56,7 +56,7 @@ class EvenOdd3
             }
         }
 
-        //Moving back the elements to the array
+        //Moving elements back to the array
         int i = 0;
         while (!s.isEmpty())
         {

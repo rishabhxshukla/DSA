@@ -11,7 +11,7 @@ Return the number of good triplets.
 
 Input: arr = [3,0,1,1,9,7], a = 7, b = 2, c = 3
 Output: 4
-Explanation: There are 4 good triplets: [(3,0,1), (3,0,1), (3,1,1), (0,1,1)].
+Explanation: There are 4 good triplets: (3,0,1), (3,0,1), (3,1,1), (0,1,1).
 */
 // NESTED LOOPS
 

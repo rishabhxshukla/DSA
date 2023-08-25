@@ -3,7 +3,7 @@ Given an array of integers, return the number of good pairs present in it.
 A pair (i, j) is called good if arr[i] == arr[j] and i < j.
 Input: [1, 2, 3, 1, 1, 3]
 Output: 4
-Explanation: 4 good pairs : (0,3), (0,4), (3,4), (2,5).
+Explanation: 4 good pairs : (1,1), (1,1), (1,1), (3,3).
 */
 // NESTED LOOP
 
