@@ -1,7 +1,14 @@
+/*
+Selection Sort works by repeatedly selecting the minimum (or maximum) element from
+the unsorted portion of the array and placing it at the beginning of the array.
+
+Time Complexity : O(N^2)
+*/
+
 package Sorting;
 import java.io.*;
 
-class Selection_Sort
+class SelectionSort
 {
     static final int size = 5;
     int arr[] = new int[size];
@@ -57,9 +64,7 @@ class Selection_Sort
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Selection_Sort obj = new Selection_Sort();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
+        SelectionSort obj = new SelectionSort();
 
         //Creating the array
         obj.create();
@@ -72,8 +77,8 @@ class Selection_Sort
         System.out.println("\nSorting...");
         obj.sort();
 
-        //Printing new array
-        System.out.println("*** New Array ***");
+        //Printing sorted array
+        System.out.println("*** Sorted Array ***");
         obj.print();
     }
 }
