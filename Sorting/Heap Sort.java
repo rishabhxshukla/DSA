@@ -1,3 +1,12 @@
+/*
+Heap Sort is a comparison-based sorting algorithm that works by first transforming the elements
+of the input array into a binary heap data structure, specifically a max-heap.
+Then, it repeatedly extracts the maximum element from the heap (which is always the root element)
+and rebuilds the heap with the remaining elements.
+
+Time Complexity : O(n log n)
+*/
+
 package Sorting;
 import java.io.*;
 
@@ -113,8 +122,6 @@ class HeapSort
     {
         //Creating object of the class
         HeapSort obj = new HeapSort();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
 
         //Creating the array
         obj.create();
@@ -127,8 +134,8 @@ class HeapSort
         System.out.println("\nSorting the array...");
         obj.sort();
 
-        //Printing new array
-        System.out.println("*** New Array ***");
+        //Printing sorted array
+        System.out.println("*** Sorted Array ***");
         obj.print();
     }
 }

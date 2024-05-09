@@ -53,9 +53,9 @@ class BubbleSort
                 if (arr[j] > arr[j+1])
                 {
                     //Swapping
-                    int t = arr[j];
+                    int temp = arr[j];
                     arr[j] = arr[j+1];
-                    arr[j+1] = t;
+                    arr[j+1] = temp;
                 }
             }
         }
