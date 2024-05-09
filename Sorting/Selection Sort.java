@@ -41,22 +41,22 @@ class SelectionSort
     /* Function to sort elements of an array */
     void sort()
     {
-        int min, t;
         int n = size;
 
         for (int i=0; i<n-1; i++)
         {
-            min = i;
+            int min = i;
 
             for (int j=i+1; j<n; j++)
             {
-                if (arr[j] < arr[min])
+                if (arr[j] < arr[min]) {
                     min = j;
+                }
             }
             //Swapping
-            t = arr[i];
+            int temp = arr[i];
             arr[i] = arr[min];
-            arr[min] = t;
+            arr[min] = temp;
         }
     }
 

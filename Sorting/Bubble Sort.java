@@ -1,7 +1,17 @@
+/*
+Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent
+elements, and swaps them if they are in the wrong order. The pass through the list is repeated
+until the list is sorted.
+It is called Bubble Sort because with each pass through the list, the smaller elements gradually
+'bubble' to the top (beginning) of the list, while the larger elements 'sink' to the bottom (end).
+
+Time Complexity : O(N^2)
+*/
+
 package Sorting;
 import java.io.*;
 
-class Bubble_Sort
+class BubbleSort
 {
     static final int size = 5;
     int arr[] = new int[size];
@@ -34,7 +44,6 @@ class Bubble_Sort
     /* Function to sort elements of an array */
     void sort()
     {
-        int t;
         int n = size - 1;
 
         for (int i=0; i<n; i++)
@@ -44,7 +53,7 @@ class Bubble_Sort
                 if (arr[j] > arr[j+1])
                 {
                     //Swapping
-                    t = arr[j];
+                    int t = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = t;
                 }
@@ -56,9 +65,7 @@ class Bubble_Sort
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Bubble_Sort obj = new Bubble_Sort();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
+        BubbleSort obj = new BubbleSort();
 
         //Creating the array
         obj.create();
@@ -71,8 +78,8 @@ class Bubble_Sort
         System.out.println("\nSorting...");
         obj.sort();
 
-        //Printing new array
-        System.out.println("*** New Array ***");
+        //Printing sorted array
+        System.out.println("*** Sorted Array ***");
         obj.print();
     }
 }
