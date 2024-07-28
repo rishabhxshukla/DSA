@@ -5,7 +5,7 @@ import java.io.*;
 
 class Concatenate
 {
-    static final int size = 3;
+    static final int size = 5;
     static int arr[] = new int[size];
 
 
@@ -36,21 +36,18 @@ class Concatenate
     /* Function to concatenate the arrays */
     void concatenate()
     {
-        //Answer array to store 2 arrays
-        int ans[] = new int[2*size];
+        //New array to store arr twice
+        int newarr[] = new int[size *  2];
 
         //Concatenating the arrays
         for (int i=0; i<size; i++)
         {
-            ans[i] = arr[i];
-            ans[i + size] = arr[i];
+            newarr[i] = arr[i];
+            newarr[i + size] = arr[i];
         }
 
         //Printing the answer array
-        for (int i=0; i<ans.length; i++)
-        {
-            System.out.print(ans[i] + " ");
-        }
+        print(newarr);
     }
 
 
