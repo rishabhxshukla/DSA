@@ -1,6 +1,6 @@
 package Patterns;
 
-class Pattern8
+class Pattern9
 {
     /* Function to create the pattern */
     void create(int N)
@@ -8,19 +8,19 @@ class Pattern8
         for (int i = 0; i < N; i++)
         {
             //Space
-            for (int j = 0; j < (N-i-1); j++)
+            for (int j = 0; j < i; j++)
             {
                 System.out.print(" ");
             }
 
             //Stars
-            for (int j = 0; j < (2*i+1); j++)
+            for (int j = 0; j < (2*N - (2*i+1)); j++)
             {
                 System.out.print("*");
             }
 
             //Space
-            for (int j = 0; j < (N-i-1); j++)
+            for (int j = 0; j < i; j++)
             {
                 System.out.print(" ");
             }
@@ -33,7 +33,7 @@ class Pattern8
     public static void main(String args[])
     {
         //Creating object of the class
-        Pattern8 obj = new Pattern8();
+        Pattern9 obj = new Pattern9();
 
         //Creating the pattern
         obj.create(5);
