@@ -1,3 +1,17 @@
+/*
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+*/
+
 package Patterns;
 
 class Pattern11
@@ -5,7 +19,7 @@ class Pattern11
     /* Function to create the pattern */
     void create(int N)
     {
-        for (int i = 0; i <= (2 * N); i++)
+        for (int i = 0; i <= (2*N); i++)
         {
             /* Upper Part */
             if (i < N)
@@ -18,7 +32,7 @@ class Pattern11
             /* Lower Part */
             else
             {
-                for (int j = 0; j <= (2 * N - i); j++)
+                for (int j = 0; j <= (2*N-i); j++)
                 {
                     System.out.print("* ");
                 }

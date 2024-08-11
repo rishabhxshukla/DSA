@@ -1,3 +1,11 @@
+/*
+* * * * *
+* * * *
+* * *
+* *
+*
+*/
+
 package Patterns;
 
 class Pattern5
@@ -9,7 +17,7 @@ class Pattern5
         {
             for (int j = N; j > i; j--)
             {
-                System.out.print("*" + " ");
+                System.out.print("* ");
             }
             System.out.println();
         }

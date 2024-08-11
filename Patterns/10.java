@@ -1,3 +1,16 @@
+/*
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+*/
+
 package Patterns;
 
 class Pattern10
@@ -25,7 +38,7 @@ class Pattern10
         }
 
         /* Lower Part */
-        for (int i = N-1; i >= 0; i--)
+        for (int i = (N-1); i >= 0; i--)
         {
             //Space
             for (int j = 0; j < (N-i-1); j++)

@@ -1,3 +1,11 @@
+/*
+    *
+   ***
+  *****
+ *******
+*********
+*/
+
 package Patterns;
 
 class Pattern8
