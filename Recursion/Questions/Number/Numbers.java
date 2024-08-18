@@ -1,19 +1,19 @@
-// Program to print your name N times
+// Program to print the first N natural numbers
 
-package Recursion.Questions.String;
+package Recursion.Questions.Number;
 import java.io.*;
 
-class Name
+class Numbers
 {
-    /* Function to print the name N times */
-    static void print(int N)
+    /* Function to print the natural numbers */
+    static void numbers(int N)
     {
         if (N == 0) {
             return;
         }
 
-        System.out.println("Rishabh");
-        print(--N);
+        numbers(N - 1);
+        System.out.println(N);
     }
 
 
@@ -26,7 +26,7 @@ class Name
         System.out.print("Enter the value of N : ");
         int n = Integer.parseInt(b.readLine());
 
-        //Printing the name N times
-        print(n);
+        //Printing the natural numbers
+        numbers(n);
     }
 }
