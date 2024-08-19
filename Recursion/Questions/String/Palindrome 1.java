@@ -9,10 +9,12 @@ class Palindrome
     /* Function to check for a palindrome string */
     static boolean palindrome(String str, int i, int j)
     {
+        //If i crosses j
         if (i >= j) {
             return true;
         }
 
+        //If characters are not same
         if (str.charAt(i) != str.charAt(j)) {
             return false;
         }
