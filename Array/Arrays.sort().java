@@ -1,4 +1,5 @@
 // Arrays.sort() inbuilt method in Java
+// Time complexity : O(n log n)
 
 package Array;
 import java.io.*;
@@ -7,9 +8,9 @@ import java.util.*;
 class ArraysSort
 {
     /* ARRAYS */
-    int arr1[] = {2, 3, 1, 5, 4};
+    int arr1[]     = {2, 3, 1, 5, 4};
     Integer arr2[] = {2, 3, 1, 5, 4};
-    int arr3[] = {2, 3, 1, 5, 4};
+    int arr3[]     = {2, 3, 1, 5, 4};
 
 
     /* Function to sort the array */
