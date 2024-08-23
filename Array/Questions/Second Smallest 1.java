@@ -1,9 +1,10 @@
 // 2nd Smallest element of the array
+// 2 mins
 
 package Array.Questions;
 import java.io.*;
 
-class SecondSmallest
+class SecondSmallest1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -60,7 +61,7 @@ class SecondSmallest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        SecondSmallest obj = new SecondSmallest();
+        SecondSmallest1 obj = new SecondSmallest1();
 
         //Creating the array
         obj.create();
