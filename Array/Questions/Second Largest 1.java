@@ -1,9 +1,10 @@
 // 2nd Largest element of the array
+// 2 maxs
 
 package Array.Questions;
 import java.io.*;
 
-class SecondLargest
+class SecondLargest1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -60,7 +61,7 @@ class SecondLargest
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        SecondLargest obj = new SecondLargest();
+        SecondLargest1 obj = new SecondLargest1();
 
         //Creating the array
         obj.create();
