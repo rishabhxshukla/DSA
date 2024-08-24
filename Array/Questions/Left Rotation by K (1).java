@@ -37,6 +37,11 @@ class LeftRotation_by_K1
     // 1 2 3 4 5   -->   2 3 4 5 1
     void leftRotate(int k)
     {
+        //Avoid unnecessary rotations if k > size
+        if (k > size) {
+            k = k % size;
+        }
+
         while (k > 0)
         {
             //Storing the 1st element
