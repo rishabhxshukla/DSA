@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class Zeroes_to_End
+class Zeroes_to_End1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -40,18 +40,19 @@ class Zeroes_to_End
         int newarr[] = new int[size];
         int k = 0;
 
-        //Moving non-zero elements
+        //Filling non-zero elements
         for (int i=0; i<size; i++)
         {
-            if (arr[i] != 0)
-                newarr[k++] = arr[i];
+            if (arr[i] != 0) {
+                newarr[k] = arr[i];
+                k++;
+            }
         }
 
-        //Moving all the zeroes
-        for (int i=0; i<size; i++)
+        //Filling zeroes
+        for (int i=k; i<size; i++)
         {
-            if (arr[i] == 0)
-                newarr[k++] = 0;
+            newarr[i] = 0;
         }
 
         return newarr;
@@ -61,7 +62,7 @@ class Zeroes_to_End
     public static void main(String[] args) throws IOException
     {
         //Creating object of the class
-        Zeroes_to_End obj = new Zeroes_to_End();
+        Zeroes_to_End1 obj = new Zeroes_to_End1();
 
         //Creating the array
         obj.create();
