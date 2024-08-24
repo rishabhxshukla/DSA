@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class Zeroes_to_Beginning
+class Zeroes_to_Beginning1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -43,15 +43,17 @@ class Zeroes_to_Beginning
         //Moving all the zeroes
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == 0)
+            if (arr[i] == 0) {
                 newarr[k++] = 0;
+            }
         }
 
         //Moving non-zero elements
         for (int i=0; i<size; i++)
         {
-            if (arr[i] != 0)
+            if (arr[i] != 0) {
                 newarr[k++] = arr[i];
+            }
         }
 
         return newarr;
@@ -61,7 +63,7 @@ class Zeroes_to_Beginning
     public static void main(String[] args) throws IOException
     {
         //Creating object of the class
-        Zeroes_to_Beginning obj = new Zeroes_to_Beginning();
+        Zeroes_to_Beginning1 obj = new Zeroes_to_Beginning1();
 
         //Creating the array
         obj.create();
