@@ -7,10 +7,9 @@ Output: 3
 
 package Array.Questions;
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
-class SingleElement
+class SingleElement2
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -81,7 +80,7 @@ class SingleElement
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        SingleElement obj = new SingleElement();
+        SingleElement2 obj = new SingleElement2();
 
         //Creating the array
         obj.create();
