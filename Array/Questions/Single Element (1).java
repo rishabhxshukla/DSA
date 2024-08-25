@@ -1,6 +1,6 @@
 /*
 Given an array where every element appears twice except for one element. Find that element.
-Input: arr = [3,1,2,1,2]
+Input: arr = [1, 2, 3, 2, 1]
 Output: 3
 */
 // TEMP ARRAY
