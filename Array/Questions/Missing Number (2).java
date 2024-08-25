@@ -4,7 +4,7 @@
 package Array.Questions;
 import java.io.*;
 
-class MissingNumber
+class MissingNumber2
 {
     static int arr[] = {1, 2, 4, 5};
     static int size = arr.length;
@@ -43,7 +43,7 @@ class MissingNumber
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        MissingNumber obj = new MissingNumber();
+        MissingNumber2 obj = new MissingNumber2();
 
         //Printing the array
         System.out.println("*** Created Array ***");
