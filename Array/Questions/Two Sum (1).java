@@ -60,9 +60,6 @@ class TwoSum1
             int e2 = pair.get(i+1);
             System.out.print("(" + e1 + "," + e2 + ")" + " ");
         }
-
-        //Deleting the ArrayList
-        pair.clear();
     }
 
 

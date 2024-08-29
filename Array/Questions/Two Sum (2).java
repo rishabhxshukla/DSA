@@ -41,21 +41,23 @@ class TwoSum2
         HashSet<Integer> hs = new HashSet<>();
         ArrayList<Integer> pair = new ArrayList<>();
 
-        //Storing all elements in HashSet
         for (int i=0; i<size; i++)
         {
-            hs.add(arr[i]);
-        }
-
-        //Checking difference from HashSet
-        for (int i=0; i<size; i++)
-        {
+            int current = arr[i];
             int diff = target - arr[i];
+
+            //Check if the difference is already present in HashSet
             if (hs.contains(diff))
             {
-                pair.add(arr[i]);
-                pair.add(diff);
+                //Avoid adding duplicates
+                if (!pair.contains(current) && !pair.contains(diff)) {
+                    pair.add(current);
+                    pair.add(diff);
+                }
             }
+
+            //Add the current element to the HashSet
+            hs.add(current);
         }
 
         //Printing the pairs
@@ -65,10 +67,6 @@ class TwoSum2
             int e2 = pair.get(i+1);
             System.out.print("(" + e1 + "," + e2 + ")" + " ");
         }
-
-        //Deleting the HashSet & ArrayList
-        hs.clear();
-        pair.clear();
     }
 
 

@@ -43,9 +43,6 @@ class TwoSum3
     /* Function to find the pairs whose sum is equal to target */
     void pairs(int target)
     {
-        //Sort the array
-        Arrays.sort(arr);
-
         //ArrayList to store the pairs
         ArrayList<Integer> pair = new ArrayList<>();
         int i = 0, j = size-1;
@@ -74,9 +71,6 @@ class TwoSum3
             int e2 = pair.get(k+1);
             System.out.print("(" + e1 + "," + e2 + ")" + " ");
         }
-
-        //Deleting the ArrayList
-        pair.clear();
     }
 
 
