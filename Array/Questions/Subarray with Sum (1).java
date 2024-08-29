@@ -42,7 +42,7 @@ class Subarray_with_Sum1
 
 
     /* Function to find the longest subarray with given sum */
-    void subarray(int target)
+    void subarray(int k)
     {
         int len = 0;
 
@@ -57,13 +57,13 @@ class Subarray_with_Sum1
                 S = S + arr[j];
 
                 //Max length of subarray which is equal to target
-                if (S == target) {
-                    len = Math.max(len, (j-i+1));
+                if (S == k) {
+                    len = Math.max(len, j-i+1);
                 }
             }
         }
 
-        System.out.println(STR."Length of longest subarray with sum \{target} is \{len}");
+        System.out.println(STR."Length of longest subarray with sum \{k} is \{len}");
     }
 
 
