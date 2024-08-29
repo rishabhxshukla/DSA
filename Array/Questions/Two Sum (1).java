@@ -1,16 +1,11 @@
-/*
-Target sum problem.
-For using the two-pointer technique, the array must be sorted.
-If the sum is lesser than the target, increase the left pointer.
-If the sum is greater than the target, decrease the right pointer.
-*/
-// 2 POINTERS
+// Two sum problem
+// NESTED LOOPS
 
 package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class TargetSum2
+class TwoSum1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -43,35 +38,26 @@ class TargetSum2
     /* Function to find the pairs whose sum is equal to target */
     void pairs(int target)
     {
-        //Sort the array
-        Arrays.sort(arr);
-
         //ArrayList to store the pairs
         ArrayList<Integer> pair = new ArrayList<>();
-        int i = 0, j = size-1;
 
-        while (i < j)
+        for (int i=0; i<size-1; i++)
         {
-            int sum = arr[i] + arr[j];
-
-            if (sum == target)
+            for (int j=i+1; j<size; j++)
             {
-                pair.add(arr[i]);
-                pair.add(arr[j]);
-            }
-            if (sum < target) {
-                i++;
-            }
-            else {
-                j--;
+                if (arr[i] + arr[j] == target)
+                {
+                    pair.add(arr[i]);
+                    pair.add(arr[j]);
+                }
             }
         }
 
         //Printing the pairs
-        for (int k=0; k<pair.size(); k=k+2)
+        for (int i=0; i<pair.size(); i=i+2)
         {
-            int e1 = pair.get(k);
-            int e2 = pair.get(k+1);
+            int e1 = pair.get(i);
+            int e2 = pair.get(i+1);
             System.out.print("(" + e1 + "," + e2 + ")" + " ");
         }
 
@@ -83,7 +69,7 @@ class TargetSum2
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        TargetSum2 obj = new TargetSum2();
+        TwoSum1 obj = new TwoSum1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

@@ -1,11 +1,11 @@
-// Target sum problem
+// Two sum problem
 // HASHSET
 
 package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class TargetSum3
+class TwoSum2
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -75,7 +75,7 @@ class TargetSum3
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        TargetSum3 obj = new TargetSum3();
+        TwoSum2 obj = new TwoSum2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

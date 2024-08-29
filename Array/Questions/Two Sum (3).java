@@ -1,11 +1,16 @@
-// Target sum problem
-// NESTED LOOPS
+/*
+Two sum problem.
+For using the two-pointer technique, the array must be sorted.
+If the sum is lesser than the target, increase the left pointer.
+If the sum is greater than the target, decrease the right pointer.
+*/
+// 2 POINTERS
 
 package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class TargetSum
+class TwoSum3
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -38,26 +43,35 @@ class TargetSum
     /* Function to find the pairs whose sum is equal to target */
     void pairs(int target)
     {
+        //Sort the array
+        Arrays.sort(arr);
+
         //ArrayList to store the pairs
         ArrayList<Integer> pair = new ArrayList<>();
+        int i = 0, j = size-1;
 
-        for (int i=0; i<size-1; i++)
+        while (i < j)
         {
-            for (int j=i+1; j<size; j++)
+            int sum = arr[i] + arr[j];
+
+            if (sum == target)
             {
-                if (arr[i] + arr[j] == target)
-                {
-                    pair.add(arr[i]);
-                    pair.add(arr[j]);
-                }
+                pair.add(arr[i]);
+                pair.add(arr[j]);
+            }
+            if (sum < target) {
+                i++;
+            }
+            else {
+                j--;
             }
         }
 
         //Printing the pairs
-        for (int i=0; i<pair.size(); i=i+2)
+        for (int k=0; k<pair.size(); k=k+2)
         {
-            int e1 = pair.get(i);
-            int e2 = pair.get(i+1);
+            int e1 = pair.get(k);
+            int e2 = pair.get(k+1);
             System.out.print("(" + e1 + "," + e2 + ")" + " ");
         }
 
@@ -69,7 +83,7 @@ class TargetSum
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        TargetSum obj = new TargetSum();
+        TwoSum3 obj = new TwoSum3();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
