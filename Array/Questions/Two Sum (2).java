@@ -43,21 +43,21 @@ class TwoSum2
 
         for (int i=0; i<size; i++)
         {
-            int current = arr[i];
+            //Taking current element and calculating the difference
             int diff = target - arr[i];
 
             //Check if the difference is already present in HashSet
+            //Pair found, add it to ArrayList
             if (hs.contains(diff))
             {
-                //Avoid adding duplicates
-                if (!pair.contains(current) && !pair.contains(diff)) {
-                    pair.add(current);
+                if (!pair.contains(arr[i]) && !pair.contains(diff)) {
+                    pair.add(arr[i]);
                     pair.add(diff);
                 }
             }
 
             //Add the current element to the HashSet
-            hs.add(current);
+            hs.add(arr[i]);
         }
 
         //Printing the pairs
