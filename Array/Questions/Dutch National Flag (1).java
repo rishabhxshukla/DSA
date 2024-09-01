@@ -8,7 +8,7 @@ Our task is to put the same colours together and in the correct order.
 package Array.Questions;
 import java.io.*;
 
-class DutchFlag
+class DutchNationalFlag1
 {
     static String arr[] = {"white", "red", "white", "blue" ,"red", "blue"};
     static int size = arr.length;
@@ -63,7 +63,7 @@ class DutchFlag
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        DutchFlag obj = new DutchFlag();
+        DutchNationalFlag1 obj = new DutchNationalFlag1();
 
         //Printing the array
         System.out.println("*** Created Array ***");
