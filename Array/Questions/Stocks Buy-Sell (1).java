@@ -6,8 +6,9 @@ You want to maximize your profit by choosing a single day to buy a stock and a d
 Example :
 Input: prices[] = {7, 1, 5, 3, 6, 4}
 Output: 5
-Explanation: Buy stock on day 1 and sell it on day 4 => 6 – 1 = 5
+Explanation: Buy stock on day 2 and sell it on day 5 => 6 – 1 = 5
 */
+// MAX-MIN
 
 package Array.Questions;
 import java.io.*;
