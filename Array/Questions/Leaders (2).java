@@ -42,7 +42,7 @@ class Leaders2
     void leaders()
     {
         ArrayList<Integer> ans = new ArrayList<>();
-        int max = 0;    //Max variable
+        int max = 0;
 
         //Storing the last element
         max = arr[size - 1];
