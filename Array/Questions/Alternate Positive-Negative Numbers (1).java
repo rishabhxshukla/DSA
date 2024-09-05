@@ -1,13 +1,13 @@
 /*
-You are given an array of even length consisting of an equal number of positive and negative numbers.
+You are given an array consisting of "equal" number of positive and negative numbers.
 Rearrange the array such that the numbers are placed in an alternate sign order.
 Example :
-Input: arr = [3, 1, -2, -5, 2, -4]
-Output: arr = [3, -2, 1, -5, 2, -4]
+Input: arr = [1, 2, 3, -4, -5, -6]
+Output: arr = [1, -4, 2, -5, 3, -6]
 Explanation:
-The positive numbers are [3, 1, 2]. The negative numbers are [-2, -5, -4].
+Positive numbers are [1, 2, 3]. Negative numbers are [-4, -5, -6].
 */
-// TEMP ARRAYS
+// 2 TEMP ARRAYS
 
 package Array.Questions;
 import java.io.*;
@@ -62,6 +62,7 @@ class AlternatePositiveNegative1
 
         //Rearranging array in alternate order of positive-negative numbers
         a = 0; b = 0;
+
         for (int i=0; i<size; i=i+2)
         {
             arr[i] = positive[a++];
