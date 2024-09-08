@@ -1,10 +1,12 @@
 /*
-Given an array, find the subarray with the largest sum.
+Given an array, find the subarray with the "maximum" sum.
+
 Example :
 Input: arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 Output: 6
 Explanation: The subarray [4, -1, 2, 1] has the largest sum 6.
 */
+
 // KADANE'S ALGORITHM
 /*
 Kadane's Algorithm is used to find the largest sum of a contiguous subarray in an array.
@@ -20,7 +22,7 @@ Kadane's Algorithm is used to find the largest sum of a contiguous subarray in a
 package Array.Questions;
 import java.io.*;
 
-class Subarray_with_Maximum_Sum3
+class Subarray_with_Sum_Maximum3
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -87,7 +89,7 @@ class Subarray_with_Maximum_Sum3
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Subarray_with_Maximum_Sum3 obj = new Subarray_with_Maximum_Sum3();
+        Subarray_with_Sum_Maximum3 obj = new Subarray_with_Sum_Maximum3();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

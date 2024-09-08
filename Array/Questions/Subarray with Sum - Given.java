@@ -1,17 +1,10 @@
-/*
-Given an array and an integer k. Your task is to find the length of the longest sub-array
-with the sum of the elements equal to the given value k.
-
-Input : arr[] = {10, 5, 2, 7, 1, 9}, k = 15
-Output : 4
-Explanation: Longest sub-array is {5, 2, 7, 1}.
-*/
+// Given an array, find the single subarray with the "given" sum.
 // 2 POINTERS
 
 package Array.Questions;
 import java.io.*;
 
-class Subarray_with_Sum3
+class Subarray_with_Sum_Given
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -41,40 +34,38 @@ class Subarray_with_Sum3
     }
 
 
-    /* Function to find the longest subarray with given sum */
-    void subarray(int k)
+    /* Function to find the subarray with given sum */
+    void subarray(int target)
     {
         int i = 0, j = 0;
-        int len = 0, S = 0;
+        int sum = arr[0];
 
         while (j < size)
         {
-            //Calculating the sum
-            S = S + arr[j];
-
-            //Adjust the left pointer if the current sum exceeds k
-            while (S > k && i <= j) {
-                S = S - arr[i];
+            if (sum == target) {
+                System.out.println("Sum is present b/w index " +i+ " and " +j);
+                return;
+            }
+            else if (sum < target) {
+                j++;
+                if (j < size) {
+                    sum = sum + arr[j];
+                }
+            }
+            else {
+                sum = sum - arr[i];
                 i++;
             }
-
-            //If the current sum equals k, update the length
-            if (S == k) {
-                len = Math.max(len, j - i + 1);
-            }
-
-            //Move the right pointer to expand the window
-            j++;
         }
-
-        System.out.println("Length of longest subarray with sum " + k + " is " + len);
+        
+        System.out.println("No subarray found!");
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Subarray_with_Sum3 obj = new Subarray_with_Sum3();
+        Subarray_with_Sum_Given obj = new Subarray_with_Sum_Given();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

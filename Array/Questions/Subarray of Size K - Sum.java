@@ -1,16 +1,18 @@
 /*
-Find sum of all subarrays of size K
-arr : 1 2 3 4 5, k = 3
-sum = 1+2+3 = 6
-sum = 2+3+4 = 9
-sum = 3+4+5 = 12
+Find the sum of all subarrays of "size" K.
+
+Example :
+arr = [1, 2, 3, 4, 5], k = 3
+sum = 1 + 2 + 3 = 6
+sum = 2 + 3 + 4 = 9
+sum = 3 + 4 + 5 = 12
 */
 // SLIDING WINDOW
 
 package Array.Questions;
 import java.io.*;
 
-class SubarraySum
+class Subarray_of_Size_K_Sum
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -72,7 +74,7 @@ class SubarraySum
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        SubarraySum obj = new SubarraySum();
+        Subarray_of_Size_K_Sum obj = new Subarray_of_Size_K_Sum();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 

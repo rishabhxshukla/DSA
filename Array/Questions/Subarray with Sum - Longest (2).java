@@ -1,9 +1,10 @@
 /*
-Given an array and an integer k. Your task is to find the length of the longest sub-array
+Given an array and an integer k. Your task is to find the "length" of the longest sub-array
 with the sum of the elements equal to the given value k.
 
-Input : arr[] = {10, 5, 2, 7, 1, 9}, k = 15
-Output : 4
+Example :
+Input: arr[] = {10, 5, 2, 7, 1, 9}, k = 15
+Output: 4
 Explanation: Longest sub-array is {5, 2, 7, 1}.
 */
 // HASHMAP
@@ -12,7 +13,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class Subarray_with_Sum2
+class Subarray_with_Sum_Longest2
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -80,7 +81,7 @@ class Subarray_with_Sum2
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Subarray_with_Sum2 obj = new Subarray_with_Sum2();
+        Subarray_with_Sum_Longest2 obj = new Subarray_with_Sum_Longest2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
