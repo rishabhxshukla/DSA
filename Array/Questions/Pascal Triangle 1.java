@@ -21,7 +21,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class PascalTriangle
+class PascalTriangle1
 {
     /* Function to make the pascal's triangle */
     void pascalTriangle(int n)
@@ -69,7 +69,7 @@ class PascalTriangle
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        PascalTriangle obj = new PascalTriangle();
+        PascalTriangle1 obj = new PascalTriangle1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
