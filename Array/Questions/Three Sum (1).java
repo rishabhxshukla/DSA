@@ -38,8 +38,8 @@ class ThreeSum1
     /* Function to find the triplets whose sum is equal to target */
     void pairs(int target)
     {
-        //List to store the triplets
-        List<List<Integer>> triplets = new ArrayList<>();
+        //Set to store the triplets
+        Set<List<Integer>> triplets = new HashSet<>();
 
         for (int i = 0; i < size-2; i++)
         {
@@ -49,8 +49,10 @@ class ThreeSum1
                 {
                     if (arr[i] + arr[j] + arr[k] == target)
                     {
-                        //Adding triplets as a group
-                        triplets.add(Arrays.asList(arr[i], arr[j], arr[k]));
+                        //Adding triplets as a group (sorting to avoid duplicates)
+                        List<Integer> triplet = Arrays.asList(arr[i], arr[j], arr[k]);
+                        Collections.sort(triplet);
+                        triplets.add(triplet);
                     }
                 }
             }

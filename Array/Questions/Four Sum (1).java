@@ -38,8 +38,8 @@ class FourSum1
     /* Function to find the quadruplets whose sum is equal to target */
     void pairs(int target)
     {
-        //List to store the quadruplets
-        List<List<Integer>> quadruplets = new ArrayList<>();
+        //Set to store the quadruplets
+        Set<List<Integer>> quadruplets = new HashSet<>();
 
         for (int i = 0; i < size-3; i++)
         {
@@ -51,8 +51,10 @@ class FourSum1
                     {
                         if (arr[i] + arr[j] + arr[k] + arr[l] == target)
                         {
-                            //Adding quadruplets as a group
-                            quadruplets.add(Arrays.asList(arr[i], arr[j], arr[k], arr[l]));
+                            //Adding quadruplets as a group (sorting to avoid duplicates)
+                            List<Integer> quadruplet = Arrays.asList(arr[i], arr[j], arr[k], arr[l]);
+                            Collections.sort(quadruplet);
+                            quadruplets.add(quadruplet);
                         }
                     }
                 }
