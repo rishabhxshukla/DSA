@@ -62,14 +62,10 @@ class MajorityElement2
             else {
                 hm.put(el, 1);
             }
-        }
 
-        //Iterate over HashMap and find the element with freq > N / 2
-        for (var i : hm.entrySet())
-        {
-            if (i.getValue() > size / 2)
-            {
-                return i.getKey();
+            //Check if current element's frequency > N / 2
+            if (hm.get(el) > size / 2) {
+                return el;
             }
         }
 
