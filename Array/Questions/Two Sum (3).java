@@ -1,8 +1,9 @@
 /*
 Two sum problem.
 For using the two-pointer technique, the array must be sorted.
-If the sum is lesser than the target, increase the left pointer.
-If the sum is greater than the target, decrease the right pointer.
+If the sum < target, increase the left pointer.
+If the sum > target, decrease the right pointer.
+If the sum == target, add the pairs.
 */
 // 2 POINTERS
 
@@ -43,33 +44,32 @@ class TwoSum3
     /* Function to find the pairs whose sum is equal to target */
     void pairs(int target)
     {
-        //ArrayList to store the pairs
-        ArrayList<Integer> pair = new ArrayList<>();
+        //Set to store the pairs
+        Set<List<Integer>> pairs = new HashSet<>();
         int i = 0, j = size-1;
 
         while (i < j)
         {
             int sum = arr[i] + arr[j];
 
-            if (sum == target)
-            {
-                pair.add(arr[i]);
-                pair.add(arr[j]);
-            }
             if (sum < target) {
                 i++;
             }
+            else if (sum > target) {
+                j--;
+            }
             else {
+                //Adding pairs as a group
+                pairs.add(Arrays.asList(arr[i], arr[j]));
+                i++;
                 j--;
             }
         }
 
         //Printing the pairs
-        for (int k=0; k<pair.size(); k=k+2)
+        for (List<Integer> group : pairs)
         {
-            int e1 = pair.get(k);
-            int e2 = pair.get(k+1);
-            System.out.print("(" + e1 + "," + e2 + ")" + " ");
+            System.out.println(group);
         }
     }
 

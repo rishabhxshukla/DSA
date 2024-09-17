@@ -38,27 +38,25 @@ class TwoSum1
     /* Function to find the pairs whose sum is equal to target */
     void pairs(int target)
     {
-        //ArrayList to store the pairs
-        ArrayList<Integer> pair = new ArrayList<>();
+        //Set to store the pairs
+        Set<List<Integer>> pairs = new HashSet<>();
 
-        for (int i=0; i<size-1; i++)
+        for (int i = 0; i < size-1; i++)
         {
-            for (int j=i+1; j<size; j++)
+            for (int j = i+1; j < size; j++)
             {
                 if (arr[i] + arr[j] == target)
                 {
-                    pair.add(arr[i]);
-                    pair.add(arr[j]);
+                    //Adding pairs as a group
+                    pairs.add(Arrays.asList(arr[i], arr[j]));
                 }
             }
         }
 
         //Printing the pairs
-        for (int i=0; i<pair.size(); i=i+2)
+        for (List<Integer> group : pairs)
         {
-            int e1 = pair.get(i);
-            int e2 = pair.get(i+1);
-            System.out.print("(" + e1 + "," + e2 + ")" + " ");
+            System.out.println(group);
         }
     }
 

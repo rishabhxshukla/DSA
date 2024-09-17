@@ -39,7 +39,7 @@ class TwoSum2
     void pairs(int target)
     {
         HashSet<Integer> hs = new HashSet<>();
-        ArrayList<Integer> pair = new ArrayList<>();
+        Set<List<Integer>> pairs = new HashSet<>();
 
         for (int i=0; i<size; i++)
         {
@@ -47,25 +47,22 @@ class TwoSum2
             int diff = target - arr[i];
 
             //Check if the difference is already present in HashSet
-            //Pair found, add it to ArrayList
+            //If yes then pair found, add it to the List
             if (hs.contains(diff))
             {
-                if (!pair.contains(arr[i]) && !pair.contains(diff)) {
-                    pair.add(arr[i]);
-                    pair.add(diff);
-                }
+                //Adding pairs as a group
+                pairs.add(Arrays.asList(arr[i], diff));
             }
-
-            //Add the current element to the HashSet
-            hs.add(arr[i]);
+            //Otherwise, add the current element to the HashSet
+            else {
+                hs.add(arr[i]);
+            }
         }
 
         //Printing the pairs
-        for (int i=0; i<pair.size(); i=i+2)
+        for (List<Integer> group : pairs)
         {
-            int e1 = pair.get(i);
-            int e2 = pair.get(i+1);
-            System.out.print("(" + e1 + "," + e2 + ")" + " ");
+            System.out.println(group);
         }
     }
 
