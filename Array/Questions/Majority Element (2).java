@@ -1,6 +1,6 @@
 /*
 Given an array, return the majority element present inside it.
-Majority element is the element that appears more than N/2 times.
+Majority element is the element that appears more than 'N / 2' times.
 
 Example :
 Input: arr = [3, 1, 2, 3, 3]
@@ -50,21 +50,21 @@ class MajorityElement2
         //Storing element & its frequency in HashMap
         for (int i=0; i<size; i++)
         {
-            int elem = arr[i];
+            int el = arr[i];
 
             //If HashMap contains the element, increase its frequency
-            if (hm.containsKey(elem)) {
-                int val = hm.get(elem);
+            if (hm.containsKey(el)) {
+                int val = hm.get(el);
                 val++;
-                hm.replace(elem, val);
+                hm.replace(el, val);
             }
             //Otherwise, add the element to HashMap
             else {
-                hm.put(elem, 1);
+                hm.put(el, 1);
             }
         }
 
-        //Iterate over HashMap and find the element with freq > size / 2
+        //Iterate over HashMap and find the element with freq > N / 2
         for (var i : hm.entrySet())
         {
             if (i.getValue() > size / 2)

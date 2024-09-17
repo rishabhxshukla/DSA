@@ -1,6 +1,6 @@
 /*
 Given an array, return the majority element present inside it.
-Majority element is the element that appears more than N/2 times.
+Majority element is the element that appears more than 'N / 2' times.
 
 Example :
 Input: arr = [3, 1, 2, 3, 3]
@@ -56,7 +56,7 @@ class MajorityElement1
                 }
             }
 
-            //If count of element is more than half
+            //If count of element is more than N/2
             //Then it is the majority element
             if (count > size / 2) {
                 return arr[i];
