@@ -5,7 +5,7 @@ If the sum < target, increase the left pointer.
 If the sum > target, decrease the right pointer.
 If the sum == target, add the triplets.
 */
-// 2 POINTERS
+// LOOP + 2 POINTERS
 
 package Array.Questions;
 import java.io.*;

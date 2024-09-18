@@ -1,5 +1,5 @@
 // Three sum problem
-// HASHSET
+// NESTED LOOPS + HASHSET
 
 package Array.Questions;
 import java.io.*;
@@ -38,6 +38,7 @@ class ThreeSum2
     /* Function to find the triplets whose sum is equal to target */
     void pairs(int target)
     {
+        //Set to store the triplets
         Set<List<Integer>> triplets = new HashSet<>();
 
         //Iterate over the array to pick the first element
