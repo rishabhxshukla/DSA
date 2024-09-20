@@ -14,12 +14,13 @@ Input: arr[] = {4, 2, 2, 6, 4}, k = 6
 Output: 4
 Explanation: Subarrays having XOR as 6 are {4, 2}, {4, 2, 2, 6, 4}, {2, 2, 6}, {6}.
 */
-// NESTED LOOPS
+// HASHMAP
 
 package Array.Questions;
 import java.io.*;
+import java.util.*;
 
-class Subarray_with_XOR1
+class Subarray_with_XOR2
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -50,24 +51,33 @@ class Subarray_with_XOR1
 
 
     /* Function to find subarrays having XOR of all elements equals to K */
-    static int xor(int target)
+    static int xor(int k)
     {
         int count = 0;
+        int xor = 0;
+        HashMap<Integer, Integer> hm = new HashMap<>();
 
-        //Creating the subarrays
+        //Initializing the map with the prefix XOR 0
+        hm.put(0, 1);
+
         for (int i=0; i<size; i++)
         {
-            int xor = 0;
+            //Calculate XOR up to the current element
+            xor = xor ^ arr[i];
 
-            //XOR of each subarray
-            for (int j=i; j<size; j++)
+            //Calculate the target prefix XOR
+            int x = xor ^ k;
+
+            //Check if this prefix XOR is already present in HashMap
+            //If yes then subarray found, increase the count
+            if (hm.containsKey(x))
             {
-                xor = xor ^ arr[j];
+                count = count + hm.get(x);
+            }
 
-                //No. of subarrays with xor k
-                if (xor == target) {
-                    count++;
-                }
+            //Otherwise, update the count of the current XOR in HashMap
+            else {
+                hm.put(xor, hm.getOrDefault(xor, 0) + 1);
             }
         }
 
@@ -78,7 +88,7 @@ class Subarray_with_XOR1
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Subarray_with_XOR1 obj = new Subarray_with_XOR1();
+        Subarray_with_XOR2 obj = new Subarray_with_XOR2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
