@@ -11,7 +11,7 @@ The compare() method returns:
 package CollectionFramework;
 import java.util.*;
 
-class ComparatorExample
+class ComparatorExample2
 {
     public static void main(String args[])
     {
