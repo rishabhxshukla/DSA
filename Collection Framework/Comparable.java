@@ -1,11 +1,11 @@
 /*
-If we have to perform custom sort based on the object attributes, we have to implement
-the Comparable<T> interface and compulsorily implement the compareTo() method.
+If we have to perform custom sort based on the object's attributes, then we have to
+implement the Comparable<T> interface and compulsorily implement the compareTo() method.
 
 The compareTo() method returns:
-  - A positive number if the current object's age is greater than the other
-  - A negative number if it is less than the other
-  - Zero if both the ages are equal.
+  - A positive number if the current object's age is greater than the other.
+  - A negative number if it is less than the other.
+  - Zero if ages of both the objects are equal.
 */
 
 package CollectionFramework;
@@ -50,7 +50,7 @@ class Student implements Comparable<Student>
 }
 
 
-class Main
+class ComparableExample
 {
     public static void main(String args[])
     {
@@ -66,9 +66,9 @@ class Main
         System.out.println("BEFORE :");
         list.forEach(System.out::println);
 
-        //Sorting the list
-        Collections.sort(list);
+        //Sorting the list based on age
         System.out.println("\nSorting the list...\n");
+        Collections.sort(list);
 
         System.out.println("AFTER :");
         list.forEach(System.out::println);

@@ -27,7 +27,7 @@ class ComparatorExample
         System.out.println("BEFORE :");
         System.out.println(list);
 
-        //Sorting the list based on 2nd digit
+        //Custom sort logic
         Comparator<Integer> com = (o1, o2) -> {
             if (o1 % 10 > o2 % 10) {
                 return 1;
@@ -43,6 +43,7 @@ class ComparatorExample
             //return (o1 % 10 - o2 % 10);
         };
 
+        //Sorting the list based on number's last digit
         System.out.println("\nSorting the list...\n");
         Collections.sort(list, com);
 
