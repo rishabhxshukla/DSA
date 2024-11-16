@@ -64,7 +64,7 @@ class Subarray_with_Sum_Longest1
             }
         }
 
-        System.out.println(STR."Length of longest subarray with sum \{k} is \{len}");
+        System.out.println("Length of longest subarray with sum " + k + " is " + len);
     }
 
 

@@ -71,6 +71,6 @@ class PascalTriangle3
         int C = Integer.parseInt(b.readLine());
 
         //Printing the pascal's triangle
-        System.out.println(STR."Number at row \{R}, column \{C} : " + nCr(R-1, C-1));
+        System.out.println("Number at row " + R + ", column " + C + " : " + nCr(R-1, C-1));
     }
 }

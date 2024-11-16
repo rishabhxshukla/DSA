@@ -49,7 +49,7 @@ class PascalTriangle2
         int n = Integer.parseInt(b.readLine());
 
         //Printing the nth row of pascal's triangle
-        System.out.println(STR."Row \{n} of Pascal's triangle :");
+        System.out.println("Row " + n + " of Pascal's triangle :");
         obj.pascalTriangleRow(n);
     }
 }
