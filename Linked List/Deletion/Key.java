@@ -21,27 +21,25 @@ class Key
     /* Deleting a particular node */
     void deleteNode(int key)
     {
-        Node temp = head;
-        Node prev = null;
-
         //If head node itself holds the key to be deleted
         if (head.data == key) {
             head = head.next;
             return;
         }
 
-        while(temp != null  && temp.data != key)
+        Node temp = head;
+        Node prev = null;
+
+        while(temp != null)
         {
+            if (temp.data == key) {
+                prev.next = temp.next;
+                return;
+            }
+
             prev = temp;
             temp = temp.next;
         }
-        //If key is not present in linked list
-        if (temp == null) {
-            System.out.println("Key not found!");
-            return;
-        }
-        //Unlink the node from linked list
-        prev.next = temp.next;
     }
 
 
