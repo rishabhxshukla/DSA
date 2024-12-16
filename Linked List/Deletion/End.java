@@ -20,6 +20,12 @@ class End
     /* Deleting the last node */
     void deleteNode()
     {
+        //If we have 0 or 1 node
+        if (head == null || head.next == null) {
+            System.out.println("ERROR : Not enough nodes present");
+            return;
+        }
+
         Node temp = head;
         while(temp.next.next != null)
         {
