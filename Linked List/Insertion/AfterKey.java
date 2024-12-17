@@ -34,19 +34,17 @@ class AfterKey
 
         /* Else iterate over the LL */
         Node temp = head;
-        while(temp.data != key)
+        while(temp != null)
         {
-            temp = temp.next;
-            if(temp == null)
-            {
-                System.out.println("ERROR : Key not found!");
-                return;
+            if (temp.data == key) {
+                //Make next of new node as next of key node
+                new_node.next = temp.next;
+                //Point the key node to the newly created node
+                temp.next = new_node;
             }
+
+            temp = temp.next;
         }
-        //Make next of new node as next of key node
-        new_node.next = temp.next;
-        //Point the key node to the newly created node
-        temp.next = new_node;
     }
 
 
