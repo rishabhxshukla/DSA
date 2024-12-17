@@ -24,12 +24,15 @@ class AllBeforeKey
         Node temp = head;
 
         //Looping till the key node
-        while(temp.data != key)
+        while (temp != null)
         {
+            if (temp.data == key) {
+                head = temp;
+                return;
+            }
+
             temp = temp.next;
         }
-        //Unlinking the nodes from linked list
-        head = temp;
     }
 
 

@@ -24,12 +24,15 @@ class AllAfterKey
         Node temp = head;
 
         //Looping till the key node
-        while(temp.data != key)
+        while (temp != null)
         {
+            if (temp.data == key) {
+                temp.next = null;
+                return;
+            }
+
             temp = temp.next;
         }
-        //Unlinking the nodes from linked list
-        temp.next = null;
     }
 
 
