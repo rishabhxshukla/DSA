@@ -41,6 +41,7 @@ class AfterKey
                 new_node.next = temp.next;
                 //Point the key node to the newly created node
                 temp.next = new_node;
+                return;
             }
 
             temp = temp.next;

@@ -34,14 +34,18 @@ class BeforeKey
 
         /* Else iterate over the LL */
         Node temp = head;
-        while(temp.next.data != key)
+        while(temp != null)
         {
+            if (temp.next.data == key) {
+                //Place new node before the key node
+                new_node.next = temp.next;
+                //Point node before the key node to the newly created node
+                temp.next = new_node;
+                return;
+            }
+
             temp = temp.next;
         }
-        //Place new node before the key node
-        new_node.next = temp.next;
-        //Point node before the key node to the newly created node
-        temp.next = new_node;
     }
 
 
