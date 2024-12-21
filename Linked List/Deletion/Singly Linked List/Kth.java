@@ -1,10 +1,9 @@
 package LinkedList.SinglyLL.Deletion;
-import java.util.Scanner;
+import java.io.*;
 
 class Kth
 {
     static Node head;
-
     static class Node
     {
         int data;
@@ -18,10 +17,44 @@ class Kth
     }
 
 
-    /* Deleting node present at Kth position */
-    void deleteNode(int k)
+    /* Creating the LL */
+    void create(int data)
     {
-        //If list is empty
+        Node new_node = new Node(data);
+
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
+    }
+
+
+    /* Printing the LL */
+    void print()
+    {
+        Node temp = head;
+
+        while(temp != null)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+
+
+    /* Deleting node present at Kth position */
+    void delete(int k)
+    {
+        //If LL is empty
         if(head == null) {
             System.out.println("ERROR : List is empty");
             return;
@@ -67,55 +100,34 @@ class Kth
     }
 
 
-    /* Printing the LL */
-    void printLL()
-    {
-        //Storing the value of head in a temp variable
-        Node temp = head;
-        while(temp != null)
-        {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-    }
-
-
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
         /* Creating object of the class */
         Kth ll = new Kth();
-        Scanner sc = new Scanner(System.in);
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
 
-        /* Assigning the Nodes */
-        head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
-
-        /* Linking the Nodes */
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = fifth;
+        /* Creating the LL */
+        for (int i = 1; i <= 5; i++)
+        {
+            ll.create(i);
+        }
 
         /* Original LL */
-        System.out.println("Original Linked List :");
-        ll.printLL();
+        System.out.println("*** Original Linked List ***");
+        ll.print();
 
         /* Deleting key node */
         System.out.print("\nEnter the value of K : ");
-        int k = sc.nextInt();
-        if (k > 5) {
+        int k = Integer.parseInt(b.readLine());
+        if (k < 1 || k > 5) {
             System.out.println("ERROR : Invalid value of K");
             return;
         }
-        ll.deleteNode(k);
+        ll.delete(k);
 
         /* New LL */
-        System.out.println("New Linked List :");
-        ll.printLL();
-
-        sc.close();
+        System.out.println("*** New Linked List ***");
+        ll.print();
     }
 }

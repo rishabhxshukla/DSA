@@ -1,10 +1,9 @@
 package LinkedList.SinglyLL.Deletion;
-import java.util.Scanner;
+import java.io.*;
 
 class Key
 {
     static Node head;
-
     static class Node
     {
         int data;
@@ -18,8 +17,42 @@ class Key
     }
 
 
+    /* Creating the LL */
+    void create(int data)
+    {
+        Node new_node = new Node(data);
+
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
+    }
+
+
+    /* Printing the LL */
+    void print()
+    {
+        Node temp = head;
+
+        while(temp != null)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+
+
     /* Deleting a particular node */
-    void deleteNode(int key)
+    void delete(int key)
     {
         //If head node itself holds the key to be deleted
         if (head.data == key) {
@@ -33,6 +66,7 @@ class Key
         while(temp != null)
         {
             if (temp.data == key) {
+                //Deleting the key node
                 prev.next = temp.next;
                 return;
             }
@@ -43,51 +77,30 @@ class Key
     }
 
 
-    /* Printing the LL */
-    void printLL()
-    {
-        //Storing the value of head in a temp variable
-        Node temp = head;
-        while(temp != null)
-        {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-    }
-
-
-    public static void main(String args[])
+    public static void main(String args[]) throws IOException
     {
         /* Creating object of the class */
         Key ll = new Key();
-        Scanner sc = new Scanner(System.in);
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
 
-        /* Assigning the Nodes */
-        head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
-
-        /* Linking the Nodes */
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = fifth;
+        /* Creating the LL */
+        for (int i = 1; i <= 5; i++)
+        {
+            ll.create(i);
+        }
 
         /* Original LL */
-        System.out.println("Original Linked List :");
-        ll.printLL();
+        System.out.println("*** Original Linked List ***");
+        ll.print();
 
         /* Deleting key node */
         System.out.print("\nEnter the node that you want to delete : ");
-        int key = sc.nextInt();
-        ll.deleteNode(key);
+        int key = Integer.parseInt(b.readLine());
+        ll.delete(key);
 
         /* New LL */
-        System.out.println("New Linked List :");
-        ll.printLL();
-
-        sc.close();
+        System.out.println("*** New Linked List ***");
+        ll.print();
     }
 }

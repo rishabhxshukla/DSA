@@ -3,7 +3,6 @@ package LinkedList.SinglyLL.Deletion;
 class All
 {
     static Node head;
-
     static class Node
     {
         int data;
@@ -17,23 +16,44 @@ class All
     }
 
 
-    /* Deleting the full Linked List */
-    void deleteLL()
+    /* Creating the LL */
+    void create(int data)
     {
-        head = null;
+        Node new_node = new Node(data);
+
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
     }
 
 
     /* Printing the LL */
-    void printLL()
+    void print()
     {
-        //Storing the value of head in a temp variable
         Node temp = head;
-        while (temp != null)
+
+        while(temp != null)
         {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
+    }
+
+
+    /* Deleting the whole Linked List */
+    void delete()
+    {
+        head = null;
     }
 
 
@@ -42,28 +62,21 @@ class All
         /* Creating object of the class */
         All ll = new All();
 
-        /* Assigning the Nodes */
-        head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
-
-        /* Linking the Nodes */
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = fifth;
+        /* Creating the LL */
+        for (int i = 1; i <= 5; i++)
+        {
+            ll.create(i);
+        }
 
         /* Original LL */
-        System.out.println("Original Linked List :");
-        ll.printLL();
+        System.out.println("*** Original Linked List ***");
+        ll.print();
 
-        /* Deleting full linked list */
-        ll.deleteLL();
+        /* Deleting full LL */
+        ll.delete();
 
         /* New LL */
-        System.out.println("\nNew Linked List :");
-        ll.printLL();
+        System.out.println("\n*** New Linked List ***");
+        ll.print();
     }
 }

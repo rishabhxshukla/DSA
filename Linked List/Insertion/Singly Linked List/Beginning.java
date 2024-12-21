@@ -1,5 +1,5 @@
 package LinkedList.SinglyLL.Insertion;
-import java.util.Scanner;
+import java.io.*;
 
 class Beginning
 {
@@ -17,29 +17,32 @@ class Beginning
     }
 
 
-    /* Inserting new node at the beginning */
-    void insertNode(int d)
+    /* Creating the LL */
+    void create(int data)
     {
-        //Allocating memory for new node
-        Node new_node = new Node(d);
-        /* IF LL IS EMPTY */
+        Node new_node = new Node(data);
+
         if(head == null) {
             head = new_node;
             return;
         }
-        /* ELSE */
-        //New node points to original head
-        new_node.next = head;
-        //New node is now the new head
-        head = new_node;
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
     }
 
-    
+
     /* Printing the LL */
-    void printLL()
+    void print()
     {
-        //Storing the value of head in a temp variable
         Node temp = head;
+
         while(temp != null)
         {
             System.out.print(temp.data + " ");
@@ -48,37 +51,49 @@ class Beginning
     }
 
 
-    public static void main(String args[]) 
+    /* Inserting new node at the beginning */
+    void insert(int data)
+    {
+        //Allocating memory for new node
+        Node new_node = new Node(data);
+
+        //If LL is empty
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        //New node points to original head
+        new_node.next = head;
+        //New node is now the new head
+        head = new_node;
+    }
+
+
+    public static void main(String args[]) throws IOException
     {
         /* Creating object of the class */
         Beginning ll = new Beginning();
-        Scanner sc = new Scanner(System.in);
+        InputStreamReader inp = new InputStreamReader(System.in);
+        BufferedReader b = new BufferedReader(inp);
 
-        /* Assigning the Nodes */
-        head = new Node(10);
-        Node second = new Node(20);
-        Node third = new Node(30);
-        Node fourth = new Node(40);
-
-        /* Linking the Nodes */
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = null;
+        /* Creating the LL */
+        for (int i = 1; i <= 5; i++)
+        {
+            ll.create(i);
+        }
 
         /* Original LL */
-        System.out.println("Original Linked List :");
-        ll.printLL();
+        System.out.println("*** Original Linked List ***");
+        ll.print();
 
         /* Inserting value */
-        System.out.print("\nEnter data to be inserted at the beginning: ");
-        int d = sc.nextInt();
-        ll.insertNode(d);
+        System.out.print("\nEnter data to be inserted at the beginning : ");
+        int data = Integer.parseInt(b.readLine());
+        ll.insert(data);
 
         /* New LL */
-        System.out.println("New Linked List :");
-        ll.printLL();
-
-        sc.close();
+        System.out.println("*** New Linked List ***");
+        ll.print();
     }
 }

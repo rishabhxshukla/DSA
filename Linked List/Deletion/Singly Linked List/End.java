@@ -3,7 +3,6 @@ package LinkedList.SinglyLL.Deletion;
 class End
 {
     static Node head;
-
     static class Node
     {
         int data;
@@ -17,8 +16,42 @@ class End
     }
 
 
+    /* Creating the LL */
+    void create(int data)
+    {
+        Node new_node = new Node(data);
+
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
+    }
+
+
+    /* Printing the LL */
+    void print()
+    {
+        Node temp = head;
+
+        while(temp != null)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+
+
     /* Deleting the last node */
-    void deleteNode()
+    void delete()
     {
         //If we have 0 or 1 node
         if (head == null || head.next == null) {
@@ -31,21 +64,9 @@ class End
         {
             temp = temp.next;
         }
+
         //Deleting the last node
         temp.next = null;
-    }
-
-
-    /* Printing the LL */
-    void printLL()
-    {
-        //Storing the value of head in a temp variable
-        Node temp = head;
-        while(temp != null)
-        {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
     }
 
 
@@ -54,28 +75,21 @@ class End
         /* Creating object of the class */
         End ll = new End();
 
-        /* Assigning the Nodes */
-        head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
-
-        /* Linking the Nodes */
-        head.next = second;
-        second.next = third;
-        third.next = fourth;
-        fourth.next = fifth;
+        /* Creating the LL */
+        for (int i = 1; i <= 5; i++)
+        {
+            ll.create(i);
+        }
 
         /* Original LL */
-        System.out.println("Original Linked List :");
-        ll.printLL();
+        System.out.println("*** Original Linked List ***");
+        ll.print();
 
         /* Deleting last node */
-        ll.deleteNode();
+        ll.delete();
 
         /* New LL */
-        System.out.println("\nNew Linked List :");
-        ll.printLL();
+        System.out.println("\n*** New Linked List ***");
+        ll.print();
     }
 }
