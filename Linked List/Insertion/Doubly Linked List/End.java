@@ -1,7 +1,7 @@
 package LinkedList.DoublyLL.Insertion;
 import java.io.*;
 
-class Beginning
+class End
 {
     static Node head;
     static class Node
@@ -53,12 +53,11 @@ class Beginning
         }
     }
 
-
-    /* Inserting new node at the beginning */
-    void insert(int d)
+    /* Inserting new node at the end */
+    void insert(int data)
     {
         //Allocating memory for new node
-        Node new_node = new Node(d);
+        Node new_node = new Node(data);
 
         //If LL is empty
         if(head == null) {
@@ -66,19 +65,26 @@ class Beginning
             return;
         }
 
-        //New node points to the original head
-        new_node.next = head;
-        //Old head's previous pointer now points to the new node
-        head.prev = new_node;
-        //New node becomes the new head
-        head = new_node;
+        //Traversing the LL
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        //Last node points to the newly created node
+        temp.next = new_node;
+        //New node points to null
+        new_node.next = null;
+        //New node points to last node
+        new_node.prev = temp;
     }
 
 
     public static void main(String args[]) throws IOException
     {
         /* Creating object of the class */
-        Beginning ll = new Beginning();
+        End ll = new End();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -93,9 +99,9 @@ class Beginning
         ll.print();
 
         /* Inserting value */
-        System.out.print("\nEnter data to be inserted at the beginning : ");
-        int d = Integer.parseInt(b.readLine());
-        ll.insert(d);
+        System.out.print("\nEnter data to be inserted at the end: ");
+        int data = Integer.parseInt(b.readLine());
+        ll.insert(data);
 
         /* New LL */
         System.out.println("*** New Linked List ***");
