@@ -1,9 +1,10 @@
-package LinkedList.Insertion;
+package LinkedList.SinglyLL.Deletion;
 import java.util.Scanner;
 
 class Kth
 {
     static Node head;
+
     static class Node
     {
         int data;
@@ -11,14 +12,14 @@ class Kth
 
         Node(int data)
         {
-            this.data   = data;
+            this.data = data;
             this.next = null;
         }
     }
 
 
-    /* Inserting new node at Kth position */
-    void insertNode(int k, int d)
+    /* Deleting node present at Kth position */
+    void deleteNode(int k)
     {
         //If list is empty
         if(head == null) {
@@ -26,43 +27,36 @@ class Kth
             return;
         }
 
-        //If insertion is happening in the head node
+        //If the node to be deleted is the head node
         if (k == 1)
         {
-            Node new_node = new Node(d);
-            new_node.next = head;
-            head = new_node;
+            head = head.next;
         }
 
-        //If insertion is happening in the last node
+        //If the node to be deleted is the last node
         else if (k == 5)
         {
-            Node new_node = new Node(d);
-
             Node temp = head;
-            while (temp.next != null)
+
+            while (temp.next.next != null)
             {
                 temp = temp.next;
             }
 
-            temp.next = new_node;
-            new_node.next = null;
+            temp.next = null;
         }
 
-        //If insertion is happening in between
+        //If the node to be deleted is in between
         else
         {
-            Node new_node = new Node(d);
-
             Node temp = head;
             int count = 1;
 
             while (temp != null)
             {
-                //Inserting at Kth node
+                //Deleting the Kth node
                 if (count == k - 1) {
-                    new_node.next = temp.next;
-                    temp.next = new_node;
+                    temp.next = temp.next.next;
                     return;
                 }
 
@@ -93,30 +87,30 @@ class Kth
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
-        head = new Node(10);
-        Node second = new Node(20);
-        Node third = new Node(30);
-        Node fourth = new Node(40);
+        head = new Node(1);
+        Node second = new Node(2);
+        Node third = new Node(3);
+        Node fourth = new Node(4);
+        Node fifth = new Node(5);
 
         /* Linking the Nodes */
         head.next = second;
         second.next = third;
         third.next = fourth;
+        fourth.next = fifth;
 
         /* Original LL */
         System.out.println("Original Linked List :");
         ll.printLL();
 
-        /* Inserting value */
-        System.out.print("\nEnter the data to be inserted: ");
-        int d = sc.nextInt();
-        System.out.print("Enter the value of K : ");
+        /* Deleting key node */
+        System.out.print("\nEnter the value of K : ");
         int k = sc.nextInt();
         if (k > 5) {
             System.out.println("ERROR : Invalid value of K");
             return;
         }
-        ll.insertNode(k, d);
+        ll.deleteNode(k);
 
         /* New LL */
         System.out.println("New Linked List :");

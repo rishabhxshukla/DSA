@@ -1,10 +1,9 @@
-package LinkedList.Deletion;
+package LinkedList.SinglyLL.Insertion;
 import java.util.Scanner;
 
-class Key
+class End
 {
     static Node head;
-
     static class Node
     {
         int data;
@@ -17,29 +16,29 @@ class Key
         }
     }
 
-
-    /* Deleting a particular node */
-    void deleteNode(int key)
+    /* Inserting new node at the end */
+    void insertNode(int d)
     {
-        //If head node itself holds the key to be deleted
-        if (head.data == key) {
-            head = head.next;
+        //Allocating memory for new node
+        Node new_node = new Node(d);
+
+        //If LL is empty then make new node as head of the list
+        if(head == null) {
+            head = new_node;
             return;
         }
 
+        //Traversing the LL
         Node temp = head;
-        Node prev = null;
-
-        while(temp != null)
+        while(temp.next != null)
         {
-            if (temp.data == key) {
-                prev.next = temp.next;
-                return;
-            }
-
-            prev = temp;
             temp = temp.next;
         }
+
+        //Last node points to the newly created node
+        temp.next = new_node;
+        //New node points to null
+        new_node.next = null;
     }
 
 
@@ -56,33 +55,31 @@ class Key
     }
 
 
-    public static void main(String args[])
+    public static void main(String args[]) 
     {
         /* Creating object of the class */
-        Key ll = new Key();
+        End ll = new End();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
-        head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        Node fourth = new Node(4);
-        Node fifth = new Node(5);
+        head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+        Node fourth = new Node(40);
 
         /* Linking the Nodes */
         head.next = second;
         second.next = third;
         third.next = fourth;
-        fourth.next = fifth;
 
         /* Original LL */
         System.out.println("Original Linked List :");
         ll.printLL();
 
-        /* Deleting key node */
-        System.out.print("\nEnter the node that you want to delete : ");
-        int key = sc.nextInt();
-        ll.deleteNode(key);
+        /* Inserting value */
+        System.out.print("\nEnter data to be inserted at the end: ");
+        int d = sc.nextInt();
+        ll.insertNode(d);
 
         /* New LL */
         System.out.println("New Linked List :");

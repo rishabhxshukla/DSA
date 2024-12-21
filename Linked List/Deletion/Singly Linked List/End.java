@@ -1,6 +1,6 @@
-package LinkedList.Deletion;
+package LinkedList.SinglyLL.Deletion;
 
-class Beginning
+class End
 {
     static Node head;
 
@@ -17,17 +17,22 @@ class Beginning
     }
 
 
-    /* Deleting the first node */
+    /* Deleting the last node */
     void deleteNode()
     {
-        /* IF LL IS EMPTY */
-        if(head == null) {
-            System.out.println("ERROR : List is empty");
+        //If we have 0 or 1 node
+        if (head == null || head.next == null) {
+            System.out.println("ERROR : Not enough nodes present");
             return;
         }
-        /* ELSE */
-        //Pointing the head to the second node
-        head = head.next;
+
+        Node temp = head;
+        while(temp.next.next != null)
+        {
+            temp = temp.next;
+        }
+        //Deleting the last node
+        temp.next = null;
     }
 
 
@@ -47,7 +52,7 @@ class Beginning
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Beginning ll = new Beginning();
+        End ll = new End();
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -66,7 +71,7 @@ class Beginning
         System.out.println("Original Linked List :");
         ll.printLL();
 
-        /* Deleting 1st node */
+        /* Deleting last node */
         ll.deleteNode();
 
         /* New LL */

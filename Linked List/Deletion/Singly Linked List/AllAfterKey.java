@@ -1,6 +1,7 @@
-package LinkedList.Deletion;
+package LinkedList.SinglyLL.Deletion;
+import java.util.Scanner;
 
-class End
+class AllAfterKey
 {
     static Node head;
 
@@ -17,22 +18,21 @@ class End
     }
 
 
-    /* Deleting the last node */
-    void deleteNode()
+    /* Deleting all nodes after a given node */
+    void deleteNode(int key)
     {
-        //If we have 0 or 1 node
-        if (head == null || head.next == null) {
-            System.out.println("ERROR : Not enough nodes present");
-            return;
-        }
-
         Node temp = head;
-        while(temp.next.next != null)
+
+        //Looping till the key node
+        while (temp != null)
         {
+            if (temp.data == key) {
+                temp.next = null;
+                return;
+            }
+
             temp = temp.next;
         }
-        //Deleting the last node
-        temp.next = null;
     }
 
 
@@ -52,7 +52,8 @@ class End
     public static void main(String args[])
     {
         /* Creating object of the class */
-        End ll = new End();
+        AllAfterKey ll = new AllAfterKey();
+        Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
         head = new Node(1);
@@ -71,11 +72,15 @@ class End
         System.out.println("Original Linked List :");
         ll.printLL();
 
-        /* Deleting last node */
-        ll.deleteNode();
+        /* Deleting the nodes */
+        System.out.print("\nEnter the node after which you want to delete all nodes : ");
+        int key = sc.nextInt();
+        ll.deleteNode(key);
 
         /* New LL */
-        System.out.println("\nNew Linked List :");
+        System.out.println("New Linked List :");
         ll.printLL();
+
+        sc.close();
     }
 }

@@ -1,7 +1,7 @@
-package LinkedList.Insertion;
+package LinkedList.SinglyLL.Insertion;
 import java.util.Scanner;
 
-class Beginning
+class AfterKey
 {
     static Node head;
     static class Node
@@ -11,30 +11,44 @@ class Beginning
 
         Node(int data)
         {
-            this.data = data;
+            this.data   = data;
             this.next = null;
         }
     }
 
 
-    /* Inserting new node at the beginning */
-    void insertNode(int d)
+    /* Inserting new node after a given key */
+    void insertNode(int key, int d)
     {
         //Allocating memory for new node
         Node new_node = new Node(d);
-        /* IF LL IS EMPTY */
-        if(head == null) {
-            head = new_node;
+
+        /* If head node contains the key */
+        if(head.data == key) {
+            //Make next of new node as next of head node
+            new_node.next = head.next;
+            //Point the head node to the newly created node
+            head.next = new_node;
             return;
         }
-        /* ELSE */
-        //New node points to original head
-        new_node.next = head;
-        //New node is now the new head
-        head = new_node;
+
+        /* Else iterate over the LL */
+        Node temp = head;
+        while(temp != null)
+        {
+            if (temp.data == key) {
+                //Make next of new node as next of key node
+                new_node.next = temp.next;
+                //Point the key node to the newly created node
+                temp.next = new_node;
+                return;
+            }
+
+            temp = temp.next;
+        }
     }
 
-    
+
     /* Printing the LL */
     void printLL()
     {
@@ -51,7 +65,7 @@ class Beginning
     public static void main(String args[]) 
     {
         /* Creating object of the class */
-        Beginning ll = new Beginning();
+        AfterKey ll = new AfterKey();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -64,16 +78,17 @@ class Beginning
         head.next = second;
         second.next = third;
         third.next = fourth;
-        fourth.next = null;
 
         /* Original LL */
         System.out.println("Original Linked List :");
         ll.printLL();
 
         /* Inserting value */
-        System.out.print("\nEnter data to be inserted at the beginning: ");
+        System.out.print("\nEnter the data to be inserted: ");
         int d = sc.nextInt();
-        ll.insertNode(d);
+        System.out.print("Enter the key after which the node is to be inserted: ");
+        int key = sc.nextInt();
+        ll.insertNode(key, d);
 
         /* New LL */
         System.out.println("New Linked List :");

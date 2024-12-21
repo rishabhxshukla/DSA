@@ -1,7 +1,7 @@
-package LinkedList.Insertion;
+package LinkedList.SinglyLL.Insertion;
 import java.util.Scanner;
 
-class End
+class BeforeKey
 {
     static Node head;
     static class Node
@@ -11,34 +11,41 @@ class End
 
         Node(int data)
         {
-            this.data = data;
+            this.data   = data;
             this.next = null;
         }
     }
 
-    /* Inserting new node at the end */
-    void insertNode(int d)
+
+    /* Inserting new node before a given key */
+    void insertNode(int key, int d)
     {
         //Allocating memory for new node
         Node new_node = new Node(d);
 
-        //If LL is empty then make new node as head of the list
-        if(head == null) {
+        /* If head node contains the key */
+        if(head.data == key) {
+            //Point the next of new node to the head node
+            new_node.next = head;
+            //Point the head node to the newly created node
             head = new_node;
             return;
         }
 
-        //Traversing the LL
+        /* Else iterate over the LL */
         Node temp = head;
-        while(temp.next != null)
+        while(temp != null)
         {
+            if (temp.next.data == key) {
+                //Place new node before the key node
+                new_node.next = temp.next;
+                //Point node before the key node to the newly created node
+                temp.next = new_node;
+                return;
+            }
+
             temp = temp.next;
         }
-
-        //Last node points to the newly created node
-        temp.next = new_node;
-        //New node points to null
-        new_node.next = null;
     }
 
 
@@ -55,10 +62,10 @@ class End
     }
 
 
-    public static void main(String args[]) 
+    public static void main(String args[])
     {
         /* Creating object of the class */
-        End ll = new End();
+        BeforeKey ll = new BeforeKey();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -77,9 +84,11 @@ class End
         ll.printLL();
 
         /* Inserting value */
-        System.out.print("\nEnter data to be inserted at the end: ");
+        System.out.print("\nEnter the data to be inserted: ");
         int d = sc.nextInt();
-        ll.insertNode(d);
+        System.out.print("Enter the key before which the node is to be inserted: ");
+        int key = sc.nextInt();
+        ll.insertNode(key, d);
 
         /* New LL */
         System.out.println("New Linked List :");

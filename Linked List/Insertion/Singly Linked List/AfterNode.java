@@ -1,4 +1,4 @@
-package LinkedList.Insertion;
+package LinkedList.SinglyLL.Insertion;
 import java.util.Scanner;
 
 class AfterNode

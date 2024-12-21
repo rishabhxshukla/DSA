@@ -1,7 +1,7 @@
-package LinkedList.Deletion;
+package LinkedList.SinglyLL.Deletion;
 import java.util.Scanner;
 
-class Kth
+class Key
 {
     static Node head;
 
@@ -18,51 +18,27 @@ class Kth
     }
 
 
-    /* Deleting node present at Kth position */
-    void deleteNode(int k)
+    /* Deleting a particular node */
+    void deleteNode(int key)
     {
-        //If list is empty
-        if(head == null) {
-            System.out.println("ERROR : List is empty");
+        //If head node itself holds the key to be deleted
+        if (head.data == key) {
+            head = head.next;
             return;
         }
 
-        //If the node to be deleted is the head node
-        if (k == 1)
-        {
-            head = head.next;
-        }
+        Node temp = head;
+        Node prev = null;
 
-        //If the node to be deleted is the last node
-        else if (k == 5)
+        while(temp != null)
         {
-            Node temp = head;
-
-            while (temp.next.next != null)
-            {
-                temp = temp.next;
+            if (temp.data == key) {
+                prev.next = temp.next;
+                return;
             }
 
-            temp.next = null;
-        }
-
-        //If the node to be deleted is in between
-        else
-        {
-            Node temp = head;
-            int count = 1;
-
-            while (temp != null)
-            {
-                //Deleting the Kth node
-                if (count == k - 1) {
-                    temp.next = temp.next.next;
-                    return;
-                }
-
-                count++;
-                temp = temp.next;
-            }
+            prev = temp;
+            temp = temp.next;
         }
     }
 
@@ -83,7 +59,7 @@ class Kth
     public static void main(String args[])
     {
         /* Creating object of the class */
-        Kth ll = new Kth();
+        Key ll = new Key();
         Scanner sc = new Scanner(System.in);
 
         /* Assigning the Nodes */
@@ -104,13 +80,9 @@ class Kth
         ll.printLL();
 
         /* Deleting key node */
-        System.out.print("\nEnter the value of K : ");
-        int k = sc.nextInt();
-        if (k > 5) {
-            System.out.println("ERROR : Invalid value of K");
-            return;
-        }
-        ll.deleteNode(k);
+        System.out.print("\nEnter the node that you want to delete : ");
+        int key = sc.nextInt();
+        ll.deleteNode(key);
 
         /* New LL */
         System.out.println("New Linked List :");
