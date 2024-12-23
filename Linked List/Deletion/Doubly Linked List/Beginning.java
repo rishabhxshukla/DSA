@@ -1,4 +1,4 @@
-package LinkedList.SinglyLL.Deletion;
+package LinkedList.DoublyLL.Deletion;
 
 class Beginning
 {
@@ -6,11 +6,13 @@ class Beginning
     static class Node
     {
         int data;
+        Node prev;
         Node next;
 
         Node(int data)
         {
             this.data = data;
+            this.prev = null;
             this.next = null;
         }
     }
@@ -34,6 +36,7 @@ class Beginning
 
         temp.next = new_node;
         new_node.next = null;
+        new_node.prev = temp;
     }
 
 
@@ -67,6 +70,8 @@ class Beginning
 
         //Pointing head to the second node
         head = head.next;
+        //Pointing prev of head to null
+        head.prev = null;
     }
 
 
