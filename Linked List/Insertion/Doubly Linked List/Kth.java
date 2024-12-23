@@ -1,4 +1,4 @@
-package LinkedList.SinglyLL.Insertion;
+package LinkedList.DoublyLL.Insertion;
 import java.io.*;
 
 class Kth
@@ -7,11 +7,13 @@ class Kth
     static class Node
     {
         int data;
+        Node prev;
         Node next;
 
         Node(int data)
         {
             this.data = data;
+            this.prev = null;
             this.next = null;
         }
     }
@@ -35,6 +37,7 @@ class Kth
 
         temp.next = new_node;
         new_node.next = null;
+        new_node.prev = temp;
     }
 
 
@@ -65,6 +68,7 @@ class Kth
         {
             Node new_node = new Node(data);
             new_node.next = head;
+            head.prev = new_node;
             head = new_node;
         }
 
@@ -81,6 +85,7 @@ class Kth
 
             temp.next = new_node;
             new_node.next = null;
+            new_node.prev = temp;
         }
 
         //If insertion is happening in between
@@ -96,7 +101,9 @@ class Kth
                 //Inserting at Kth node
                 if (count == k - 1) {
                     new_node.next = temp.next;
+                    temp.next.prev = new_node;
                     temp.next = new_node;
+                    new_node.prev = temp;
                     return;
                 }
 
