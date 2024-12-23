@@ -11,7 +11,7 @@ class AfterKey
 
         Node(int data)
         {
-            this.data   = data;
+            this.data = data;
             this.next = null;
         }
     }

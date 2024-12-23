@@ -1,17 +1,19 @@
-package LinkedList.SinglyLL.Insertion;
+package LinkedList.DoublyLL.Insertion;
 import java.io.*;
 
-class BeforeKey
+class AfterKey
 {
     static Node head;
     static class Node
     {
         int data;
+        Node prev;
         Node next;
 
         Node(int data)
         {
             this.data = data;
+            this.prev = null;
             this.next = null;
         }
     }
@@ -35,6 +37,7 @@ class BeforeKey
 
         temp.next = new_node;
         new_node.next = null;
+        new_node.prev = temp;
     }
 
 
@@ -51,18 +54,24 @@ class BeforeKey
     }
 
 
-    /* Inserting new node before a given key */
+    /* Inserting new node after a given key */
     void insert(int key, int data)
     {
         //Allocating memory for new node
         Node new_node = new Node(data);
 
         //If head node contains the key
-        if(head.data == key) {
-            //Point the next of new node to the head node
-            new_node.next = head;
-            //Point the head node to the newly created node
-            head = new_node;
+        if(head.data == key)
+        {
+            //Link new node to the next of key node
+            new_node.next = head.next;
+            if (head.next != null) {
+                head.next.prev = new_node;
+            }
+
+            //Link key node to the newly created node
+            head.next = new_node;
+            new_node.prev = head;
             return;
         }
 
@@ -70,11 +79,17 @@ class BeforeKey
         Node temp = head;
         while(temp != null)
         {
-            if (temp.next.data == key) {
-                //Place new node before the key node
+            if (temp.data == key)
+            {
+                //Link new node to the next of key node
                 new_node.next = temp.next;
-                //Point node before the key node to the newly created node
+                if (temp.next != null) {
+                    temp.next.prev = new_node;
+                }
+
+                //Link key node to the newly created node
                 temp.next = new_node;
+                new_node.prev = temp;
                 return;
             }
 
@@ -86,7 +101,7 @@ class BeforeKey
     public static void main(String args[]) throws IOException
     {
         /* Creating object of the class */
-        BeforeKey ll = new BeforeKey();
+        AfterKey ll = new AfterKey();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -103,7 +118,7 @@ class BeforeKey
         /* Inserting value */
         System.out.print("\nEnter the data to be inserted : ");
         int data = Integer.parseInt(b.readLine());
-        System.out.print("Enter the key before which the node is to be inserted : ");
+        System.out.print("Enter the key after which the node is to be inserted : ");
         int key = Integer.parseInt(b.readLine());
         ll.insert(key, data);
 
