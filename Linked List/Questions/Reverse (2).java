@@ -8,11 +8,12 @@ STEPS :
    b) Point temp.next to the prev : temp.next = prev
    c) Update prev and temp variables : prev = temp, temp = next
 */
+// 3 POINTERS
 
 package LinkedList.Questions;
 import java.io.*;
 
-class Reverse
+class Reverse2
 {
     static Node head;
     static class Node
@@ -65,7 +66,7 @@ class Reverse
             temp = next;
         }
 
-        //Changing head node
+        //Changing the head node
         head = prev;
     }
 
@@ -73,7 +74,7 @@ class Reverse
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Reverse ll = new Reverse();
+        Reverse2 ll = new Reverse2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
