@@ -1,3 +1,5 @@
+// LinkedList acts as a Doubly Linked List by default.
+
 package CollectionFramework;
 import java.util.LinkedList;
 import java.util.Collections;
@@ -82,6 +84,13 @@ class Linked_List
         System.out.println("Size of Linked List :");
         int size = ll.size();
         System.out.println(size);
+        System.out.println();
+
+
+        /* Reversing the Linked List */
+        System.out.println("Reversing the Linked List :");
+        LinkedList<String> reversed = ll.reversed();
+        System.out.println(reversed);
         System.out.println();
 
 

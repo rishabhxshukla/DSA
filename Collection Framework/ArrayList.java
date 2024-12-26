@@ -1,6 +1,7 @@
 // ArrayList provides us with resizable arrays.
 
 package CollectionFramework;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -68,6 +69,13 @@ class Array_List
         System.out.println("Size of ArrayList :");
         int size = al.size();
         System.out.println(size);
+        System.out.println();
+
+
+        /* Reversing the ArrayList */
+        System.out.println("Reversing the ArrayList :");
+        List<Integer> reversed = al.reversed();
+        System.out.println(reversed);
         System.out.println();
 
 
