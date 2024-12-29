@@ -23,32 +23,38 @@ class ReverseDLL1
     }
 
 
-    /* Printing the LL */
-    void print()
-    {
-        Node temp = head;
-        while (temp != null)
-        {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-    }
-
-
     /* Creating the LL */
-    void add(int d)
+    void create(int data)
     {
-        //If LL is empty
-        if (head == null) {
-            Node new_node = new Node(d);
+        Node new_node = new Node(data);
+
+        if(head == null) {
             head = new_node;
             return;
         }
 
-        Node new_node = new Node(d);
-        new_node.next = head;
-        head.prev = new_node;
-        head = new_node;
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
+        new_node.prev = temp;
+    }
+
+
+    /* Printing the LL */
+    void print()
+    {
+        Node temp = head;
+
+        while(temp != null)
+        {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
     }
 
 
@@ -83,11 +89,9 @@ class ReverseDLL1
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the LL
-        for (int i=0; i<5; i++)
+        for (int i = 1; i <= 5; i++)
         {
-            System.out.print("Enter the node : ");
-            int d = Integer.parseInt(b.readLine());
-            ll.add(d);
+            ll.create(i);
         }
 
         //Printing original LL

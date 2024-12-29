@@ -1,9 +1,19 @@
-// ...
+/*
+Reverse a linked list
+STEPS :
+1) Initialize 3 pointers back = null, temp = head, and front = null.
+2) Iterate through the linked list.
+3) Follow these steps -
+   a) Store the next node : front = temp.next
+   b) Point temp to the previous node : temp.next = back
+   c) Update back and temp variables : back = temp, temp = front
+*/
+// REVERSE LINKS (3 POINTERS)
 
 package LinkedList.Questions;
 import java.io.*;
 
-class Boilerplate
+class ReverseLL2
 {
     static Node head;
     static class Node
@@ -53,14 +63,31 @@ class Boilerplate
     }
 
 
-    /* Function to ... */
-    //
+    /* Function to reverse the LL */
+    void reverse()
+    {
+        Node back = null;
+        Node temp = head;
+        Node front = null;
+
+        while (temp != null)
+        {
+            front = temp.next;
+            temp.next = back;
+
+            back = temp;
+            temp = front;
+        }
+
+        //Changing the head node
+        head = back;
+    }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Boilerplate ll = new Boilerplate();
+        ReverseLL2 ll = new ReverseLL2();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -70,8 +97,16 @@ class Boilerplate
             ll.create(i);
         }
 
-        //Printing the LL
+        //Printing original LL
         System.out.println("*** Created Linked List ***");
+        ll.print();
+
+        //Reversing the LL
+        System.out.print("\nReversing Linked List...");
+        ll.reverse();
+
+        //Printing new LL
+        System.out.println("\n*** New Linked List ***");
         ll.print();
     }
 }
