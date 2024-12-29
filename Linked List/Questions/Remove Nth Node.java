@@ -1,9 +1,9 @@
-// Remove the Nth node from the end of a linked list
+// Remove the Nth node from the start of a linked list
 
 package LinkedList.Questions;
 import java.io.*;
 
-class Remove_Nth_Node_from_end
+class Remove_Nth_Node
 {
     static Node head;
     static class Node
@@ -69,13 +69,13 @@ class Remove_Nth_Node_from_end
     }
 
 
-    /* Function to delete the Nth node from end */
+    /* Function to delete the Nth node from start */
     void deleteNth(int index)
     {
         Node temp = head;
         Node prev = null;
         int length = length();
-        int count = length;
+        int count = 1;
 
         //Invalid index
         if (index <= 0 || index > length) {
@@ -83,8 +83,8 @@ class Remove_Nth_Node_from_end
             System.exit(1);
         }
 
-        //Deleting last node from end <-
-        if (index == length) {
+        //Deleting 1st node
+        if (index == 1) {
             head = head.next;
             return;
         }
@@ -95,7 +95,7 @@ class Remove_Nth_Node_from_end
                 prev.next = temp.next;
                 return;
             }
-            count--;
+            count++;
             prev = temp;
             temp = temp.next;
         }
@@ -105,7 +105,7 @@ class Remove_Nth_Node_from_end
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Remove_Nth_Node_from_end ll = new Remove_Nth_Node_from_end();
+        Remove_Nth_Node ll = new Remove_Nth_Node();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -120,11 +120,11 @@ class Remove_Nth_Node_from_end
         ll.print();
 
         //Taking user input
-        System.out.print("\nEnter the index from end : ");
+        System.out.print("\nEnter the index from start : ");
         int index = Integer.parseInt(b.readLine());
 
-        //Deleting the node present at 'index' from last
-        System.out.println("Deleting node present at index " + index + " from last...");
+        //Deleting the node present at 'index' from start
+        System.out.println("Deleting node present at index " + index + " from start...");
         ll.deleteNth(index);
 
         //Printing the LL
