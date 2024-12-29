@@ -73,7 +73,6 @@ class Remove_Nth_Node
     void deleteNth(int index)
     {
         Node temp = head;
-        Node prev = null;
         int length = length();
         int count = 1;
 
@@ -83,22 +82,20 @@ class Remove_Nth_Node
             System.exit(1);
         }
 
-        //Deleting 1st node
+        //Deleting 1st node from start
         if (index == 1) {
             head = head.next;
             return;
         }
 
-        while (temp != null)
+        //Traverse to the node before the target node
+        while (count != index - 1)
         {
-            if (count == index) {
-                prev.next = temp.next;
-                return;
-            }
             count++;
-            prev = temp;
             temp = temp.next;
         }
+        //Remove the target node
+        temp.next = temp.next.next;
     }
 
 
