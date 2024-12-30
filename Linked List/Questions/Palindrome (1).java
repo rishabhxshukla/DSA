@@ -1,10 +1,11 @@
 // Check if a linked list is palindrome or not
+// STACK
 
 package LinkedList.Questions;
 import java.io.*;
 import java.util.Stack;
 
-class Palindrome
+class Palindrome1
 {
     static Node head;
     static class Node
@@ -20,24 +21,37 @@ class Palindrome
     }
 
 
+    /* Creating the LL */
+    void create(int data)
+    {
+        Node new_node = new Node(data);
+
+        if(head == null) {
+            head = new_node;
+            return;
+        }
+
+        Node temp = head;
+        while(temp.next != null)
+        {
+            temp = temp.next;
+        }
+
+        temp.next = new_node;
+        new_node.next = null;
+    }
+
+
     /* Printing the LL */
     void print()
     {
         Node temp = head;
-        while (temp != null)
+
+        while(temp != null)
         {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
-    }
-
-
-    /* Creating the LL */
-    void add(int d)
-    {
-        Node new_node = new Node(d);
-        new_node.next = head;
-        head = new_node;
     }
 
 
@@ -46,7 +60,6 @@ class Palindrome
     {
         Stack<Integer> stack = new Stack<>();
         Node temp = head;
-        boolean ans = false;
 
         //Pushing nodes in stack
         while (temp != null)
@@ -56,40 +69,38 @@ class Palindrome
         }
 
         //Checking for palindrome
-        temp = head;    //Reassigning temp
+        temp = head;
         while (temp != null)
         {
-            if (temp.data == stack.pop()) {
-                ans = true;
+            if (temp.data != stack.pop()) {
+                return false;
             }
-            else {
-                ans = false;
-            }
-
             temp = temp.next;
         }
 
-        return ans;
+        return true;
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Palindrome ll = new Palindrome();
+        Palindrome1 ll = new Palindrome1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the LL
-        for (int i=0; i<5; i++)
+        for (int i = 1; i <= 5; i++)
         {
-            System.out.print("Enter the node : ");
-            int d = Integer.parseInt(b.readLine());
-            ll.add(d);
+            ll.create(i);
+        }
+        for (int i = 4; i >= 1; i--)
+        {
+            ll.create(i);
         }
 
         //Printing the LL
-        System.out.println("Created Linked List :");
+        System.out.println("*** Created Linked List ***");
         ll.print();
 
         //Printing the result
