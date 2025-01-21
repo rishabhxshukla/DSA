@@ -1,11 +1,11 @@
 /*
 Find the intersection point of 2 linked list
 
-   10 -> 20
-           \
-            30 -> 40 -> 50
-           /
-   60 -> 70
+               10 -> 20
+                       \
+                        30 -> 40 -> 50
+                       /
+   60 -> 70 -> 80 -> 90
 */
 // HASHSET
 
@@ -50,9 +50,13 @@ class IntersectionPoint1
         //2nd Linked List
         head2 = new Node(60);
         Node second2 = new Node(70);
+        Node third2  = new Node(80);
+        Node fourth2 = new Node(90);
 
         head2.next   = second2;
-        second2.next = common;
+        second2.next = third2;
+        third2.next  = fourth2;
+        fourth2.next = common;
     }
 
 
