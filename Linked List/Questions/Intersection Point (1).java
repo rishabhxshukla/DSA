@@ -1,11 +1,11 @@
 /*
 Find the intersection point of 2 linked list
 
-               80 - 90
-              /
-   10 - 20 - 30 - 40 - 50
-            /
-     60 - 70
+   10 -> 20
+           \
+            30 -> 40 -> 50
+           /
+   60 -> 70
 */
 // HASHSET
 
@@ -13,7 +13,7 @@ package LinkedList.Questions;
 import java.io.*;
 import java.util.HashSet;
 
-class IntersectionPoint
+class IntersectionPoint1
 {
     static Node head1;
     static Node head2;
@@ -36,30 +36,23 @@ class IntersectionPoint
         //Common node for intersection
         Node common = new Node(30);
 
-        //Other nodes
-        Node fourth1 = new Node(40);
-        Node fifth1  = new Node(50);
-        Node fourth2 = new Node(80);
-        Node fifth2  = new Node(90);
-
-        //Linking the shared part
-        common.next  = fourth1;   // 30 -> 40
-        fourth1.next = fifth1;    // 40 -> 50
-        fourth2.next = fifth2;    // 80 -> 90
-
         //1st Linked List
         head1 = new Node(10);
         Node second1 = new Node(20);
+        Node fourth1 = new Node(40);
+        Node fifth1  = new Node(50);
 
         head1.next   = second1;
-        second1.next = common;    // 10 -> 20 -> 30 -> ...
+        second1.next = common;
+        common.next  = fourth1;
+        fourth1.next = fifth1;
 
-        // 2nd Linked List
+        //2nd Linked List
         head2 = new Node(60);
         Node second2 = new Node(70);
 
         head2.next   = second2;
-        second2.next = common;    // 60 -> 70 -> 30 -> ...
+        second2.next = common;
     }
 
 
@@ -106,7 +99,7 @@ class IntersectionPoint
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        IntersectionPoint ll = new IntersectionPoint();
+        IntersectionPoint1 ll = new IntersectionPoint1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
