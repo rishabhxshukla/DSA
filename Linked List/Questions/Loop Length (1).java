@@ -1,9 +1,10 @@
 // Find the length of loop/cycle in a linked list
-// TORTOISE & HARE ALGORITHM (or) FLOYD’S CYCLE DETECTION ALGORITHM
+// HASHSET
 
 package LinkedList.Questions;
+import java.util.HashSet;
 
-class LoopLength2
+class LoopLength1
 {
     static Node head;
     static class Node
@@ -72,19 +73,21 @@ class LoopLength2
     /* Function to find the loop in LL */
     static int isLoop()
     {
-        Node slow = head;
-        Node fast = head;
+        HashSet<Node> hm = new HashSet<>();
+        Node temp = head;
 
-        //Stop the search when fast is null or fast points to null
-        while (fast != null && fast.next != null)
+        while (temp != null)
         {
-            slow = slow.next;
-            fast = fast.next.next;
-
-            if (slow == fast) {
+            //If HashSet already contains the node
+            if (hm.contains(temp)) {
                 //Calculate and return the loop length
-                return lengthOfLoop(fast);
+                return lengthOfLoop(temp);
             }
+
+            //Otherwise, add it to the HashSet
+            hm.add(temp);
+
+            temp = temp.next;
         }
 
         return 0;
@@ -94,7 +97,7 @@ class LoopLength2
     public static void main(String args[])
     {
         //Creating object of the class
-        LoopLength2 ll = new LoopLength2();
+        LoopLength1 ll = new LoopLength1();
 
         //Creating the LL
         ll.create();
