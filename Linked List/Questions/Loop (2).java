@@ -1,10 +1,9 @@
-// Detect loop or cycle in a linked list
-// HASHSET
+// Detect a loop or cycle in a linked list
+// Floyd’s Cycle Detection Algorithm
 
 package LinkedList.Questions;
-import java.util.HashSet;
 
-class DetectLoop2
+class Loop2
 {
     static Node head;
     static class Node
@@ -57,19 +56,20 @@ class DetectLoop2
     /* Function to find loop in LL */
     static boolean isLoop()
     {
-        HashSet<Node> hs = new HashSet<>();
-        Node temp = head;
+        Node slow = head;
+        Node fast = head;
 
-        while (temp != null)
+        //Stop the search when fast is null or fast points to null
+        while (fast != null && fast.next != null)
         {
-            //If HashSet already contains the node
-            if (hs.contains(temp)) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast) {
                 return true;
             }
-            //Otherwise, add it to the HashSet
-            hs.add(temp);
-            temp = temp.next;
         }
+
         return false;
     }
 
@@ -77,7 +77,7 @@ class DetectLoop2
     public static void main(String args[])
     {
         //Creating object of the class
-        DetectLoop2 ll = new DetectLoop2();
+        Loop2 ll = new Loop2();
 
         //Creating the LL
         ll.create();
