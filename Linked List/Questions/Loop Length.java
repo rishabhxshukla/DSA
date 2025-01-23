@@ -1,5 +1,5 @@
-// Find length of loop/cycle in given linked list
-// Floyd’s Cycle Detection Algorithm
+// Find the length of loop/cycle in a linked list
+// TORTOISE & HARE ALGORITHM (or) FLOYD’S CYCLE DETECTION ALGORITHM
 
 package LinkedList.Questions;
 

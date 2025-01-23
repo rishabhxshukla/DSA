@@ -1,5 +1,5 @@
 // Detect a loop or cycle in a linked list
-// Floyd’s Cycle Detection Algorithm
+// TORTOISE & HARE ALGORITHM (or) FLOYD’S CYCLE DETECTION ALGORITHM
 
 package LinkedList.Questions;
 
