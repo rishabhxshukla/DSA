@@ -54,7 +54,7 @@ class Loop1
     }
 
 
-    /* Function to find loop in LL */
+    /* Function to find the loop in LL */
     static boolean isLoop()
     {
         HashSet<Node> hs = new HashSet<>();

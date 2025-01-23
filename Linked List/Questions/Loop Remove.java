@@ -53,7 +53,7 @@ class LoopRemove
     }
 
 
-    /* Function to remove loop from a LL */
+    /* Function to remove the loop from a LL */
     static boolean removeLoop()
     {
         Node slow = head;

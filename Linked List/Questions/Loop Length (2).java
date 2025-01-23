@@ -3,7 +3,7 @@
 
 package LinkedList.Questions;
 
-class LoopLength
+class LoopLength2
 {
     static Node head;
     static class Node
@@ -53,7 +53,23 @@ class LoopLength
     }
 
 
-    /* Function to find loop in LL */
+    /* Function to find the loop length in LL */
+    static int lengthOfLoop(Node start)
+    {
+        Node temp = start;
+        int count = 1;
+
+        while (temp.next != start)
+        {
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+    }
+
+
+    /* Function to find the loop in LL */
     static int isLoop()
     {
         Node slow = head;
@@ -74,26 +90,10 @@ class LoopLength
     }
 
 
-    /* Function to find loop length in LL */
-    static int lengthOfLoop(Node start)
-    {
-        Node temp = start;
-        int count = 1;
-
-        while (temp.next != start)
-        {
-            count++;
-            temp = temp.next;
-        }
-
-        return count;
-    }
-
-
     public static void main(String args[])
     {
         //Creating object of the class
-        LoopLength ll = new LoopLength();
+        LoopLength2 ll = new LoopLength2();
 
         //Creating the LL
         ll.create();

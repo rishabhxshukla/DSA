@@ -53,7 +53,7 @@ class Loop2
     }
 
 
-    /* Function to find loop in LL */
+    /* Function to find the loop in LL */
     static boolean isLoop()
     {
         Node slow = head;
