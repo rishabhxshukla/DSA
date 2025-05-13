@@ -1,5 +1,5 @@
 // Check if the array is sorted
-// current-previous comparison
+// CURRENT-PREVIOUS COMPARISON
 
 package Array.Questions;
 import java.io.*;
