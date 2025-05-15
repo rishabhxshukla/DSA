@@ -7,7 +7,7 @@ Output: arr = [1, -4, 2, -5, 3, -6]
 Explanation:
 Positive numbers are [1, 2, 3]. Negative numbers are [-4, -5, -6].
 */
-// 2 POINTERS
+// 1 TEMP ARRAY
 
 package Array.Questions;
 import java.io.*;
@@ -46,7 +46,7 @@ class AlternatePositiveNegative2
     void rearrange()
     {
         int temp[] = new int[size];
-        int pos = 0, neg = 1;
+        int p = 0, n = 1;
 
         //Storing positive & negative numbers using 2 pointers
         //Positive numbers are stored at even indices
@@ -54,12 +54,12 @@ class AlternatePositiveNegative2
         for (int i=0; i<size; i++)
         {
             if (arr[i] > 0) {
-                temp[pos] = arr[i];
-                pos = pos + 2;
+                temp[p] = arr[i];
+                p = p + 2;
             }
             else {
-                temp[neg] = arr[i];
-                neg = neg + 2;
+                temp[n] = arr[i];
+                n = n + 2;
             }
         }
 
