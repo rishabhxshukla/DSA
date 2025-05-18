@@ -15,7 +15,7 @@ package Array.Questions;
 import java.io.*;
 import java.util.*;
 
-class Candies
+class Candies2
 {
     static int candies[] ={2, 3, 5, 1, 3};
     static int size = candies.length;
@@ -80,7 +80,7 @@ class Candies
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Candies obj = new Candies();
+        Candies2 obj = new Candies2();
 
         //Printing the array
         System.out.println("*** Candies ***");
