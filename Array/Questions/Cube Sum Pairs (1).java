@@ -16,7 +16,10 @@ class CubeSumPairs1
         {
             for (int j=0; j<=range; j++)
             {
-                if (Math.pow(i, 3) + Math.pow(j, 3) == target)
+                //Calculating the sum
+                int sum = (int)(Math.pow(i, 3) + Math.pow(j, 3));
+                
+                if (sum == target)
                 {
                     System.out.println("("+ i +", "+ j +")");
                 }
