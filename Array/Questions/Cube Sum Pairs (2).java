@@ -27,8 +27,10 @@ class CubeSumPairs2
             //Second no. = Cube root of diff
             int j = (int)Math.cbrt(diff);
 
-            //If i^3 + j^3 == target
-            if ((int)Math.pow(i, 3) + (int)Math.pow(j, 3) == target)
+            //Calculating the sum
+            int sum = (int)(Math.pow(i, 3) + Math.pow(j, 3));
+
+            if (sum == target)
             {
                 System.out.println("("+ i +", "+ j +")");
             }
