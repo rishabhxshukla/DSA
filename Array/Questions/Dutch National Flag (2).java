@@ -37,6 +37,15 @@ class DutchNationalFlag2
     }
 
 
+    /* Helper function to swap 2 elements of an array */
+    void swap(int i, int j)
+    {
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+
     /* Function to make the Dutch flag */
     void makeFlag()
     {
@@ -45,30 +54,21 @@ class DutchNationalFlag2
         while (mid <= high)
         {
             //Swap low and mid
-            if (arr[mid] == "red") {
+            if (arr[mid].equals("red")) {
                 swap(low, mid);
                 low++;
                 mid++;
             }
             //No swap
-            else if (arr[mid] == "white") {
+            else if (arr[mid].equals("white")) {
                 mid++;
             }
             //Swap mid and high
-            else if (arr[mid] == "blue") {
+            else {
                 swap(mid, high);
                 high--;
             }
         }
-    }
-
-
-    /* Helper function to swap 2 elements */
-    void swap(int i, int j)
-    {
-        String temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 
 
