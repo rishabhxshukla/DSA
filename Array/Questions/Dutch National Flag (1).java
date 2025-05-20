@@ -32,12 +32,15 @@ class DutchNationalFlag1
         //Counting the no. of colours
         for (int i=0; i<size; i++)
         {
-            if (arr[i] == "red")
+            if (arr[i].equals("red")) {
                 red++;
-            else if (arr[i] == "white")
+            }
+            else if (arr[i].equals("white")) {
                 white++;
-            else if (arr[i] == "blue")
+            }
+            else {
                 blue++;
+            }
         }
 
         //Making the flag
