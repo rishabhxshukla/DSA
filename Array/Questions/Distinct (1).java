@@ -1,11 +1,11 @@
-// Distinct elements of the array containing mixed values
-// HASHMAP
+// Find the distinct elements of the array which contains mixed values.
+// HASHSET
 
 package Array.Questions;
 import java.io.*;
-import java.util.HashMap;
+import java.util.HashSet;
 
-class Distinct
+class Distinct1
 {
     static final int size = 5;
     static int arr[] = new int[size];
@@ -36,27 +36,24 @@ class Distinct
 
 
     /* Function to find the distinct elements of the array */
-    static HashMap<Integer, Integer> distinct()
+    void distinct()
     {
-        HashMap<Integer, Integer> hm = new HashMap<>();
+        HashSet<Integer> hs = new HashSet<>();
 
-        //Storing all the values in a HashMap
+        //Storing all the values in HashSet
         for (int i=0; i<size; i++)
         {
-            if (hm.containsValue(arr[i]))
-                continue;
-            else
-                hm.put(i, arr[i]);
+            hs.add(arr[i]);
         }
 
-        return hm;
+        System.out.println(hs);
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Distinct obj = new Distinct();
+        Distinct1 obj = new Distinct1();
 
         //Creating the array
         obj.create();
@@ -66,7 +63,7 @@ class Distinct
         obj.print(arr);
 
         //Printing the distinct elements
-        HashMap<Integer, Integer> ans = distinct();
-        System.out.println("\nDistinct elements : " + ans.values());
+        System.out.println("\nDistinct elements : ");
+        obj.distinct();
     }
 }
