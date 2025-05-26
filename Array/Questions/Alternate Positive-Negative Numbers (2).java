@@ -7,7 +7,7 @@ Output: arr = [1, -4, 2, -5, 3, -6]
 Explanation:
 Positive numbers are [1, 2, 3]. Negative numbers are [-4, -5, -6].
 */
-// 2 POINTERS
+// 1 TEMP ARRAY + 2 POINTERS
 
 package Array.Questions;
 import java.io.*;
