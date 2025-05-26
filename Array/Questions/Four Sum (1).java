@@ -41,15 +41,18 @@ class FourSum1
         //Set to store the quadruplets
         Set<List<Integer>> quadruplets = new HashSet<>();
 
-        for (int i = 0; i < size-3; i++)
+        for (int i = 0; i < size; i++)
         {
-            for (int j = i+1; j < size-2; j++)
+            for (int j = i+1; j < size; j++)
             {
-                for (int k = j+1; k < size-1; k++)
+                for (int k = j+1; k < size; k++)
                 {
                     for (int l = k+1; l < size; l++)
                     {
-                        if (arr[i] + arr[j] + arr[k] + arr[l] == target)
+                        //Calculating the sum
+                        int sum = arr[i] + arr[j] + arr[k] + arr[l];
+                        
+                        if (sum == target)
                         {
                             //Adding quadruplets as a group (sorting to avoid duplicates)
                             List<Integer> quadruplet = Arrays.asList(arr[i], arr[j], arr[k], arr[l]);
