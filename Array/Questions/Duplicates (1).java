@@ -1,5 +1,5 @@
 // Find all duplicate elements in an unsorted array
-// HASHSET
+// HASHMAP
 
 package Array.Questions;
 import java.io.*;
@@ -35,19 +35,34 @@ class Duplicates1
     }
 
 
-    /* Function to find the duplicates */
+    /* Function to find the duplicate elements */
     void duplicates()
     {
-        HashSet<Integer> hs = new HashSet<>();
+        HashMap<Integer, Integer> hm = new HashMap<>();
 
-        //Adding elements to HashSet
+        //Adding element & its frequency to HashMap
         for (int i=0; i<size; i++)
         {
-            hs.add(arr[i]);
+            int key = arr[i];
+
+            if (hm.containsKey(key)) {
+                int val = hm.get(key);
+                val++;
+                hm.put(key, val);
+            }
+            else {
+                hm.put(key, 1);
+            }
         }
 
-        //Printing the duplicates
-        System.out.println(hs);
+        //Printing the duplicate elements
+        for (Map.Entry<Integer, Integer> i : hm.entrySet())
+        {
+            //If freq > 1, then its a duplicate element
+            if (i.getValue() > 1) {
+                System.out.print(i.getKey() + " ");
+            }
+        }
     }
 
 
