@@ -34,23 +34,18 @@ class Duplicates2
     }
 
 
-    /* Function to find the duplicates */
+    /* Function to find the duplicate elements */
     void duplicates()
     {
-        int j = 0;
-
+        //Printing the duplicates
         for (int i=1; i<size; i++)
         {
             if (arr[i] == arr[i - 1]) {
-                arr[j] = arr[i];
-                j++;
+                //Print only if it's the first occurrence of the duplicate
+                if (i == 1 || arr[i] != arr[i - 2]) {
+                    System.out.print(arr[i] + " ");
+                }
             }
-        }
-
-        //Printing the duplicates
-        for (int i=0; i<j; i++)
-        {
-            System.out.print(arr[i] + " ");
         }
     }
 
