@@ -1,11 +1,19 @@
 /*
-Create Target Array in the Given Order
-Given two arrays arr and index. Your task is to create target array under the following rules :
+Create a target array in the given order
+Given two arrays arr and index.
+Your task is to create target array under the following rules :
 1) Initially target array is empty.
 2) Read arr[i] and index[i], insert at index index[i] the value arr[i] in target array.
 
-Input: arr = [0,1,2,3,4], index = [0,1,2,2,1]
-Output: [0,4,1,3,2]
+Input: arr = [0, 1, 2, 3, 4], index = [0, 1, 2, 2, 1]
+Output: [0, 4, 1, 3, 2]
+
+Explanation:
+[0, 0, 0, 0, 0]
+[0, 1, 0, 0, 0]
+[0, 1, 2, 0, 0]
+[0, 1, 3, 2, 0]
+[0, 4, 1, 3, 2]
 */
 
 package Array.Questions;
@@ -16,6 +24,7 @@ class ElementAtIndex
     static final int size = 5;
     static int arr[] = {0, 1, 2, 3, 4};
     static int index[] = {0, 1, 2, 2, 1};
+    static int target[] = new int [arr.length];
 
 
     /* Creating the array */
@@ -43,25 +52,32 @@ class ElementAtIndex
 
 
     /* Helper function to shift elements */
-    static void shiftElements(int target[], int pos, int value, int length)
+    static void shift(int start, int end)
     {
-        for (int i = length - 1; i >= pos; i--)
+        for (int i = end; i >= start; i--)
         {
-            target[i + 1] = target[i];
+            target[i] = target[i - 1];
         }
-
-        target[pos] = value;
     }
 
 
     /* Function to create the target array */
     static int[] createTarget()
     {
-        int target[] = new int [arr.length];
-
-        for (int i = 0; i < arr.length; i++)
+        for (int i = 0; i < size; i++)
         {
-            shiftElements(target, index[i], arr[i], i);
+            //Extracting the index and element
+            int idx = index[i];
+            int element = arr[i];
+
+            //Shifting elements to the right if an element
+            //is already inserted at the given index
+            if (target[idx] != 0) {
+                shift(idx, size - 1);
+            }
+
+            //Inserting the element
+            target[idx] = element;
         }
 
         return target;
