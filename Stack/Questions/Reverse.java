@@ -6,94 +6,49 @@ import java.util.*;
 
 class Reverse
 {
-    int top = -1;
-    static final int MAX = 5;
-    int a[] = new int[MAX];
-
-
-    /* Print Stack */
-    void print()
-    {
-        for (int i=top; i>=0; i--)
-        {
-            System.out.print(a[i] + " ");
-        }
-    }
-
-
-    /* isEmpty */
-    boolean isEmpty()
-    {
-        return (top < 0);
-    }
-
-
-    /* PUSH */
-    void push(int data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
-    }
-
-
-    /* POP */
-    int pop()
-    {
-        if (top < 0) {
-            System.out.println("Stack Underflow!");
-            return -999;
-        }
-        else
-            return a[top--];
-    }
+    static Stack<Integer> s = new Stack<>();
 
 
     /* Function to reverse the stack */
-    void reverse(Reverse s)
+    void reverse()
     {
-        Queue<Integer> q = new LinkedList<>();
+        //Using a temp stack to store the elements
+        Stack<Integer> temp = new Stack<>();
 
-        //Storing elements in a temporary stack
         while (!s.isEmpty())
         {
-            q.add(s.pop());
+            temp.push(s.pop());
         }
 
-        //Bringing back elements to the original stack
-        while (!q.isEmpty())
-        {
-            s.push(q.remove());
-        }
+        s = temp;
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        Reverse s = new Reverse();
+        Reverse obj = new Reverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<MAX; i++)
+        for (int i=0; i<5; i++)
         {
-            System.out.print("Enter the data : ");
+            System.out.print("Enter the element : ");
             int d = Integer.parseInt(b.readLine());
             s.push(d);
         }
 
         //Printing original stack
-        System.out.println("*** Original Stack ***");
-        s.print();
+        System.out.println("\n*** Original Stack ***");
+        System.out.println(s);
 
         //Reversing the stack
         System.out.println("\nReversing the stack...");
-        s.reverse(s);
+        obj.reverse();
 
         //Printing new stack
-        System.out.println("*** New Stack ***");
-        s.print();
+        System.out.println("\n*** New Stack ***");
+        System.out.println(s);
     }
 }

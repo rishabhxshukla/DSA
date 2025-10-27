@@ -2,11 +2,12 @@
 
 package Stack.Questions;
 import java.io.*;
-import java.util.Stack;
+import java.util.*;
 
 class Length
 {
     static Stack<Integer> s = new Stack<>();
+
 
     /* Function to find the length of stack */
     static int length()
@@ -21,6 +22,7 @@ class Length
         return count;
     }
 
+
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
@@ -30,7 +32,7 @@ class Length
         //Creating the stack
         for (int i = 0; i < 5; i++)
         {
-            System.out.print("Enter the data : ");
+            System.out.print("Enter the element : ");
             int d = Integer.parseInt(b.readLine());
             s.push(d);
         }
