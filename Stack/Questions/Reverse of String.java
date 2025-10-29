@@ -2,38 +2,38 @@
 
 package Stack.Questions;
 import java.io.*;
+import java.util.*;
 
 class StringReverse
 {
-    int top = -1;
-    static final int MAX = 100;
-    char a[] = new char[MAX];
+    static Stack<Character> s = new Stack<>();
 
 
-    /* Print Stack */
-    void print()
+    /* Function to reverse a string */
+    static String reverse(String str)
     {
-        for (int i=top; i>=0; i--)
+        String newstr = "";
+
+        //Pushing characters into the stack
+        for (int i = 0; i < str.length(); i++)
         {
-            System.out.print(a[i]);
+            char ch = str.charAt(i);
+            s.push(ch);
         }
-    }
 
+        //Popping character from the stack
+        while (!s.isEmpty())
+        {
+            newstr = newstr + s.pop();
+        }
 
-    /* PUSH */
-    void push(char data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
+        return newstr;
     }
 
 
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        StringReverse s = new StringReverse();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -41,19 +41,7 @@ class StringReverse
         System.out.print("Enter the string : ");
         String str = b.readLine();
 
-        //Reversing the string
-        for (int i=0; i<str.length(); i++)
-        {
-            char ch = str.charAt(i);
-            s.push(ch);
-        }
-
-        //Printing original stack
-        System.out.println("*** Original String ***");
-        System.out.println(str);
-
-        //Printing new stack
-        System.out.println("*** New String ***");
-        s.print();
+        //Printing the reversed string
+        System.out.print("Reverse of the string : " + reverse(str));
     }
 }

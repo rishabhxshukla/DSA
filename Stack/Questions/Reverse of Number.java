@@ -9,7 +9,7 @@ class NumberReverse
     static Stack<Integer> s = new Stack<>();
 
 
-    /* Function to find the reverse a number */
+    /* Function to reverse a number */
     static int reverse(int num)
     {
         int rem, sum = 0;
