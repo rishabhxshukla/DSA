@@ -2,101 +2,34 @@
 
 package Stack.Questions;
 import java.io.*;
+import java.util.*;
 
 class DeleteMiddle
 {
-    static int top = -1;
-    static final int MAX = 5;
-    int a[] = new int[MAX];
+    static Stack<Integer> s = new Stack<>();
 
 
-    /* Print Stack */
-    void print()
-    {
-        for (int i=top; i>=0; i--)
-        {
-            System.out.print(a[i] + " ");
-        }
-    }
-
-
-    /* isEmpty() */
-    boolean isEmpty()
-    {
-        return (top < 0);
-    }
-
-
-    /* PUSH */
-    void push(int data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
-    }
-
-
-    /* POP */
-    int pop()
-    {
-        if (top < 0) {
-            System.out.println("Stack Underflow!");
-            return -999;
-        }
-        else
-            return a[top--];
-    }
-
-
-    /* PEEK */
-    int peek()
-    {
-        if (top < 0) {
-            System.out.println("Stack is Empty!");
-            return -999;
-        }
-        else
-            return a[top];
-    }
-
-
-    /* Function to find length of stack */
-    static int length()
-    {
-        int count = 0;
-
-        for (int i=top; i>=0; i--)
-        {
-            count++;
-        }
-
-        return count;
-    }
-
-
-    /* Function to delete middle element */
+    /* Function to delete the middle element */
     void deleteMiddle()
     {
-        DeleteMiddle s = new DeleteMiddle();
-        DeleteMiddle t = new DeleteMiddle();
-        int mid = length()/2;
+        Stack<Integer> temp = new Stack<>();
+        int mid = s.size()/2;
         int count = 0;
 
         //Storing elements in a temporary stack until mid is found
         while (count != mid)
         {
-            t.push(s.pop());
+            temp.push(s.pop());
             count++;
         }
 
         //Popping out middle element
         s.pop();
 
-        //Placing elements back to the main stack from the temp stack
-        while (!t.isEmpty())
+        //Placing elements back to the main stack from temp stack
+        while (!temp.isEmpty())
         {
-            s.push(t.pop());
+            s.push(temp.pop());
         }
     }
 
@@ -104,12 +37,12 @@ class DeleteMiddle
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        DeleteMiddle s = new DeleteMiddle();
+        DeleteMiddle obj = new DeleteMiddle();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<MAX; i++)
+        for (int i = 0; i < 5; i++)
         {
             System.out.print("Enter the data : ");
             int d = Integer.parseInt(b.readLine());
@@ -117,15 +50,15 @@ class DeleteMiddle
         }
 
         //Printing original stack
-        System.out.println("*** Original Stack ***");
-        s.print();
+        System.out.println("\n*** Original Stack ***");
+        System.out.println(s);
 
         //Deleting middle element
         System.out.println("\nDeleting middle element...");
-        s.deleteMiddle();
+        obj.deleteMiddle();
 
         //Printing new stack
-        System.out.println("*** New Stack ***");
-        s.print();
+        System.out.println("\n*** New Stack ***");
+        System.out.println(s);
     }
 }

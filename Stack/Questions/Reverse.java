@@ -32,7 +32,7 @@ class Reverse
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<5; i++)
+        for (int i = 0; i < 5; i++)
         {
             System.out.print("Enter the element : ");
             int d = Integer.parseInt(b.readLine());
