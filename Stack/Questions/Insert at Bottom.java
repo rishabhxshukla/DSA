@@ -2,71 +2,31 @@
 
 package Stack.Questions;
 import java.io.*;
+import java.util.*;
 
 class InsertBottom
 {
-    int top = -1;
-    static final int MAX = 5;
-    int a[] = new int[MAX + 1];
-
-
-    /* Printing Stack */
-    void print()
-    {
-        for (int i=top; i>=0; i--)
-        {
-            System.out.print(a[i] + " ");
-        }
-    }
-
-
-    /* isEmpty */
-    boolean isEmpty()
-    {
-        return (top < 0);
-    }
-
-
-    /* PUSH */
-    void push(int data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
-    }
-
-
-    /* POP */
-    int pop()
-    {
-        if (top < 0) {
-            System.out.println("Stack Underflow!");
-            return -999;
-        }
-        else
-            return a[top--];
-    }
+    static Stack<Integer> s = new Stack<Integer>();
 
 
     /* Function to insert element at the bottom of the stack */
-    void insertAtBottom(InsertBottom s, int data)
+    void insertAtBottom(int k)
     {
-        InsertBottom t = new InsertBottom();    //Temporary Stack
+        Stack<Integer> temp = new Stack<Integer>();
 
         //Shifting all elements from main stack to temp stack
         while (!s.isEmpty())
         {
-            t.push(s.pop());
+            temp.push(s.pop());
         }
 
         //Inserting the last element
-        s.push(data);
+        s.push(k);
 
         //Re-shifting all elements from temp stack to main stack
-        while (!t.isEmpty())
+        while (!temp.isEmpty())
         {
-            s.push(t.pop());
+            s.push(temp.pop());
         }
     }
 
@@ -74,12 +34,12 @@ class InsertBottom
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        InsertBottom s = new InsertBottom();
+        InsertBottom obj = new InsertBottom();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<MAX; i++)
+        for (int i = 0; i < 5; i++)
         {
             System.out.print("Enter the data : ");
             int d = Integer.parseInt(b.readLine());
@@ -87,16 +47,16 @@ class InsertBottom
         }
 
         //Printing original stack
-        System.out.println("*** Original Stack ***");
-        s.print();
+        System.out.println("\n*** Original Stack ***");
+        System.out.println(s);
 
         //Taking user input
         System.out.print("\nEnter the element that you want to insert : ");
-        int d = Integer.parseInt(b.readLine());
-        s.insertAtBottom(s, d);
+        int k = Integer.parseInt(b.readLine());
+        obj.insertAtBottom(k);
 
         //Printing new stack
-        System.out.println("*** New Stack ***");
-        s.print();
+        System.out.println("\n*** New Stack ***");
+        System.out.println(s);
     }
 }
