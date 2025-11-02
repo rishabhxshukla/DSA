@@ -9,76 +9,46 @@ NOTE : The order of opening and closing parenthesis should be same.
 
 package Stack.Questions;
 import java.io.*;
+import java.util.*;
 
 class ParenthesisMatching
 {
-    int top = -1;
-    static final int MAX = 100;
-    char a[] = new char[MAX];
-
-
-    /* isEmpty */
-    boolean isEmpty()
-    {
-        return (top < 0);
-    }
-
-
-    /* PUSH */
-    void push(char data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
-    }
-
-
-    /* POP */
-    char pop()
-    {
-        if (top < 0) {
-            System.out.println("Stack Underflow!");
-            return 'X';
-        }
-        else
-            return a[top--];
-    }
-
-
-    /* PEEK */
-    char peek()
-    {
-        if (top < 0) {
-            System.out.println("Stack is Empty!");
-            return 'X';
-        }
-        else
-            return a[top];
-    }
+    static Stack<Character> s = new Stack<>();
 
 
     /* Function to check for balanced parenthesis */
     static boolean isBalanced(String str)
     {
-        ParenthesisMatching s = new ParenthesisMatching();
+        s.clear();
 
-        for (int i=0; i<str.length(); i++)
+        for (int i = 0; i < str.length(); i++)
         {
+            //Extracting each character
             char ch = str.charAt(i);
+
             //If opening bracket, push it into stack
-            if (ch == '[' || ch == '{' | ch == '(')
+            if (ch == '[' || ch == '{' || ch == '(')
             {
                 s.push(ch);
             }
 
             //If closing bracket, compare with stack top and pop it
-            else if ((ch==']' && s.peek()=='[') ||
-                     (ch=='}' && s.peek()=='{') ||
-                     (ch==')' && s.peek()=='('))
-                    {
-                        s.pop();
-                    }
+            else if (ch == ')' || ch == '}' || ch == ']')
+            {
+                //If stack is empty before match => unbalanced
+                if (s.isEmpty())
+                    return false;
+
+                char top = s.peek();
+
+                //Mismatched pair
+                if ((ch == ')' && top != '(') ||
+                        (ch == '}' && top != '{') ||
+                        (ch == ']' && top != '['))
+                    return false;
+
+                s.pop();
+            }
         }
 
         //Finally, if stack is empty then parenthesis are balanced
