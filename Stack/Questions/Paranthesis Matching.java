@@ -1,8 +1,13 @@
 /*
-Opening parenthesis => Push in stack
-Closing parenthesis => Compare with top of the stack
-If pair matches, pop out the opening parenthesis from the stack.
-Parenthesis are balanced if stack is empty otherwise not.
+STEPS :
+1) Traverse each character of the string.
+2) If it's an opening bracket [ { ( -> push it into the stack.
+3) If it's a closing bracket ) } ] ->
+     a) If stack is empty → not balanced.
+     b) Compare it with top of stack :
+          - If matching pair → pop the stack.
+          - Else → not balanced.
+4) After traversal, if stack is empty → parentheses are balanced, otherwise not.
 
 NOTE : The order of opening and closing parenthesis should be same.
 */
@@ -19,8 +24,6 @@ class ParenthesisMatching
     /* Function to check for balanced parenthesis */
     static boolean isBalanced(String str)
     {
-        s.clear();
-
         for (int i = 0; i < str.length(); i++)
         {
             //Extracting each character
@@ -36,8 +39,9 @@ class ParenthesisMatching
             else if (ch == ')' || ch == '}' || ch == ']')
             {
                 //If stack is empty before match => unbalanced
-                if (s.isEmpty())
+                if (s.isEmpty()) {
                     return false;
+                }
 
                 char top = s.peek();
 
@@ -45,7 +49,9 @@ class ParenthesisMatching
                 if ((ch == ')' && top != '(') ||
                         (ch == '}' && top != '{') ||
                         (ch == ']' && top != '['))
+                {
                     return false;
+                }
 
                 s.pop();
             }
