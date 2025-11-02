@@ -2,7 +2,7 @@
 
 package Stack.Questions;
 import java.io.*;
-import java.util.Stack;
+import java.util.*;
 
 class QueueUsingStack1
 {
@@ -41,16 +41,16 @@ class QueueUsingStack1
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        QueueUsingStack1 q = new QueueUsingStack1();
+        QueueUsingStack1 obj = new QueueUsingStack1();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
         //Creating the stack
-        for (int i=0; i<5; i++)
+        for (int i = 0; i < 5; i++)
         {
             System.out.print("Enter the data : ");
             int d = Integer.parseInt(b.readLine());
-            q.enqueue(d);
+            obj.enqueue(d);
         }
 
         //Printing original queue
@@ -58,8 +58,8 @@ class QueueUsingStack1
         System.out.print(s1);
 
         //Performing operations
-        System.out.println("\nRemoving " +q.dequeue()+ " from the queue...");
-        System.out.println("Removing " +q.dequeue()+ " from the queue...");
+        System.out.println("\nRemoving " + obj.dequeue() + " from the queue...");
+        System.out.println("Removing " + obj.dequeue() + " from the queue...");
 
         //Printing new queue
         System.out.println("*** New Queue ***");
