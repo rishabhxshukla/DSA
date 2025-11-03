@@ -1,71 +1,24 @@
-// Convert infix to postfix expression
+/*
+Convert infix to postfix expression
+
+Example :
+Infix: A+B*C
+Postfix: ABC*+
+*/
 
 package Stack.Questions;
 import java.io.*;
+import java.util.*;
 
 class InfixToPostfix
 {
-    static int top = -1;
-    static final int MAX = 6;
-    char a[] = new char[MAX];
-
-
-    /* Print Stack */
-    void print()
-    {
-        for (int i=top; i>=0; i--)
-        {
-            System.out.print(a[i] + " ");
-        }
-    }
-
-
-    /* isEmpty() */
-    static boolean isEmpty()
-    {
-        return (top < 0);
-    }
-
-
-    /* PUSH */
-    void push(char data)
-    {
-        if (top > MAX - 1)
-            System.out.println("Stack Overflow!");
-        else
-            a[++top] = data;
-    }
-
-
-    /* POP */
-    char pop()
-    {
-        if (top < 0) {
-            System.out.println("Stack Underflow!");
-            return '$';
-        }
-        else
-            return a[top--];
-    }
-
-
-    /* PEEK */
-    char peek()
-    {
-        if (top < 0) {
-            System.out.println("Stack is Empty!");
-            return '$';
-        }
-        else
-            return a[top];
-    }
+    static Stack<Character> s = new Stack<>();
 
 
     /* Utility Functions */
-    /*--------------------------------------------------------*/
     static boolean isOperand(char ch)
     {
-        return ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>=1 && ch<=9));
+        return ((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>=0 && ch<=9));
     }
     static boolean isOpening(char ch)
     {
@@ -86,31 +39,31 @@ class InfixToPostfix
         else
             return 0;
     }
-    /*--------------------------------------------------------*/
 
 
     /* Function to convert Infix to Postfix */
-    static String Convert(String str)
+    static String convert(String str)
     {
-        InfixToPostfix s = new InfixToPostfix();
         String ans = "";
 
-        for (int i=0; i<str.length(); i++)
+        for (int i = 0; i < str.length(); i++)
         {
             char ch = str.charAt(i);
 
             //If the scanned character is an operand, add it to output
-            if (isOperand(ch))
+            if (isOperand(ch)) {
                 ans = ans + ch;
+            }
 
             //If the scanned character is '(', push it to the stack
-            else if (isOpening(ch))
+            else if (isOpening(ch)) {
                 s.push(ch);
+            }
 
             //If the scanned character is an ')', pop from stack until '(' is encountered
             else if (isClosing(ch))
             {
-                while (!isEmpty() && s.peek() != '(')
+                while (!s.isEmpty() && s.peek() != '(')
                 {
                     ans = ans + s.peek();
                     s.pop();
@@ -121,7 +74,7 @@ class InfixToPostfix
             //When any operator is encountered, check precedence
             else
             {
-                while (!isEmpty() && Precedence(s.peek()) >= Precedence(ch))
+                while (!s.isEmpty() && Precedence(s.peek()) >= Precedence(ch))
                 {
                     ans = ans + s.peek();
                     s.pop();
@@ -131,14 +84,16 @@ class InfixToPostfix
         }
 
         //Pop all the operators from the stack
-        while (!isEmpty())
+        while (!s.isEmpty())
         {
-            if (s.peek() == '(')
+            if (s.peek() == '(') {
                 return "Invalid Expression";
+            }
 
             ans = ans + s.peek();
             s.pop();
         }
+
         return ans;
     }
 
@@ -146,7 +101,6 @@ class InfixToPostfix
     public static void main(String args[]) throws IOException
     {
         //Creating object of the class
-        InfixToPostfix s = new InfixToPostfix();
         InputStreamReader inp = new InputStreamReader(System.in);
         BufferedReader b = new BufferedReader(inp);
 
@@ -155,6 +109,6 @@ class InfixToPostfix
         String str = b.readLine();
 
         //Printing the postfix expression
-        System.out.println("Postfix expression = " + Convert(str));
+        System.out.println("Postfix expression : " + convert(str));
     }
 }
