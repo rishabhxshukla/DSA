@@ -1,22 +1,24 @@
 /*
-The next greater element of a value x in an array is the first element that appears to the right of x
-and has a greater value.
-You are given two distinct integer arrays, nums1 and nums2, where nums1 is a subset of nums2.
-For each element nums1[i], locate its corresponding index j in nums2 such that
-nums1[i] == nums2[j], and identify the next greater element to the right of nums2[j] in nums2.
-If no such greater element exists, return -1 for that position.
-Return an ans[] array where ans[i] contains the next greater element for nums1[i].
+Given an array arr of size n containing elements, find the next greater element for each element in the
+array in the order of their appearance. The next greater element of an element in the array is the nearest
+element on the right that is greater than the current element.
+If there does not exist a next greater element for the current element, then the next greater element for
+that element is -1.
 
-Example :
-Input: nums1 = [4, 1, 2], nums2 = [1, 3, 4, 2]
-Output: [-1, 3, -1]
+Example 1 :
+Input: arr = [1, 3, 2, 4]
+Output: [3, 4, 4, -1]
 Explanation:
-The next greater element for each value of nums1 in nums2 is as follows :
--> 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
--> 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
--> 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+In the array, the next larger element to 1 is 3, 3 is 4, 2 is 4 and for 4 is -1, since it does not exist.
+
+Example 2 :
+Input: arr = [6, 8, 0, 1, 3]
+Output: [8, -1, 1, 3, -1]
+Explanation:
+In the array, the next larger element to 6 is 8, for 8 there is no larger elements hence it is -1, for 0
+it is 1 , for 1 it is 3 and then for 3 there is no larger element on the right and hence -1.
 */
-// NESTED LOOPS
+// NESTED LOOP
 
 package Array.Questions;
 import java.io.*;
@@ -24,38 +26,30 @@ import java.util.*;
 
 class NextGreaterElement1
 {
-    static int nums1[] = {4, 1, 2};
-    static int nums2[] = {1, 3, 4, 2};
+    static int arr[] = {6, 8, 0, 1, 3};
 
 
-    /* Function to find the next greater element of each element in nums1 */
+    /* Function to find the next greater element of each element in arr */
     static ArrayList<Integer> nextGreaterElement()
     {
         ArrayList<Integer> ans = new ArrayList<>();
 
-        //Loop through each element of nums1
-        for (int i = 0; i < nums1.length; i++)
+        //Taking each element
+        for (int i = 0; i < arr.length; i++)
         {
             int nextGreater = -1;
 
-            //Find nums1[i] in nums2
-            for (int j = 0; j < nums2.length; j++)
+            //Comparing it with elements to its right
+            for (int j = i + 1; j < arr.length; j++)
             {
-                if (nums1[i] == nums2[j])
-                {
-                    //Look to the right of j for its greater element
-                    for (int k = j + 1; k < nums2.length; k++)
-                    {
-                        if (nums2[k] > nums1[i])
-                        {
-                            nextGreater = nums2[k];
-                            break;
-                        }
-                    }
-                    break;  //Stop searching nums2 once match is found
+                //If next greater element found
+                if (arr[j] > arr[i]) {
+                    nextGreater = arr[j];
+                    break;
                 }
             }
 
+            //Add the nextGreater element to the ans array
             ans.add(nextGreater);
         }
 
@@ -63,11 +57,10 @@ class NextGreaterElement1
     }
 
 
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
-        //Printing the nums arrays
-        System.out.println("Nums1[] : " + Arrays.toString(nums1));
-        System.out.println("Nums2[] : " + Arrays.toString(nums2));
+        //Printing the original array
+        System.out.println("Original array : " + Arrays.toString(arr));
 
         //Printing the next greater element array
         System.out.println("Next greater element array : " + nextGreaterElement());
