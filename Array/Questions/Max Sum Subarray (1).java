@@ -13,7 +13,7 @@ Subarrays of size 4:
   [3, 3, 4, 5] → sum = 15
   [3, 4, 5, -1] → sum = 11
 */
-// BRUTE FORCE -> SLIDING WINDOW -> O(n*k)
+// NESTED LOOPS -> SLIDING WINDOW -> O(n*k)
 
 package Array.Questions;
 import java.io.*;
@@ -29,10 +29,12 @@ class MaxSumSubarray1
     static int maxSum()
     {
         int max = Integer.MIN_VALUE;
-        int sum = 0;
 
-        for (int i = 0; i <= arr.length - k; i++)
+        for (int i = 0; i <= (arr.length - k); i++)
         {
+            //Reinitialize sum to 0 for every window
+            int sum = 0;
+
             //Sliding window of size k starting from ith index
             for (int j = i; j < (i + k); j++)
             {
@@ -46,16 +48,13 @@ class MaxSumSubarray1
 
             /* System.out.println("Window " + (i + 1));
             System.out.println(" SUM: " + sum + ", MAX: " + max); */
-
-            //Reinitialize current sum to 0
-            sum = 0;
         }
 
         return max;
     }
 
 
-    public static void main(String[] args)
+    public static void main(String args[])
     {
         //Printing the array
         System.out.println("Array : " + Arrays.toString(arr));
