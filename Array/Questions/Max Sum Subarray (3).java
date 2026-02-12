@@ -13,7 +13,7 @@ Subarrays of size 4:
   [3, 3, 4, 5] → sum = 15
   [3, 4, 5, -1] → sum = 11
 */
-// SLIDING WINDOW -> 2 POINTERS -> O(n)
+// 2. SLIDING WINDOW -> O(N)
 
 package Array.Questions;
 import java.io.*;
@@ -29,30 +29,22 @@ class MaxSumSubarray3
     static int maxSum()
     {
         int max = Integer.MIN_VALUE;
-        int sum = 0;
+        int i = 0, sum = 0;
 
-        //First window
-        //Move the 2nd pointer till you make a window of size k
-        int i = 0, j = 0;
-        while (j - i < k)
+        for (int j = 0; j < arr.length; j++)
         {
+            //Expand window
             sum = sum + arr[j];
-            j++;
-        }
 
-        //1st max is sum of elements of 1st window
-        max = sum;
+            //When window size is k
+            if (j - i + 1 == k)
+            {
+                //Update max
+                max = Math.max(max, sum);
 
-        //Slide the window
-        //Move the 2nd pointer till you find the end of the array
-        while (j < arr.length)
-        {
-            sum = sum - arr[i++];    //Shrink from left
-            sum = sum + arr[j++];    //Expand to right
-
-            //Update the max sum
-            if (sum > max) {
-                max = sum;
+                //Shrink window
+                sum = sum - arr[i];
+                i++;
             }
         }
 
