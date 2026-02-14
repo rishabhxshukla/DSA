@@ -97,8 +97,53 @@ Use when you have to find or arrange data.
 
 **Types :**
 
-- Fixed window 
-- Variable window
+- ***Fixed window***
+  ```
+  int i = 0;
+  
+  for (int j = 0; j < arr.length; j++)
+  {
+      //Expand window
+      sum = sum + arr[j];
+  
+      //When window size is k
+      if (j - i + 1 == k)
+      {
+          //Process answer
+          max = Math.max(max, sum);
+
+          //Shrink window
+          sum = sum - arr[i];
+          i++;
+      }
+  }
+  ```
+- ***Variable window***
+  ```
+  int i = 0;
+  
+  for (int j = 0; j < arr.length; j++)
+  {
+      //Expand window
+      sum = sum + arr[j];
+  
+      //Shrink window
+      if (!condition)
+      {
+          while(!condition)
+          {
+              sum = sum - arr[i];
+              i++;
+          }
+      }
+
+      //Process answer
+      max = Math.max(max, sum);
+  }
+  ```
+  Remember :
+  - If invalidity comes AFTER adding → shrink after expand
+  - If invalidity exists BEFORE adding → shrink before expand
 
 **Problems :**
 
