@@ -34,7 +34,6 @@ Use when you have to find or arrange data.
 ### 3) Stack
 
 **Problems :**
-
 - Undo / Redo
 - Parentheses validation
 - Expression evaluation
@@ -45,7 +44,6 @@ Use when you have to find or arrange data.
 ### 4) Queue
 
 **Problems :**
-
 - BFS (graphs / trees)
 - Scheduling
 - Level-order traversal
@@ -55,7 +53,6 @@ Use when you have to find or arrange data.
 ### 5) HashMap
 
 **Problems :**
-
 - Frequency counting
 - Fast lookup
 - Index tracking
@@ -65,7 +62,6 @@ Use when you have to find or arrange data.
 ### 6) HashSet
 
 **Problems :**
-
 - Removing duplicates
 - Checking existence
 - Handling unique elements
@@ -75,7 +71,6 @@ Use when you have to find or arrange data.
 ### 7) Priority Queue (Heap)
 
 **Problems :**
-
 - Min / Max element problems
 - Top K elements
 - Kth largest / smallest element
@@ -86,7 +81,6 @@ Use when you have to find or arrange data.
 ### 8) Binary Search
 
 **Problems :**
-
 - Given data is sorted
 - Searching in a range
 - Optimization problems
@@ -95,9 +89,22 @@ Use when you have to find or arrange data.
 
 ### 9) Sliding Window
 
-**Types :**
+Sliding window is a technique for solving subarray/substring problems efficiently by maintaining a window that expands and shrinks as it moves across the array/substring, avoiding redundant computation.
 
-- ***Fixed window***
+**Problems :**
+- Subarray / substring problems 
+- Maximum / minimum in a window
+- Sum / count in a window problems
+- Longest / shortest window problems
+
+### * Fixed window *
+
+When to use?
+- Window size is fixed
+- Window size = exactly K elements
+- K controls length, not a property
+
+Template :
   ```
   int i = 0;
   
@@ -118,7 +125,22 @@ Use when you have to find or arrange data.
       }
   }
   ```
-- ***Variable window***
+
+Problems :
+- Maximum/Minimum sum subarray of size K
+- First negative number in every window of size K
+- Count occurrences in window of size K
+- Average of subarrays of size K
+
+---
+
+### * Variable window *
+When to use?
+- Window size is not fixed
+- Want longest / shortest valid window
+- Condition is checked on the whole window
+
+Template :
   ```
   int i = 0;
   
@@ -141,16 +163,61 @@ Use when you have to find or arrange data.
       max = Math.max(max, sum);
   }
   ```
-  Remember :
-  - If invalidity comes AFTER adding → shrink after expand
-  - If invalidity exists BEFORE adding → shrink before expand
 
-**Problems :**
+Remember :
+- If invalidity comes AFTER adding → shrink after expand
+- If invalidity exists BEFORE adding → shrink before expand
 
-- Subarray / substring problems 
-- Maximum / minimum in a window
-- Sum / count in a window problems
-- Longest / shortest window problems
+Problems :
+- Longest substring without repeating characters
+- Longest substring with at most K distinct characters
+- Longest subarray of 1s after replacing at most K zeros
+- Longest subarray with sum ≤ K
+- Minimum size subarray sum
+
+---
+
+### * Variable window - atMost problems *
+When to use?
+- Problem asks to COUNT subarrays
+- K controls a property, not the length
+- Condition is monotonic :
+  - sum ≤ K
+  - odd ≤ K
+  - distinct ≤ K
+
+Template :
+  ```
+  int i = 0;
+  
+  for (int j = 0; j < arr.length; j++)
+  {
+      //Expand window
+      sum = sum + arr[j];
+  
+      //Shrink window
+      if (!condition)
+      {
+          while(!condition)
+          {
+              sum = sum - arr[i];
+              i++;
+          }
+      }
+
+      //Process answer
+      count = count + (j - i + 1);
+  }
+  ```
+
+Formula :  
+*exactly K = atMost(K) - atMost(K - 1)*
+
+Problems :
+- Subarrays with sum ≤ K
+- Subarrays with at most K odd numbers
+- Subarrays with at most K distinct integers/characters
+- Binary subarrays with sum ≤ goal
 
 ---
 
