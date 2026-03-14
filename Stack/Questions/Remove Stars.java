@@ -10,13 +10,12 @@ STEPS :
 2) If it's a letter, push it in the stack.
 3) If it's '#', remove last letter from the stack and perform backspace.
 */
-// STACK
 
-package String.Questions;
+package Stack.Questions;
 import java.io.*;
 import java.util.*;
 
-class RemoveStars1
+class RemoveStars
 {
     /* Function to remove the stars from the string */
     static String removeStars(String str)
