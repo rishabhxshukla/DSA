@@ -1,18 +1,18 @@
-// Program to find the sum of first N natural numbers
+// Program to find the product of first N natural numbers
 // O(N)
 
 package Recursion.Questions.Number;
 import java.io.*;
 
-class Sum
+class Product
 {
-    static int sum(int n)
+    static int prod(int n)
     {
         if (n == 0) {
-            return 0;
+            return 1;
         }
 
-        return n + sum(n - 1);
+        return n * prod(n - 1);
     }
 
 
@@ -26,6 +26,6 @@ class Sum
         int n = Integer.parseInt(b.readLine());
 
         //Printing the result
-        System.out.println("Sum : " + sum(n));
+        System.out.println("Product : " + prod(n));
     }
 }

@@ -1,18 +1,17 @@
-// Program to find the factorial of n
+// Program to find the factorial of N
 
 package Recursion.Questions.Number;
 import java.io.*;
 
 class Factorial
 {
-    /* Function to find the factorial */
     static int factorial(int n)
     {
         if (n == 0) {
             return 1;
         }
 
-        return (n * factorial(n-1));
+        return n * factorial(n - 1);
     }
 
 
