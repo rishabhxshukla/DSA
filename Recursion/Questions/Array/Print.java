@@ -1,43 +1,29 @@
-// Program to print the array recursively
+// Program to print the elements of an array recursively
 
 package Recursion.Questions.Array;
 import java.io.*;
+import java.util.*;
 
 class Print
 {
-    static final int size = 5;
-    static int arr[] = new int[size];
-
-
-    /* Function to print the array */
-    void print(int i)
+    static void print(int arr[], int i)
     {
-        if (i == size-1) {
-            System.out.print(arr[i]);
+        //Base case
+        if (i == arr.length) {
             return;
         }
 
         System.out.print(arr[i] + " ");
-        print(i+1);
+        print(arr, i + 1);
     }
 
 
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
-        //Creating object of the class
-        Print obj = new Print();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
-
-        //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        int arr[] = {1, 2, 3, 4, 5};
 
         //Printing the array
-        System.out.println("*** Created Array ***");
-        obj.print(0);
+        System.out.println("Array : ");
+        print(arr, 0 );
     }
 }

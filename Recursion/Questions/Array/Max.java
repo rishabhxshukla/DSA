@@ -1,52 +1,35 @@
-// Program to find the largest element of an array
+// Program to find the maximum element of an array
 
 package Recursion.Questions.Array;
 import java.io.*;
+import java.util.*;
 
 class Max
 {
-    static final int size = 5;
-    static int arr[] = new int[size];
-
-
-    /* Function to find the max element */
-    static int max = Integer.MIN_VALUE;
-    static int max(int i)
+    static int max(int arr[], int i, int max)
     {
+        //Base case
         if (i == arr.length) {
             return max;
         }
 
+        //Find max
         if (arr[i] > max) {
             max = arr[i];
         }
 
-        return max(i + 1);
+        return max(arr, i + 1, max);
     }
 
 
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
-        //Creating object of the class
-        Max obj = new Max();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
-
-        //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        int arr[] = {3, 1, 2, 5, 4};
 
         //Printing the array
-        System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println("Array : " + Arrays.toString(arr));
 
-        //Finding the largest element
-        System.out.println("\nMax : " + max(0));
+        //Printing the result
+        System.out.println("Max : " + max(arr, 0, arr[0]));
     }
 }

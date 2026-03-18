@@ -1,52 +1,35 @@
-// Program to find the smallest element of an array
+// Program to find the minimum element of an array
 
 package Recursion.Questions.Array;
 import java.io.*;
+import java.util.*;
 
 class Min
 {
-    static final int size = 5;
-    static int arr[] = new int[size];
-
-
-    /* Function to find the max element */
-    static int min = Integer.MAX_VALUE;
-    static int min(int i)
+    static int min(int arr[], int i, int min)
     {
+        //Base case
         if (i == arr.length) {
             return min;
         }
 
+        //Find min
         if (arr[i] < min) {
             min = arr[i];
         }
 
-        return min(i + 1);
+        return min(arr, i + 1, min);
     }
 
 
-    public static void main(String args[]) throws IOException
+    public static void main(String args[])
     {
-        //Creating object of the class
-        Min obj = new Min();
-        InputStreamReader inp = new InputStreamReader(System.in);
-        BufferedReader b = new BufferedReader(inp);
-
-        //Creating the array
-        for (int i=0; i<size; i++)
-        {
-            System.out.print("Enter the element : ");
-            arr[i] = Integer.parseInt(b.readLine());
-        }
+        int arr[] = {3, 1, 2, 5, 4};
 
         //Printing the array
-        System.out.println("*** Created Array ***");
-        for (int i=0; i<size; i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println("Array : " + Arrays.toString(arr));
 
-        //Finding the smallest element
-        System.out.println("\nMin : " + min(0));
+        //Printing the result
+        System.out.println("Min : " + min(arr, 0, arr[0]));
     }
 }
