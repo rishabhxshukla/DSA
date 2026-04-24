@@ -1,23 +1,24 @@
 // Program to reverse a number
+// O(N)
 
 package Recursion.Questions.Number;
 import java.io.*;
 
 class Reverse
 {
-    /* Function to reverse a number */
-    static int sum = 0;
-    static int reverse(int num)
+    static int reverse(int num, int S)
     {
+        //Base case: No digits left
         if (num == 0) {
-            return sum;
+            return S;
         }
 
-        //Storing the reverse of num
+        //Extract last digit and build reversed number
         int r = num % 10;
-        sum = (sum * 10) + r;
+        S = (S * 10) + r;
 
-        return reverse(num / 10);
+        //Recurse for remaining digits
+        return reverse(num / 10, S);
     }
 
 
@@ -30,7 +31,7 @@ class Reverse
         System.out.print("Enter the number : ");
         int num = Integer.parseInt(b.readLine());
 
-        //Printing the reversed number
-        System.out.print("Reversed number : " + reverse(num));
+        //Printing the result
+        System.out.print("Reversed number : " + reverse(num, 0));
     }
 }
