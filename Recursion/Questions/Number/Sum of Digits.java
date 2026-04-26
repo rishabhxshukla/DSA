@@ -1,22 +1,20 @@
 // Program to find the sum of digits of a number
+// O(N)
 
 package Recursion.Questions.Number;
 import java.io.*;
 
-class SumDigits
+class SumOfDigits
 {
-    /* Function to find the sum */
-    static int sum = 0;
     static int sum(int num)
     {
+        //Base case: No digits left
         if (num == 0) {
-            return sum;
+            return 0;
         }
 
-        //Adding last digit to sum
-        sum = sum + num % 10;
-
-        return sum(num / 10);
+        //Last digit + sum of remaining digits
+        return (num % 10) + sum(num / 10);
     }
 
 
